@@ -844,3 +844,33 @@ C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\P
 C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\SDK.NET.Interface.dll
 C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\SDK.NET.Interface.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\MES APP.exe.config
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\SDK.NET.Interface.dll
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Debug\SDK.NET.Interface.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Main.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.pdb

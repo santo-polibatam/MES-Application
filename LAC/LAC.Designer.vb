@@ -120,7 +120,6 @@ Partial Class Main
         Me.Manual_Print_Product = New System.Windows.Forms.Button()
         Me.Print_Product_x = New System.Windows.Forms.Button()
         Me.Print_Label_Outside = New System.Windows.Forms.Button()
-        Me.select_quantity = New System.Windows.Forms.CheckBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.selectedLabel = New System.Windows.Forms.TextBox()
         Me.Label147 = New System.Windows.Forms.Label()
@@ -148,6 +147,7 @@ Partial Class Main
         Me.checkAssembledSingapore = New System.Windows.Forms.CheckBox()
         Me.checkMadeInChina = New System.Windows.Forms.CheckBox()
         Me.autoPrint = New System.Windows.Forms.CheckBox()
+        Me.select_quantity = New System.Windows.Forms.CheckBox()
         Me.printLabel = New System.Windows.Forms.Button()
         Me.previewLabel = New System.Windows.Forms.Button()
         Me.quantityLabel = New System.Windows.Forms.TextBox()
@@ -1775,18 +1775,6 @@ Partial Class Main
         Me.Print_Label_Outside.Text = "Print Label Outside the Box"
         Me.Print_Label_Outside.UseVisualStyleBackColor = True
         '
-        'select_quantity
-        '
-        Me.select_quantity.AutoSize = True
-        Me.select_quantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.select_quantity.ForeColor = System.Drawing.Color.Black
-        Me.select_quantity.Location = New System.Drawing.Point(7, 156)
-        Me.select_quantity.Name = "select_quantity"
-        Me.select_quantity.Size = New System.Drawing.Size(157, 24)
-        Me.select_quantity.TabIndex = 57
-        Me.select_quantity.Text = "select the quantity"
-        Me.select_quantity.UseVisualStyleBackColor = True
-        '
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2080,6 +2068,18 @@ Partial Class Main
         Me.autoPrint.TabIndex = 0
         Me.autoPrint.Text = "Automatic Printing"
         Me.autoPrint.UseVisualStyleBackColor = True
+        '
+        'select_quantity
+        '
+        Me.select_quantity.AutoSize = True
+        Me.select_quantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.select_quantity.ForeColor = System.Drawing.Color.Black
+        Me.select_quantity.Location = New System.Drawing.Point(7, 156)
+        Me.select_quantity.Name = "select_quantity"
+        Me.select_quantity.Size = New System.Drawing.Size(160, 24)
+        Me.select_quantity.TabIndex = 57
+        Me.select_quantity.Text = "Select the quantity"
+        Me.select_quantity.UseVisualStyleBackColor = True
         '
         'printLabel
         '
