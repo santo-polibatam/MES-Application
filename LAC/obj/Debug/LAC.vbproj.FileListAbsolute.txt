@@ -1,0 +1,846 @@
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\LAC.exe.config
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\LAC.exe
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\LAC.pdb
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\LAC.xml
+D:\17_18 NEW PROJECT\MES\LAC\LAC\obj\Debug\LAC.vbprojResolveAssemblyReference.cache
+D:\17_18 NEW PROJECT\MES\LAC\LAC\obj\Debug\LAC.Main.resources
+D:\17_18 NEW PROJECT\MES\LAC\LAC\obj\Debug\LAC.Resources.resources
+D:\17_18 NEW PROJECT\MES\LAC\LAC\obj\Debug\LAC.vbproj.GenerateResource.Cache
+D:\17_18 NEW PROJECT\MES\LAC\LAC\obj\Debug\LAC.exe
+D:\17_18 NEW PROJECT\MES\LAC\LAC\obj\Debug\LAC.xml
+D:\17_18 NEW PROJECT\MES\LAC\LAC\obj\Debug\LAC.pdb
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.Shared.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\FlashControlV71.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\ShockwaveFlashObjects.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\17_18 NEW PROJECT\MES\LAC\LAC\bin\Debug\stdole.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\LAC.exe.config
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\LAC.exe
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\LAC.pdb
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\LAC.xml
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\ShockwaveFlashObjects.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\stdole.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.Main.resources
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.Resources.resources
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.vbproj.GenerateResource.Cache
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.exe
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.xml
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.pdb
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.Form1.resources
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\bin\Debug\MultiColumnComboBox.dll
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\project\001. Converting MES Application\002. Project Data\Schneider\Schneider\LAC\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\LAC.exe.config
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\LAC.exe
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\LAC.pdb
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\LAC.xml
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\MultiColumnComboBox.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\stdole.dll
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.exe
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.xml
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.pdb
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\CEO-Perusahaan\Source\Repos\arifmuspita\MES\LAC\bin\Debug\SDK.NET.Interface.xml
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\LAC.exe.config
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\LAC.exe
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\LAC.pdb
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\LAC.xml
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\ShockwaveFlashObjects.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\stdole.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.Form1.resources
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.Main.resources
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.Resources.resources
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.Form_preview.resources
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.exe
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.xml
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.pdb
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.Shared.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\CrystalDecisions.Windows.Forms.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\FlashControlV71.dll
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.LoginForm.resources
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\LAC.exe.manifest
+E:\Jangan Dihapus\DB MES\MES\LAC\bin\Debug\LAC.application
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.exe.manifest
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.application
+E:\Jangan Dihapus\DB MES\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\LAC.exe.config
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\LAC.exe.manifest
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\LAC.application
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\LAC.exe
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\LAC.pdb
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\LAC.xml
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\FlashControlV71.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\bin\Debug\stdole.dll
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.exe.manifest
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.application
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.exe
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.xml
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.pdb
+C:\Users\sesa434387\Documents\MES2\MES\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\LAC.exe.config
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\LAC.exe.manifest
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\LAC.application
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\LAC.exe
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\LAC.pdb
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\LAC.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\FlashControlV71.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\bin\Debug\stdole.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.exe.manifest
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.application
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.exe
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\21082019 Malam\MES2\MES\MES\LAC\obj\Debug\LAC.pdb
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.exe
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.pdb
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\LAC.exe.config
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\LAC.exe.manifest
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\LAC.application
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\LAC.exe
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\LAC.pdb
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\LAC.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\FlashControlV71.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\bin\Debug\stdole.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.exe.manifest
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.application
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\FlashControlV71.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\stdole.dll
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\MES APP.exe.config
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\MES APP.exe.manifest
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\MES APP.application
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\MES APP.exe
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\MES APP.pdb
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\bin\Debug\MES APP.xml
+P:\Kum Fatt\MES Installer\Debug\MES APP.exe.config
+P:\Kum Fatt\MES Installer\Debug\MES APP.exe.manifest
+P:\Kum Fatt\MES Installer\Debug\MES APP.application
+P:\Kum Fatt\MES Installer\Debug\MES APP.exe
+P:\Kum Fatt\MES Installer\Debug\MES APP.pdb
+P:\Kum Fatt\MES Installer\Debug\MES APP.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES old\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434387\Documents\Debug\MES APP.exe.config
+C:\Users\sesa434387\Documents\Debug\MES APP.exe.manifest
+C:\Users\sesa434387\Documents\Debug\MES APP.application
+C:\Users\sesa434387\Documents\Debug\MES APP.exe
+C:\Users\sesa434387\Documents\Debug\MES APP.pdb
+C:\Users\sesa434387\Documents\Debug\MES APP.xml
+C:\Users\sesa434387\Documents\Sanindo Multi Tekno\01Program Last\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Debug\MES APP.exe.config
+D:\Santo data\Debug\MES APP.exe.manifest
+D:\Santo data\Debug\MES APP.application
+D:\Santo data\Debug\MES APP.exe
+D:\Santo data\Debug\MES APP.pdb
+D:\Santo data\Debug\MES APP.xml
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\MES 10 feb 21\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\Development 22 Feb 21\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\Fuji 2 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\Fuji 3 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\Fuji 6 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\Fuji 7 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\Fuji 8 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\Debug\MES APP.exe.config
+D:\Santo data\Current Program\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\Debug\MES APP.application
+D:\Santo data\Current Program\Debug\MES APP.exe
+D:\Santo data\Current Program\Debug\MES APP.pdb
+D:\Santo data\Current Program\Debug\MES APP.xml
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\MES 11 Maret 2021\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+D:\Santo data\Current Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\Debug\MES APP.exe.config
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\Debug\MES APP.application
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\Debug\MES APP.exe
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\Debug\MES APP.pdb
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\Debug\MES APP.xml
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\SESA434392\Documents\MES Program Raw sanindotekno\_PROJECT Fuji\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.exe.config
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.application
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.exe
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.pdb
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.xml
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Documents\MES App Sanindo Multi Tekno\MES Backup\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 12 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\Debug\MES APP.exe.config
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 13 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\Debug\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 16 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\Debug\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 18 Maret 20221 New\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\Debug\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 19 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\Debug\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 20 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\Debug\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Currect Program\MES Fuji 26 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\Debug\MES APP.exe.config
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 29 Maret 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\Debug\MES APP.exe.config
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Main.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\obj\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\MES APP.exe.config
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\MES APP.exe.manifest
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\MES APP.application
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\MES APP.exe
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\MES APP.pdb
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\MES APP.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\SDK.NET.Interface.dll
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\SESA434392\Box\SANTO\VB Program\Currect Program\MES Fuji 1 April 2021\Program\MES Fuji 11 Maret 2021 new\Fuji 9 Maret 2021\MES\LAC\bin\Debug\SDK.NET.Interface.xml
