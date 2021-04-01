@@ -422,6 +422,13 @@ Err_btnExit2_Click:
 
         deleteRow.Enabled = True
 
+        'fuji 
+        cbx_fuji_side_label.Enabled = True
+        cbx_Rotary.Enabled = True
+        cbx_outside.Enabled = True
+        cbx_front.Enabled = True
+        cbx_Carton.Enabled = True
+
     End Sub
 
     Sub AccessOperator() 'Just View and cannot Edit
@@ -453,6 +460,13 @@ Err_btnExit2_Click:
         Button6.Enabled = False
         btn_export_QI_Trace.Enabled = False
         deleteRow.Enabled = False
+
+        'fuji
+        cbx_fuji_side_label.Enabled = False
+        cbx_Rotary.Enabled = False
+        cbx_outside.Enabled = False
+        cbx_front.Enabled = False
+        cbx_Carton.Enabled = False
 
     End Sub
 
