@@ -5768,15 +5768,27 @@ loncat:
 
         Dim COCreport As String = ""
         'If Me.micrologicRef.Text = "" Or String.IsNullOrEmpty(Me.micrologicRef.Text) = True Then
-        If Me.breakerType.Text = "NA" Or Me.breakerType.Text = "HA" Or Me.breakerType.Text = "HF" Then
-            COCreport = "COC SD"
-            label3_printer.Variables("COC_Main").SetValue(COC_SD_Main)
-            label3_printer.Variables("COC_foot").SetValue(COC_SD_foot)
-        Else
-            COCreport = "COC CB"
-            label3_printer.Variables("COC_Main").SetValue(COC_CB_Main)
-            label3_printer.Variables("COC_foot").SetValue(COC_CB_foot)
-        End If
+
+        'reset value
+        label3_printer.Variables("COC_SD").SetValue("0")
+        label3_printer.Variables("COC_CB").SetValue("0")
+
+        Try
+            If Me.breakerType.Text = "NA" Or Me.breakerType.Text = "HA" Or Me.breakerType.Text = "HF" Then
+                COCreport = "COC SD"
+                label3_printer.Variables("COC_Main").SetValue(COC_SD_Main)
+                label3_printer.Variables("COC_foot").SetValue(COC_SD_foot)
+                'santo
+                label3_printer.Variables("COC_SD").SetValue("1")
+            Else
+                COCreport = "COC CB"
+                label3_printer.Variables("COC_Main").SetValue(COC_CB_Main)
+                label3_printer.Variables("COC_foot").SetValue(COC_CB_foot)
+                label3_printer.Variables("COC_CB").SetValue("1")
+            End If
+        Catch ex As Exception
+
+        End Try
 
         label3_printer.Variables("Adress").SetValue(testCustomer.Text)
         label3_printer.Variables("Product").SetValue(productRange.Text)

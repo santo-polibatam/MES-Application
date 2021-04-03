@@ -9,14 +9,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="MES APP.exe.manifest" size="6109">
+    <dependentAssembly dependencyType="install" codebase="MES APP.exe.manifest" size="6111">
       <assemblyIdentity name="MES APP.exe" version="1.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mrH2sEeUgAAmbXJaba+8bdqL3MayMbggxgTiJO3icHw=</dsig:DigestValue>
+        <dsig:DigestValue>zKKt547hCK+GF4j8s9aRB+sXHFnLalWUvJSnnrs1X8U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
