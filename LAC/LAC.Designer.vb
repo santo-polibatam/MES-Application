@@ -676,6 +676,7 @@ Partial Class Main
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
+        Me.btn_log = New System.Windows.Forms.Button()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -2211,6 +2212,7 @@ Partial Class Main
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.btn_log)
         Me.GroupBox6.Controls.Add(Me.SaveData)
         Me.GroupBox6.Controls.Add(Me.MaskedTextBox1)
         Me.GroupBox6.Controls.Add(Me.Fuji_QR_Product_Label)
@@ -7787,6 +7789,16 @@ Partial Class Main
         '
         Me.MadeINtextTableAdapter1.ClearBeforeFill = True
         '
+        'btn_log
+        '
+        Me.btn_log.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_log.Location = New System.Drawing.Point(414, 14)
+        Me.btn_log.Name = "btn_log"
+        Me.btn_log.Size = New System.Drawing.Size(30, 23)
+        Me.btn_log.TabIndex = 92
+        Me.btn_log.Text = "Log"
+        Me.btn_log.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -8533,4 +8545,5 @@ Partial Class Main
     Friend WithEvents PO_Group_BOX As TextBox
     Friend WithEvents btn_Export_Labelling_fuji As Button
     Friend WithEvents btn_export_BOM_Fuji As Button
+    Friend WithEvents btn_log As Button
 End Class

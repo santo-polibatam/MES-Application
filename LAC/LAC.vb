@@ -98,7 +98,8 @@ Public Class Main
             koneksi = New SqlConnection(database)
             If koneksi.State = ConnectionState.Closed Then koneksi.Open() Else koneksi.Close()
         Catch ex As Exception
-            MsgBox("Please Contact IT Team. This is Database Problem -> " + ex.Message)
+            'MsgBox("Please Contact IT Team. This is Database Problem -> " + ex.Message)
+            Log_form.Log_text.Text = Log_form.Log_text.Text & Chr(13) & Chr(13) & "Please Contact IT Team. This is Database Problem -> " + ex.Message
         End Try
     End Sub
 
@@ -429,6 +430,9 @@ Err_btnExit2_Click:
         cbx_front.Enabled = True
         cbx_Carton.Enabled = True
 
+        'tools
+        btn_log.Visible = True
+
     End Sub
 
     Sub AccessOperator() 'Just View and cannot Edit
@@ -467,6 +471,9 @@ Err_btnExit2_Click:
         cbx_outside.Enabled = False
         cbx_front.Enabled = False
         cbx_Carton.Enabled = False
+
+        'tools
+        btn_log.Visible = False
 
     End Sub
 
@@ -3852,23 +3859,23 @@ loncat:
 
 
             If Me.testCountry.Text = "" Then
-                    Dim dsCountry As New DataSet
-                    sql = "Select * " &
+                Dim dsCountry As New DataSet
+                sql = "Select * " &
                 "FROM customerDatabase " &
                 "WHERE [customer code] = '" & Me.testCustomerCode.Text & "';"
 
-                    adapter = New SqlDataAdapter(sql, Main.koneksi)
-                    adapter.Fill(dsCountry)
-                    Try
-                        If dsCountry.Tables(0).Rows.Count = 1 Then
-                            Me.testCountry.Text = ds.Tables(0).Rows(0).Item("country")
-                        End If
-                    Catch ex As Exception
-                        If CustomerCountryNotFound = 0 Then MsgBox("Customer Country Not Found ")
-                        CustomerCountryNotFound = 1
-                    End Try
-                End If
+                adapter = New SqlDataAdapter(sql, Main.koneksi)
+                adapter.Fill(dsCountry)
+                Try
+                    If dsCountry.Tables(0).Rows.Count = 1 Then
+                        Me.testCountry.Text = ds.Tables(0).Rows(0).Item("country")
+                    End If
+                Catch ex As Exception
+                    If CustomerCountryNotFound = 0 Then MsgBox("Customer Country Not Found ")
+                    CustomerCountryNotFound = 1
+                End Try
             End If
+        End If
     End Sub
 
     Private Sub TestMaterial_TextChanged(sender As Object, e As EventArgs) Handles testMaterial.TextChanged
@@ -6096,33 +6103,33 @@ loncat:
             End Try
 
             label6_printer.Variables("mat1").SetValue(Microsoft.VisualBasic.Left(mat1.Text, 14))
-                    label6_printer.Variables("mat2").SetValue(Microsoft.VisualBasic.Left(mat2.Text, 14))
-                    label6_printer.Variables("mat3").SetValue(Microsoft.VisualBasic.Left(mat3.Text, 14))
-                    label6_printer.Variables("mat4").SetValue(Microsoft.VisualBasic.Left(mat4.Text, 14))
-                    label6_printer.Variables("mat5").SetValue(Microsoft.VisualBasic.Left(mat5.Text, 14))
-                    label6_printer.Variables("mat6").SetValue(Microsoft.VisualBasic.Left(mat6.Text, 14))
-                    label6_printer.Variables("mat7").SetValue(Microsoft.VisualBasic.Left(mat7.Text, 14))
-                    label6_printer.Variables("mat8").SetValue(Microsoft.VisualBasic.Left(mat8.Text, 14))
-                    label6_printer.Variables("mat9").SetValue(Microsoft.VisualBasic.Left(mat9.Text, 14))
-                    label6_printer.Variables("mat10").SetValue(Microsoft.VisualBasic.Left(mat10.Text, 14))
+            label6_printer.Variables("mat2").SetValue(Microsoft.VisualBasic.Left(mat2.Text, 14))
+            label6_printer.Variables("mat3").SetValue(Microsoft.VisualBasic.Left(mat3.Text, 14))
+            label6_printer.Variables("mat4").SetValue(Microsoft.VisualBasic.Left(mat4.Text, 14))
+            label6_printer.Variables("mat5").SetValue(Microsoft.VisualBasic.Left(mat5.Text, 14))
+            label6_printer.Variables("mat6").SetValue(Microsoft.VisualBasic.Left(mat6.Text, 14))
+            label6_printer.Variables("mat7").SetValue(Microsoft.VisualBasic.Left(mat7.Text, 14))
+            label6_printer.Variables("mat8").SetValue(Microsoft.VisualBasic.Left(mat8.Text, 14))
+            label6_printer.Variables("mat9").SetValue(Microsoft.VisualBasic.Left(mat9.Text, 14))
+            label6_printer.Variables("mat10").SetValue(Microsoft.VisualBasic.Left(mat10.Text, 14))
 
-                    label6_printer.Variables("descr1").SetValue(Microsoft.VisualBasic.Left(descr1.Text, 50))
-                    label6_printer.Variables("descr2").SetValue(Microsoft.VisualBasic.Left(descr2.Text, 50))
-                    label6_printer.Variables("descr3").SetValue(Microsoft.VisualBasic.Left(descr3.Text, 50))
-                    label6_printer.Variables("descr4").SetValue(Microsoft.VisualBasic.Left(descr4.Text, 50))
-                    label6_printer.Variables("descr5").SetValue(Microsoft.VisualBasic.Left(descr5.Text, 50))
-                    label6_printer.Variables("descr6").SetValue(Microsoft.VisualBasic.Left(descr6.Text, 50))
-                    label6_printer.Variables("descr7").SetValue(Microsoft.VisualBasic.Left(descr7.Text, 50))
-                    label6_printer.Variables("descr8").SetValue(Microsoft.VisualBasic.Left(descr8.Text, 50))
-                    label6_printer.Variables("descr9").SetValue(Microsoft.VisualBasic.Left(descr9.Text, 50))
-                    label6_printer.Variables("descr10").SetValue(Microsoft.VisualBasic.Left(descr10.Text, 50))
+            label6_printer.Variables("descr1").SetValue(Microsoft.VisualBasic.Left(descr1.Text, 50))
+            label6_printer.Variables("descr2").SetValue(Microsoft.VisualBasic.Left(descr2.Text, 50))
+            label6_printer.Variables("descr3").SetValue(Microsoft.VisualBasic.Left(descr3.Text, 50))
+            label6_printer.Variables("descr4").SetValue(Microsoft.VisualBasic.Left(descr4.Text, 50))
+            label6_printer.Variables("descr5").SetValue(Microsoft.VisualBasic.Left(descr5.Text, 50))
+            label6_printer.Variables("descr6").SetValue(Microsoft.VisualBasic.Left(descr6.Text, 50))
+            label6_printer.Variables("descr7").SetValue(Microsoft.VisualBasic.Left(descr7.Text, 50))
+            label6_printer.Variables("descr8").SetValue(Microsoft.VisualBasic.Left(descr8.Text, 50))
+            label6_printer.Variables("descr9").SetValue(Microsoft.VisualBasic.Left(descr9.Text, 50))
+            label6_printer.Variables("descr10").SetValue(Microsoft.VisualBasic.Left(descr10.Text, 50))
 
             If (PPnumberEntry.Text.Length >= 10 And Me.DataGridView1.Rows.Count <= 0) Or select_quantity.Checked = True Then
                 label6_printer.Variables("label13").SetValue(Me.Quantity.Text)
             End If
 
         Catch ex As Exception
-                    MsgBox("Label 6 - " & ex.Message)
+            MsgBox("Label 6 - " & ex.Message)
         End Try
     End Sub
     Private Sub Command191_Click(sender As Object, e As EventArgs) Handles Command191.Click
@@ -6499,6 +6506,7 @@ loncat:
                     MsgBox("Add Daily SQOO Success !")
                 Catch ex As Exception
                     MsgBox("Add SQOO Fail" & ex.Message)
+
                 End Try
             End Using
         End If
@@ -6644,40 +6652,40 @@ loncat:
             Dim SheetName As String = xlWorkBook.Worksheets(1).Name.ToString
             Dim excelpath As String = OpenFileDialog1.FileName
             Dim koneksiExcel As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & excelpath & ";Extended Properties='Excel 8.0;HDR=No;IMEX=1;'"
-                    oleCon = New OleDbConnection(koneksiExcel)
-                    oleCon.Open()
+            oleCon = New OleDbConnection(koneksiExcel)
+            oleCon.Open()
 
-                    Dim queryExcel As String = "select * from [" & SheetName & "$]"
-                    Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
-                    Dim rd As OleDbDataReader
+            Dim queryExcel As String = "select * from [" & SheetName & "$]"
+            Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
+            Dim rd As OleDbDataReader
 
-                    Call koneksi_db()
+            Call koneksi_db()
 
-                    Dim deleteReset As New SqlCommand("Delete from [dbo].[Users] DBCC CHECKIDENT ('[Users]',RESEED,0)", Main.koneksi)
+            Dim deleteReset As New SqlCommand("Delete from [dbo].[Users] DBCC CHECKIDENT ('[Users]',RESEED,0)", Main.koneksi)
 
-                    Try
-                        deleteReset.ExecuteNonQuery()
-                        'Show Msg Box
-                        'Timer1.Enabled = True
-                        'MsgBox("database Delete & Reset ID !")
-                    Catch ex As Exception
-                        MsgBox("Delete DB Fail " & ex.Message)
-                    End Try
+            Try
+                deleteReset.ExecuteNonQuery()
+                'Show Msg Box
+                'Timer1.Enabled = True
+                'MsgBox("database Delete & Reset ID !")
+            Catch ex As Exception
+                MsgBox("Delete DB Fail " & ex.Message)
+            End Try
 
-                    Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
-                        bulkCopy.DestinationTableName = "dbo.Users"
-                        Try
-                            rd = cmd.ExecuteReader
-                            bulkCopy.ColumnMappings.Add(0, 1)
-                            bulkCopy.ColumnMappings.Add(1, 2)
-                            bulkCopy.WriteToServer(rd)
-                            rd.Close()
-                            MsgBox("Upload Technician Success")
-                        Catch ex As Exception
-                            MsgBox(ex.Message)
-                        End Try
-                    End Using
-                End If
+            Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
+                bulkCopy.DestinationTableName = "dbo.Users"
+                Try
+                    rd = cmd.ExecuteReader
+                    bulkCopy.ColumnMappings.Add(0, 1)
+                    bulkCopy.ColumnMappings.Add(1, 2)
+                    bulkCopy.WriteToServer(rd)
+                    rd.Close()
+                    MsgBox("Upload Technician Success")
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End Using
+        End If
     End Sub
 
     Private Sub Command121_Click(sender As Object, e As EventArgs) Handles Command121.Click
@@ -7101,47 +7109,47 @@ Deletecomponent_Error:
         If (Dialog.ShowDialog = DialogResult.OK) Then
             'Try
             Dim oExcel As Excel.Application
-                Dim oBook As Excel.Workbook
-                Dim oSheet As Excel.Worksheet
+            Dim oBook As Excel.Workbook
+            Dim oSheet As Excel.Worksheet
 
-                oExcel = CreateObject("Excel.Application")
-                oBook = oExcel.Workbooks.Add(Type.Missing)
-                oSheet = oBook.Worksheets(1)
+            oExcel = CreateObject("Excel.Application")
+            oBook = oExcel.Workbooks.Add(Type.Missing)
+            oSheet = oBook.Worksheets(1)
 
-                Dim dc As System.Data.DataColumn
-                Dim dr As System.Data.DataRow
-                Dim colIndex As Integer = 0
-                Dim rowIndex As Integer = 0
+            Dim dc As System.Data.DataColumn
+            Dim dr As System.Data.DataRow
+            Dim colIndex As Integer = 0
+            Dim rowIndex As Integer = 0
 
-                Dim adapter As New SqlCommand(sql_command, Main.koneksi)
-                Dim dataAdapter As New SqlClient.SqlDataAdapter()
+            Dim adapter As New SqlCommand(sql_command, Main.koneksi)
+            Dim dataAdapter As New SqlClient.SqlDataAdapter()
 
-                dataAdapter.SelectCommand = adapter
+            dataAdapter.SelectCommand = adapter
             Try
                 'adapter.ExecuteNonQuery()
                 dataAdapter.Fill(datatableMain)
             Catch ex As Exception
                 MsgBox("Export Fail " & ex.Message)
                 Exit Sub
-                End Try
+            End Try
 
-                Dim a As Integer = 0
-                Dim b As Integer = 0
-                'Dim c As Integer
-                'c = datatableMain.Columns.Count + datatableMain.Rows.Count
+            Dim a As Integer = 0
+            Dim b As Integer = 0
+            'Dim c As Integer
+            'c = datatableMain.Columns.Count + datatableMain.Rows.Count
 
-                'Set final path
-                Dim fileName As String = Dialog.FileName '+ ".xls"
-                Dim finalPath = f.SelectedPath + fileName
+            'Set final path
+            Dim fileName As String = Dialog.FileName '+ ".xls"
+            Dim finalPath = f.SelectedPath + fileName
 
 
-                'Export the Columns to excel file
-                For Each dc In datatableMain.Columns
-                    colIndex = colIndex + 1
-                    oSheet.Cells(1, colIndex) = dc.ColumnName
-                Next
-                'show progress
-                Progress.Show()
+            'Export the Columns to excel file
+            For Each dc In datatableMain.Columns
+                colIndex = colIndex + 1
+                oSheet.Cells(1, colIndex) = dc.ColumnName
+            Next
+            'show progress
+            Progress.Show()
 
 
             'Export the rows to excel file
@@ -7159,22 +7167,22 @@ Deletecomponent_Error:
             Next
 
             oSheet.Columns.AutoFit()
-                'Save file in final path
-                oBook.SaveAs(finalPath)
+            'Save file in final path
+            oBook.SaveAs(finalPath)
 
-                'Release the objects
-                releaseObject(oSheet)
-                oBook.Close(False, Type.Missing, Type.Missing)
-                releaseObject(oBook)
-                oExcel.Quit()
-                releaseObject(oExcel)
+            'Release the objects
+            releaseObject(oSheet)
+            oBook.Close(False, Type.Missing, Type.Missing)
+            releaseObject(oBook)
+            oExcel.Quit()
+            releaseObject(oExcel)
 
-                'Some time Office application does not quit after automation: 
-                'so i am calling GC.Collect method.
-                GC.Collect()
+            'Some time Office application does not quit after automation: 
+            'so i am calling GC.Collect method.
+            GC.Collect()
 
-                MessageBox.Show("Export done successfully!")
-                Progress.Close()
+            MessageBox.Show("Export done successfully!")
+            Progress.Close()
 
             'Catch ex As Exception
             'MsgBox("Export to Excel Failed: " & ex.Message)
@@ -9282,19 +9290,19 @@ set @abc = (SELECT TOP (1) [Date]
 
                         'this textbox for Carton Label
                         Carton1.Text = dsCekFuji.Tables(0).Rows(0).Item("From1").ToString
-                            Carton2.Text = dsCekFuji.Tables(0).Rows(0).Item("From2").ToString
-                            Carton32.Text = dsCekFuji.Tables(0).Rows(0).Item("FrameNumber")
-                            Carton32.Text = Carton32.Text.ToString.Substring(Carton32.Text.Length - 2)
-                            Carton4.Text = dsCekFuji.Tables(0).Rows(0).Item("RatedCurrent").ToString
-                            'baca Sq00
-                            Dim sql_box As String = "SELECT* FROM PPList WHERE [Order] ='" & Me.PPFujiEntry.Text & "'"
-                            Dim ds_box As New DataSet
-                            Dim adapter_box = New SqlDataAdapter(sql_box, Main.koneksi)
-                            adapter_box.Fill(ds_box)
+                        Carton2.Text = dsCekFuji.Tables(0).Rows(0).Item("From2").ToString
+                        Carton32.Text = dsCekFuji.Tables(0).Rows(0).Item("FrameNumber")
+                        Carton32.Text = Carton32.Text.ToString.Substring(Carton32.Text.Length - 2)
+                        Carton4.Text = dsCekFuji.Tables(0).Rows(0).Item("RatedCurrent").ToString
+                        'baca Sq00
+                        Dim sql_box As String = "SELECT* FROM PPList WHERE [Order] ='" & Me.PPFujiEntry.Text & "'"
+                        Dim ds_box As New DataSet
+                        Dim adapter_box = New SqlDataAdapter(sql_box, Main.koneksi)
+                        adapter_box.Fill(ds_box)
 
-                            FujiSO.Text = ds_box.Tables(0).Rows(0).Item("SO no").ToString
-                            FujiLineNo.Text = ds_box.Tables(0).Rows(0).Item("item").ToString
-                            fujiQty.Text = ds_box.Tables(0).Rows(0).Item("Item quantity").ToString
+                        FujiSO.Text = ds_box.Tables(0).Rows(0).Item("SO no").ToString
+                        FujiLineNo.Text = ds_box.Tables(0).Rows(0).Item("item").ToString
+                        fujiQty.Text = ds_box.Tables(0).Rows(0).Item("Item quantity").ToString
 
                         GroupingBox.Text = dsCekFuji.Tables(0).Rows(0).Item("GroupingBox").ToString
                         PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Purchase order number").ToString
@@ -9303,12 +9311,12 @@ set @abc = (SELECT TOP (1) [Date]
                         Dim sqlCounterItemsFuji As String = "select * from ComponentsFuji where 
                         ComponentsFuji.[Order]='" & Me.PPFujiEntry.Text & "' and ComponentsFuji.Workstation='" & Me.workstationFuji.Text & "' 
                         and ComponentsFuji.[Check Components]=1 and ComponentsFuji.[2ndScan]= 0 "
-                            Dim ds3 As New DataSet
-                            adapter3 = New SqlDataAdapter(sqlCounterItemsFuji, Main.koneksi)
-                            adapter3.Fill(ds3)
-                            CounterItemsFuji.Text = ds3.Tables(0).Rows.Count
-                        Else
-                            MessageBox.Show("This PP not Fuji")
+                        Dim ds3 As New DataSet
+                        adapter3 = New SqlDataAdapter(sqlCounterItemsFuji, Main.koneksi)
+                        adapter3.Fill(ds3)
+                        CounterItemsFuji.Text = ds3.Tables(0).Rows.Count
+                    Else
+                        MessageBox.Show("This PP not Fuji")
                     End If
                 Else
                     MsgBox("Sorry The PP must be number")
@@ -9954,5 +9962,9 @@ set @abc = (SELECT TOP (1) [Date]
 
     Private Sub btn_Export_Labelling_fuji_Click(sender As Object, e As EventArgs) Handles btn_Export_Labelling_fuji.Click
         ExportToExcel("SELECT * FROM MasterFujiLabelling")
+    End Sub
+
+    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles btn_log.Click
+        Log_form.Show()
     End Sub
 End Class
