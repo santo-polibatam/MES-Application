@@ -869,7 +869,7 @@ Err_btnExit2_Click:
         Else
             cbx_fuji_side_label.SelectedText = "Microsoft Print to PDF"
             label_side_printer.PrintSettings.PrinterName = "Microsoft Print to PDF"
-            MsgBox("Fuji Side label Printer are choosen (" & selectedPrinterFujiSIdeLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
+            'MsgBox("Fuji Side label Printer are choosen (" & selectedPrinterFujiSIdeLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
         End If
 
         If index_fuji2 >= 0 Then
@@ -879,7 +879,7 @@ Err_btnExit2_Click:
         Else
             cbx_Rotary.SelectedText = "Microsoft Print to PDF"
             label_rotary_printer.PrintSettings.PrinterName = "Microsoft Print to PDF"
-            MsgBox("Fuji Rotary label Printer are choosen (" & selectedPrinterFujiRotaryLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
+            'MsgBox("Fuji Rotary label Printer are choosen (" & selectedPrinterFujiRotaryLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
         End If
 
         If index_fuji3 >= 0 Then
@@ -890,7 +890,7 @@ Err_btnExit2_Click:
             cbx_front.SelectedText = "Microsoft Print to PDF"
             label_front_long_printer.PrintSettings.PrinterName = "Microsoft Print to PDF"
             label_front_short_printer.PrintSettings.PrinterName = "Microsoft Print to PDF"
-            MsgBox("Fuji Front label Printer are choosen (" & selectedPrinterFujifrontLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
+            'MsgBox("Fuji Front label Printer are choosen (" & selectedPrinterFujifrontLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
         End If
 
         If index_fuji4 >= 0 Then
@@ -903,7 +903,7 @@ Err_btnExit2_Click:
             cbx_outside.SelectedText = "Microsoft Print to PDF"
             label_carton_printer.PrintSettings.PrinterName = "Microsoft Print to PDF"
             label_out_side_printer.PrintSettings.PrinterName = "Microsoft Print to PDF"
-            MsgBox("Fuji Carton and Outside Box label Printer are choosen (" & selectedPrinterFujiCartonLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
+            'MsgBox("Fuji Carton and Outside Box label Printer are choosen (" & selectedPrinterFujiCartonLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
         End If
         '----------------------------------------------------------------------
         If index1 >= 0 Then
@@ -965,10 +965,10 @@ Err_btnExit2_Click:
 
 
 
-        'Report_Tab.SelectedIndex = 3
-        'Report_Tab.SelectedIndex = 2
-        'Report_Tab.SelectedIndex = 1
-        'Report_Tab.SelectedIndex = 0
+        Report_Tab.SelectedIndex = 3
+        Report_Tab.SelectedIndex = 2
+        Report_Tab.SelectedIndex = 1
+        Report_Tab.SelectedIndex = 0
 
         'Select Product Label printer
         workstation_event()
