@@ -94,7 +94,13 @@ Public Class Main
         Try
             'database = "Data Source=DESKTOP-4PHNBDD;initial catalog=MES_DB;integrated security=true"
             'database = "Data Source=10.155.128.185;initial catalog=MES_DB;Persist Security Info=True;User ID =HA;Password=HA@123"
-            database = "Data Source=10.155.128.71;initial catalog=SGRAC_MES;Persist Security Info=True;User ID=SGRAC;Password=SGRAC@123"
+            database = "Data Source=10.155.128.71;
+            initial catalog=SGRAC_MES;
+            Persist Security Info=True;
+            User ID=SGRAC;
+            Password=SGRAC@123;
+            Max Pool Size=5000;
+            Pooling=True"
             koneksi = New SqlConnection(database)
             If koneksi.State = ConnectionState.Closed Then koneksi.Open() Else koneksi.Close()
         Catch ex As Exception
@@ -6135,6 +6141,8 @@ loncat:
     Private Sub Command191_Click(sender As Object, e As EventArgs) Handles Command191.Click
         'Set to Variable of NiceLabel
         'label3_printer.Variables("Name").SetValue("333333")
+        label3_setvalue()
+        label3_setvalue()
         label3_setvalue()
         'printing with quantity 
         'Dim qty As Integer = 1
