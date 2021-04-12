@@ -3460,22 +3460,6 @@ Err_btnExit2_Click:
 
     End Function
 
-    Function get2digitYear()
-        get2digitYear = DateTime.Now.ToString("yy")
-    End Function
-
-    Function getWeek()
-        Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
-
-        If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
-
-        getWeek = VBAWeekNum
-    End Function
-
-    Function getDay()
-        getDay = DateAndTime.Weekday(DateTime.Now, vbMonday)
-    End Function
-
 
     Sub updateTraceability()
         Try
@@ -3484,6 +3468,17 @@ Err_btnExit2_Click:
             Dim sql2a = "SELECT * FROM [PPList] WHERE [Order] = '" & Me.PPnumberEntry.Text & "'"
             Dim adapter2 = New SqlDataAdapter(sql2a, Main.koneksi)
             adapter2.Fill(ds2)
+
+            Dim strArrGiDate() As String
+            Dim stringGiDate As String = ds2.Tables(0).Rows(0).Item("GI date").ToString()
+            strArrGiDate = stringGiDate.Split(".")
+            Dim CombineGiDate As String = strArrGiDate(1) + "." + strArrGiDate(0) + "." + strArrGiDate(2)
+
+            Dim strArrSchFini() As String
+            Dim stringSchFini As String = ds2.Tables(0).Rows(0).Item("Scheduled finish").ToString()
+            strArrSchFini = stringSchFini.Split(".")
+            Dim CombineSchFini As String = strArrSchFini(1) + "." + strArrSchFini(0) + "." + strArrSchFini(2)
+
             Dim sql = "INSERT INTO [dbo].[ProductionOrders](
             [GI Date]
             ,[PP]
@@ -3501,7 +3496,7 @@ Err_btnExit2_Click:
             ,[Item]
             ,[Entity]) 
             values(
-            cast('" & Convert.ToDateTime(ds2.Tables(0).Rows(0).Item("GI date")).ToString("MM/dd/yyyy") & "' as datetime)
+            cast('" & Convert.ToDateTime(CombineGiDate).ToString("MM/dd/yyyy") & "' as datetime)
             ,'" & ds2.Tables(0).Rows(0).Item("order") & "'
             ,'" & CounterItems.Text & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Item quantity") & "'
@@ -3509,15 +3504,17 @@ Err_btnExit2_Click:
             ,'" & ds2.Tables(0).Rows(0).Item("range") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Customer") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("City") & "'
-            ,cast('" & Convert.ToDateTime(ds2.Tables(0).Rows(0).Item("Scheduled finish")).ToString("MM/dd/yyyy") & "' as datetime)
+            ,cast('" & Convert.ToDateTime(CombineSchFini).ToString("MM/dd/yyyy") & "' as datetime)
             ,'" & ds2.Tables(0).Rows(0).Item("Material") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Description") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Name 1") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("SO no") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Item") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Entity") & "')"
-            'MessageBox.Show(sql)
+
             Dim ter = New SqlDataAdapter(sql, Main.koneksi)
+            ter.SelectCommand.ExecuteNonQuery()
+
             'If ter.SelectCommand.ExecuteNonQuery() Then
             '    MessageBox.Show("Berhasil")
             'Else
@@ -3577,7 +3574,7 @@ Err_btnExit2_Click:
             adapters2 = New SqlDataAdapter(queryschlate, Main.koneksi)
             adapters2.SelectCommand.ExecuteNonQuery()
         Catch ex As Exception
-
+            Log_data("Update Trecebility:" & ex.ToString)
         End Try
     End Sub
 
@@ -5770,41 +5767,63 @@ loncat:
     Public Const COC_CB_foot As String = "The Air Circuit Breaker delivered:"
     Public Const COC_SD_foot As String = "The switch disconnector delivered:"
 
+    Public Sub Log_data(ByVal data As String)
+        Dim file As System.IO.StreamWriter
+        file = My.Computer.FileSystem.OpenTextFileWriter("Log.txt", True)
+        file.WriteLine(data)
+        file.Close()
+    End Sub
+
+    Dim buka_packaging_tab As Integer
+
+
     Private Sub label3_setvalue()
+
+        'If buka_packaging_tab = 0 Then
+        'Report_Tab.SelectedIndex = 1
+        'Report_Tab.SelectedIndex = 2
+        'buka_packaging_tab = 1
+        'End If
+
         Try
             label3_printer.Variables("StartTestQuantity").SetValue(StartTestQuantity.Text)
         Catch ex As Exception
-
+            Log_data("COC Start Qty: " & ex.ToString)
         End Try
 
-        label3_printer.Variables("testQuantity").SetValue(Quantity.Text)
+        Try
+            label3_printer.Variables("testQuantity").SetValue(Quantity.Text)
+        Catch ex As Exception
+            Log_data("COC Error testQty: " & ex.ToString)
+        End Try
+
 
         Dim COCreport As String = ""
         'If Me.micrologicRef.Text = "" Or String.IsNullOrEmpty(Me.micrologicRef.Text) = True Then
 
-        Try
-            'reset value
-            label3_printer.Variables("COC_SD").SetValue("0")
-            label3_printer.Variables("COC_CB").SetValue("0")
-        Catch ex As Exception
+        'Try
+        '    'reset value
+        '    label3_printer.Variables("COC_SD").SetValue("0")
+        '    label3_printer.Variables("COC_CB").SetValue("0")
+        'Catch ex As Exception
+        '    Log_data("COC COC SD = 0: " & ex.ToString)
+        'End Try
 
-        End Try
+        'Try
+        '    If Me.breakerType.Text = "NA" Or Me.breakerType.Text = "HA" Or Me.breakerType.Text = "HF" Then
+        '        COCreport = "COC SD"
+        '        'santo coco jinlong
+        '        label3_printer.Variables("COC_SD").SetValue("1")
 
-        Try
-            If Me.breakerType.Text = "NA" Or Me.breakerType.Text = "HA" Or Me.breakerType.Text = "HF" Then
-                COCreport = "COC SD"
-                'santo coco jinlong
-                label3_printer.Variables("COC_SD").SetValue("1")
+        '    Else
+        '        COCreport = "COC CB"
+        '        'santo COC jinlong
+        '        label3_printer.Variables("COC_CB").SetValue("1")
 
-            Else
-                COCreport = "COC CB"
-                'santo COC jinlong
-                label3_printer.Variables("COC_CB").SetValue("1")
-
-            End If
-        Catch ex As Exception
-
-        End Try
+        '    End If
+        'Catch ex As Exception
+        '    Log_data("COC COC Data in 1: " & ex.ToString)
+        'End Try
 
 
         Try
@@ -5822,19 +5841,23 @@ loncat:
 
             End If
         Catch ex As Exception
-
+            Log_data("COC COC Data in 2: " & ex.ToString)
+        End Try
+        Try
+            label3_printer.Variables("Adress").SetValue(testCustomer.Text)
+            label3_printer.Variables("Product").SetValue(productRange.Text)
+            label3_printer.Variables("Item").SetValue(StartTestQuantity.Text)
+            label3_printer.Variables("tes Material").SetValue(Microsoft.VisualBasic.Left(testMaterial.Text, 14))
+            label3_printer.Variables("tes Description").SetValue(testDescription.Text)
+            label3_printer.Variables("tes SO").SetValue(testSO.Text)
+            label3_printer.Variables("tes Production").SetValue(testPP.Text)
+            label3_printer.Variables("tes Customer PO").SetValue(testCustPO.Text)
+            label3_printer.Variables("tes SOitem").SetValue(testSOitem.Text)
+            label3_printer.Variables("testCustPOitem").SetValue(testCustPOitem.Text)
+        Catch ex As Exception
+            Log_data("COC last: " & ex.ToString)
         End Try
 
-        label3_printer.Variables("Adress").SetValue(testCustomer.Text)
-        label3_printer.Variables("Product").SetValue(productRange.Text)
-        label3_printer.Variables("Item").SetValue(StartTestQuantity.Text)
-        label3_printer.Variables("tes Material").SetValue(Microsoft.VisualBasic.Left(testMaterial.Text, 14))
-        label3_printer.Variables("tes Description").SetValue(testDescription.Text)
-        label3_printer.Variables("tes SO").SetValue(testSO.Text)
-        label3_printer.Variables("tes Production").SetValue(testPP.Text)
-        label3_printer.Variables("tes Customer PO").SetValue(testCustPO.Text)
-        label3_printer.Variables("tes SOitem").SetValue(testSOitem.Text)
-        label3_printer.Variables("testCustPOitem").SetValue(testCustPOitem.Text)
     End Sub
 
     Private Sub Label4_SetValue()
@@ -6139,10 +6162,11 @@ loncat:
         End Try
     End Sub
     Private Sub Command191_Click(sender As Object, e As EventArgs) Handles Command191.Click
+        Report_Tab.SelectedIndex = 1
+        Report_Tab.SelectedIndex = 2
+
         'Set to Variable of NiceLabel
         'label3_printer.Variables("Name").SetValue("333333")
-        label3_setvalue()
-        label3_setvalue()
         label3_setvalue()
         'printing with quantity 
         'Dim qty As Integer = 1
@@ -6152,7 +6176,11 @@ loncat:
             'MsgBox(testPrintQty.SelectedItem)
             'printing with quantity 
             Dim qty As Integer = Convert.ToDecimal(COCprintQty.Text)
-            label3_printer.Variables("StartTestQuantity").SetValue(a)
+            Try
+                label3_printer.Variables("StartTestQuantity").SetValue(a)
+            Catch ex As Exception
+                Log_data("COC StartTestQTY : " & ex.ToString)
+            End Try
 
             Try
                 label3_printer.Print(COCprintQty.Text)
@@ -9313,7 +9341,8 @@ set @abc = (SELECT TOP (1) [Date]
                         fujiQty.Text = ds_box.Tables(0).Rows(0).Item("Item quantity").ToString
 
                         GroupingBox.Text = dsCekFuji.Tables(0).Rows(0).Item("GroupingBox").ToString
-                        PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Purchase order number").ToString
+                        'PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Purchase order number").ToString
+                        PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Order").ToString
 
 
                         Dim sqlCounterItemsFuji As String = "select * from ComponentsFuji where 
