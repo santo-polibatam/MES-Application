@@ -27,14 +27,25 @@ Partial Class Main
         Me.Report_Tab = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Label192 = New System.Windows.Forms.Label()
+        Me.txt_SO_item = New System.Windows.Forms.TextBox()
+        Me.Label191 = New System.Windows.Forms.Label()
+        Me.Label188 = New System.Windows.Forms.Label()
+        Me.Label190 = New System.Windows.Forms.Label()
+        Me.Label186 = New System.Windows.Forms.Label()
+        Me.Label189 = New System.Windows.Forms.Label()
+        Me.Label184 = New System.Windows.Forms.Label()
         Me.Label156 = New System.Windows.Forms.Label()
         Me.TextBox_Neutral = New System.Windows.Forms.TextBox()
         Me.EANTEST = New System.Windows.Forms.TextBox()
         Me.Command39 = New System.Windows.Forms.Button()
         Me.technicalDescription = New System.Windows.Forms.TextBox()
         Me.descriptionRussian = New System.Windows.Forms.TextBox()
+        Me.logo6value = New System.Windows.Forms.TextBox()
         Me.logo3value = New System.Windows.Forms.TextBox()
+        Me.logo5value = New System.Windows.Forms.TextBox()
         Me.logo2value = New System.Windows.Forms.TextBox()
+        Me.logo4value = New System.Windows.Forms.TextBox()
         Me.logo1value = New System.Windows.Forms.TextBox()
         Me.Picture2 = New System.Windows.Forms.TextBox()
         Me.descriptionChinese = New System.Windows.Forms.TextBox()
@@ -582,6 +593,7 @@ Partial Class Main
         Me.Command43 = New System.Windows.Forms.Button()
         Me.Command34 = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.btn_delete_dot_sq00 = New System.Windows.Forms.Button()
         Me.deleteDup = New System.Windows.Forms.Button()
         Me.latestUpdatePacking = New System.Windows.Forms.TextBox()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -595,6 +607,7 @@ Partial Class Main
         Me.Command146 = New System.Windows.Forms.Button()
         Me.Command3 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.latestUpdate = New System.Windows.Forms.TextBox()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Command109 = New System.Windows.Forms.Button()
@@ -677,6 +690,7 @@ Partial Class Main
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
+        Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -765,14 +779,25 @@ Partial Class Main
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.Label192)
+        Me.GroupBox5.Controls.Add(Me.txt_SO_item)
+        Me.GroupBox5.Controls.Add(Me.Label191)
+        Me.GroupBox5.Controls.Add(Me.Label188)
+        Me.GroupBox5.Controls.Add(Me.Label190)
+        Me.GroupBox5.Controls.Add(Me.Label186)
+        Me.GroupBox5.Controls.Add(Me.Label189)
+        Me.GroupBox5.Controls.Add(Me.Label184)
         Me.GroupBox5.Controls.Add(Me.Label156)
         Me.GroupBox5.Controls.Add(Me.TextBox_Neutral)
         Me.GroupBox5.Controls.Add(Me.EANTEST)
         Me.GroupBox5.Controls.Add(Me.Command39)
         Me.GroupBox5.Controls.Add(Me.technicalDescription)
         Me.GroupBox5.Controls.Add(Me.descriptionRussian)
+        Me.GroupBox5.Controls.Add(Me.logo6value)
         Me.GroupBox5.Controls.Add(Me.logo3value)
+        Me.GroupBox5.Controls.Add(Me.logo5value)
         Me.GroupBox5.Controls.Add(Me.logo2value)
+        Me.GroupBox5.Controls.Add(Me.logo4value)
         Me.GroupBox5.Controls.Add(Me.logo1value)
         Me.GroupBox5.Controls.Add(Me.Picture2)
         Me.GroupBox5.Controls.Add(Me.descriptionChinese)
@@ -838,6 +863,91 @@ Partial Class Main
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Material"
         '
+        'Label192
+        '
+        Me.Label192.AutoSize = True
+        Me.Label192.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label192.ForeColor = System.Drawing.Color.Black
+        Me.Label192.Location = New System.Drawing.Point(513, 354)
+        Me.Label192.Name = "Label192"
+        Me.Label192.Size = New System.Drawing.Size(51, 15)
+        Me.Label192.TabIndex = 107
+        Me.Label192.Text = "SO Item"
+        '
+        'txt_SO_item
+        '
+        Me.txt_SO_item.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_SO_item.Location = New System.Drawing.Point(570, 351)
+        Me.txt_SO_item.Name = "txt_SO_item"
+        Me.txt_SO_item.Size = New System.Drawing.Size(72, 21)
+        Me.txt_SO_item.TabIndex = 106
+        '
+        'Label191
+        '
+        Me.Label191.AutoSize = True
+        Me.Label191.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label191.ForeColor = System.Drawing.Color.Black
+        Me.Label191.Location = New System.Drawing.Point(651, 301)
+        Me.Label191.Name = "Label191"
+        Me.Label191.Size = New System.Drawing.Size(42, 15)
+        Me.Label191.TabIndex = 105
+        Me.Label191.Text = "Logo5"
+        '
+        'Label188
+        '
+        Me.Label188.AutoSize = True
+        Me.Label188.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label188.ForeColor = System.Drawing.Color.Black
+        Me.Label188.Location = New System.Drawing.Point(522, 301)
+        Me.Label188.Name = "Label188"
+        Me.Label188.Size = New System.Drawing.Size(42, 15)
+        Me.Label188.TabIndex = 105
+        Me.Label188.Text = "Logo2"
+        '
+        'Label190
+        '
+        Me.Label190.AutoSize = True
+        Me.Label190.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label190.ForeColor = System.Drawing.Color.Black
+        Me.Label190.Location = New System.Drawing.Point(651, 327)
+        Me.Label190.Name = "Label190"
+        Me.Label190.Size = New System.Drawing.Size(42, 15)
+        Me.Label190.TabIndex = 105
+        Me.Label190.Text = "Logo6"
+        '
+        'Label186
+        '
+        Me.Label186.AutoSize = True
+        Me.Label186.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label186.ForeColor = System.Drawing.Color.Black
+        Me.Label186.Location = New System.Drawing.Point(522, 327)
+        Me.Label186.Name = "Label186"
+        Me.Label186.Size = New System.Drawing.Size(42, 15)
+        Me.Label186.TabIndex = 105
+        Me.Label186.Text = "Logo3"
+        '
+        'Label189
+        '
+        Me.Label189.AutoSize = True
+        Me.Label189.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label189.ForeColor = System.Drawing.Color.Black
+        Me.Label189.Location = New System.Drawing.Point(651, 272)
+        Me.Label189.Name = "Label189"
+        Me.Label189.Size = New System.Drawing.Size(42, 15)
+        Me.Label189.TabIndex = 105
+        Me.Label189.Text = "Logo4"
+        '
+        'Label184
+        '
+        Me.Label184.AutoSize = True
+        Me.Label184.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label184.ForeColor = System.Drawing.Color.Black
+        Me.Label184.Location = New System.Drawing.Point(522, 272)
+        Me.Label184.Name = "Label184"
+        Me.Label184.Size = New System.Drawing.Size(42, 15)
+        Me.Label184.TabIndex = 105
+        Me.Label184.Text = "Logo1"
+        '
         'Label156
         '
         Me.Label156.AutoSize = True
@@ -893,6 +1003,14 @@ Partial Class Main
         Me.descriptionRussian.Size = New System.Drawing.Size(134, 21)
         Me.descriptionRussian.TabIndex = 99
         '
+        'logo6value
+        '
+        Me.logo6value.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logo6value.Location = New System.Drawing.Point(699, 325)
+        Me.logo6value.Name = "logo6value"
+        Me.logo6value.Size = New System.Drawing.Size(72, 21)
+        Me.logo6value.TabIndex = 98
+        '
         'logo3value
         '
         Me.logo3value.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -901,6 +1019,14 @@ Partial Class Main
         Me.logo3value.Size = New System.Drawing.Size(72, 21)
         Me.logo3value.TabIndex = 98
         '
+        'logo5value
+        '
+        Me.logo5value.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logo5value.Location = New System.Drawing.Point(699, 298)
+        Me.logo5value.Name = "logo5value"
+        Me.logo5value.Size = New System.Drawing.Size(72, 21)
+        Me.logo5value.TabIndex = 97
+        '
         'logo2value
         '
         Me.logo2value.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -908,6 +1034,14 @@ Partial Class Main
         Me.logo2value.Name = "logo2value"
         Me.logo2value.Size = New System.Drawing.Size(72, 21)
         Me.logo2value.TabIndex = 97
+        '
+        'logo4value
+        '
+        Me.logo4value.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logo4value.Location = New System.Drawing.Point(699, 270)
+        Me.logo4value.Name = "logo4value"
+        Me.logo4value.Size = New System.Drawing.Size(72, 21)
+        Me.logo4value.TabIndex = 96
         '
         'logo1value
         '
@@ -6875,6 +7009,7 @@ Partial Class Main
         '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.btn_delete_dot_sq00)
         Me.GroupBox8.Controls.Add(Me.deleteDup)
         Me.GroupBox8.Controls.Add(Me.latestUpdatePacking)
         Me.GroupBox8.Controls.Add(Me.Label55)
@@ -6896,13 +7031,24 @@ Partial Class Main
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Packaging Label"
         '
+        'btn_delete_dot_sq00
+        '
+        Me.btn_delete_dot_sq00.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_delete_dot_sq00.ForeColor = System.Drawing.Color.Black
+        Me.btn_delete_dot_sq00.Location = New System.Drawing.Point(7, 277)
+        Me.btn_delete_dot_sq00.Name = "btn_delete_dot_sq00"
+        Me.btn_delete_dot_sq00.Size = New System.Drawing.Size(155, 35)
+        Me.btn_delete_dot_sq00.TabIndex = 18
+        Me.btn_delete_dot_sq00.Text = "Delete . (dot)"
+        Me.btn_delete_dot_sq00.UseVisualStyleBackColor = True
+        '
         'deleteDup
         '
         Me.deleteDup.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.deleteDup.ForeColor = System.Drawing.Color.Black
-        Me.deleteDup.Location = New System.Drawing.Point(6, 230)
+        Me.deleteDup.Location = New System.Drawing.Point(6, 214)
         Me.deleteDup.Name = "deleteDup"
-        Me.deleteDup.Size = New System.Drawing.Size(156, 82)
+        Me.deleteDup.Size = New System.Drawing.Size(156, 51)
         Me.deleteDup.TabIndex = 84
         Me.deleteDup.Text = "Delete Duplicate SQOO"
         Me.deleteDup.UseVisualStyleBackColor = True
@@ -7029,6 +7175,7 @@ Partial Class Main
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.Button12)
         Me.GroupBox7.Controls.Add(Me.latestUpdate)
         Me.GroupBox7.Controls.Add(Me.Label54)
         Me.GroupBox7.Controls.Add(Me.Command109)
@@ -7048,6 +7195,17 @@ Partial Class Main
         Me.GroupBox7.TabIndex = 0
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Product Label"
+        '
+        'Button12
+        '
+        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.ForeColor = System.Drawing.Color.Black
+        Me.Button12.Location = New System.Drawing.Point(7, 230)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(155, 35)
+        Me.Button12.TabIndex = 17
+        Me.Button12.Text = "Delete . (dot)"
+        Me.Button12.UseVisualStyleBackColor = True
         '
         'latestUpdate
         '
@@ -7799,12 +7957,20 @@ Partial Class Main
         '
         Me.MadeINtextTableAdapter1.ClearBeforeFill = True
         '
+        'Progress_print_all
+        '
+        Me.Progress_print_all.Location = New System.Drawing.Point(1134, 23)
+        Me.Progress_print_all.Name = "Progress_print_all"
+        Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
+        Me.Progress_print_all.TabIndex = 100
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1276, 881)
+        Me.ClientSize = New System.Drawing.Size(1310, 881)
+        Me.Controls.Add(Me.Progress_print_all)
         Me.Controls.Add(Me.Report_Tab)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(1523, 1500)
@@ -8546,4 +8712,18 @@ Partial Class Main
     Friend WithEvents btn_Export_Labelling_fuji As Button
     Friend WithEvents btn_export_BOM_Fuji As Button
     Friend WithEvents btn_log As Button
+    Friend WithEvents Label191 As Label
+    Friend WithEvents Label188 As Label
+    Friend WithEvents Label190 As Label
+    Friend WithEvents Label186 As Label
+    Friend WithEvents Label189 As Label
+    Friend WithEvents Label184 As Label
+    Friend WithEvents logo6value As TextBox
+    Friend WithEvents logo5value As TextBox
+    Friend WithEvents logo4value As TextBox
+    Friend WithEvents Label192 As Label
+    Friend WithEvents txt_SO_item As TextBox
+    Friend WithEvents Button12 As Button
+    Friend WithEvents btn_delete_dot_sq00 As Button
+    Friend WithEvents Progress_print_all As ProgressBar
 End Class

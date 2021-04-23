@@ -1,0 +1,33 @@
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\SDK.NET.Interface.dll
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\bin\Release\SDK.NET.Interface.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Log_form.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Loading_Form.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Printing.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.pdb
