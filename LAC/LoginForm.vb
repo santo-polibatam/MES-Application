@@ -1,9 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class LoginForm
-
-    Public strHostName As String = System.Net.Dns.GetHostName()
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Call Main.koneksi_db()
 
@@ -20,9 +17,8 @@ Public Class LoginForm
                 MsgBox("Invalid Username Or Password")
             Else
                 Main.role = textboxusername.Text
-                Me.Hide()
                 Main.Show()
-
+                Me.Hide()
             End If
 
             If Main.role = "admin" Then
@@ -72,7 +68,6 @@ Public Class LoginForm
         Form2.Hide()
         Me.CenterToScreen()
         Me.Label3.Text = "V " & Application.ProductVersion
-        Me.Text = "LoginForm - " & strHostName
     End Sub
 
     Private Sub Textboxusername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles textboxusername.KeyPress

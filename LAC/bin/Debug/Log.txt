@@ -1,0 +1,146 @@
+﻿Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3487
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability()
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability()
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.InvalidCastException: Conversion from string "dd/MM/yyyy" to type 'Integer' is not valid. ---> System.FormatException: Input string was not in a correct format.
+   at Microsoft.VisualBasic.CompilerServices.Conversions.ParseDouble(String Value, NumberFormatInfo NumberFormat)
+   at Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger(String Value)
+   --- End of inner exception stack trace ---
+   at Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger(String Value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3474
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3474
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at LAC.Main.updateTraceability()
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3474
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3474
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3471
+Update Trecebility:System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.IFormatProvider'.
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3472
+Update Trecebility:System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at LAC.Main.updateTraceability() in C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\LAC.vb:line 3475

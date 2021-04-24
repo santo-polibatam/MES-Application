@@ -875,5 +875,3 @@ C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\M
 C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.xml
 C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.pdb
 C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Log_form.resources
-C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Loading_Form.resources
-C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Printing.resources
