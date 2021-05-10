@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
@@ -33,3 +34,40 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.0.2.30")>
 <Assembly: AssemblyFileVersion("1.0.2.30")>
+=======
+﻿Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("MES APP")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("LAC")>
+<Assembly: AssemblyCopyright("Copyright ©  2019")>
+<Assembly: AssemblyTrademark("")>
+
+<Assembly: ComVisible(False)>
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("3ce8cbf5-a334-4f93-8e54-f3ed55a72076")>
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")> 
+
+<Assembly: AssemblyVersion("1.0.2.30")>
+<Assembly: AssemblyFileVersion("1.0.2.30")>
+>>>>>>> 5d2bc5751623f3413e8c53f892b2d6831328829d
