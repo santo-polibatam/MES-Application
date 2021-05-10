@@ -463,8 +463,7 @@ Err_btnExit2_Click:
         cbx_front.Enabled = True
         cbx_Carton.Enabled = True
 
-        'tools
-        btn_log.Visible = True
+
 
     End Sub
 
@@ -504,9 +503,6 @@ Err_btnExit2_Click:
         cbx_outside.Enabled = False
         cbx_front.Enabled = False
         cbx_Carton.Enabled = False
-
-        'tools
-        btn_log.Visible = False
 
     End Sub
 
@@ -10198,7 +10194,7 @@ set @abc = (SELECT TOP (1) [Date]
         ExportToExcel("SELECT * FROM MasterFujiLabelling")
     End Sub
 
-    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles btn_log.Click
+    Private Sub Button12_Click_1(sender As Object, e As EventArgs)
         Log_form.Show()
     End Sub
 

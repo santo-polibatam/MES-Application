@@ -172,7 +172,6 @@ Partial Class Main
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.btn_log = New System.Windows.Forms.Button()
         Me.SaveData = New System.Windows.Forms.TextBox()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Fuji_QR_Product_Label = New System.Windows.Forms.TextBox()
@@ -2346,7 +2345,6 @@ Partial Class Main
         '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.btn_log)
         Me.GroupBox6.Controls.Add(Me.SaveData)
         Me.GroupBox6.Controls.Add(Me.MaskedTextBox1)
         Me.GroupBox6.Controls.Add(Me.Fuji_QR_Product_Label)
@@ -2373,16 +2371,6 @@ Partial Class Main
         Me.GroupBox6.Size = New System.Drawing.Size(1063, 145)
         Me.GroupBox6.TabIndex = 41
         Me.GroupBox6.TabStop = False
-        '
-        'btn_log
-        '
-        Me.btn_log.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_log.Location = New System.Drawing.Point(414, 14)
-        Me.btn_log.Name = "btn_log"
-        Me.btn_log.Size = New System.Drawing.Size(30, 23)
-        Me.btn_log.TabIndex = 92
-        Me.btn_log.Text = "Log"
-        Me.btn_log.UseVisualStyleBackColor = True
         '
         'SaveData
         '
@@ -8711,7 +8699,6 @@ Partial Class Main
     Friend WithEvents PO_Group_BOX As TextBox
     Friend WithEvents btn_Export_Labelling_fuji As Button
     Friend WithEvents btn_export_BOM_Fuji As Button
-    Friend WithEvents btn_log As Button
     Friend WithEvents Label191 As Label
     Friend WithEvents Label188 As Label
     Friend WithEvents Label190 As Label
