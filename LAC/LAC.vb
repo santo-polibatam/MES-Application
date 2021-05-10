@@ -204,7 +204,18 @@ Err_btnExit2_Click:
 
     End Sub
 
+    Private Sub loading(ByVal a)
+        Loading_Form.Loading_Progress.Value = a
+        Application.DoEvents()
+    End Sub
+
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        LoginForm.Hide()
+        Loading_Form.Show()
+        Me.Hide()
+
+        loading(10)
 
         baca_chkbox_last()
 
@@ -222,6 +233,7 @@ Err_btnExit2_Click:
         Me.UsersTableAdapter.Fill(Me.SGRAC_MESDataSet.Users)
         'TODO: This line of code loads data into the 'SGRAC_MESDataSet.Workstations' table. You can move, or remove it, as needed.
         Me.WorkstationsTableAdapter.Fill(Me.SGRAC_MESDataSet.Workstations)
+
         'Call koneksi_db()
         'Try
         '    Dim sc_workstations As New SqlCommand("select * from Workstations order by wkName asc", koneksi)
@@ -256,6 +268,7 @@ Err_btnExit2_Click:
 
         'workstation.Text = My.Settings.WorkStationBind
 
+        loading(20)
 
         'santo
         InitializePrintEngine()
@@ -268,10 +281,12 @@ Err_btnExit2_Click:
         label1_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "adaptation.nlbl")
         label2_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "testReport.nlbl")
         label3_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "COC.nlbl")
-
+        loading(30)
         label4_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "Loose2.nlbl")
         label5_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "Components.nlbl")
         label6_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "Loose2.nlbl")
+
+        loading(40)
 
         'Fuji
         label_side_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "Fuji Product Label side label.nlbl")
@@ -281,6 +296,7 @@ Err_btnExit2_Click:
         label_carton_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "Fuji Carton Label.nlbl")
         label_out_side_printer = PrintEngineFactory.PrintEngine.OpenLabel(appPath & "\Label\" & "Fuji Outside Grouping Label.nlbl")
 
+        loading(50)
 
         printers = PrintEngineFactory.PrintEngine.Printers
         'filling up list of comboBox
@@ -300,6 +316,8 @@ Err_btnExit2_Click:
             cbx_fuji_side_label.Items.Add(printers.Item(i).Name)
 
         Next
+
+        loading(60)
         'show list printer
         If role = "admin" Then
             listprinter.Enabled = True
@@ -359,6 +377,8 @@ Err_btnExit2_Click:
         scanComponents = False
         CounterItems.Text = 1
 
+        loading(70)
+
         'show check box
         en_print.Checked = My.Settings.checkbox
 
@@ -374,12 +394,19 @@ Err_btnExit2_Click:
 
         DGV_MasterPlantCode()
 
+        loading(90)
+
         Report_Tab.SelectedIndex = 3
         Report_Tab.SelectedIndex = 2
         Report_Tab.SelectedIndex = 1
         Report_Tab.SelectedIndex = 0
 
         workstationFuji.Text = ""
+
+        loading(100)
+
+        Loading_Form.Close()
+        Me.Show()
 
     End Sub
 
@@ -534,6 +561,9 @@ Err_btnExit2_Click:
       ,[logo1]
       ,[logo2]
       ,[logo3]
+      ,[logo4]
+      ,[logo5]
+      ,[logo6]
       ,[productImage] from NSXMasterdata")
         Form1.Show()
     End Sub
@@ -546,7 +576,8 @@ Err_btnExit2_Click:
       ,[user]
       ,[From]
       ,[To]
-      ,[QRCodeFuji] from printingRecord")
+      ,[QRCodeFuji]
+      ,[Data] from printingRecord")
         Form1.Show()
     End Sub
 
@@ -963,8 +994,6 @@ Err_btnExit2_Click:
         workstation3.SelectedItem = workstation.SelectedItem
         workstationFuji.SelectedItem = workstation.SelectedItem
 
-
-
         Report_Tab.SelectedIndex = 3
         Report_Tab.SelectedIndex = 2
         Report_Tab.SelectedIndex = 1
@@ -973,10 +1002,7 @@ Err_btnExit2_Click:
         'Select Product Label printer
         workstation_event()
 
-
     End Sub
-
-
 
     Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles workstation2.SelectedIndexChanged
         workstation.SelectedItem = workstation2.SelectedItem
@@ -1271,6 +1297,8 @@ Err_btnExit2_Click:
 
         'select label
 
+
+
     End Sub
 
     Sub clean() 'Clean data 'sudah sesuai dengan VBA
@@ -1462,6 +1490,10 @@ Err_btnExit2_Click:
         Me.logo1value.Text = ""
         Me.logo2value.Text = ""
         Me.logo3value.Text = ""
+
+        Me.logo3value.Text = ""
+        Me.logo4value.Text = ""
+        Me.logo5value.Text = ""
 
         Me.AutoPrintProductLabelFrom.Text = 0
         Me.AutoPrintPackagingLabelFrom.Text = 0
@@ -1854,12 +1886,16 @@ Err_btnExit2_Click:
         AutoPrintProductLabelFrom.Text = "0"
         AutoPrintPackagingLabelFrom.Text = "0"
 
+        'If header.Text.Contains("BW") Then CheckProductLabelPrinting.Checked = False
+
     End Sub
 
     Private Sub cek_fuji_barcode()
         SaveData.Text = CompToQuality.Text
         'Dim phrase As String = SaveData.Text.Substring(SaveData.Text.IndexOf(" ") + 1, SaveData.Text.Length - SaveData.Text.IndexOf(" "))
         Dim a As Integer = SaveData.Text.IndexOf(" ")
+        Dim idx_ref As Integer = SaveData.Text.IndexOf("f=")
+        Dim idx_sn As Integer = SaveData.Text.IndexOf("n=TC")
         Dim b As Integer = SaveData.Text.Length
         Dim p As String = SaveData.Text.Substring(a + 1, b - a - 1)
         p = p.Replace(" ", "")
@@ -1873,6 +1909,20 @@ Err_btnExit2_Click:
             Dim QrCodeFujiSideLabel = header.Text & "/sn=SG" & p 'Microsoft.VisualBasic.Right(SaveData.Text, 13)
             Fuji_QR_Product_Label.Text = QrCodeFujiSideLabel
             CompToQuality.Text = SaveData.Text.Substring(0, SaveData.Text.IndexOf(" "))
+
+        ElseIf CompToQuality.Text.Contains("http://go2se.com/ref") Then
+            p = SaveData.Text.Substring(idx_sn + 1, b - idx_sn - 1)
+            p = p.Replace("=TC", "")
+            MsgBox(p)
+            Dim QrCodeFujiSideLabel = header.Text & "/sn=SG" & p 'Microsoft.VisualBasic.Right(SaveData.Text, 13)
+            Fuji_QR_Product_Label.Text = QrCodeFujiSideLabel
+
+            Dim s As String = SaveData.Text
+            Dim i As Integer = idx_ref
+            Dim f As String = s.Substring(i + 2, s.IndexOf("/s", i + 1) - i - 2)
+            'MsgBox(f)
+            CompToQuality.Text = f
+
         End If
     End Sub
 
@@ -2284,6 +2334,8 @@ Err_btnExit2_Click:
             If ds.Tables(0).Rows.Count > 0 Then
 
                 header.Text = ds.Tables(0).Rows(0).Item("peggedreqt").ToString
+                'tambahan biar fuji tidak print
+                If header.Text.Contains("BW") Then CheckProductLabelPrinting.Checked = False
 
                 'If variable_Q = 0 Then
                 If InStr(header.Text, "CSC") <> 0 Then
@@ -2484,6 +2536,8 @@ Err_btnExit2_Click:
                     'DoCmd.RunCommand acCmdWindowHide
 
                 End If
+                ''remove
+                'If header.Text.Contains("BW") Then CheckProductLabelPrinting.Checked = False
 
             Else
                 If hasnotbeenfound = False Then
@@ -2607,13 +2661,14 @@ Err_btnExit2_Click:
                 Exit Function
             Else
                 PPPackingdoyouwanttoreprintit = 1
-                cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to]) values(@pp,@date,@time,@user,@from,@to)", Main.koneksi)
+                cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data]) values(@pp,@date,@time,@user,@from,@to,@data)", Main.koneksi)
                 cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
                 cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
                 cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
                 cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
                 cmd.Parameters.AddWithValue("@from", Me.StartLabel.Text)
                 cmd.Parameters.AddWithValue("@to", Me.quantityLabel.Text)
+                cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
                 cmd.ExecuteNonQuery()
 
                 checkDuplicatdePP = False
@@ -3459,7 +3514,15 @@ Err_btnExit2_Click:
         dateCode2 = Date.Now.Year & "-W" & VBAWeekNum & "-" & DateAndTime.Weekday(DateTime.Now, vbMonday)
 
     End Function
+    'untuk LA4202
+    Function dateCode3()
+        Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
 
+        If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
+
+        dateCode3 = Date.Now.Year & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
+
+    End Function
 
     Sub updateTraceability()
         Try
@@ -3469,15 +3532,20 @@ Err_btnExit2_Click:
             Dim adapter2 = New SqlDataAdapter(sql2a, Main.koneksi)
             adapter2.Fill(ds2)
 
-            Dim strArrGiDate() As String
-            Dim stringGiDate As String = ds2.Tables(0).Rows(0).Item("GI date").ToString()
-            strArrGiDate = stringGiDate.Split(".")
-            Dim CombineGiDate As String = strArrGiDate(1) + "." + strArrGiDate(0) + "." + strArrGiDate(2)
+            'Problem save data
+            'Dim strArrGiDate() As String
+            'Dim stringGiDate As String = ds2.Tables(0).Rows(0).Item("GI date").ToString()
+            'strArrGiDate = stringGiDate.Split(".")
+            'Dim CombineGiDate As String = strArrGiDate(1) + "." + strArrGiDate(0) + "." + strArrGiDate(2)
 
-            Dim strArrSchFini() As String
-            Dim stringSchFini As String = ds2.Tables(0).Rows(0).Item("Scheduled finish").ToString()
-            strArrSchFini = stringSchFini.Split(".")
-            Dim CombineSchFini As String = strArrSchFini(1) + "." + strArrSchFini(0) + "." + strArrSchFini(2)
+            'Dim CombineGiDate As String = ds2.Tables(0).Rows(0).Item("GI date").ToString()
+
+            'Dim strArrSchFini() As String
+            'Dim stringSchFini As String = ds2.Tables(0).Rows(0).Item("Scheduled finish").ToString()
+            'strArrSchFini = stringSchFini.Split(".")
+            'Dim CombineSchFini As String = strArrSchFini(1) + "." + strArrSchFini(0) + "." + strArrSchFini(2)
+
+            'Dim CombineSchFini As String = ds2.Tables(0).Rows(0).Item("Scheduled finish").ToString()
 
             Dim sql = "INSERT INTO [dbo].[ProductionOrders](
             [GI Date]
@@ -3496,7 +3564,7 @@ Err_btnExit2_Click:
             ,[Item]
             ,[Entity]) 
             values(
-            cast('" & Convert.ToDateTime(CombineGiDate).ToString("MM/dd/yyyy") & "' as datetime)
+            '" & ds2.Tables(0).Rows(0).Item("GI date").ToString() & "'
             ,'" & ds2.Tables(0).Rows(0).Item("order") & "'
             ,'" & CounterItems.Text & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Item quantity") & "'
@@ -3504,7 +3572,7 @@ Err_btnExit2_Click:
             ,'" & ds2.Tables(0).Rows(0).Item("range") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Customer") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("City") & "'
-            ,cast('" & Convert.ToDateTime(CombineSchFini).ToString("MM/dd/yyyy") & "' as datetime)
+            ,'" & ds2.Tables(0).Rows(0).Item("Scheduled finish").ToString() & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Material") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Description") & "'
             ,'" & ds2.Tables(0).Rows(0).Item("Name 1") & "'
@@ -3514,6 +3582,9 @@ Err_btnExit2_Click:
 
             Dim ter = New SqlDataAdapter(sql, Main.koneksi)
             ter.SelectCommand.ExecuteNonQuery()
+
+            'cast('" & Convert.ToDateTime(CombineGiDate).ToString("MM/dd/yyyy") & "' as datetime)
+            ',cast('" & Convert.ToDateTime(CombineSchFini).ToString("MM/dd/yyyy") & "' as datetime)
 
             'If ter.SelectCommand.ExecuteNonQuery() Then
             '    MessageBox.Show("Berhasil")
@@ -3574,7 +3645,8 @@ Err_btnExit2_Click:
             adapters2 = New SqlDataAdapter(queryschlate, Main.koneksi)
             adapters2.SelectCommand.ExecuteNonQuery()
         Catch ex As Exception
-            Log_data("Update Trecebility:" & ex.ToString)
+            'MessageBox.Show(ex.ToString)
+            'Log_data("Update Trecebility:" & ex.ToString)
         End Try
     End Sub
 
@@ -3683,6 +3755,8 @@ Err_btnExit2_Click:
 
     Sub UpdateScanRecords()
         Try
+
+            If header.Text.Contains("BW") Then Btn_Fuji_Side_label_Click(sender, e)
             'Dim sql As String
             Dim ds As New DataSet
             Dim ds2 As New DataSet
@@ -3733,7 +3807,7 @@ Err_btnExit2_Click:
                     Dim adapterInsert = New SqlDataAdapter(queryInsert, Main.koneksi)
                     adapterInsert.SelectCommand.ExecuteNonQuery()
                     'MessageBox.Show("Print Fuji Side Label")
-                    Btn_Fuji_Side_label_Click(sender, e)
+                    'Btn_Fuji_Side_label_Click(sender, e)
                 End If
             End If
 
@@ -3772,6 +3846,7 @@ Err_btnExit2_Click:
 loncat:
             Me.testSO.Text = ds.Tables(0).Rows(0).Item("SO no").ToString
             Me.testSOitem.Text = ds.Tables(0).Rows(0).Item("Item").ToString
+            Me.txt_SO_item.Text = ds.Tables(0).Rows(0).Item("Item").ToString
             Me.testMaterial.Text = ds.Tables(0).Rows(0).Item("Material").ToString
             If InStr(Me.header.Text, "CSC") <> 0 Or InStr(Me.header.Text, "ATS") <> 0 Then
                 Me.testQuantity.Text = q
@@ -4065,6 +4140,7 @@ loncat:
             'Fill the form for packaging label
             Me.SO.Text = ds.Tables(0).Rows(0).Item("SO no").ToString
             Me.SO_item.Text = ds.Tables(0).Rows(0).Item("Item").ToString
+            Me.txt_SO_item.Text = ds.Tables(0).Rows(0).Item("Item").ToString
             Me.Material.Text = ds.Tables(0).Rows(0).Item("Material").ToString
             If InStr(Me.header.Text, "CSC") <> 0 Or InStr(Me.header.Text, "ATS") <> 0 Then
                 Me.Quantity.Text = q
@@ -4340,6 +4416,16 @@ loncat:
             Me.logo2value.Text = ds2.Tables(0).Rows(0).Item("logo2").ToString
             Me.logo3value.Text = ds2.Tables(0).Rows(0).Item("logo3").ToString
 
+            'Try
+            Me.logo4value.Text = ds2.Tables(0).Rows(0).Item("logo4").ToString
+                Me.logo5value.Text = ds2.Tables(0).Rows(0).Item("logo5").ToString
+                Me.logo6value.Text = ds2.Tables(0).Rows(0).Item("logo6").ToString
+            'Catch ex As Exception
+            'Log_data("Logo :" & DateTime.Today.ToString & ex.ToString)
+            ' End Try
+
+
+
         Else
 
             adapter2 = New SqlDataAdapter("Select * FROM [labelSelectionTable] WHERE [range start] <= '" & Category & "' AND [range end] >= '" & Category & "'", Main.koneksi)
@@ -4389,6 +4475,15 @@ loncat:
                         Me.logo1value.Text = ds3.Tables(0).Rows(0).Item("logo1").ToString
                         Me.logo2value.Text = ds3.Tables(0).Rows(0).Item("logo2").ToString
                         Me.logo3value.Text = ds3.Tables(0).Rows(0).Item("logo3").ToString
+
+                        'Try
+                        Me.logo4value.Text = ds2.Tables(0).Rows(0).Item("logo4").ToString
+                            Me.logo5value.Text = ds2.Tables(0).Rows(0).Item("logo5").ToString
+                            Me.logo6value.Text = ds2.Tables(0).Rows(0).Item("logo6").ToString
+                        'Catch ex As Exception
+                        'Log_data("Logo :" & DateTime.Today.ToString & ex.ToString)
+                        'End Try
+
 
                     Else
                         Me.Picture2.Text = ds2.Tables(0).Rows(0).Item("productImage").ToString
@@ -4918,6 +5013,15 @@ loncat:
         label_printer.Variables("Logo2").SetValue(logo2value.Text)
         label_printer.Variables("Logo3").SetValue(logo3value.Text)
 
+        Try
+            label_printer.Variables("Logo4").SetValue(logo4value.Text)
+            label_printer.Variables("Logo5").SetValue(logo5value.Text)
+            label_printer.Variables("Logo6").SetValue(logo6value.Text)
+        Catch ex As Exception
+            'Log_data("Logo :" & DateTime.Today.ToString & ex.ToString)
+        End Try
+
+
         'compare Neutral L
         'Dim strList1 As List(Of String) = New List(Of String)(New String() {"47595", "47596", "47597", "LV847595", "LV847596", "LV847597"})
         'Dim Neutral As String
@@ -4973,6 +5077,23 @@ loncat:
 
         End Try
 
+        Try
+            label_printer.Variables("SQ00_item").SetValue(Convert.ToDecimal(txt_SO_item.Text).ToString("0000"))
+        Catch ex As Exception
+
+        End Try
+
+
+        Try
+            label_printer.Variables("SQ00_Description").SetValue(Me.testDescription.Text)
+        Catch ex As Exception
+
+        End Try
+        'Try
+        '    label_printer.Variables("DataMatrix").SetValue("SG" & dateCode3() & Convert.ToDecimal(CounterItems.Text).ToString("0000"))
+        'Catch ex As Exception
+
+        'End Try
 
     End Sub
 
@@ -5028,7 +5149,11 @@ loncat:
             If Convert.ToDecimal(quantityLabel.Text) >= Convert.ToDecimal(StartLabel.Text) Then
                 For a = Convert.ToDecimal(StartLabel.Text) To Convert.ToDecimal(quantityLabel.Text)
                     label_printer.Variables("CounterItems").SetValue(a.ToString)
+                    Try
+                        label_printer.Variables("DataMatrix").SetValue("SG" & dateCode3() & Convert.ToDecimal(a.ToString).ToString("0000"))
+                    Catch ex As Exception
 
+                    End Try
                     'printing with quantity 
                     Dim qty As Integer = 1
                     Try
@@ -5037,13 +5162,14 @@ loncat:
                         MsgBox("Printing Label Cancel " & ex.Message)
                     End Try
                 Next
-                cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to]) values(@pp,@date,@time,@user,@from,@to)", Main.koneksi)
+                cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data]) values(@pp,@date,@time,@user,@from,@to,@data)", Main.koneksi)
                 cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
                 cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
                 cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
                 cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
                 cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
                 cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
+                cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
                 cmd.ExecuteNonQuery()
             Else
                 MsgBox("The Component has not been Scanned !" & vbNewLine & "Pls Scan The Component First")
@@ -5403,6 +5529,7 @@ loncat:
     Public Const do_check As String = "{\rtf1\deff0{\fonttbl{\f0 Calibri;}{\f1 Times New Roman;}{\f2\fcharset2 Wingdings 2;}}{\colortbl ;\red0\green0\blue255 ;}{\*\defchp \f1}{\stylesheet {\ql\f1 Normal;}{\*\cs1\f1 Default Paragraph Font;}{\*\cs2\sbasedon1\f1 Line Number;}{\*\cs3\ul\f1\cf1 Hyperlink;}{\*\ts4\tsrowd\f1\ql\tscellpaddfl3\tscellpaddl108\tscellpaddfb3\tscellpaddfr3\tscellpaddr108\tscellpaddft3\tsvertalt\cltxlrtb Normal Table;}{\*\ts5\tsrowd\sbasedon4\f1\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\tscellpaddfl3\tscellpaddl108\tscellpaddfr3\tscellpaddr108\tsvertalt\cltxlrtb Table Simple 1;}}{\*\listoverridetable}\nouicompat\splytwnine\htmautsp\sectd\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pard\plain\ql{\field{\*\fldinst{\f1\fs32\cf0 SYMBOL 82 \\f ""Wingdings 2"" \\s 11}}{\fldrslt{\f2\fs22\cf0 R}}}\f1\par}"
     Public Const no_check As String = "{\rtf1\deff0{\fonttbl{\f0 Calibri;}{\f1 Times New Roman;}{\f2\fcharset2 Wingdings 2;}}{\colortbl ;\red0\green0\blue255 ;}{\*\defchp \f1}{\stylesheet {\ql\f1 Normal;}{\*\cs1\f1 Default Paragraph Font;}{\*\cs2\sbasedon1\f1 Line Number;}{\*\cs3\ul\f1\cf1 Hyperlink;}{\*\ts4\tsrowd\f1\ql\tscellpaddfl3\tscellpaddl108\tscellpaddfb3\tscellpaddfr3\tscellpaddr108\tscellpaddft3\tsvertalt\cltxlrtb Normal Table;}{\*\ts5\tsrowd\sbasedon4\f1\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\tscellpaddfl3\tscellpaddl108\tscellpaddfr3\tscellpaddr108\tsvertalt\cltxlrtb Table Simple 1;}}{\*\listoverridetable}\nouicompat\splytwnine\htmautsp\sectd\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pard\plain\ql{\field{\*\fldinst{\f1\cf0 SYMBOL 163 \\f ""Wingdings 2"" \\s 11}}{\fldrslt{\f2\fs22\cf0 \u163\'a3}}}\f1\par}"
     Private Sub Label2_setValue()
+        Application.DoEvents()
         'label2_printer.Variables("testQuantity").SetValue(testQuantity.Text)
         label2_printer.Variables("testQuantity").SetValue(Quantity.Text)
         label2_printer.Variables("StartTestQuantity").SetValue(StartTestQuantity.Text)
@@ -5717,9 +5844,10 @@ loncat:
             Exit Sub
         End If
 
+        progress_printing(30)
         'Set to Variable of NiceLabel
         Label2_setValue()
-
+        progress_printing(50)
         ' Dim a As Integer
         For a = Convert.ToDecimal(StartTestQuantity.Text) To Convert.ToDecimal(testQuantity.Text)
             'MsgBox(testPrintQty.SelectedItem)
@@ -5736,6 +5864,7 @@ loncat:
                 cmd.Parameters.AddWithValue("@from", Me.StartTestQuantity.Text)
                 cmd.Parameters.AddWithValue("@to", Me.testQuantity.Text)
                 cmd.ExecuteNonQuery()
+                progress_printing(90)
             Catch ex As Exception
                 MsgBox("Printing TEST Cancel " & ex.Message)
             End Try
@@ -5760,19 +5889,19 @@ loncat:
         '        MsgBox("Printing TEST Cancel " & ex.Message)
         '    End Try
         'Next
-
+        progress_printing(100)
     End Sub
     Public Const COC_SD_Main As String = "We hereby certify that the switch disconnector delivered (as listed below) are assembled and tested at Schneider Electric Logistics Asia Pte Ltd Adaptation Centre. We guarantee their conformity with Schneider Electric technical specification and with the standards and regulations for switch disconnector as per IEC 60947-3."
     Public Const COC_CB_Main As String = "We hereby certify that the air circuit breaker delivered (as listed below) are assembled and tested at Schneider Electric Logistics Asia Pte Ltd Adaptation Centre. We guarantee their conformity with Schneider Electric technical specification and with the standards and regulations for circuit breaker as per IEC 60947-2."
     Public Const COC_CB_foot As String = "The Air Circuit Breaker delivered:"
     Public Const COC_SD_foot As String = "The switch disconnector delivered:"
 
-    Public Sub Log_data(ByVal data As String)
-        Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter("Log.txt", True)
-        file.WriteLine(data)
-        file.Close()
-    End Sub
+    'Public Sub Log_data(ByVal data As String)
+    '    Dim file As System.IO.StreamWriter
+    '    file = My.Computer.FileSystem.OpenTextFileWriter("Log.txt", True)
+    '    file.WriteLine(data)
+    '    file.Close()
+    'End Sub
 
     Dim buka_packaging_tab As Integer
 
@@ -5788,13 +5917,13 @@ loncat:
         Try
             label3_printer.Variables("StartTestQuantity").SetValue(StartTestQuantity.Text)
         Catch ex As Exception
-            Log_data("COC Start Qty: " & ex.ToString)
+            'Log_data("COC Start Qty: " & ex.ToString)
         End Try
 
         Try
             label3_printer.Variables("testQuantity").SetValue(Quantity.Text)
         Catch ex As Exception
-            Log_data("COC Error testQty: " & ex.ToString)
+            'Log_data("COC Error testQty: " & ex.ToString)
         End Try
 
 
@@ -5841,7 +5970,7 @@ loncat:
 
             End If
         Catch ex As Exception
-            Log_data("COC COC Data in 2: " & ex.ToString)
+            'Log_data("COC COC Data in 2: " & ex.ToString)
         End Try
         Try
             label3_printer.Variables("Adress").SetValue(testCustomer.Text)
@@ -5855,7 +5984,7 @@ loncat:
             label3_printer.Variables("tes SOitem").SetValue(testSOitem.Text)
             label3_printer.Variables("testCustPOitem").SetValue(testCustPOitem.Text)
         Catch ex As Exception
-            Log_data("COC last: " & ex.ToString)
+            'Log_data("COC last: " & ex.ToString)
         End Try
 
     End Sub
@@ -5943,6 +6072,14 @@ loncat:
         label4_printer.Variables("Logo1").SetValue(logo1value.Text)
         label4_printer.Variables("Logo2").SetValue(logo2value.Text)
         label4_printer.Variables("Logo3").SetValue(logo3value.Text)
+
+        Try
+            label_printer.Variables("Logo4").SetValue(logo4value.Text)
+            label_printer.Variables("Logo5").SetValue(logo5value.Text)
+            label_printer.Variables("Logo6").SetValue(logo6value.Text)
+        Catch ex As Exception
+            'Log_data("Logo :" & DateTime.Today.ToString & ex.ToString)
+        End Try
 
 
 
@@ -6161,16 +6298,30 @@ loncat:
             MsgBox("Label 6 - " & ex.Message)
         End Try
     End Sub
+
+    Private Sub progress_printing(ByVal a As Integer)
+        If a > 0 And a < 100 Then
+            Printing.Show()
+        Else
+            Printing.Close()
+        End If
+
+        Printing.ProgressBar1.Value = a
+        Application.DoEvents()
+    End Sub
+
     Private Sub Command191_Click(sender As Object, e As EventArgs) Handles Command191.Click
-        Report_Tab.SelectedIndex = 1
-        Report_Tab.SelectedIndex = 2
+        'Report_Tab.SelectedIndex = 1
+        'Report_Tab.SelectedIndex = 2
+
+        progress_printing(30)
 
         'Set to Variable of NiceLabel
         'label3_printer.Variables("Name").SetValue("333333")
         label3_setvalue()
         'printing with quantity 
         'Dim qty As Integer = 1
-
+        progress_printing(70)
         ' Dim a As Integer
         For a = Convert.ToDecimal(StartTestQuantity.Text) To Convert.ToDecimal(testQuantity.Text)
             'MsgBox(testPrintQty.SelectedItem)
@@ -6179,11 +6330,12 @@ loncat:
             Try
                 label3_printer.Variables("StartTestQuantity").SetValue(a)
             Catch ex As Exception
-                Log_data("COC StartTestQTY : " & ex.ToString)
+                'Log_data("COC StartTestQTY : " & ex.ToString)
             End Try
 
             Try
                 label3_printer.Print(COCprintQty.Text)
+                progress_printing(90)
                 cmd = New SqlCommand("insert into printingRecordCOC([pp],[date],[time],[user]) values(@pp,@date,@time,@user)", Main.koneksi)
                 cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
                 cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
@@ -6191,9 +6343,11 @@ loncat:
                 cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
                 cmd.ExecuteNonQuery()
             Catch ex As Exception
-                MsgBox("Printing COC Cancel " & ex.Message)
+                'abc
+                'MsgBox("Printing COC Cancel " & ex.Message)
             End Try
         Next
+        progress_printing(100)
     End Sub
 
     Private Sub Command31_Click(sender As Object, e As EventArgs) Handles Command31.Click
@@ -6619,6 +6773,12 @@ loncat:
 
             End Try
 
+            Try
+                label_printer.Variables("DataMatrix").SetValue("SG" & dateCode3() & Convert.ToDecimal(AutoPrintProductLabelFrom.Text).ToString("0000"))
+            Catch ex As Exception
+
+            End Try
+
             'label_printer.Variables("CounterItems").SetValue(CounterItems.Text)
             'Try
 
@@ -6638,7 +6798,7 @@ loncat:
 
             'Save to DB every printing
             Try
-                Dim cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[QRCodeFuji]) values(@pp,@date,@time,@user,@from,@to,@QRCodeFuji)", Main.koneksi)
+                Dim cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[QRCodeFuji],[Data]) values(@pp,@date,@time,@user,@from,@to,@QRCodeFuji,@data)", Main.koneksi)
                 cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
                 cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
                 cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
@@ -6646,6 +6806,7 @@ loncat:
                 cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
                 cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
                 cmd.Parameters.AddWithValue("@QRCodeFuji", Me.Fuji_QR_Product_Label.Text)
+                cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
                 cmd.ExecuteNonQuery()
             Catch ex As Exception
 
@@ -6806,6 +6967,8 @@ loncat:
                     MsgBox("Upload SQOO Fail " & ex.Message)
                 End Try
             End Using
+
+            btn_delete_dot_sq00_Click(sender, e)
         End If
     End Sub
 
@@ -6860,6 +7023,17 @@ loncat:
                     MsgBox("Add COOIS Successed !")
                 Catch ex As Exception
                     MsgBox("Add COOIS Fail " & ex.Message)
+                End Try
+
+                Try
+                    Dim Sql2 = "UPDATE openOrders set [Reqmts qty] = REPLACE([Reqmts qty],'.','') WHERE [Reqmts qty] LIKE '%.%';"
+                    Dim insert2 = New SqlCommand(Sql2, Main.koneksi)
+                    'insert2.ExecuteNonQuery()
+
+                    Dim afected As Integer = insert2.ExecuteNonQuery()
+                    If afected > 0 Then MsgBox("Deleting '.' Succeed, Rows Affected:" & afected.ToString)
+                Catch ex As Exception
+                    MsgBox("Deleting '.' Failed !")
                 End Try
             End Using
         End If
@@ -7897,7 +8071,7 @@ Deletecomponent_Error:
             If ds.Tables(0).Rows.Count > 0 Then
                 ' MsgBox(ds.Tables(0).Rows(0).Item("category").ToString)
                 If ds.Tables(0).Rows(0).Item("category").ToString = "OF" Or ds.Tables(0).Rows(0).Item("category").ToString = "OF Individual" Then
-                    jmlOF.Text = (CInt(jmlOF.Text) + CInt(ds2.Tables(0).Rows(i).Item("Reqmts qty").ToString))
+                    jmlOF.Text = (CInt(jmlOF.Text) + CInt(ds2.Tables(0).Rows(i).Item("Reqmts qty")))
                 End If
             End If
         Next
@@ -8168,6 +8342,13 @@ set @abc = (SELECT TOP (1) [Date]
             'label_printer.Variables("label13").SetValue(Me.boxQty.Text)
             label_printer.Variables("label13").SetValue("1")
             label_printer.Variables("CounterItems").SetValue(i)
+
+            Try
+                label_printer.Variables("DataMatrix").SetValue("SG" & dateCode3() & Convert.ToDecimal(i.ToString).ToString("0000"))
+            Catch ex As Exception
+
+            End Try
+
             Dim qty As Integer = 1
             Try
                 label_printer.Print(qty)
@@ -8181,6 +8362,12 @@ set @abc = (SELECT TOP (1) [Date]
         ' label_printer.Variables("label13").SetValue(Convert.ToDecimal(Me.Quantity.Text) - PrintCount)
         label_printer.Variables("label13").SetValue("1")
         label_printer.Variables("CounterItems").SetValue(i)
+
+        Try
+            label_printer.Variables("DataMatrix").SetValue("SG" & dateCode3() & Convert.ToDecimal(i.ToString).ToString("0000"))
+        Catch ex As Exception
+
+        End Try
 
         Try
             label_printer.Print(1)
@@ -8667,8 +8854,9 @@ set @abc = (SELECT TOP (1) [Date]
         Dim tampungSplit As String = ""
         If e.KeyData = Keys.Enter Or e.KeyData = 9 Then
             'santo tambah
-            If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Then cek_fuji_barcode()
-
+            'If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Then cek_fuji_barcode()
+            If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Or Me.CompToQuality.Text.Length = 48 Then cek_fuji_barcode()
+            'abcde
             If Active_Quality_issue.Checked = True Then
 
                 'mungkin salah
@@ -9352,6 +9540,8 @@ set @abc = (SELECT TOP (1) [Date]
                         adapter3 = New SqlDataAdapter(sqlCounterItemsFuji, Main.koneksi)
                         adapter3.Fill(ds3)
                         CounterItemsFuji.Text = ds3.Tables(0).Rows.Count
+
+                        ScanLabel.Text = ""
                     Else
                         MessageBox.Show("This PP not Fuji")
                     End If
@@ -9371,6 +9561,8 @@ set @abc = (SELECT TOP (1) [Date]
         'edit santo
         If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And (Len(Me.ScanLabel.Text) >= 33 Or Len(Me.ScanLabel.Text) >= 29) Then
             'If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And Len(Me.ScanLabel.Text) >= 33 Then
+            'ScanLabel.Text = ScanLabel.Text.Replace(Keys.Tab, "")
+
             Dim SplitData = Microsoft.VisualBasic.Left(Me.ScanLabel.Text, 14)
             Dim sql As String = "select ComponentsFuji.[Order], ComponentsFuji.[RefFuji],ComponentsFuji.[Check Components],
             MasterFujiLabelling.QRFrontLabelNumber,MasterFujiLabelling.QRRotaryHandleNumber,MasterFujiLabelling.TripUnitLabelNumber from ComponentsFuji, MasterFujiLabelling where 
@@ -9424,9 +9616,11 @@ set @abc = (SELECT TOP (1) [Date]
                         btn_carton_print_Click(sender, e)
 
                         'MessageBox.Show("Print 3 Label")
+                        ScanLabel2.Enabled = True
+                        ScanLabel2.Text = ""
                         ScanLabel2.Select()
                         ScanLabel.Enabled = False
-                        ScanLabel2.Enabled = True
+
 
                         'this textbox for sidelabel
                         QRSideLabel.Text = ScanLabel.Text
@@ -9443,9 +9637,11 @@ set @abc = (SELECT TOP (1) [Date]
                     If ds2.Tables(0).Rows.Count > 0 Then
                         If ds2.Tables(0).Rows(0).Item("Check Components").ToString() = "0" Or ds2.Tables(0).Rows(1).Item("Check Components").ToString() = "0" Or ds2.Tables(0).Rows(2).Item("Check Components").ToString() = "0" Then
                             Refresh_DGV_Fuji_2()
+                            ScanLabel2.Enabled = True
+                            ScanLabel2.Text = ""
                             ScanLabel2.Select()
                             ScanLabel.Enabled = False
-                            ScanLabel2.Enabled = True
+
                         Else
                             MessageBox.Show("All Labels Have been Scan!")
                         End If
@@ -9876,6 +10072,7 @@ set @abc = (SELECT TOP (1) [Date]
             Fuji_side_SetValue()
             If qty = 0 Then qty = 1
             label_side_printer.Print(qty)
+            'updateTraceability()
         Catch ex As Exception
             MsgBox("Print Failed" & ex.ToString)
         End Try
@@ -10003,5 +10200,37 @@ set @abc = (SELECT TOP (1) [Date]
 
     Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles btn_log.Click
         Log_form.Show()
+    End Sub
+
+    Private Sub Button12_Click_2(sender As Object, e As EventArgs) Handles Button12.Click
+        Try
+            Dim Sql2 = "UPDATE openOrders set [Reqmts qty] = REPLACE([Reqmts qty],'.','') WHERE [Reqmts qty] LIKE '%.%';"
+            Dim insert2 = New SqlCommand(Sql2, Main.koneksi)
+            'insert2.ExecuteNonQuery()
+
+            Dim afected As Integer = insert2.ExecuteNonQuery()
+            If afected > 0 Then MsgBox("Deleting '.' Succeed, Rows Affected:" & afected.ToString)
+        Catch ex As Exception
+            MsgBox("Deleting '.' Failed !")
+        End Try
+    End Sub
+
+    Private Sub btn_delete_dot_sq00_Click(sender As Object, e As EventArgs) Handles btn_delete_dot_sq00.Click
+        Try
+            Dim Sql2 = "UPDATE PPList set [Item quantity] = REPLACE([Item quantity],'.','') WHERE [Item quantity] LIKE '%.%';"
+            Dim insert2 = New SqlCommand(Sql2, Main.koneksi)
+            'insert2.ExecuteNonQuery()
+
+            Dim afected As Integer = insert2.ExecuteNonQuery()
+            If afected > 0 Then MsgBox("Deleting '.' Succeed, Rows Affected:" & afected.ToString)
+        Catch ex As Exception
+            MsgBox("Deleting '.' Failed !")
+        End Try
+    End Sub
+
+
+    Private Sub print_progress(ByVal a As Integer)
+        Progress_print_all.Value = a
+        Application.DoEvents()
     End Sub
 End Class

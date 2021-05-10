@@ -875,3 +875,38 @@ C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\M
 C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.xml
 C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.pdb
 C:\Users\SESA434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Log_form.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Loading_Form.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.Printing.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\MES APP.exe.config
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\MES APP.pdb
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\SDK.NET.Interface.dll
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\bin\Debug\SDK.NET.Interface.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.vbprojAssemblyReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.vbproj.ResolveComReference.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Export_to_Excel.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Form1.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Form2.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Log_form.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Loading_Form.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Input_BoX.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Main.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.LoginForm.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Resources.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Form_preview.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Printer_Setting.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Printing.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.Progress.resources
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.vbproj.GenerateResource.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.vbproj.CoreCompileInputs.cache
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\MES APP.exe.manifest
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\MES APP.application
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\LAC.vbproj.CopyComplete
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\MES APP.exe
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\MES APP.xml
+C:\Users\sesa434392\Box\SANTO\VB Program\Program\git\MES-Application-main\LAC\obj\Debug\MES APP.pdb
