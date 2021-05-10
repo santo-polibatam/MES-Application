@@ -1297,6 +1297,8 @@ Err_btnExit2_Click:
 
         'select label
 
+
+
     End Sub
 
     Sub clean() 'Clean data 'sudah sesuai dengan VBA
@@ -1884,12 +1886,16 @@ Err_btnExit2_Click:
         AutoPrintProductLabelFrom.Text = "0"
         AutoPrintPackagingLabelFrom.Text = "0"
 
+        'If header.Text.Contains("BW") Then CheckProductLabelPrinting.Checked = False
+
     End Sub
 
     Private Sub cek_fuji_barcode()
         SaveData.Text = CompToQuality.Text
         'Dim phrase As String = SaveData.Text.Substring(SaveData.Text.IndexOf(" ") + 1, SaveData.Text.Length - SaveData.Text.IndexOf(" "))
         Dim a As Integer = SaveData.Text.IndexOf(" ")
+        Dim idx_ref As Integer = SaveData.Text.IndexOf("f=")
+        Dim idx_sn As Integer = SaveData.Text.IndexOf("n=TC")
         Dim b As Integer = SaveData.Text.Length
         Dim p As String = SaveData.Text.Substring(a + 1, b - a - 1)
         p = p.Replace(" ", "")
@@ -1903,6 +1909,20 @@ Err_btnExit2_Click:
             Dim QrCodeFujiSideLabel = header.Text & "/sn=SG" & p 'Microsoft.VisualBasic.Right(SaveData.Text, 13)
             Fuji_QR_Product_Label.Text = QrCodeFujiSideLabel
             CompToQuality.Text = SaveData.Text.Substring(0, SaveData.Text.IndexOf(" "))
+
+        ElseIf CompToQuality.Text.Contains("http://go2se.com/ref") Then
+            p = SaveData.Text.Substring(idx_sn + 1, b - idx_sn - 1)
+            p = p.Replace("=TC", "")
+            MsgBox(p)
+            Dim QrCodeFujiSideLabel = header.Text & "/sn=SG" & p 'Microsoft.VisualBasic.Right(SaveData.Text, 13)
+            Fuji_QR_Product_Label.Text = QrCodeFujiSideLabel
+
+            Dim s As String = SaveData.Text
+            Dim i As Integer = idx_ref
+            Dim f As String = s.Substring(i + 2, s.IndexOf("/s", i + 1) - i - 2)
+            'MsgBox(f)
+            CompToQuality.Text = f
+
         End If
     End Sub
 
@@ -2314,6 +2334,8 @@ Err_btnExit2_Click:
             If ds.Tables(0).Rows.Count > 0 Then
 
                 header.Text = ds.Tables(0).Rows(0).Item("peggedreqt").ToString
+                'tambahan biar fuji tidak print
+                If header.Text.Contains("BW") Then CheckProductLabelPrinting.Checked = False
 
                 'If variable_Q = 0 Then
                 If InStr(header.Text, "CSC") <> 0 Then
@@ -2514,6 +2536,8 @@ Err_btnExit2_Click:
                     'DoCmd.RunCommand acCmdWindowHide
 
                 End If
+                ''remove
+                'If header.Text.Contains("BW") Then CheckProductLabelPrinting.Checked = False
 
             Else
                 If hasnotbeenfound = False Then
@@ -8830,8 +8854,9 @@ set @abc = (SELECT TOP (1) [Date]
         Dim tampungSplit As String = ""
         If e.KeyData = Keys.Enter Or e.KeyData = 9 Then
             'santo tambah
-            If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Then cek_fuji_barcode()
-
+            'If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Then cek_fuji_barcode()
+            If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Or Me.CompToQuality.Text.Length = 48 Then cek_fuji_barcode()
+            'abcde
             If Active_Quality_issue.Checked = True Then
 
                 'mungkin salah
@@ -9536,6 +9561,8 @@ set @abc = (SELECT TOP (1) [Date]
         'edit santo
         If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And (Len(Me.ScanLabel.Text) >= 33 Or Len(Me.ScanLabel.Text) >= 29) Then
             'If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And Len(Me.ScanLabel.Text) >= 33 Then
+            'ScanLabel.Text = ScanLabel.Text.Replace(Keys.Tab, "")
+
             Dim SplitData = Microsoft.VisualBasic.Left(Me.ScanLabel.Text, 14)
             Dim sql As String = "select ComponentsFuji.[Order], ComponentsFuji.[RefFuji],ComponentsFuji.[Check Components],
             MasterFujiLabelling.QRFrontLabelNumber,MasterFujiLabelling.QRRotaryHandleNumber,MasterFujiLabelling.TripUnitLabelNumber from ComponentsFuji, MasterFujiLabelling where 
@@ -9589,9 +9616,11 @@ set @abc = (SELECT TOP (1) [Date]
                         btn_carton_print_Click(sender, e)
 
                         'MessageBox.Show("Print 3 Label")
+                        ScanLabel2.Enabled = True
+                        ScanLabel2.Text = ""
                         ScanLabel2.Select()
                         ScanLabel.Enabled = False
-                        ScanLabel2.Enabled = True
+
 
                         'this textbox for sidelabel
                         QRSideLabel.Text = ScanLabel.Text
@@ -9608,9 +9637,11 @@ set @abc = (SELECT TOP (1) [Date]
                     If ds2.Tables(0).Rows.Count > 0 Then
                         If ds2.Tables(0).Rows(0).Item("Check Components").ToString() = "0" Or ds2.Tables(0).Rows(1).Item("Check Components").ToString() = "0" Or ds2.Tables(0).Rows(2).Item("Check Components").ToString() = "0" Then
                             Refresh_DGV_Fuji_2()
+                            ScanLabel2.Enabled = True
+                            ScanLabel2.Text = ""
                             ScanLabel2.Select()
                             ScanLabel.Enabled = False
-                            ScanLabel2.Enabled = True
+
                         Else
                             MessageBox.Show("All Labels Have been Scan!")
                         End If
