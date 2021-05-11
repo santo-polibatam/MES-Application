@@ -691,6 +691,8 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
+        Me.chk_scan_tripUnit = New System.Windows.Forms.CheckBox()
+        Me.Button13 = New System.Windows.Forms.Button()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -6455,6 +6457,8 @@ Partial Class Main
         '
         'GroupBox14
         '
+        Me.GroupBox14.Controls.Add(Me.Button13)
+        Me.GroupBox14.Controls.Add(Me.chk_scan_tripUnit)
         Me.GroupBox14.Controls.Add(Me.Button9)
         Me.GroupBox14.Controls.Add(Me.dateCodeFuji)
         Me.GroupBox14.Controls.Add(Me.technicianShortNameFuji)
@@ -7964,6 +7968,25 @@ Partial Class Main
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
         '
+        'chk_scan_tripUnit
+        '
+        Me.chk_scan_tripUnit.AutoSize = True
+        Me.chk_scan_tripUnit.Location = New System.Drawing.Point(319, 98)
+        Me.chk_scan_tripUnit.Name = "chk_scan_tripUnit"
+        Me.chk_scan_tripUnit.Size = New System.Drawing.Size(128, 24)
+        Me.chk_scan_tripUnit.TabIndex = 53
+        Me.chk_scan_tripUnit.Text = "Scan Trip Unit"
+        Me.chk_scan_tripUnit.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(629, 63)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(75, 23)
+        Me.Button13.TabIndex = 54
+        Me.Button13.Text = "Button13"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -8726,4 +8749,6 @@ Partial Class Main
     Friend WithEvents Button12 As Button
     Friend WithEvents btn_delete_dot_sq00 As Button
     Friend WithEvents Progress_print_all As ProgressBar
+    Friend WithEvents chk_scan_tripUnit As CheckBox
+    Friend WithEvents Button13 As Button
 End Class

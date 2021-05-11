@@ -1913,7 +1913,7 @@ Err_btnExit2_Click:
         ElseIf CompToQuality.Text.Contains("http://go2se.com/ref") Then
             p = SaveData.Text.Substring(idx_sn + 1, b - idx_sn - 1)
             p = p.Replace("=TC", "")
-            MsgBox(p)
+
             Dim QrCodeFujiSideLabel = header.Text & "/sn=SG" & p 'Microsoft.VisualBasic.Right(SaveData.Text, 13)
             Fuji_QR_Product_Label.Text = QrCodeFujiSideLabel
 
@@ -2335,7 +2335,11 @@ Err_btnExit2_Click:
 
                 header.Text = ds.Tables(0).Rows(0).Item("peggedreqt").ToString
                 'tambahan biar fuji tidak print
-                If header.Text.Contains("BW") Then CheckProductLabelPrinting.Checked = False
+                If header.Text.Contains("BW") Then
+                    CheckProductLabelPrinting.Checked = False
+                    autoPrint.Checked = False
+                    autoPrint2.Checked = False
+                End If
 
                 'If variable_Q = 0 Then
                 If InStr(header.Text, "CSC") <> 0 Then
@@ -5956,7 +5960,7 @@ loncat:
 
 
         Try
-            If Me.breakerType.Text = "NA" Or Me.breakerType.Text = "HA" Or Me.breakerType.Text = "HF" Then
+            If Me.breakerType.Text = "NA" Or Me.breakerType.Text = "HA" Or Me.breakerType.Text = "HF" Or Me.breakerType.Text = "H1-S" Then
                 COCreport = "COC SD"
 
                 label3_printer.Variables("COC_Main").SetValue(COC_SD_Main)
@@ -9581,8 +9585,21 @@ set @abc = (SELECT TOP (1) [Date]
                     adapter = New SqlDataAdapter(queryUpdate, Main.koneksi)
                     If adapter.SelectCommand.ExecuteNonQuery().ToString() = 1 Then
                         'Refresh_DGV_Fuji()
+
+                        ''Baca scan data
+                        Dim sql2 As String = "SELECT * FROM SGRAC_MES.dbo.MasterFuji WHERE FCSRef ='" & FCSRef.Text & "'"
+                        Dim ds2 As New DataSet
+                        adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
+                        adapter2.Fill(ds2)
+
+                        Dim scan_rotary As String = ds2.Tables(0).Rows(0).Item("ScanRotaryHandleLabel").ToString()
+                        Dim scan_front As String = ds2.Tables(0).Rows(0).Item("ScanFrontLabel").ToString()
+                        Dim scan_trip As String = ds2.Tables(0).Rows(0).Item("ScanTripUnitLabel").ToString()
+
+                        MsgBox(scan_rotary & " " & scan_front & " " & scan_trip & " ")
+
                         For r = 1 To 3
-                            If r = 1 Then
+                            If r = 1 And scan_rotary = "1" Then
                                 Dim NamaLabel As String = "Rotary Handle Label"
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
                                 [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
@@ -9590,7 +9607,7 @@ set @abc = (SELECT TOP (1) [Date]
                                 '" & ds.Tables(0).Rows(0).Item("QRFrontLabelNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
                                 adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
                                 adapter.SelectCommand.ExecuteNonQuery()
-                            ElseIf r = 2 Then
+                            ElseIf r = 2 And scan_front = "1" Then
                                 Dim NamaLabel As String = "Front Cover Label"
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
                                 [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
@@ -9598,7 +9615,7 @@ set @abc = (SELECT TOP (1) [Date]
                                 '" & ds.Tables(0).Rows(0).Item("QRRotaryHandleNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
                                 adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
                                 adapter.SelectCommand.ExecuteNonQuery()
-                            Else
+                            ElseIf chk_scan_tripUnit.Checked = True And scan_trip = "1" Then
                                 Dim NamaLabel As String = "Trip Unit Label"
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
                                 [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
@@ -10232,5 +10249,19 @@ set @abc = (SELECT TOP (1) [Date]
     Private Sub print_progress(ByVal a As Integer)
         Progress_print_all.Value = a
         Application.DoEvents()
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Dim sql2 As String = "SELECT * FROM SGRAC_MES.dbo.MasterFuji WHERE FCSRef ='" & FCSRef.Text & "'"
+        Dim ds2 As New DataSet
+        adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
+        adapter2.Fill(ds2)
+
+        Dim scan_rotary As String = ds2.Tables(0).Rows(0).Item("ScanRotaryHandleLabel").ToString()
+        Dim scan_front As String = ds2.Tables(0).Rows(0).Item("ScanFrontLabel").ToString()
+        Dim scan_trip As String = ds2.Tables(0).Rows(0).Item("ScanTripUnitLabel").ToString()
+
+        MsgBox(scan_rotary & " " & scan_front & " " & scan_trip & " ")
+
     End Sub
 End Class
