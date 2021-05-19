@@ -5093,11 +5093,19 @@ loncat:
         Catch ex As Exception
 
         End Try
-        'Try
-        '    label_printer.Variables("DataMatrix").SetValue("SG" & dateCode3() & Convert.ToDecimal(CounterItems.Text).ToString("0000"))
-        'Catch ex As Exception
+        Try
+            Dim date_2 As String
 
-        'End Try
+            Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
+
+            If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
+
+            date_2 = Date.Now.ToString("yy") & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
+
+            label_printer.Variables("DataMatrix").SetValue("SG" & date_2 & Convert.ToDecimal(CounterItems.Text).ToString("0000"))
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 
