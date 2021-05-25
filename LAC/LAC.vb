@@ -9604,7 +9604,7 @@ set @abc = (SELECT TOP (1) [Date]
                         Dim scan_front As String = ds2.Tables(0).Rows(0).Item("ScanFrontLabel").ToString()
                         Dim scan_trip As String = ds2.Tables(0).Rows(0).Item("ScanTripUnitLabel").ToString()
 
-                        MsgBox(scan_rotary & " " & scan_front & " " & scan_trip & " ")
+                        'MsgBox(scan_rotary & " " & scan_front & " " & scan_trip & " ")
 
                         For r = 1 To 3
                             If r = 1 And scan_rotary = "1" Then
@@ -9623,7 +9623,8 @@ set @abc = (SELECT TOP (1) [Date]
                                 '" & ds.Tables(0).Rows(0).Item("QRRotaryHandleNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
                                 adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
                                 adapter.SelectCommand.ExecuteNonQuery()
-                            ElseIf chk_scan_tripUnit.Checked = True And scan_trip = "1" Then
+                                'ElseIf chk_scan_tripUnit.Checked = True And scan_trip = "1" Then
+                            ElseIf scan_trip = "1" Then
                                 Dim NamaLabel As String = "Trip Unit Label"
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
                                 [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
