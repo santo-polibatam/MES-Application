@@ -9604,9 +9604,17 @@ set @abc = (SELECT TOP (1) [Date]
                         Dim scan_front As String = ds2.Tables(0).Rows(0).Item("ScanFrontLabel").ToString()
                         Dim scan_trip As String = ds2.Tables(0).Rows(0).Item("ScanTripUnitLabel").ToString()
 
+                        Dim maxScan As Integer
+
                         'MsgBox(scan_rotary & " " & scan_front & " " & scan_trip & " ")
 
-                        For r = 1 To 3
+                        If chk_scan_tripUnit.Checked = True Then
+                            maxScan = 3
+                        Else
+                            maxScan = 2
+                        End If
+
+                        For r = 1 To maxScan
                             If r = 1 And scan_rotary = "1" Then
                                 Dim NamaLabel As String = "Rotary Handle Label"
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
@@ -9624,7 +9632,7 @@ set @abc = (SELECT TOP (1) [Date]
                                 adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
                                 adapter.SelectCommand.ExecuteNonQuery()
                                 'ElseIf chk_scan_tripUnit.Checked = True And scan_trip = "1" Then
-                            ElseIf scan_trip = "1" Then
+                            ElseIf r = 3 And chk_scan_tripUnit.Checked = True Then
                                 Dim NamaLabel As String = "Trip Unit Label"
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
                                 [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
@@ -9743,6 +9751,30 @@ set @abc = (SELECT TOP (1) [Date]
                             adapter = New SqlDataAdapter(queryUpdate, Main.koneksi)
                             If adapter.SelectCommand.ExecuteNonQuery().ToString() = 1 Then
                                 Refresh_DGV_Fuji_2()
+                                If chk_scan_tripUnit.Checked = False Then
+                                    Dim sql2 As String = "select * from ComponentsFuji where [Order]= " & PPFujiEntry.Text & " and [Check Components]=0"
+                                    Dim ds2 As New DataSet
+                                    adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
+                                    adapter2.Fill(ds2)
+                                    If ds2.Tables(0).Rows.Count > 0 Then
+                                        ScanLabel.Text = ""
+                                        ScanLabel2.Text = ""
+                                        ScanLabel.Enabled = True
+                                        ScanLabel2.Enabled = False
+                                        DataGridView8.Rows.Clear()
+                                        ScanLabel.Select()
+                                    Else
+                                        ScanLabel.Text = ""
+                                        ScanLabel2.Text = ""
+                                        PPFujiEntry.Text = ""
+                                        PPFujiEntry.Select()
+                                        ScanLabel.Enabled = False
+                                        ScanLabel2.Enabled = False
+                                        DataGridView7.Rows.Clear()
+                                        DataGridView8.Rows.Clear()
+                                        FCSRef.Text = ""
+                                    End If
+                                End If
                             End If
                         End If
                     Else
@@ -9764,10 +9796,10 @@ set @abc = (SELECT TOP (1) [Date]
                             If ds2.Tables(0).Rows.Count > 0 Then
                                 ScanLabel.Text = ""
                                 ScanLabel2.Text = ""
-                                ScanLabel.Select()
                                 ScanLabel.Enabled = True
                                 ScanLabel2.Enabled = False
                                 DataGridView8.Rows.Clear()
+                                ScanLabel.Select()
                             Else
                                 ScanLabel.Text = ""
                                 ScanLabel2.Text = ""
