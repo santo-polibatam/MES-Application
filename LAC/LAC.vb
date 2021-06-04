@@ -90,6 +90,10 @@ Public Class Main
     Dim selected_Printer As IPrinter
 
 
+    Dim seq_SerialNumber As Integer
+
+    Dim var_PrintLabel_klik As Boolean = False
+
     Public Shared Sub koneksi_db()
         Try
             'database = "Data Source=DESKTOP-4PHNBDD;initial catalog=MES_DB;integrated security=true"
@@ -569,15 +573,17 @@ Err_btnExit2_Click:
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Command37.Click
-        Form1.open_form("select [autonumber]
-      ,[PP]
-      ,[date]
-      ,[time]
-      ,[user]
-      ,[From]
-      ,[To]
-      ,[QRCodeFuji]
-      ,[Data] from printingRecord")
+        '  Form1.open_form("select [autonumber]
+        ',[PP]
+        ',[date]
+        ',[time]
+        ',[user]
+        ',[From]
+        ',[To]
+        ',[QRCodeFuji]
+        ',[Data] from printingRecord")
+
+        Form1.open_form("select * from printingRecord")
         Form1.Show()
     End Sub
 
@@ -2665,15 +2671,15 @@ Err_btnExit2_Click:
                 Exit Function
             Else
                 PPPackingdoyouwanttoreprintit = 1
-                cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data]) values(@pp,@date,@time,@user,@from,@to,@data)", Main.koneksi)
-                cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
-                cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
-                cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
-                cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
-                cmd.Parameters.AddWithValue("@from", Me.StartLabel.Text)
-                cmd.Parameters.AddWithValue("@to", Me.quantityLabel.Text)
-                cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
-                cmd.ExecuteNonQuery()
+                'cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data]) values(@pp,@date,@time,@user,@from,@to,@data)", Main.koneksi)
+                'cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
+                'cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
+                'cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
+                'cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
+                'cmd.Parameters.AddWithValue("@from", Me.StartLabel.Text)
+                'cmd.Parameters.AddWithValue("@to", Me.quantityLabel.Text)
+                'cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+                'cmd.ExecuteNonQuery()
 
                 checkDuplicatdePP = False
             End If
@@ -4692,7 +4698,23 @@ loncat:
         End Try
     End Sub
 
-    Function checkSerialNumber(Quantity) 'Check the serial number or add one 'sudah sesuai dengan VBA
+    Function read_serialNumber()
+        Dim sql2 As String
+        Dim adapter2 As SqlDataAdapter
+        Dim ds2 As New DataSet
+
+        sql2 = " Select Case [sequence] FROM SGRAC_MES.dbo.serialNumber WHERE [day] like '%" & DateTime.Now.ToString("yyyy-MM-dd") & "%'"
+        adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
+        adapter2.Fill(ds2)
+
+        Dim seq As Integer = Convert.ToDecimal(ds2.Tables(0).Rows(0).Item("sequence").ToString)
+        read_serialNumber = seq
+    End Function
+
+
+    Function checkSerialNumber() 'Check the serial number or add one 'sudah sesuai dengan VBA
+
+        Dim seq_old As Integer
 
         Dim sql As String
         Dim adapter As SqlDataAdapter
@@ -4704,22 +4726,35 @@ loncat:
         adapter = New SqlDataAdapter(sql, Main.koneksi)
         adapter.Fill(ds)
 
+
+
         'MsgBox(ds.Tables(0).Rows.Count)
 
         If ds.Tables(0).Rows.Count = 0 Then
             cmd = New SqlCommand("insert into serialNumber([day],[sequence]) values(@day,@seq)", Main.koneksi)
             cmd.Parameters.AddWithValue("@day", DateTime.Now.ToString("yyyy/MM/dd"))
-            cmd.Parameters.AddWithValue("@seq", 1 + Quantity)
+            cmd.Parameters.AddWithValue("@seq", 1)
             cmd.ExecuteNonQuery()
             checkSerialNumber = 1
         Else
-
+            seq_old = Convert.ToDecimal(ds.Tables(0).Rows(0).Item("sequence").ToString)
             checkSerialNumber = ds.Tables(0).Rows(0).Item("sequence")
             cmd = New SqlCommand("update [serialNumber] set [sequence]=@seq where [day]=@day", Main.koneksi)
             cmd.Parameters.AddWithValue("@day", DateTime.Now.ToString("yyyy/MM/dd"))
-            cmd.Parameters.AddWithValue("@seq", 1 + Quantity)
+            cmd.Parameters.AddWithValue("@seq", 1 + seq_old)
             cmd.ExecuteNonQuery()
 
+
+            Dim sql2 As String
+            Dim adapter2 As SqlDataAdapter
+            Dim ds2 As New DataSet
+
+            sql2 = " Select Case [sequence] FROM SGRAC_MES.dbo.serialNumber WHERE [day] like '%" & DateTime.Now.ToString("yyyy-MM-dd") & "%'"
+            adapter2 = New SqlDataAdapter(sql, Main.koneksi)
+            adapter2.Fill(ds2)
+
+            Dim seq As Integer = Convert.ToDecimal(ds2.Tables(0).Rows(0).Item("sequence").ToString)
+            checkSerialNumber = seq
         End If
 
     End Function
@@ -5089,7 +5124,7 @@ loncat:
 
 
         Try
-            label_printer.Variables("SQ00_Description").SetValue(Me.testDescription.Text)
+            label_printer.Variables("SQ00_Description").SetValue(Microsoft.VisualBasic.Left(Me.testDescription.Text, 24))
         Catch ex As Exception
 
         End Try
@@ -5102,7 +5137,12 @@ loncat:
 
             date_2 = Date.Now.ToString("yy") & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
 
-            label_printer.Variables("DataMatrix").SetValue("SG" & date_2 & Convert.ToDecimal(CounterItems.Text).ToString("0000"))
+            'label_printer.Variables("DataMatrix").SetValue("SG" & date_2 & Convert.ToDecimal(CounterItems.Text).ToString("0000"))
+
+            Dim _ID As String = Convert.ToDecimal(seq_SerialNumber.ToString).ToString("0000")
+
+            'label_printer.Variables("DataMatrix").SetValue("SG" & date_2 & _ID)
+            label_printer.Variables("Matrix").SetValue("SG" & date_2 & _ID)
         Catch ex As Exception
 
         End Try
@@ -5134,6 +5174,7 @@ loncat:
     End Sub
 
 
+
     'Product label Printing ....................
     Private Sub Product_Label_print()
 
@@ -5148,6 +5189,8 @@ loncat:
         '====================================================================================================
         'If selectedLabel.Text.ToLower = "generic" Or selectedLabel.Text = "" Then
         If selectedLabel.Text.ToLower = "generic" Then
+
+            seq_SerialNumber = checkSerialNumber()
             'set value to label
             Label_SetValue()
 
@@ -5174,14 +5217,37 @@ loncat:
                         MsgBox("Printing Label Cancel " & ex.Message)
                     End Try
                 Next
-                cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data]) values(@pp,@date,@time,@user,@from,@to,@data)", Main.koneksi)
+                cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@data,@Seq)", Main.koneksi)
                 cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
                 cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
                 cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
                 cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
-                cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
+
+                If var_PrintLabel_klik = True Then
+                    cmd.Parameters.AddWithValue("@from", CInt(Me.StartLabel.Text))
+                    var_PrintLabel_klik = False
+                Else
+                    cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
+                End If
+
+
                 cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
                 cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+
+                Dim date_2 As String
+
+                Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
+
+                If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
+
+                date_2 = Date.Now.ToString("yy") & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
+
+                Dim _ID As String = Convert.ToDecimal(seq_SerialNumber.ToString).ToString("0000")
+                Dim _seq As String = "SG" & date_2 & _ID
+
+                cmd.Parameters.AddWithValue("@Seq", _seq)
+
+                'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
                 cmd.ExecuteNonQuery()
             Else
                 MsgBox("The Component has not been Scanned !" & vbNewLine & "Pls Scan The Component First")
@@ -5401,6 +5467,8 @@ loncat:
 
     End Sub
     Private Sub PrintLabel_Click() Handles printLabel.Click
+
+        var_PrintLabel_klik = True
 
         Dim a As Integer = 0
 
@@ -6772,11 +6840,16 @@ loncat:
 
             'End If
 
+            'asdf
+
             'Else 
             'Printing Label
             'If CheckProductLabelPrinting.Checked = True Then
             AutoPrintProductLabelFrom.Text = Convert.ToDecimal(AutoPrintProductLabelFrom.Text) + 1
-            If selectedLabel.Text.ToLower = "generic" Then Label_SetValue() 'generic
+            If selectedLabel.Text.ToLower = "generic" Then
+                seq_SerialNumber = checkSerialNumber()
+                Label_SetValue() 'generic
+            End If
             'Label4_SetValue() 'Loose2
             If selectedLabel.Text.ToLower = "loose2" Then Label6_SetValue()
             Try
@@ -6797,6 +6870,7 @@ loncat:
 
             'If selectedLabel.Text.ToLower <> "loose2" Then
             If selectedLabel.Text.ToLower = "generic" Then
+                'seq_SerialNumber = checkSerialNumber()
                 label_printer.Print(1)
             ElseIf selectedLabel.Text.ToLower = "loose2" Then
                 label6_printer.Variables("Label13").SetValue(1)
@@ -6810,7 +6884,7 @@ loncat:
 
             'Save to DB every printing
             Try
-                Dim cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[QRCodeFuji],[Data]) values(@pp,@date,@time,@user,@from,@to,@QRCodeFuji,@data)", Main.koneksi)
+                Dim cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[QRCodeFuji],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@QRCodeFuji,@data,@Seq)", Main.koneksi)
                 cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
                 cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
                 cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
@@ -6819,7 +6893,43 @@ loncat:
                 cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
                 cmd.Parameters.AddWithValue("@QRCodeFuji", Me.Fuji_QR_Product_Label.Text)
                 cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+
+                Dim date_2 As String
+
+                Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
+
+                If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
+
+                date_2 = Date.Now.ToString("yy") & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
+
+                Dim _ID As String = Convert.ToDecimal(seq_SerialNumber.ToString).ToString("0000")
+                Dim _seq As String = "SG" & date_2 & _ID
+
+                cmd.Parameters.AddWithValue("@Seq", _seq)
+
+                'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
                 cmd.ExecuteNonQuery()
+
+
+                'cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@data,@Seq)", Main.koneksi)
+                'cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
+                'cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
+                'cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
+                'cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
+
+                'If var_PrintLabel_klik = True Then
+                '    cmd.Parameters.AddWithValue("@from", CInt(Me.StartLabel.Text))
+                '    var_PrintLabel_klik = False
+                'Else
+                '    cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
+                'End If
+
+
+                'cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
+                'cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+                'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
+                'cmd.ExecuteNonQuery()
+
             Catch ex As Exception
 
             End Try
@@ -8448,9 +8558,43 @@ set @abc = (SELECT TOP (1) [Date]
     End Sub
 
     Private Sub Trace_Click(sender As Object, e As EventArgs) Handles Trace.Click
+
+
         Call Main.koneksi_db()
         'e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And
-        If Len(TextBox1.Text) >= 11 Then
+        If Len(TextBox1.Text) >= 33 Then
+            DataGridView2.Rows.Clear()
+            DataGridView3.Rows.Clear()
+            DataGridView4.Rows.Clear()
+            Dim dsTrace As New DataSet
+            Dim sql = "select DISTINCT ProductionOrders.PP from ProductionOrders, printingRecord where ProductionOrders.PP=printingRecord.PP and printingRecord.QRCodeFuji='" & TextBox2.Text & "'"
+            Dim adapter = New SqlDataAdapter(sql, Main.koneksi)
+            adapter.Fill(dsTrace)
+            If dsTrace.Tables(0).Rows.Count > 0 Then
+                TextBox1.Text = dsTrace.Tables(0).Rows(0).Item("PP")
+                'Trace.PerformClick()
+            Else
+                MessageBox.Show("Sorry Data Not Found")
+            End If
+
+        ElseIf TextBox1.Text.Contains("SG") Then
+
+            Dim ds As New DataSet
+            Dim queryCheck = "select PP FROM SGRAC_MES.dbo.printingRecord pr WHERE Seq ='" & TextBox1.Text & "'"
+            Dim CheckAdap = New SqlDataAdapter(queryCheck, Main.koneksi)
+            CheckAdap.Fill(ds)
+
+            If ds.Tables(0).Rows.Count > 0 Then
+                TextBox1.Text = ds.Tables(0).Rows(0).Item("PP")
+
+                MsgBox(TextBox1.Text)
+
+            End If
+
+        End If
+
+
+        If Len(TextBox1.Text) <= 12 Then
             DataGridView2.Rows.Clear()
             DataGridView3.Rows.Clear()
             DataGridView4.Rows.Clear()
@@ -10303,6 +10447,10 @@ set @abc = (SELECT TOP (1) [Date]
         Dim scan_trip As String = ds2.Tables(0).Rows(0).Item("ScanTripUnitLabel").ToString()
 
         MsgBox(scan_rotary & " " & scan_front & " " & scan_trip & " ")
+
+    End Sub
+
+    Private Sub Label157_Click(sender As Object, e As EventArgs) Handles Label157.Click
 
     End Sub
 End Class

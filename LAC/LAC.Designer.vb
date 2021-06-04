@@ -545,6 +545,8 @@ Partial Class Main
         Me.btn_rotary_handle_preview = New System.Windows.Forms.Button()
         Me.btn_rotary_print = New System.Windows.Forms.Button()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.chk_scan_tripUnit = New System.Windows.Forms.CheckBox()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.dateCodeFuji = New System.Windows.Forms.TextBox()
         Me.technicianShortNameFuji = New System.Windows.Forms.TextBox()
@@ -620,8 +622,8 @@ Partial Class Main
         Me.Command108 = New System.Windows.Forms.Button()
         Me.open_orders_table = New System.Windows.Forms.Button()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TraceFujiProduct = New System.Windows.Forms.Button()
-        Me.Label185 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.btn_export_Tracecibility = New System.Windows.Forms.Button()
         Me.Label160 = New System.Windows.Forms.Label()
@@ -691,8 +693,6 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
-        Me.chk_scan_tripUnit = New System.Windows.Forms.CheckBox()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -6476,6 +6476,25 @@ Partial Class Main
         Me.GroupBox14.TabIndex = 42
         Me.GroupBox14.TabStop = False
         '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(629, 63)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(75, 23)
+        Me.Button13.TabIndex = 54
+        Me.Button13.Text = "Button13"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'chk_scan_tripUnit
+        '
+        Me.chk_scan_tripUnit.AutoSize = True
+        Me.chk_scan_tripUnit.Location = New System.Drawing.Point(319, 98)
+        Me.chk_scan_tripUnit.Name = "chk_scan_tripUnit"
+        Me.chk_scan_tripUnit.Size = New System.Drawing.Size(128, 24)
+        Me.chk_scan_tripUnit.TabIndex = 53
+        Me.chk_scan_tripUnit.Text = "Scan Trip Unit"
+        Me.chk_scan_tripUnit.UseVisualStyleBackColor = True
+        '
         'Button9
         '
         Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -7333,8 +7352,8 @@ Partial Class Main
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.TextBox3)
         Me.TabPage5.Controls.Add(Me.TraceFujiProduct)
-        Me.TabPage5.Controls.Add(Me.Label185)
         Me.TabPage5.Controls.Add(Me.TextBox2)
         Me.TabPage5.Controls.Add(Me.btn_export_Tracecibility)
         Me.TabPage5.Controls.Add(Me.Label160)
@@ -7354,33 +7373,34 @@ Partial Class Main
         Me.TabPage5.Text = "Tracecibility"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(613, 48)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(211, 26)
+        Me.TextBox3.TabIndex = 14
+        Me.TextBox3.Visible = False
+        '
         'TraceFujiProduct
         '
         Me.TraceFujiProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TraceFujiProduct.Location = New System.Drawing.Point(854, 33)
+        Me.TraceFujiProduct.Location = New System.Drawing.Point(854, 13)
         Me.TraceFujiProduct.Name = "TraceFujiProduct"
-        Me.TraceFujiProduct.Size = New System.Drawing.Size(127, 45)
+        Me.TraceFujiProduct.Size = New System.Drawing.Size(127, 62)
         Me.TraceFujiProduct.TabIndex = 13
         Me.TraceFujiProduct.Text = "Trace"
         Me.TraceFujiProduct.UseVisualStyleBackColor = True
-        '
-        'Label185
-        '
-        Me.Label185.AutoSize = True
-        Me.Label185.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label185.Location = New System.Drawing.Point(475, 13)
-        Me.Label185.Name = "Label185"
-        Me.Label185.Size = New System.Drawing.Size(146, 25)
-        Me.Label185.TabIndex = 11
-        Me.Label185.Text = "Fuji QRCode"
+        Me.TraceFujiProduct.Visible = False
         '
         'TextBox2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(480, 41)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(613, 16)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(351, 29)
+        Me.TextBox2.Size = New System.Drawing.Size(211, 26)
         Me.TextBox2.TabIndex = 10
+        Me.TextBox2.Visible = False
         '
         'btn_export_Tracecibility
         '
@@ -7414,9 +7434,9 @@ Partial Class Main
         'Trace
         '
         Me.Trace.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Trace.Location = New System.Drawing.Point(272, 33)
+        Me.Trace.Location = New System.Drawing.Point(464, 23)
         Me.Trace.Name = "Trace"
-        Me.Trace.Size = New System.Drawing.Size(127, 45)
+        Me.Trace.Size = New System.Drawing.Size(117, 81)
         Me.Trace.TabIndex = 6
         Me.Trace.Text = "Trace"
         Me.Trace.UseVisualStyleBackColor = True
@@ -7467,16 +7487,16 @@ Partial Class Main
         Me.Label157.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label157.Location = New System.Drawing.Point(38, 13)
         Me.Label157.Name = "Label157"
-        Me.Label157.Size = New System.Drawing.Size(42, 25)
+        Me.Label157.Size = New System.Drawing.Size(300, 25)
         Me.Label157.TabIndex = 1
-        Me.Label157.Text = "PP"
+        Me.Label157.Text = "PP / QR Code / Data Matrix"
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(43, 41)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(43, 53)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(211, 31)
+        Me.TextBox1.Size = New System.Drawing.Size(376, 26)
         Me.TextBox1.TabIndex = 0
         '
         'TabPage6
@@ -7968,31 +7988,12 @@ Partial Class Main
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
         '
-        'chk_scan_tripUnit
-        '
-        Me.chk_scan_tripUnit.AutoSize = True
-        Me.chk_scan_tripUnit.Location = New System.Drawing.Point(319, 98)
-        Me.chk_scan_tripUnit.Name = "chk_scan_tripUnit"
-        Me.chk_scan_tripUnit.Size = New System.Drawing.Size(128, 24)
-        Me.chk_scan_tripUnit.TabIndex = 53
-        Me.chk_scan_tripUnit.Text = "Scan Trip Unit"
-        Me.chk_scan_tripUnit.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(629, 63)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 23)
-        Me.Button13.TabIndex = 54
-        Me.Button13.Text = "Button13"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1310, 881)
+        Me.ClientSize = New System.Drawing.Size(1327, 881)
         Me.Controls.Add(Me.Progress_print_all)
         Me.Controls.Add(Me.Report_Tab)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -8729,7 +8730,6 @@ Partial Class Main
     Friend WithEvents Auto_print_groupping As TextBox
     Friend WithEvents SaveData As TextBox
     Friend WithEvents TraceFujiProduct As Button
-    Friend WithEvents Label185 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents PO_Group_BOX As TextBox
     Friend WithEvents btn_Export_Labelling_fuji As Button
@@ -8751,4 +8751,5 @@ Partial Class Main
     Friend WithEvents Progress_print_all As ProgressBar
     Friend WithEvents chk_scan_tripUnit As CheckBox
     Friend WithEvents Button13 As Button
+    Friend WithEvents TextBox3 As TextBox
 End Class
