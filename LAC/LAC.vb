@@ -8586,9 +8586,6 @@ set @abc = (SELECT TOP (1) [Date]
 
             If ds.Tables(0).Rows.Count > 0 Then
                 TextBox1.Text = ds.Tables(0).Rows(0).Item("PP")
-
-                MsgBox(TextBox1.Text)
-
             End If
 
         End If
