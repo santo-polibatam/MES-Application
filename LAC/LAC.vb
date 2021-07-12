@@ -3938,7 +3938,15 @@ loncat:
 
             'Jinlong Req
             If Microsoft.VisualBasic.Left(Me.testDescription.Text, 3) = "MTZ" Then
-                Me.productRange.Text = "MTZ Masterpact"
+                If testMaterial.Text.Contains("MTZ1") Then
+                    Me.productRange.Text = "MTZ1 Masterpact"
+                ElseIf testMaterial.Text.Contains("MTZ2") Then
+                    Me.productRange.Text = "MTZ2 Masterpact"
+                ElseIf testMaterial.Text.Contains("MTZ3") Then
+                    Me.productRange.Text = "MTZ3 Masterpact"
+                Else
+                    Me.productRange.Text = "MTZ Masterpact"
+                End If
             End If
 
             If Microsoft.VisualBasic.Left(Me.testDescription.Text, 3) = "EV" Then
@@ -5534,7 +5542,8 @@ loncat:
     'label 1 setvalue
     Private Sub label1_setValue()
         label1_printer.Variables("Product ID").SetValue(Microsoft.VisualBasic.Left(Material.Text, 19))
-        label1_printer.Variables("custMaterial").SetValue(Microsoft.VisualBasic.Left(custMaterial.Text, 19))
+        'label1_printer.Variables("custMaterial").SetValue(Microsoft.VisualBasic.Left(custMaterial.Text, 19))
+        label1_printer.Variables("custMaterial").SetValue(custMaterial.Text)
         label1_printer.Variables("Product Desc Eng").SetValue(Microsoft.VisualBasic.Left(packingDescription.Text, 30))
         label1_printer.Variables("PP Number").SetValue(PP.Text)
         label1_printer.Variables("SO Number").SetValue(SO.Text)
@@ -9677,13 +9686,15 @@ set @abc = (SELECT TOP (1) [Date]
                         Dim adapter_box = New SqlDataAdapter(sql_box, Main.koneksi)
                         adapter_box.Fill(ds_box)
 
+
+
                         FujiSO.Text = ds_box.Tables(0).Rows(0).Item("SO no").ToString
                         FujiLineNo.Text = ds_box.Tables(0).Rows(0).Item("item").ToString
                         fujiQty.Text = ds_box.Tables(0).Rows(0).Item("Item quantity").ToString
 
                         GroupingBox.Text = dsCekFuji.Tables(0).Rows(0).Item("GroupingBox").ToString
-                        'PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Purchase order number").ToString
-                        PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Order").ToString
+                        PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Purchase order number").ToString
+                        'PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Order").ToString
 
 
                         Dim sqlCounterItemsFuji As String = "select * from ComponentsFuji where 
@@ -9755,13 +9766,14 @@ set @abc = (SELECT TOP (1) [Date]
                             maxScan = 2
                         End If
 
+
                         For r = 1 To maxScan
                             If r = 1 And scan_rotary = "1" Then
                                 Dim NamaLabel As String = "Rotary Handle Label"
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
                                 [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
                                 '" & Me.workstationFuji.Text & "',0,1,'" & NamaLabel & "',
-                                '" & ds.Tables(0).Rows(0).Item("QRFrontLabelNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
+                                '" & ds.Tables(0).Rows(0).Item("QRRotaryHandleNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
                                 adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
                                 adapter.SelectCommand.ExecuteNonQuery()
                             ElseIf r = 2 And scan_front = "1" Then
@@ -9769,7 +9781,7 @@ set @abc = (SELECT TOP (1) [Date]
                                 Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
                                 [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
                                 '" & Me.workstationFuji.Text & "',0,1,'" & NamaLabel & "',
-                                '" & ds.Tables(0).Rows(0).Item("QRRotaryHandleNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
+                                '" & ds.Tables(0).Rows(0).Item("QRFrontLabelNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
                                 adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
                                 adapter.SelectCommand.ExecuteNonQuery()
                                 'ElseIf chk_scan_tripUnit.Checked = True And scan_trip = "1" Then
@@ -9783,6 +9795,35 @@ set @abc = (SELECT TOP (1) [Date]
                                 adapter.SelectCommand.ExecuteNonQuery()
                             End If
                         Next
+
+                        'For r = 1 To maxScan
+                        '    If r = 1 And scan_rotary = "1" Then
+                        '        Dim NamaLabel As String = "Rotary Handle Label"
+                        '        Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
+                        '        [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
+                        '        '" & Me.workstationFuji.Text & "',0,1,'" & NamaLabel & "',
+                        '        '" & ds.Tables(0).Rows(0).Item("QRFrontLabelNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
+                        '        adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
+                        '        adapter.SelectCommand.ExecuteNonQuery()
+                        '    ElseIf r = 2 And scan_front = "1" Then
+                        '        Dim NamaLabel As String = "Front Cover Label"
+                        '        Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
+                        '        [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
+                        '        '" & Me.workstationFuji.Text & "',0,1,'" & NamaLabel & "',
+                        '        '" & ds.Tables(0).Rows(0).Item("QRRotaryHandleNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
+                        '        adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
+                        '        adapter.SelectCommand.ExecuteNonQuery()
+                        '        'ElseIf chk_scan_tripUnit.Checked = True And scan_trip = "1" Then
+                        '    ElseIf r = 3 And chk_scan_tripUnit.Checked = True Then
+                        '        Dim NamaLabel As String = "Trip Unit Label"
+                        '        Dim queryInsert = "insert into [ComponentsFuji]([order],[RefFuji],[WorkStation],[Check Components], 
+                        '        [2ndScan],[2ndScanName],[2ndQrCode],[QRCodeFuji]) values ('" & Me.PPFujiEntry.Text & "','" & SplitData & "',
+                        '        '" & Me.workstationFuji.Text & "',0,1,'" & NamaLabel & "',
+                        '        '" & ds.Tables(0).Rows(0).Item("TripUnitLabelNumber").ToString() & "','" & Me.ScanLabel.Text & "')"
+                        '        adapter = New SqlDataAdapter(queryInsert, Main.koneksi)
+                        '        adapter.SelectCommand.ExecuteNonQuery()
+                        '    End If
+                        'Next
                         Refresh_DGV_Fuji()
                         Refresh_DGV_Fuji_2()
                         'fuji printing label
@@ -9810,7 +9851,20 @@ set @abc = (SELECT TOP (1) [Date]
                     adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
                     adapter2.Fill(ds2)
                     If ds2.Tables(0).Rows.Count > 0 Then
-                        If ds2.Tables(0).Rows(0).Item("Check Components").ToString() = "0" Or ds2.Tables(0).Rows(1).Item("Check Components").ToString() = "0" Or ds2.Tables(0).Rows(2).Item("Check Components").ToString() = "0" Then
+
+                        'santo edit
+                        Dim cek_0 As String = "x"
+                        Dim cek_1 As String = "x"
+                        Dim cek_2 As String = "x"
+                        Try
+                            cek_0 = ds2.Tables(0).Rows(0).Item("Check Components").ToString()
+                            cek_1 = ds2.Tables(0).Rows(1).Item("Check Components").ToString()
+                            cek_2 = ds2.Tables(0).Rows(2).Item("Check Components").ToString()
+                        Catch ex As Exception
+
+                        End Try
+
+                        If cek_0 = "0" Or cek_1 = "0" Or cek_2 = "0" Then
                             Refresh_DGV_Fuji_2()
                             ScanLabel2.Enabled = True
                             ScanLabel2.Text = ""
@@ -10433,7 +10487,7 @@ set @abc = (SELECT TOP (1) [Date]
         Application.DoEvents()
     End Sub
 
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+    Private Sub Button13_Click(sender As Object, e As EventArgs)
         Dim sql2 As String = "SELECT * FROM SGRAC_MES.dbo.MasterFuji WHERE FCSRef ='" & FCSRef.Text & "'"
         Dim ds2 As New DataSet
         adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
@@ -10450,4 +10504,19 @@ set @abc = (SELECT TOP (1) [Date]
     Private Sub Label157_Click(sender As Object, e As EventArgs) Handles Label157.Click
 
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim confirm = MessageBox.Show("Are You Sure For Logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If confirm = Windows.Forms.DialogResult.Yes Then
+            Me.Hide()
+            LoginForm.Show()
+            LoginForm.textboxusername.Text = ""
+            LoginForm.textboxpassword.Text = ""
+        ElseIf confirm = Windows.Forms.DialogResult.Yes Then
+            Exit Sub
+        End If
+        role = ""
+    End Sub
+
+
 End Class

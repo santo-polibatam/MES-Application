@@ -545,7 +545,6 @@ Partial Class Main
         Me.btn_rotary_handle_preview = New System.Windows.Forms.Button()
         Me.btn_rotary_print = New System.Windows.Forms.Button()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.chk_scan_tripUnit = New System.Windows.Forms.CheckBox()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.dateCodeFuji = New System.Windows.Forms.TextBox()
@@ -2422,7 +2421,7 @@ Partial Class Main
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(867, 13)
+        Me.Button1.Location = New System.Drawing.Point(893, 13)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(154, 48)
         Me.Button1.TabIndex = 52
@@ -6457,7 +6456,6 @@ Partial Class Main
         '
         'GroupBox14
         '
-        Me.GroupBox14.Controls.Add(Me.Button13)
         Me.GroupBox14.Controls.Add(Me.chk_scan_tripUnit)
         Me.GroupBox14.Controls.Add(Me.Button9)
         Me.GroupBox14.Controls.Add(Me.dateCodeFuji)
@@ -6476,15 +6474,6 @@ Partial Class Main
         Me.GroupBox14.TabIndex = 42
         Me.GroupBox14.TabStop = False
         '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(629, 63)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 23)
-        Me.Button13.TabIndex = 54
-        Me.Button13.Text = "Button13"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
         'chk_scan_tripUnit
         '
         Me.chk_scan_tripUnit.AutoSize = True
@@ -6498,7 +6487,7 @@ Partial Class Main
         'Button9
         '
         Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(867, 13)
+        Me.Button9.Location = New System.Drawing.Point(903, 13)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(154, 48)
         Me.Button9.TabIndex = 52
@@ -7993,7 +7982,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1327, 881)
+        Me.ClientSize = New System.Drawing.Size(1344, 881)
         Me.Controls.Add(Me.Progress_print_all)
         Me.Controls.Add(Me.Report_Tab)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -8750,6 +8739,5 @@ Partial Class Main
     Friend WithEvents btn_delete_dot_sq00 As Button
     Friend WithEvents Progress_print_all As ProgressBar
     Friend WithEvents chk_scan_tripUnit As CheckBox
-    Friend WithEvents Button13 As Button
     Friend WithEvents TextBox3 As TextBox
 End Class
