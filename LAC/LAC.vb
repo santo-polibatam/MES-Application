@@ -96,6 +96,7 @@ Public Class Main
 
     Public Shared Sub koneksi_db()
         Try
+
             'database = "Data Source=DESKTOP-4PHNBDD;initial catalog=MES_DB;integrated security=true"
             'database = "Data Source=10.155.128.185;initial catalog=MES_DB;Persist Security Info=True;User ID =HA;Password=HA@123"
             database = "Data Source=10.155.128.71;
