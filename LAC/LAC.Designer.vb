@@ -557,6 +557,28 @@ Partial Class Main
         Me.Label178 = New System.Windows.Forms.Label()
         Me.Label180 = New System.Windows.Forms.Label()
         Me.technicianNameFuji = New System.Windows.Forms.ComboBox()
+        Me.Tab_Ruby = New System.Windows.Forms.TabPage()
+        Me.GroupBox31 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView10 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox30 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView9 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox29 = New System.Windows.Forms.GroupBox()
+        Me.Label196 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label197 = New System.Windows.Forms.Label()
+        Me.GroupBox28 = New System.Windows.Forms.GroupBox()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.dateCodeRuby = New System.Windows.Forms.TextBox()
+        Me.technicianShortNameRuby = New System.Windows.Forms.TextBox()
+        Me.ComRefRuby = New System.Windows.Forms.TextBox()
+        Me.PPRubyEntry = New System.Windows.Forms.TextBox()
+        Me.workstationRuby = New System.Windows.Forms.ComboBox()
+        Me.Label185 = New System.Windows.Forms.Label()
+        Me.Label193 = New System.Windows.Forms.Label()
+        Me.Label194 = New System.Windows.Forms.Label()
+        Me.Label195 = New System.Windows.Forms.Label()
+        Me.technicianNameRuby = New System.Windows.Forms.ComboBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.btn_Export_Labelling_fuji = New System.Windows.Forms.Button()
@@ -692,6 +714,7 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
+        Me.masterruby = New System.Windows.Forms.Button()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -726,6 +749,13 @@ Partial Class Main
         Me.GroupBox17.SuspendLayout
         Me.GroupBox16.SuspendLayout
         Me.GroupBox14.SuspendLayout
+        Me.Tab_Ruby.SuspendLayout
+        Me.GroupBox31.SuspendLayout
+        CType(Me.DataGridView10, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.GroupBox30.SuspendLayout
+        CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.GroupBox29.SuspendLayout
+        Me.GroupBox28.SuspendLayout
         Me.TabPage4.SuspendLayout
         Me.GroupBox15.SuspendLayout
         Me.GroupBox11.SuspendLayout
@@ -752,6 +782,7 @@ Partial Class Main
         Me.Report_Tab.Controls.Add(Me.TabPage2)
         Me.Report_Tab.Controls.Add(Me.TabPage3)
         Me.Report_Tab.Controls.Add(Me.Tab_Fuji)
+        Me.Report_Tab.Controls.Add(Me.Tab_Ruby)
         Me.Report_Tab.Controls.Add(Me.TabPage4)
         Me.Report_Tab.Controls.Add(Me.TabPage5)
         Me.Report_Tab.Controls.Add(Me.TabPage6)
@@ -6468,7 +6499,7 @@ Partial Class Main
         Me.GroupBox14.Controls.Add(Me.Label178)
         Me.GroupBox14.Controls.Add(Me.Label180)
         Me.GroupBox14.Controls.Add(Me.technicianNameFuji)
-        Me.GroupBox14.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox14.Location = New System.Drawing.Point(6, 3)
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.Size = New System.Drawing.Size(1063, 145)
         Me.GroupBox14.TabIndex = 42
@@ -6591,8 +6622,240 @@ Partial Class Main
         Me.technicianNameFuji.TabIndex = 43
         Me.technicianNameFuji.ValueMember = "Technician"
         '
+        'Tab_Ruby
+        '
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox31)
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox30)
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox29)
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox28)
+        Me.Tab_Ruby.Location = New System.Drawing.Point(4, 29)
+        Me.Tab_Ruby.Name = "Tab_Ruby"
+        Me.Tab_Ruby.Size = New System.Drawing.Size(1220, 1047)
+        Me.Tab_Ruby.TabIndex = 8
+        Me.Tab_Ruby.Text = "Ruby"
+        Me.Tab_Ruby.UseVisualStyleBackColor = True
+        '
+        'GroupBox31
+        '
+        Me.GroupBox31.Controls.Add(Me.DataGridView10)
+        Me.GroupBox31.Location = New System.Drawing.Point(3, 390)
+        Me.GroupBox31.Name = "GroupBox31"
+        Me.GroupBox31.Size = New System.Drawing.Size(821, 146)
+        Me.GroupBox31.TabIndex = 55
+        Me.GroupBox31.TabStop = False
+        Me.GroupBox31.Text = "GroupBox31"
+        '
+        'DataGridView10
+        '
+        Me.DataGridView10.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView10.Location = New System.Drawing.Point(6, 20)
+        Me.DataGridView10.Name = "DataGridView10"
+        Me.DataGridView10.Size = New System.Drawing.Size(809, 115)
+        Me.DataGridView10.TabIndex = 0
+        '
+        'GroupBox30
+        '
+        Me.GroupBox30.Controls.Add(Me.DataGridView9)
+        Me.GroupBox30.Location = New System.Drawing.Point(6, 157)
+        Me.GroupBox30.Name = "GroupBox30"
+        Me.GroupBox30.Size = New System.Drawing.Size(821, 142)
+        Me.GroupBox30.TabIndex = 54
+        Me.GroupBox30.TabStop = False
+        Me.GroupBox30.Text = "Component"
+        '
+        'DataGridView9
+        '
+        Me.DataGridView9.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView9.Location = New System.Drawing.Point(6, 20)
+        Me.DataGridView9.Name = "DataGridView9"
+        Me.DataGridView9.Size = New System.Drawing.Size(809, 110)
+        Me.DataGridView9.TabIndex = 0
+        '
+        'GroupBox29
+        '
+        Me.GroupBox29.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox29.Controls.Add(Me.Label196)
+        Me.GroupBox29.Controls.Add(Me.TextBox8)
+        Me.GroupBox29.Controls.Add(Me.TextBox9)
+        Me.GroupBox29.Controls.Add(Me.Label197)
+        Me.GroupBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox29.ForeColor = System.Drawing.Color.Green
+        Me.GroupBox29.Location = New System.Drawing.Point(833, 157)
+        Me.GroupBox29.Name = "GroupBox29"
+        Me.GroupBox29.Size = New System.Drawing.Size(236, 142)
+        Me.GroupBox29.TabIndex = 44
+        Me.GroupBox29.TabStop = False
+        Me.GroupBox29.Text = "Scanning"
+        '
+        'Label196
+        '
+        Me.Label196.AutoSize = True
+        Me.Label196.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label196.ForeColor = System.Drawing.Color.Blue
+        Me.Label196.Location = New System.Drawing.Point(6, 77)
+        Me.Label196.Name = "Label196"
+        Me.Label196.Size = New System.Drawing.Size(126, 20)
+        Me.Label196.TabIndex = 52
+        Me.Label196.Text = "Checking Label :"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(10, 104)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(210, 26)
+        Me.TextBox8.TabIndex = 51
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(10, 48)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(210, 26)
+        Me.TextBox9.TabIndex = 42
+        '
+        'Label197
+        '
+        Me.Label197.AutoSize = True
+        Me.Label197.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label197.ForeColor = System.Drawing.Color.Blue
+        Me.Label197.Location = New System.Drawing.Point(6, 25)
+        Me.Label197.Name = "Label197"
+        Me.Label197.Size = New System.Drawing.Size(156, 20)
+        Me.Label197.TabIndex = 9
+        Me.Label197.Text = "Ruby Product Label :"
+        '
+        'GroupBox28
+        '
+        Me.GroupBox28.Controls.Add(Me.Button13)
+        Me.GroupBox28.Controls.Add(Me.dateCodeRuby)
+        Me.GroupBox28.Controls.Add(Me.technicianShortNameRuby)
+        Me.GroupBox28.Controls.Add(Me.ComRefRuby)
+        Me.GroupBox28.Controls.Add(Me.PPRubyEntry)
+        Me.GroupBox28.Controls.Add(Me.workstationRuby)
+        Me.GroupBox28.Controls.Add(Me.Label185)
+        Me.GroupBox28.Controls.Add(Me.Label193)
+        Me.GroupBox28.Controls.Add(Me.Label194)
+        Me.GroupBox28.Controls.Add(Me.Label195)
+        Me.GroupBox28.Controls.Add(Me.technicianNameRuby)
+        Me.GroupBox28.Location = New System.Drawing.Point(6, 3)
+        Me.GroupBox28.Name = "GroupBox28"
+        Me.GroupBox28.Size = New System.Drawing.Size(1063, 145)
+        Me.GroupBox28.TabIndex = 43
+        Me.GroupBox28.TabStop = False
+        '
+        'Button13
+        '
+        Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.Location = New System.Drawing.Point(903, 13)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(154, 48)
+        Me.Button13.TabIndex = 52
+        Me.Button13.Text = "Logout"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'dateCodeRuby
+        '
+        Me.dateCodeRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateCodeRuby.Location = New System.Drawing.Point(308, 13)
+        Me.dateCodeRuby.Name = "dateCodeRuby"
+        Me.dateCodeRuby.Size = New System.Drawing.Size(100, 22)
+        Me.dateCodeRuby.TabIndex = 51
+        '
+        'technicianShortNameRuby
+        '
+        Me.technicianShortNameRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.technicianShortNameRuby.Location = New System.Drawing.Point(308, 38)
+        Me.technicianShortNameRuby.Name = "technicianShortNameRuby"
+        Me.technicianShortNameRuby.Size = New System.Drawing.Size(55, 21)
+        Me.technicianShortNameRuby.TabIndex = 47
+        '
+        'ComRefRuby
+        '
+        Me.ComRefRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComRefRuby.Location = New System.Drawing.Point(126, 98)
+        Me.ComRefRuby.Name = "ComRefRuby"
+        Me.ComRefRuby.ReadOnly = True
+        Me.ComRefRuby.Size = New System.Drawing.Size(176, 21)
+        Me.ComRefRuby.TabIndex = 45
+        '
+        'PPRubyEntry
+        '
+        Me.PPRubyEntry.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PPRubyEntry.Location = New System.Drawing.Point(126, 66)
+        Me.PPRubyEntry.Name = "PPRubyEntry"
+        Me.PPRubyEntry.Size = New System.Drawing.Size(176, 21)
+        Me.PPRubyEntry.TabIndex = 44
+        '
+        'workstationRuby
+        '
+        Me.workstationRuby.DataSource = Me.WorkstationsBindingSource
+        Me.workstationRuby.DisplayMember = "wkName"
+        Me.workstationRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.workstationRuby.FormattingEnabled = True
+        Me.workstationRuby.Location = New System.Drawing.Point(126, 12)
+        Me.workstationRuby.Name = "workstationRuby"
+        Me.workstationRuby.Size = New System.Drawing.Size(176, 23)
+        Me.workstationRuby.TabIndex = 42
+        Me.workstationRuby.ValueMember = "wkName"
+        '
+        'Label185
+        '
+        Me.Label185.AutoSize = True
+        Me.Label185.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label185.Location = New System.Drawing.Point(15, 98)
+        Me.Label185.Name = "Label185"
+        Me.Label185.Size = New System.Drawing.Size(72, 20)
+        Me.Label185.TabIndex = 40
+        Me.Label185.Text = "Com Ref"
+        '
+        'Label193
+        '
+        Me.Label193.AutoSize = True
+        Me.Label193.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label193.Location = New System.Drawing.Point(15, 41)
+        Me.Label193.Name = "Label193"
+        Me.Label193.Size = New System.Drawing.Size(85, 20)
+        Me.Label193.TabIndex = 38
+        Me.Label193.Text = "Technician"
+        '
+        'Label194
+        '
+        Me.Label194.AutoSize = True
+        Me.Label194.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label194.Location = New System.Drawing.Point(15, 13)
+        Me.Label194.Name = "Label194"
+        Me.Label194.Size = New System.Drawing.Size(94, 20)
+        Me.Label194.TabIndex = 37
+        Me.Label194.Text = "Workstation"
+        '
+        'Label195
+        '
+        Me.Label195.AutoSize = True
+        Me.Label195.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label195.Location = New System.Drawing.Point(15, 66)
+        Me.Label195.Name = "Label195"
+        Me.Label195.Size = New System.Drawing.Size(29, 20)
+        Me.Label195.TabIndex = 39
+        Me.Label195.Text = "PP"
+        '
+        'technicianNameRuby
+        '
+        Me.technicianNameRuby.DataSource = Me.UsersBindingSource
+        Me.technicianNameRuby.DisplayMember = "Technician"
+        Me.technicianNameRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.technicianNameRuby.FormattingEnabled = True
+        Me.technicianNameRuby.Location = New System.Drawing.Point(126, 38)
+        Me.technicianNameRuby.Name = "technicianNameRuby"
+        Me.technicianNameRuby.Size = New System.Drawing.Size(176, 23)
+        Me.technicianNameRuby.TabIndex = 43
+        Me.technicianNameRuby.ValueMember = "Technician"
+        '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.masterruby)
         Me.TabPage4.Controls.Add(Me.GroupBox15)
         Me.TabPage4.Controls.Add(Me.GroupBox11)
         Me.TabPage4.Controls.Add(Me.GroupBox10)
@@ -7977,6 +8240,15 @@ Partial Class Main
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
         '
+        'masterruby
+        '
+        Me.masterruby.Location = New System.Drawing.Point(1079, 549)
+        Me.masterruby.Name = "masterruby"
+        Me.masterruby.Size = New System.Drawing.Size(116, 78)
+        Me.masterruby.TabIndex = 13
+        Me.masterruby.Text = "Upload Ruby Master Data"
+        Me.masterruby.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -8043,6 +8315,15 @@ Partial Class Main
         Me.GroupBox16.ResumeLayout(False)
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout
+        Me.Tab_Ruby.ResumeLayout(False)
+        Me.GroupBox31.ResumeLayout(False)
+        CType(Me.DataGridView10, System.ComponentModel.ISupportInitialize).EndInit
+        Me.GroupBox30.ResumeLayout(False)
+        CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).EndInit
+        Me.GroupBox29.ResumeLayout(False)
+        Me.GroupBox29.PerformLayout
+        Me.GroupBox28.ResumeLayout(False)
+        Me.GroupBox28.PerformLayout
         Me.TabPage4.ResumeLayout(False)
         Me.GroupBox15.ResumeLayout(False)
         Me.GroupBox11.ResumeLayout(False)
@@ -8740,4 +9021,27 @@ Partial Class Main
     Friend WithEvents Progress_print_all As ProgressBar
     Friend WithEvents chk_scan_tripUnit As CheckBox
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Tab_Ruby As TabPage
+    Friend WithEvents GroupBox29 As GroupBox
+    Friend WithEvents Label196 As Label
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Label197 As Label
+    Friend WithEvents GroupBox28 As GroupBox
+    Friend WithEvents Button13 As Button
+    Friend WithEvents dateCodeRuby As TextBox
+    Friend WithEvents technicianShortNameRuby As TextBox
+    Friend WithEvents ComRefRuby As TextBox
+    Friend WithEvents PPRubyEntry As TextBox
+    Friend WithEvents workstationRuby As ComboBox
+    Friend WithEvents Label185 As Label
+    Friend WithEvents Label193 As Label
+    Friend WithEvents Label194 As Label
+    Friend WithEvents Label195 As Label
+    Friend WithEvents technicianNameRuby As ComboBox
+    Friend WithEvents GroupBox30 As GroupBox
+    Friend WithEvents DataGridView9 As DataGridView
+    Friend WithEvents GroupBox31 As GroupBox
+    Friend WithEvents DataGridView10 As DataGridView
+    Friend WithEvents masterruby As Button
 End Class

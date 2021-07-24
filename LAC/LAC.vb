@@ -96,7 +96,6 @@ Public Class Main
 
     Public Shared Sub koneksi_db()
         Try
-
             'database = "Data Source=DESKTOP-4PHNBDD;initial catalog=MES_DB;integrated security=true"
             'database = "Data Source=10.155.128.185;initial catalog=MES_DB;Persist Security Info=True;User ID =HA;Password=HA@123"
             database = "Data Source=10.155.128.71;
@@ -1031,6 +1030,8 @@ Err_btnExit2_Click:
             Dim itemName As String = row(2).ToString()
             technicianShortName.Text = itemName
             technicianShortNameFuji.Text = itemName
+            technicianShortNameRuby.Text = itemName
+
         End If
 
     End Sub
@@ -2219,9 +2220,13 @@ Err_btnExit2_Click:
                 If barcode.Length > 128 Then
                     barcode = Microsoft.VisualBasic.Left(barcode, 127)
                 End If
+
+
                 Dim sql As String = "INSERT INTO ScanError (workstation, technician, day, PP, BarcodeScanned) VALUES ('" & Me.workstation.SelectedValue & "','" & Me.technicianName.SelectedValue & "','" & DateTime.Now & "','" & Me.PPnumberEntry.Text & "','" & barcode & "')"
-                Dim cmd = New SqlCommand(sql, Main.koneksi)
-                cmd.ExecuteNonQuery()
+                    Dim cmd = New SqlCommand(sql, Main.koneksi)
+                    cmd.ExecuteNonQuery()
+
+
 
             End If
             Me.ComponentNo.Text = ""
@@ -9016,100 +9021,116 @@ set @abc = (SELECT TOP (1) [Date]
 
         Dim tampungSplit As String = ""
         If e.KeyData = Keys.Enter Or e.KeyData = 9 Then
+
+            'Cek Fuji breaker
+            If header.Text.Contains("BW") Then
+                Dim q = "select * from FujiBreakerCheck where [EAN13]='" & Me.CompToQuality.Text & "'"
+                Dim dsfuji As New DataSet
+                Dim adapt = New SqlDataAdapter(q, Main.koneksi)
+
+                adapt.Fill(dsfuji)
+                If dsfuji.Tables(0).Rows.Count > 0 Then
+                    Dim a As String = "Wrong Scan!" + Chr(13) + "Please Scan QR Code"
+                    MessageBox.Show(a, "Important", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Me.CompToQuality.Text = ""
+                    Exit Sub
+                End If
+            End If
+
             'santo tambah
             'If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Then cek_fuji_barcode()
             If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Or Me.CompToQuality.Text.Length = 48 Then cek_fuji_barcode()
-            'abcde
-            If Active_Quality_issue.Checked = True Then
+                'abcde
+                If Active_Quality_issue.Checked = True Then
 
-                'mungkin salah
-                'If Len(Me.CompToQuality.Text) = 22 Then
-                '    SaveData.Text = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
-                '    tampungSplit = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
-                '    ComponentNo.Text = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
-                'End If
+                    'mungkin salah
+                    'If Len(Me.CompToQuality.Text) = 22 Then
+                    '    SaveData.Text = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
+                    '    tampungSplit = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
+                    '    ComponentNo.Text = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
+                    'End If
 
-                'arif
-                If Len(Me.CompToQuality.Text) = 24 Then tampungSplit = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 11), 10)
-                If Len(Me.CompToQuality.Text) = 10 Then
-                    tampungSplit = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 5)
-                ElseIf Len(Me.CompToQuality.Text) >= 11 Then
-                    tampungSplit = Microsoft.VisualBasic.Left(Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 6), 5)
-                Else
-                    tampungSplit = CompToQuality.Text
-                End If
+                    'arif
+                    If Len(Me.CompToQuality.Text) = 24 Then tampungSplit = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 11), 10)
+                    If Len(Me.CompToQuality.Text) = 10 Then
+                        tampungSplit = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 5)
+                    ElseIf Len(Me.CompToQuality.Text) >= 11 Then
+                        tampungSplit = Microsoft.VisualBasic.Left(Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 6), 5)
+                    Else
+                        tampungSplit = CompToQuality.Text
+                    End If
 
-                Dim sql As String = "select * from [Componentslist] where [code]='" & tampungSplit & "' or [material]='" & tampungSplit & "'"
-                Dim dsSql As New DataSet
-                Dim sqlAdap = New SqlDataAdapter(sql, Main.koneksi)
-                sqlAdap.Fill(dsSql)
-                If dsSql.Tables(0).Rows.Count > 0 Then
-                    tampungSplit = dsSql.Tables(0).Rows(0).Item("Material").ToString
-                Else
-                    MsgBox("Wrong Components", vbExclamation, "The component is not part of the product")
-                End If
+                    Dim sql As String = "select * from [Componentslist] where [code]='" & tampungSplit & "' or [material]='" & tampungSplit & "'"
+                    Dim dsSql As New DataSet
+                    Dim sqlAdap = New SqlDataAdapter(sql, Main.koneksi)
+                    sqlAdap.Fill(dsSql)
+                    If dsSql.Tables(0).Rows.Count > 0 Then
+                        tampungSplit = dsSql.Tables(0).Rows(0).Item("Material").ToString
+                    Else
+                        MsgBox("Wrong Components", vbExclamation, "The component is not part of the product")
+                    End If
 
-                'santo
-                If Convert.ToDecimal(CounterItems.Text) = Convert.ToDecimal(LabelQuantityitem.Text) Then
-                    MsgBox("All Breakers have been adapted !")
-                    CompToQuality.Text = ""
-                    Exit Sub
-                End If
+                    'santo
+                    If Convert.ToDecimal(CounterItems.Text) = Convert.ToDecimal(LabelQuantityitem.Text) Then
+                        MsgBox("All Breakers have been adapted !")
+                        CompToQuality.Text = ""
+                        Exit Sub
+                    End If
 
-                Try
-                    'Dim queryCheck = "select * from QualityIssue where [references]='" & CompToQuality.Text & "'"
-                    Dim queryCheck = "select * from QualityIssue where [references]='" & tampungSplit & "'"
-                    Dim ds As New DataSet
-                    Dim CheckAdap = New SqlDataAdapter(queryCheck, Main.koneksi)
+                    Try
+                        'Dim queryCheck = "select * from QualityIssue where [references]='" & CompToQuality.Text & "'"
+                        Dim queryCheck = "select * from QualityIssue where [references]='" & tampungSplit & "'"
+                        Dim ds As New DataSet
+                        Dim CheckAdap = New SqlDataAdapter(queryCheck, Main.koneksi)
 
-                    CheckAdap.Fill(ds)
+                        CheckAdap.Fill(ds)
 
-                    If ds.Tables(0).Rows.Count >= 1 Then
-                        'Dim PlantCode = InputBox("Please enter the Plant Code + Date Code :" & vbLf & vbLf & "Example: AF19514", "Enter Plant Code & Date Code")
-                        Dim PlantCode
-                        'santo
+                        If ds.Tables(0).Rows.Count >= 1 Then
+                            'Dim PlantCode = InputBox("Please enter the Plant Code + Date Code :" & vbLf & vbLf & "Example: AF19514", "Enter Plant Code & Date Code")
+                            Dim PlantCode
+                            'santo
 
-                        Input_BoX.ShowDialog()
-                        PlantCode = Input_BoX.txt_PlanCode_DateCode.Text
+                            Input_BoX.ShowDialog()
+                            PlantCode = Input_BoX.txt_PlanCode_DateCode.Text
 
-                        'Dim Query = "INSERT INTO [dbo].[QualityIssueRecord] ([PP],[References],[PlantCodeDateCode],[Remark]) VALUES ('" & PPnumberEntry.Text & "','" & tampungSplit.ToUpper & "','" & PlantCode.ToString.ToUpper & "','" & checkQualityIssue(tampungSplit, PlantCode) & "')"
-                        'Dim InsertBro = New SqlDataAdapter(Query, Main.koneksi)
-                        'InsertBro.SelectCommand.ExecuteNonQuery()
+                            'Dim Query = "INSERT INTO [dbo].[QualityIssueRecord] ([PP],[References],[PlantCodeDateCode],[Remark]) VALUES ('" & PPnumberEntry.Text & "','" & tampungSplit.ToUpper & "','" & PlantCode.ToString.ToUpper & "','" & checkQualityIssue(tampungSplit, PlantCode) & "')"
+                            'Dim InsertBro = New SqlDataAdapter(Query, Main.koneksi)
+                            'InsertBro.SelectCommand.ExecuteNonQuery()
 
-                        If checkQualityIssue(tampungSplit, PlantCode) <> "OK" Then
+                            If checkQualityIssue(tampungSplit, PlantCode) <> "OK" Then
 
-                            MessageBox.Show("Product Impected based on LA Info!" & vbCrLf & "Please Liaise with CS & Q", "Attention !",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Stop)
+                                MessageBox.Show("Product Impected based on LA Info!" & vbCrLf & "Please Liaise with CS & Q", "Attention !",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Stop)
 
-                            CompToQuality.Text = ""
-                            'CompToQuality.Select()
-                            CompToQuality.Enabled = False
-                            PPnumberEntry.Select()
-                            PPnumberEntry.SelectAll()
-                            Exit Sub
+                                CompToQuality.Text = ""
+                                'CompToQuality.Select()
+                                CompToQuality.Enabled = False
+                                PPnumberEntry.Select()
+                                PPnumberEntry.SelectAll()
+                                Exit Sub
 
+                            Else
+                                ComponentNo.Text = CompToQuality.Text
+                                CompToQuality.Text = ""
+                                CompToQuality.Select()
+                                'Lbl_Result.Text = "Result"
+                                'lbl_PlantCode.Text = "Plant :"
+                            End If
                         Else
                             ComponentNo.Text = CompToQuality.Text
                             CompToQuality.Text = ""
                             CompToQuality.Select()
-                            'Lbl_Result.Text = "Result"
-                            'lbl_PlantCode.Text = "Plant :"
                         End If
-                    Else
-                        ComponentNo.Text = CompToQuality.Text
-                        CompToQuality.Text = ""
-                        CompToQuality.Select()
-                    End If
-                Catch ex As Exception
+                    Catch ex As Exception
 
-                End Try
-            Else
-                ComponentNo.Text = CompToQuality.Text
-                CompToQuality.Text = ""
-                CompToQuality.Select()
+                    End Try
+                Else
+                    ComponentNo.Text = CompToQuality.Text
+                    CompToQuality.Text = ""
+                    CompToQuality.Select()
+                End If
             End If
-        End If
     End Sub
 
     Private Sub Simpan_QualityIssueRecord()
@@ -10519,5 +10540,173 @@ set @abc = (SELECT TOP (1) [Date]
         role = ""
     End Sub
 
+    '--Code Ruby Start From Here--'
 
+    Private Sub PPRubyEntry_KeyPress(sender As Object, e As PreviewKeyDownEventArgs) Handles PPRubyEntry.PreviewKeyDown 'sudah sesuai dengan VBA
+        If Len(Me.PPRubyEntry.Text) = 12 Then Me.PPRubyEntry.Text = Microsoft.VisualBasic.Right(Me.PPRubyEntry.Text, 11)
+
+        If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And Len(Me.PPRubyEntry.Text) >= 11 Then
+            If String.IsNullOrEmpty(workstationRuby.Text) = False And String.IsNullOrEmpty(technicianNameRuby.Text) = False Then
+                If IsNumeric(PPRubyEntry.Text) Then
+                    Dim sqlCekRuby As String = "select * from MasterRuby, openOrders where openOrders.PeggedReqt=MasterRuby.CRRef and openOrders.[Order]='" & Me.PPRubyEntry.Text & "'"
+                    Dim dsCekRuby As New DataSet
+                    adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
+                    adapter.Fill(dsCekRuby)
+                    If (dsCekRuby.Tables(0).Rows.Count > 0) Then
+                        Dim sqlCekForInsert As String = "select * from openOrders, ComponentsFuji where openOrders.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsFuji.RefFuji=openOrders.PeggedReqt and ComponentsFuji.Workstation='" & Me.workstationFuji.Text & "' and ComponentsFuji.[2ndScan]=0"
+                        Dim dsCekForInsert As New DataSet
+                        adapter = New SqlDataAdapter(sqlCekForInsert, Main.koneksi)
+                        adapter.Fill(dsCekForInsert)
+                        If (dsCekForInsert.Tables(0).Rows.Count > 0) Then
+                            Refresh_DGV_Ruby()
+                            ScanLabel.Enabled = True
+                            ScanLabel2.Enabled = False
+                            ScanLabel.Select()
+                        Else
+                            MessageBox.Show("No Data Found")
+                        End If
+
+                        'Keluarkan semua data dibawah ini
+                        FCSRef.Text = dsCekRuby.Tables(0).Rows(0).Item("FCSRef").ToString
+                        Me.dateCodeFuji.Text = dateCode2()
+
+                        'this textbox for rotaryhandle
+                        QRForRotaryHandle.Text = dsCekRuby.Tables(0).Rows(0).Item("QRRotaryHandleNumber").ToString
+                        Rotary1.Text = dsCekRuby.Tables(0).Rows(0).Item("From1").ToString
+                        Rotary2.Text = dsCekRuby.Tables(0).Rows(0).Item("From2").ToString
+                        Rotary3.Text = dsCekRuby.Tables(0).Rows(0).Item("FrameNumber").ToString
+                        Rotary5.Text = dsCekRuby.Tables(0).Rows(0).Item("BC1").ToString
+                        Rotary6.Text = dsCekRuby.Tables(0).Rows(0).Item("BC2").ToString
+                        Rotary7.Text = dsCekRuby.Tables(0).Rows(0).Item("BC3").ToString
+                        Rotary4.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurrent").ToString
+                        LotNumberRotaryHandle.Text = dsCekRuby.Tables(0).Rows(0).Item("RotaryHandleLabelNumber").ToString
+                        IdxLabelRotaryHandle.Text = "-"
+
+                        'this textbox for Front Cover Label
+                        QRForCoverLabel.Text = dsCekRuby.Tables(0).Rows(0).Item("QRFrontLabelNumber").ToString
+                        Front1.Text = dsCekRuby.Tables(0).Rows(0).Item("From1").ToString
+                        Front2.Text = dsCekRuby.Tables(0).Rows(0).Item("From2").ToString
+                        Front3.Text = dsCekRuby.Tables(0).Rows(0).Item("FrameNumber").ToString
+                        Front5.Text = dsCekRuby.Tables(0).Rows(0).Item("BC1").ToString
+                        Front6.Text = dsCekRuby.Tables(0).Rows(0).Item("BC2").ToString
+                        Front7.Text = dsCekRuby.Tables(0).Rows(0).Item("BC3").ToString
+                        Front4.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurrent").ToString
+                        LotNumberCoverLabel.Text = dsCekRuby.Tables(0).Rows(0).Item("FrontLabelNumber").ToString
+                        IdxLabelCoverLabel.Text = "-"
+                        Dim range_label As String = dsCekRuby.Tables(0).Rows(0).Item("FigureNumber").ToString
+                        If Convert.ToDecimal(range_label) <= 56 Or (Convert.ToDecimal(range_label) >= 73 And Convert.ToDecimal(range_label) <= 88) Then
+                            FujiLabelType.Text = "Short"
+                        Else
+                            FujiLabelType.Text = "Long"
+                        End If
+
+                        'this textbox for Carton Label
+                        Carton1.Text = dsCekRuby.Tables(0).Rows(0).Item("From1").ToString
+                        Carton2.Text = dsCekRuby.Tables(0).Rows(0).Item("From2").ToString
+                        Carton32.Text = dsCekRuby.Tables(0).Rows(0).Item("FrameNumber")
+                        Carton32.Text = Carton32.Text.ToString.Substring(Carton32.Text.Length - 2)
+                        Carton4.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurrent").ToString
+                        'baca Sq00
+                        Dim sql_box As String = "SELECT* FROM PPList WHERE [Order] ='" & Me.PPFujiEntry.Text & "'"
+                        Dim ds_box As New DataSet
+                        Dim adapter_box = New SqlDataAdapter(sql_box, Main.koneksi)
+                        adapter_box.Fill(ds_box)
+
+
+
+                        FujiSO.Text = ds_box.Tables(0).Rows(0).Item("SO no").ToString
+                        FujiLineNo.Text = ds_box.Tables(0).Rows(0).Item("item").ToString
+                        fujiQty.Text = ds_box.Tables(0).Rows(0).Item("Item quantity").ToString
+
+                        GroupingBox.Text = dsCekRuby.Tables(0).Rows(0).Item("GroupingBox").ToString
+                        PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Purchase order number").ToString
+                        'PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Order").ToString
+
+
+                        Dim sqlCounterItemsFuji As String = "select * from ComponentsFuji where 
+                        ComponentsFuji.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsFuji.Workstation='" & Me.workstationFuji.Text & "' 
+                        and ComponentsFuji.[Check Components]=1 and ComponentsFuji.[2ndScan]= 0 "
+                        Dim ds3 As New DataSet
+                        adapter3 = New SqlDataAdapter(sqlCounterItemsFuji, Main.koneksi)
+                        adapter3.Fill(ds3)
+                        CounterItemsFuji.Text = ds3.Tables(0).Rows.Count
+
+                        ScanLabel.Text = ""
+                    Else
+                        MessageBox.Show("This PP not Ruby")
+                    End If
+                Else
+                    MsgBox("Sorry The PP must be number")
+                    Me.PPFujiEntry.Text = ""
+                End If
+            Else
+                MsgBox("Sorry you Must select workstations and technician first")
+            End If
+        End If
+    End Sub
+
+    Private Sub Refresh_DGV_Ruby()
+        DataGridView9.Rows.Clear()
+        'DataGridView8.Rows.Clear()
+        Dim sql As String = "select [Order], [RefRuby],[Check Components],[QRCodeRuby]  from ComponentsRuby where [Order]='" & Me.PPRubyEntry.Text & "' and Workstation='" & Me.workstationRuby.Text & "'"
+        Dim ds As New DataSet
+        adapter = New SqlDataAdapter(sql, Main.koneksi)
+        adapter.Fill(ds)
+        If ds.Tables(0).Rows.Count > 0 Then
+            DataGridView9.ColumnCount = 4
+            DataGridView9.Columns(0).Name = "Order"
+            DataGridView9.Columns(1).Name = "CR Refrence"
+            DataGridView9.Columns(2).Name = "QR Code"
+            DataGridView9.Columns(3).Name = "Check Scan"
+            For r = 0 To ds.Tables(0).Rows.Count - 1
+                Dim row As String() = New String() {ds.Tables(0).Rows(r).Item("Order").ToString(), ds.Tables(0).Rows(r).Item("RefRuby").ToString(), ds.Tables(0).Rows(r).Item("QRCodeRuby").ToString(), ds.Tables(0).Rows(r).Item("Check Components").ToString()}
+                DataGridView9.Rows.Add(row)
+                If ds.Tables(0).Rows(r).Item("Check Components").ToString() = 1 Then
+                    DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.SkyBlue
+                Else
+                    DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.White
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub masterruby_Click(sender As Object, e As EventArgs) Handles masterruby.Click
+        OpenFileDialog1.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+        If OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            Dim xlApp As New Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(OpenFileDialog1.FileName)
+            Dim SheetName As String = xlWorkBook.Worksheets(1).Name.ToString
+            Dim excelpath As String = OpenFileDialog1.FileName
+            Dim koneksiExcel As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & excelpath & ";Extended Properties='Excel 8.0;HDR=No;IMEX=1;'"
+            oleCon = New OleDbConnection(koneksiExcel)
+            oleCon.Open()
+
+            Dim queryExcel As String = "select * from [" & SheetName & "$]"
+            Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
+            Dim rd As OleDbDataReader
+
+            Call koneksi_db()
+
+            Dim deleteReset As New SqlCommand("Delete from [dbo].[MasterRuby]", Main.koneksi)
+
+            Try
+                deleteReset.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("Delete DB Fail " & ex.Message)
+            End Try
+
+            Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
+                bulkCopy.DestinationTableName = "dbo.MasterRuby"
+                Try
+                    rd = cmd.ExecuteReader
+                    bulkCopy.WriteToServer(rd)
+
+                    rd.Close()
+                    MsgBox("Upload Master Data RUBY Successed !")
+                Catch ex As Exception
+                    MsgBox("Upload Master RUBY Fail" & ex.Message)
+                End Try
+            End Using
+        End If
+    End Sub
 End Class
