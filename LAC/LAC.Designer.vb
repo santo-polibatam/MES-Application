@@ -565,7 +565,7 @@ Partial Class Main
         Me.GroupBox29 = New System.Windows.Forms.GroupBox()
         Me.Label196 = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.ScanRuby = New System.Windows.Forms.TextBox()
         Me.Label197 = New System.Windows.Forms.Label()
         Me.GroupBox28 = New System.Windows.Forms.GroupBox()
         Me.Button13 = New System.Windows.Forms.Button()
@@ -580,6 +580,8 @@ Partial Class Main
         Me.Label195 = New System.Windows.Forms.Label()
         Me.technicianNameRuby = New System.Windows.Forms.ComboBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.masterruby = New System.Windows.Forms.Button()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.btn_Export_Labelling_fuji = New System.Windows.Forms.Button()
         Me.btn_export_BOM_Fuji = New System.Windows.Forms.Button()
@@ -714,7 +716,15 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
-        Me.masterruby = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.RatedCurrRuby = New System.Windows.Forms.TextBox()
+        Me.UtilizationRuby = New System.Windows.Forms.TextBox()
+        Me.DCRuby = New System.Windows.Forms.TextBox()
+        Me.RatedVoltRuby = New System.Windows.Forms.TextBox()
+        Me.RatedFreq = New System.Windows.Forms.TextBox()
+        Me.ShortCircuitRuby = New System.Windows.Forms.TextBox()
+        Me.GroupBox32 = New System.Windows.Forms.GroupBox()
+        Me.Button16 = New System.Windows.Forms.Button()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -774,6 +784,7 @@ Partial Class Main
         CType(Me.DGV_QI_Trace, System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.SGRACMESDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.SgraC_MESDataSet1, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.GroupBox32.SuspendLayout
         Me.SuspendLayout
         '
         'Report_Tab
@@ -6624,6 +6635,7 @@ Partial Class Main
         '
         'Tab_Ruby
         '
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox32)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox31)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox30)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox29)
@@ -6666,6 +6678,7 @@ Partial Class Main
         '
         'DataGridView9
         '
+        Me.DataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView9.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView9.Location = New System.Drawing.Point(6, 20)
@@ -6678,7 +6691,7 @@ Partial Class Main
         Me.GroupBox29.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox29.Controls.Add(Me.Label196)
         Me.GroupBox29.Controls.Add(Me.TextBox8)
-        Me.GroupBox29.Controls.Add(Me.TextBox9)
+        Me.GroupBox29.Controls.Add(Me.ScanRuby)
         Me.GroupBox29.Controls.Add(Me.Label197)
         Me.GroupBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox29.ForeColor = System.Drawing.Color.Green
@@ -6708,13 +6721,13 @@ Partial Class Main
         Me.TextBox8.Size = New System.Drawing.Size(210, 26)
         Me.TextBox8.TabIndex = 51
         '
-        'TextBox9
+        'ScanRuby
         '
-        Me.TextBox9.Enabled = False
-        Me.TextBox9.Location = New System.Drawing.Point(10, 48)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(210, 26)
-        Me.TextBox9.TabIndex = 42
+        Me.ScanRuby.Enabled = False
+        Me.ScanRuby.Location = New System.Drawing.Point(10, 48)
+        Me.ScanRuby.Name = "ScanRuby"
+        Me.ScanRuby.Size = New System.Drawing.Size(210, 26)
+        Me.ScanRuby.TabIndex = 42
         '
         'Label197
         '
@@ -6855,6 +6868,9 @@ Partial Class Main
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Button16)
+        Me.TabPage4.Controls.Add(Me.Button15)
+        Me.TabPage4.Controls.Add(Me.Button14)
         Me.TabPage4.Controls.Add(Me.masterruby)
         Me.TabPage4.Controls.Add(Me.GroupBox15)
         Me.TabPage4.Controls.Add(Me.GroupBox11)
@@ -6869,6 +6885,24 @@ Partial Class Main
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Master Data"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(1079, 652)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(116, 71)
+        Me.Button14.TabIndex = 14
+        Me.Button14.Text = "Upload Ruby Material Master"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'masterruby
+        '
+        Me.masterruby.Location = New System.Drawing.Point(1079, 549)
+        Me.masterruby.Name = "masterruby"
+        Me.masterruby.Size = New System.Drawing.Size(116, 78)
+        Me.masterruby.TabIndex = 13
+        Me.masterruby.Text = "Upload Ruby Master Data"
+        Me.masterruby.UseVisualStyleBackColor = True
         '
         'GroupBox15
         '
@@ -8240,14 +8274,86 @@ Partial Class Main
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
         '
-        'masterruby
+        'Button15
         '
-        Me.masterruby.Location = New System.Drawing.Point(1079, 549)
-        Me.masterruby.Name = "masterruby"
-        Me.masterruby.Size = New System.Drawing.Size(116, 78)
-        Me.masterruby.TabIndex = 13
-        Me.masterruby.Text = "Upload Ruby Master Data"
-        Me.masterruby.UseVisualStyleBackColor = True
+        Me.Button15.Location = New System.Drawing.Point(1079, 759)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(116, 66)
+        Me.Button15.TabIndex = 15
+        Me.Button15.Text = "Upload Ruby Range Label"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'RatedCurrRuby
+        '
+        Me.RatedCurrRuby.Location = New System.Drawing.Point(12, 38)
+        Me.RatedCurrRuby.Name = "RatedCurrRuby"
+        Me.RatedCurrRuby.ReadOnly = True
+        Me.RatedCurrRuby.Size = New System.Drawing.Size(100, 26)
+        Me.RatedCurrRuby.TabIndex = 56
+        '
+        'UtilizationRuby
+        '
+        Me.UtilizationRuby.Location = New System.Drawing.Point(12, 89)
+        Me.UtilizationRuby.Name = "UtilizationRuby"
+        Me.UtilizationRuby.ReadOnly = True
+        Me.UtilizationRuby.Size = New System.Drawing.Size(100, 26)
+        Me.UtilizationRuby.TabIndex = 57
+        '
+        'DCRuby
+        '
+        Me.DCRuby.Location = New System.Drawing.Point(129, 138)
+        Me.DCRuby.Name = "DCRuby"
+        Me.DCRuby.ReadOnly = True
+        Me.DCRuby.Size = New System.Drawing.Size(100, 26)
+        Me.DCRuby.TabIndex = 58
+        '
+        'RatedVoltRuby
+        '
+        Me.RatedVoltRuby.Location = New System.Drawing.Point(129, 38)
+        Me.RatedVoltRuby.Name = "RatedVoltRuby"
+        Me.RatedVoltRuby.ReadOnly = True
+        Me.RatedVoltRuby.Size = New System.Drawing.Size(100, 26)
+        Me.RatedVoltRuby.TabIndex = 59
+        '
+        'RatedFreq
+        '
+        Me.RatedFreq.Location = New System.Drawing.Point(129, 89)
+        Me.RatedFreq.Name = "RatedFreq"
+        Me.RatedFreq.ReadOnly = True
+        Me.RatedFreq.Size = New System.Drawing.Size(100, 26)
+        Me.RatedFreq.TabIndex = 60
+        '
+        'ShortCircuitRuby
+        '
+        Me.ShortCircuitRuby.Location = New System.Drawing.Point(12, 138)
+        Me.ShortCircuitRuby.Name = "ShortCircuitRuby"
+        Me.ShortCircuitRuby.ReadOnly = True
+        Me.ShortCircuitRuby.Size = New System.Drawing.Size(100, 26)
+        Me.ShortCircuitRuby.TabIndex = 61
+        '
+        'GroupBox32
+        '
+        Me.GroupBox32.Controls.Add(Me.RatedCurrRuby)
+        Me.GroupBox32.Controls.Add(Me.DCRuby)
+        Me.GroupBox32.Controls.Add(Me.ShortCircuitRuby)
+        Me.GroupBox32.Controls.Add(Me.RatedVoltRuby)
+        Me.GroupBox32.Controls.Add(Me.RatedFreq)
+        Me.GroupBox32.Controls.Add(Me.UtilizationRuby)
+        Me.GroupBox32.Location = New System.Drawing.Point(3, 542)
+        Me.GroupBox32.Name = "GroupBox32"
+        Me.GroupBox32.Size = New System.Drawing.Size(250, 249)
+        Me.GroupBox32.TabIndex = 62
+        Me.GroupBox32.TabStop = False
+        Me.GroupBox32.Text = "Performance Label"
+        '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(1079, 859)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(116, 76)
+        Me.Button16.TabIndex = 16
+        Me.Button16.Text = "Upload Ruby Packaging Label"
+        Me.Button16.UseVisualStyleBackColor = True
         '
         'Main
         '
@@ -8349,6 +8455,8 @@ Partial Class Main
         CType(Me.DGV_QI_Trace, System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.SGRACMESDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.SgraC_MESDataSet1, System.ComponentModel.ISupportInitialize).EndInit
+        Me.GroupBox32.ResumeLayout(False)
+        Me.GroupBox32.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
@@ -9025,7 +9133,7 @@ Partial Class Main
     Friend WithEvents GroupBox29 As GroupBox
     Friend WithEvents Label196 As Label
     Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents ScanRuby As TextBox
     Friend WithEvents Label197 As Label
     Friend WithEvents GroupBox28 As GroupBox
     Friend WithEvents Button13 As Button
@@ -9044,4 +9152,14 @@ Partial Class Main
     Friend WithEvents GroupBox31 As GroupBox
     Friend WithEvents DataGridView10 As DataGridView
     Friend WithEvents masterruby As Button
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
+    Friend WithEvents ShortCircuitRuby As TextBox
+    Friend WithEvents RatedFreq As TextBox
+    Friend WithEvents RatedVoltRuby As TextBox
+    Friend WithEvents DCRuby As TextBox
+    Friend WithEvents UtilizationRuby As TextBox
+    Friend WithEvents RatedCurrRuby As TextBox
+    Friend WithEvents GroupBox32 As GroupBox
+    Friend WithEvents Button16 As Button
 End Class

@@ -3539,6 +3539,15 @@ Err_btnExit2_Click:
         dateCode3 = Date.Now.Year & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
 
     End Function
+    'untuk Ruby
+    Function dateCode4()
+        Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
+
+        If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
+
+        dateCode4 = Date.Now.Year.ToString().Substring(2, 2) & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
+
+    End Function
 
     Sub updateTraceability()
         Try
@@ -10548,90 +10557,49 @@ set @abc = (SELECT TOP (1) [Date]
         If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And Len(Me.PPRubyEntry.Text) >= 11 Then
             If String.IsNullOrEmpty(workstationRuby.Text) = False And String.IsNullOrEmpty(technicianNameRuby.Text) = False Then
                 If IsNumeric(PPRubyEntry.Text) Then
-                    Dim sqlCekRuby As String = "select * from MasterRuby, openOrders where openOrders.PeggedReqt=MasterRuby.CRRef and openOrders.[Order]='" & Me.PPRubyEntry.Text & "'"
+                    Dim sqlCekRuby As String = "select * from MasterRuby, PPList, MasterRangeLabelRuby where PPList.Material=MasterRuby.CRRef and PPList.[Order]='" & Me.PPRubyEntry.Text & "' and PPList.[Material]=MasterRangeLabelRuby.[CRRef]"
                     Dim dsCekRuby As New DataSet
                     adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
                     adapter.Fill(dsCekRuby)
                     If (dsCekRuby.Tables(0).Rows.Count > 0) Then
-                        Dim sqlCekForInsert As String = "select * from openOrders, ComponentsFuji where openOrders.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsFuji.RefFuji=openOrders.PeggedReqt and ComponentsFuji.Workstation='" & Me.workstationFuji.Text & "' and ComponentsFuji.[2ndScan]=0"
+                        Dim sqlCekForInsert As String = "select * from PPList, ComponentsRuby where PPlist.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsRuby.RefRuby=PPList.Material and ComponentsRuby.Workstation='" & Me.workstationRuby.Text & "'"
                         Dim dsCekForInsert As New DataSet
                         adapter = New SqlDataAdapter(sqlCekForInsert, Main.koneksi)
                         adapter.Fill(dsCekForInsert)
                         If (dsCekForInsert.Tables(0).Rows.Count > 0) Then
                             Refresh_DGV_Ruby()
-                            ScanLabel.Enabled = True
-                            ScanLabel2.Enabled = False
-                            ScanLabel.Select()
                         Else
-                            MessageBox.Show("No Data Found")
+                            'Dim QrCodeRuby = "http://go2se.com/ref=" & dsCekRuby.Tables(0).Rows(0).Item("CRRef").ToString & "/sn=WG" & dateCode4() & "010000"
+                            'MessageBox.Show("No Data Found")
+                            Dim queryInsert = "insert into [ComponentsRuby]([order],[RefRuby],[WorkStation],[Check Components], 
+                            [ReqQty]) values ('" & Me.PPRubyEntry.Text & "',(select Top 1 material from PPList 
+                            where [order]='" & Me.PPRubyEntry.Text & "'),'" & Me.workstationRuby.Text & "',0,(select Top 1 [Item quantity] from PPList 
+                            where [order]='" & Me.PPRubyEntry.Text & "'))"
+                            Dim adapterInsert = New SqlDataAdapter(queryInsert, Main.koneksi)
+                            adapterInsert.SelectCommand.ExecuteNonQuery()
+                            Refresh_DGV_Ruby()
+                        End If
+
+                        ComRefRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("CRRef").ToString
+                        Me.dateCodeRuby.Text = dateCode2()
+
+                        Dim row_v As DataRowView = technicianNameRuby.SelectedItem
+                        If (Not row_v Is Nothing) Then
+                            Dim row As DataRow = row_v.Row
+                            Dim itemName As String = row(2).ToString()
+                            technicianShortNameRuby.Text = itemName
                         End If
 
                         'Keluarkan semua data dibawah ini
-                        FCSRef.Text = dsCekRuby.Tables(0).Rows(0).Item("FCSRef").ToString
-                        Me.dateCodeFuji.Text = dateCode2()
+                        RatedCurrRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurr").ToString
+                        RatedVoltRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedVolt").ToString
+                        UtilizationRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("Utilization").ToString
+                        RatedFreq.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedFreq").ToString
+                        ShortCircuitRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("ShortCircuit").ToString
+                        DCRuby.Text = "-"
+                        ScanRuby.Enabled = True
+                        ScanRuby.Text = ""
 
-                        'this textbox for rotaryhandle
-                        QRForRotaryHandle.Text = dsCekRuby.Tables(0).Rows(0).Item("QRRotaryHandleNumber").ToString
-                        Rotary1.Text = dsCekRuby.Tables(0).Rows(0).Item("From1").ToString
-                        Rotary2.Text = dsCekRuby.Tables(0).Rows(0).Item("From2").ToString
-                        Rotary3.Text = dsCekRuby.Tables(0).Rows(0).Item("FrameNumber").ToString
-                        Rotary5.Text = dsCekRuby.Tables(0).Rows(0).Item("BC1").ToString
-                        Rotary6.Text = dsCekRuby.Tables(0).Rows(0).Item("BC2").ToString
-                        Rotary7.Text = dsCekRuby.Tables(0).Rows(0).Item("BC3").ToString
-                        Rotary4.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurrent").ToString
-                        LotNumberRotaryHandle.Text = dsCekRuby.Tables(0).Rows(0).Item("RotaryHandleLabelNumber").ToString
-                        IdxLabelRotaryHandle.Text = "-"
-
-                        'this textbox for Front Cover Label
-                        QRForCoverLabel.Text = dsCekRuby.Tables(0).Rows(0).Item("QRFrontLabelNumber").ToString
-                        Front1.Text = dsCekRuby.Tables(0).Rows(0).Item("From1").ToString
-                        Front2.Text = dsCekRuby.Tables(0).Rows(0).Item("From2").ToString
-                        Front3.Text = dsCekRuby.Tables(0).Rows(0).Item("FrameNumber").ToString
-                        Front5.Text = dsCekRuby.Tables(0).Rows(0).Item("BC1").ToString
-                        Front6.Text = dsCekRuby.Tables(0).Rows(0).Item("BC2").ToString
-                        Front7.Text = dsCekRuby.Tables(0).Rows(0).Item("BC3").ToString
-                        Front4.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurrent").ToString
-                        LotNumberCoverLabel.Text = dsCekRuby.Tables(0).Rows(0).Item("FrontLabelNumber").ToString
-                        IdxLabelCoverLabel.Text = "-"
-                        Dim range_label As String = dsCekRuby.Tables(0).Rows(0).Item("FigureNumber").ToString
-                        If Convert.ToDecimal(range_label) <= 56 Or (Convert.ToDecimal(range_label) >= 73 And Convert.ToDecimal(range_label) <= 88) Then
-                            FujiLabelType.Text = "Short"
-                        Else
-                            FujiLabelType.Text = "Long"
-                        End If
-
-                        'this textbox for Carton Label
-                        Carton1.Text = dsCekRuby.Tables(0).Rows(0).Item("From1").ToString
-                        Carton2.Text = dsCekRuby.Tables(0).Rows(0).Item("From2").ToString
-                        Carton32.Text = dsCekRuby.Tables(0).Rows(0).Item("FrameNumber")
-                        Carton32.Text = Carton32.Text.ToString.Substring(Carton32.Text.Length - 2)
-                        Carton4.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurrent").ToString
-                        'baca Sq00
-                        Dim sql_box As String = "SELECT* FROM PPList WHERE [Order] ='" & Me.PPFujiEntry.Text & "'"
-                        Dim ds_box As New DataSet
-                        Dim adapter_box = New SqlDataAdapter(sql_box, Main.koneksi)
-                        adapter_box.Fill(ds_box)
-
-
-
-                        FujiSO.Text = ds_box.Tables(0).Rows(0).Item("SO no").ToString
-                        FujiLineNo.Text = ds_box.Tables(0).Rows(0).Item("item").ToString
-                        fujiQty.Text = ds_box.Tables(0).Rows(0).Item("Item quantity").ToString
-
-                        GroupingBox.Text = dsCekRuby.Tables(0).Rows(0).Item("GroupingBox").ToString
-                        PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Purchase order number").ToString
-                        'PO_Group_BOX.Text = ds_box.Tables(0).Rows(0).Item("Order").ToString
-
-
-                        Dim sqlCounterItemsFuji As String = "select * from ComponentsFuji where 
-                        ComponentsFuji.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsFuji.Workstation='" & Me.workstationFuji.Text & "' 
-                        and ComponentsFuji.[Check Components]=1 and ComponentsFuji.[2ndScan]= 0 "
-                        Dim ds3 As New DataSet
-                        adapter3 = New SqlDataAdapter(sqlCounterItemsFuji, Main.koneksi)
-                        adapter3.Fill(ds3)
-                        CounterItemsFuji.Text = ds3.Tables(0).Rows.Count
-
-                        ScanLabel.Text = ""
                     Else
                         MessageBox.Show("This PP not Ruby")
                     End If
@@ -10647,8 +10615,7 @@ set @abc = (SELECT TOP (1) [Date]
 
     Private Sub Refresh_DGV_Ruby()
         DataGridView9.Rows.Clear()
-        'DataGridView8.Rows.Clear()
-        Dim sql As String = "select [Order], [RefRuby],[Check Components],[QRCodeRuby]  from ComponentsRuby where [Order]='" & Me.PPRubyEntry.Text & "' and Workstation='" & Me.workstationRuby.Text & "'"
+        Dim sql As String = "select [Order], [RefRuby],[Check Components],[ReqQty] from ComponentsRuby where [Order]='" & Me.PPRubyEntry.Text & "' and Workstation='" & Me.workstationRuby.Text & "'"
         Dim ds As New DataSet
         adapter = New SqlDataAdapter(sql, Main.koneksi)
         adapter.Fill(ds)
@@ -10656,10 +10623,10 @@ set @abc = (SELECT TOP (1) [Date]
             DataGridView9.ColumnCount = 4
             DataGridView9.Columns(0).Name = "Order"
             DataGridView9.Columns(1).Name = "CR Refrence"
-            DataGridView9.Columns(2).Name = "QR Code"
+            DataGridView9.Columns(2).Name = "Req Qty"
             DataGridView9.Columns(3).Name = "Check Scan"
             For r = 0 To ds.Tables(0).Rows.Count - 1
-                Dim row As String() = New String() {ds.Tables(0).Rows(r).Item("Order").ToString(), ds.Tables(0).Rows(r).Item("RefRuby").ToString(), ds.Tables(0).Rows(r).Item("QRCodeRuby").ToString(), ds.Tables(0).Rows(r).Item("Check Components").ToString()}
+                Dim row As String() = New String() {ds.Tables(0).Rows(r).Item("Order").ToString(), ds.Tables(0).Rows(r).Item("RefRuby").ToString(), ds.Tables(0).Rows(r).Item("ReqQty").ToString(), ds.Tables(0).Rows(r).Item("Check Components").ToString()}
                 DataGridView9.Rows.Add(row)
                 If ds.Tables(0).Rows(r).Item("Check Components").ToString() = 1 Then
                     DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.SkyBlue
@@ -10707,6 +10674,157 @@ set @abc = (SELECT TOP (1) [Date]
                     MsgBox("Upload Master RUBY Fail" & ex.Message)
                 End Try
             End Using
+        End If
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        OpenFileDialog1.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+        If OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            Dim xlApp As New Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(OpenFileDialog1.FileName)
+            Dim SheetName As String = xlWorkBook.Worksheets(1).Name.ToString
+            Dim excelpath As String = OpenFileDialog1.FileName
+            Dim koneksiExcel As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & excelpath & ";Extended Properties='Excel 8.0;HDR=No;IMEX=1;'"
+            oleCon = New OleDbConnection(koneksiExcel)
+            oleCon.Open()
+
+            Dim queryExcel As String = "select * from [" & SheetName & "$]"
+            Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
+            Dim rd As OleDbDataReader
+
+            Call koneksi_db()
+
+            Dim deleteReset As New SqlCommand("Delete from [dbo].[MasterMaterialRuby]", Main.koneksi)
+
+            Try
+                deleteReset.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("Delete DB Fail " & ex.Message)
+            End Try
+
+            Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
+                bulkCopy.DestinationTableName = "dbo.MasterMaterialRuby"
+                Try
+                    rd = cmd.ExecuteReader
+                    bulkCopy.WriteToServer(rd)
+
+                    rd.Close()
+                    MsgBox("Upload Master Material RUBY Successed !")
+                Catch ex As Exception
+                    MsgBox("Upload Master Material Fail" & ex.Message)
+                End Try
+            End Using
+        End If
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        OpenFileDialog1.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+        If OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            Dim xlApp As New Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(OpenFileDialog1.FileName)
+            Dim SheetName As String = xlWorkBook.Worksheets(1).Name.ToString
+            Dim excelpath As String = OpenFileDialog1.FileName
+            Dim koneksiExcel As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & excelpath & ";Extended Properties='Excel 8.0;HDR=No;IMEX=1;'"
+            oleCon = New OleDbConnection(koneksiExcel)
+            oleCon.Open()
+
+            Dim queryExcel As String = "select * from [" & SheetName & "$]"
+            Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
+            Dim rd As OleDbDataReader
+
+            Call koneksi_db()
+
+            Dim deleteReset As New SqlCommand("Delete from [dbo].[MasterRangeLabelRuby]", Main.koneksi)
+
+            Try
+                deleteReset.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("Delete DB Fail " & ex.Message)
+            End Try
+
+            Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
+                bulkCopy.DestinationTableName = "dbo.MasterRangeLabelRuby"
+                Try
+                    rd = cmd.ExecuteReader
+                    bulkCopy.WriteToServer(rd)
+
+                    rd.Close()
+                    MsgBox("Upload Master Range Label RUBY Successed !")
+                Catch ex As Exception
+                    MsgBox("Upload Master Range Label Fail" & ex.Message)
+                End Try
+            End Using
+        End If
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        OpenFileDialog1.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+        If OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            Dim xlApp As New Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(OpenFileDialog1.FileName)
+            Dim SheetName As String = xlWorkBook.Worksheets(1).Name.ToString
+            Dim excelpath As String = OpenFileDialog1.FileName
+            Dim koneksiExcel As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & excelpath & ";Extended Properties='Excel 8.0;HDR=No;IMEX=1;'"
+            oleCon = New OleDbConnection(koneksiExcel)
+            oleCon.Open()
+
+            Dim queryExcel As String = "select * from [" & SheetName & "$]"
+            Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
+            Dim rd As OleDbDataReader
+
+            Call koneksi_db()
+
+            Dim deleteReset As New SqlCommand("Delete from [dbo].[MasterPackagingLabelRuby]", Main.koneksi)
+
+            Try
+                deleteReset.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("Delete DB Fail " & ex.Message)
+            End Try
+
+            Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
+                bulkCopy.DestinationTableName = "dbo.MasterPackagingLabelRuby"
+                Try
+                    rd = cmd.ExecuteReader
+                    bulkCopy.WriteToServer(rd)
+
+                    rd.Close()
+                    MsgBox("Upload Master Packaging Label RUBY Successed !")
+                Catch ex As Exception
+                    MsgBox("Upload Master Packaging Label Fail" & ex.Message)
+                End Try
+            End Using
+        End If
+    End Sub
+
+    Private Sub ScanRuby_TextChanged(sender As Object, e As PreviewKeyDownEventArgs) Handles ScanRuby.PreviewKeyDown
+        If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And (Len(Me.ScanRuby.Text) >= 52) Then
+            Dim arrData1() As String = Split(ScanRuby.Text, "/")
+            Dim arrDataRef() As String = Split(arrData1(3), "=")
+            Dim arrDataSn() As String = Split(arrData1(4), "=")
+            Dim DataRef As String = arrDataRef(1)
+            Dim DataSn As String = arrDataSn(1)
+
+            Dim sqlCekRuby As String = "select * from ComponentsRuby where [order]=" & PPRubyEntry.Text & "and [RefRuby]='" & DataRef & "' and workstation='" & workstationRuby.Text & "'"
+            Dim dsCekRuby As New DataSet
+            adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
+            adapter.Fill(dsCekRuby)
+            If (dsCekRuby.Tables(0).Rows.Count > 0) Then
+                DCRuby.Text = DataSn.Substring(2)
+                If (dsCekRuby.Tables(0).Rows(0).Item("ReqQty") = dsCekRuby.Tables(0).Rows(0).Item("Check Components")) Then
+                    MsgBox("All Product have been scanned")
+                Else
+                    Dim queryUpdate = "UPDATE [ComponentsRuby] SET [Check Components] = " & Convert.ToInt32(dsCekRuby.Tables(0).Rows(0).Item("Check Components")) + 1 & " where 
+                    [Order]='" & Me.PPRubyEntry.Text & "' 
+                    and Workstation='" & Me.workstationRuby.Text & "' 
+                    and RefRuby='" & DataRef & "'"
+                    adapter = New SqlDataAdapter(queryUpdate, Main.koneksi)
+                    If adapter.SelectCommand.ExecuteNonQuery().ToString() = 1 Then
+                        Refresh_DGV_Ruby()
+                    End If
+                End If
+                ScanRuby.Text = ""
+            End If
         End If
     End Sub
 End Class
