@@ -10551,13 +10551,14 @@ set @abc = (SELECT TOP (1) [Date]
 
     '--Code Ruby Start From Here--'
 
+    '------------------Scan PP Ruby V1--------------------------------
     Private Sub PPRubyEntry_KeyPress(sender As Object, e As PreviewKeyDownEventArgs) Handles PPRubyEntry.PreviewKeyDown 'sudah sesuai dengan VBA
         If Len(Me.PPRubyEntry.Text) = 12 Then Me.PPRubyEntry.Text = Microsoft.VisualBasic.Right(Me.PPRubyEntry.Text, 11)
 
         If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And Len(Me.PPRubyEntry.Text) >= 11 Then
             If String.IsNullOrEmpty(workstationRuby.Text) = False And String.IsNullOrEmpty(technicianNameRuby.Text) = False Then
                 If IsNumeric(PPRubyEntry.Text) Then
-                    Dim sqlCekRuby As String = "select * from MasterRuby, PPList, MasterRangeLabelRuby where PPList.Material=MasterRuby.CRRef and PPList.[Order]='" & Me.PPRubyEntry.Text & "' and PPList.[Material]=MasterRangeLabelRuby.[CRRef]"
+                    Dim sqlCekRuby As String = "select * from MasterRuby, PPList, MasterRangeLabelRuby, MasterPackagingLabelRuby where PPList.Material=MasterRuby.CRRef and PPList.[Order]='" & Me.PPRubyEntry.Text & "' and PPList.[Material]=MasterRangeLabelRuby.[CRRef] and PPList.[Material]=MasterPackagingLabelRuby.CRRef"
                     Dim dsCekRuby As New DataSet
                     adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
                     adapter.Fill(dsCekRuby)
@@ -10572,7 +10573,7 @@ set @abc = (SELECT TOP (1) [Date]
                             'Dim QrCodeRuby = "http://go2se.com/ref=" & dsCekRuby.Tables(0).Rows(0).Item("CRRef").ToString & "/sn=WG" & dateCode4() & "010000"
                             'MessageBox.Show("No Data Found")
                             Dim queryInsert = "insert into [ComponentsRuby]([order],[RefRuby],[WorkStation],[Check Components], 
-                            [ReqQty]) values ('" & Me.PPRubyEntry.Text & "',(select Top 1 material from PPList 
+                            [Qty]) values ('" & Me.PPRubyEntry.Text & "',(select Top 1 material from PPList 
                             where [order]='" & Me.PPRubyEntry.Text & "'),'" & Me.workstationRuby.Text & "',0,(select Top 1 [Item quantity] from PPList 
                             where [order]='" & Me.PPRubyEntry.Text & "'))"
                             Dim adapterInsert = New SqlDataAdapter(queryInsert, Main.koneksi)
@@ -10596,6 +10597,38 @@ set @abc = (SELECT TOP (1) [Date]
                         UtilizationRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("Utilization").ToString
                         RatedFreq.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedFreq").ToString
                         ShortCircuitRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("ShortCircuit").ToString
+
+                        PerfLabel.Text = dsCekRuby.Tables(0).Rows(0).Item("PerfLabel").ToString
+                        QtyPerfLabel.Text = dsCekRuby.Tables(0).Rows(0).Item("QTY3").ToString
+                        SERefRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("SeRef").ToString
+                        QtySERefRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("QTY1").ToString
+                        ScrewAcc.Text = dsCekRuby.Tables(0).Rows(0).Item("ScrewAcc").ToString
+                        QtyScrewAcc.Text = dsCekRuby.Tables(0).Rows(0).Item("QTY2").ToString
+                        EXT24.Text = dsCekRuby.Tables(0).Rows(0).Item("EXT24").ToString
+                        QtyEXT24.Text = dsCekRuby.Tables(0).Rows(0).Item("QTY6").ToString
+                        RS485.Text = dsCekRuby.Tables(0).Rows(0).Item("ModRS485").ToString
+                        QtyRS485.Text = dsCekRuby.Tables(0).Rows(0).Item("QTY7").ToString
+                        CartonBoxRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("CartonBox").ToString
+                        QtyCartonBox.Text = dsCekRuby.Tables(0).Rows(0).Item("QTY8").ToString
+
+                        LangCn.Text = dsCekRuby.Tables(0).Rows(0).Item("cn").ToString
+                        LangEn.Text = dsCekRuby.Tables(0).Rows(0).Item("en").ToString
+                        LangEs.Text = dsCekRuby.Tables(0).Rows(0).Item("es").ToString
+                        LangFr.Text = dsCekRuby.Tables(0).Rows(0).Item("fr").ToString
+                        LangKz.Text = dsCekRuby.Tables(0).Rows(0).Item("kz").ToString
+                        LangRu.Text = dsCekRuby.Tables(0).Rows(0).Item("ru").ToString
+                        RangeNameRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("RangeName").ToString
+                        EAN13Ruby.Text = dsCekRuby.Tables(0).Rows(0).Item("EAN13").ToString
+                        QTYSingleBoxRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("QTY").ToString
+                        MadeInCountryRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("MadeInCountry").ToString
+                        SiteAddressRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("SiteAddress").ToString
+                        ZipCodeRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("ZipCode").ToString
+                        NameChRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("NameCh").ToString
+                        AddressChRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("AddressCh").ToString
+                        LogisticRefRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("LogisticRef").ToString
+                        CIPRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("CIP").ToString
+                        ProductImageRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("ProductPicture").ToString
+
                         DCRuby.Text = "-"
                         ScanRuby.Enabled = True
                         ScanRuby.Text = ""
@@ -10613,9 +10646,79 @@ set @abc = (SELECT TOP (1) [Date]
         End If
     End Sub
 
+    '------------------Scan PP Ruby V2--------------------------------
+    'Private Sub PPRubyEntry_KeyPress2(sender As Object, e As PreviewKeyDownEventArgs) Handles PPRubyEntry.PreviewKeyDown 'sudah sesuai dengan VBA
+    '    If Len(Me.PPRubyEntry.Text) = 12 Then Me.PPRubyEntry.Text = Microsoft.VisualBasic.Right(Me.PPRubyEntry.Text, 11)
+
+    '    If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And Len(Me.PPRubyEntry.Text) >= 11 Then
+    '        If String.IsNullOrEmpty(workstationRuby.Text) = False And String.IsNullOrEmpty(technicianNameRuby.Text) = False Then
+    '            If IsNumeric(PPRubyEntry.Text) Then
+    '                Dim sqlCekRuby As String = "select * from MasterRuby, PPList, MasterRangeLabelRuby where PPList.Material=MasterRuby.CRRef and PPList.[Order]='" & Me.PPRubyEntry.Text & "' and PPList.[Material]=MasterRangeLabelRuby.[CRRef]"
+    '                Dim dsCekRuby As New DataSet
+    '                adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
+    '                adapter.Fill(dsCekRuby)
+    '                If (dsCekRuby.Tables(0).Rows.Count > 0) Then
+    '                    Dim sqlCekForInsert As String = "select * from PPList, ComponentsRuby where PPlist.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsRuby.RefRuby=PPList.Material and ComponentsRuby.Workstation='" & Me.workstationRuby.Text & "'"
+    '                    Dim dsCekForInsert As New DataSet
+    '                    adapter = New SqlDataAdapter(sqlCekForInsert, Main.koneksi)
+    '                    adapter.Fill(dsCekForInsert)
+    '                    If (dsCekForInsert.Tables(0).Rows.Count > 0) Then
+    '                        Refresh_DGV_Ruby()
+    '                    Else
+    '                        Dim queryInsert = "INSERT INTO [ComponentsRuby] ([Order],[RefRuby],[Component],[Qty]) 
+    '                        Select [PPList].[Order],[MasterMaterialRuby].[ParentRef],[MasterMaterialRuby].[Component],[MasterMaterialRuby].[Qty] 
+    '                        FROM [MasterMaterialRuby] 
+    '                        INNER JOIN [PPList] 
+    '                        ON [MasterMaterialRuby].[ParentRef]=[PPList].[Material] 
+    '                        WHERE [PPList].[Order] = '" & Me.PPRubyEntry.Text & "'"
+    '                        Dim adapterInsert = New SqlDataAdapter(queryInsert, Main.koneksi)
+    '                        If adapterInsert.SelectCommand.ExecuteNonQuery() > 0 Then
+    '                            Dim queryUpdate = "UPDATE [ComponentsRuby] SET [workstation] = '" & Me.workstationRuby.Text & "' 
+    '                            where [Order]='" & Me.PPRubyEntry.Text & "'"
+    '                            adapter = New SqlDataAdapter(queryUpdate, Main.koneksi)
+    '                            If adapter.SelectCommand.ExecuteNonQuery().ToString() > 0 Then
+    '                                Refresh_DGV_Ruby()
+    '                            End If
+    '                        End If
+    '                    End If
+
+    '                    ComRefRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("CRRef").ToString
+    '                    Me.dateCodeRuby.Text = dateCode2()
+
+    '                    Dim row_v As DataRowView = technicianNameRuby.SelectedItem
+    '                    If (Not row_v Is Nothing) Then
+    '                        Dim row As DataRow = row_v.Row
+    '                        Dim itemName As String = row(2).ToString()
+    '                        technicianShortNameRuby.Text = itemName
+    '                    End If
+
+    '                    'Keluarkan semua data dibawah ini
+    '                    RatedCurrRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedCurr").ToString
+    '                    RatedVoltRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedVolt").ToString
+    '                    UtilizationRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("Utilization").ToString
+    '                    RatedFreq.Text = dsCekRuby.Tables(0).Rows(0).Item("RatedFreq").ToString
+    '                    ShortCircuitRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("ShortCircuit").ToString
+    '                    DCRuby.Text = "-"
+    '                    ScanRuby.Enabled = True
+    '                    ScanRuby.Text = ""
+
+    '                Else
+    '                    MessageBox.Show("This PP not Ruby")
+    '                End If
+    '            Else
+    '                MsgBox("Sorry The PP must be number")
+    '                Me.PPFujiEntry.Text = ""
+    '            End If
+    '        Else
+    '            MsgBox("Sorry you Must select workstations and technician first")
+    '        End If
+    '    End If
+    'End Sub
+
+    '------------------- Refresh DGV Ruby V1 -------------------------------------------------
     Private Sub Refresh_DGV_Ruby()
         DataGridView9.Rows.Clear()
-        Dim sql As String = "select [Order], [RefRuby],[Check Components],[ReqQty] from ComponentsRuby where [Order]='" & Me.PPRubyEntry.Text & "' and Workstation='" & Me.workstationRuby.Text & "'"
+        Dim sql As String = "select [Order],[RefRuby],[Check Components],[Qty] from ComponentsRuby where [Order]='" & Me.PPRubyEntry.Text & "' and Workstation='" & Me.workstationRuby.Text & "' and Component is null"
         Dim ds As New DataSet
         adapter = New SqlDataAdapter(sql, Main.koneksi)
         adapter.Fill(ds)
@@ -10623,15 +10726,43 @@ set @abc = (SELECT TOP (1) [Date]
             DataGridView9.ColumnCount = 4
             DataGridView9.Columns(0).Name = "Order"
             DataGridView9.Columns(1).Name = "CR Refrence"
-            DataGridView9.Columns(2).Name = "Req Qty"
+            DataGridView9.Columns(2).Name = "Qty"
             DataGridView9.Columns(3).Name = "Check Scan"
             For r = 0 To ds.Tables(0).Rows.Count - 1
-                Dim row As String() = New String() {ds.Tables(0).Rows(r).Item("Order").ToString(), ds.Tables(0).Rows(r).Item("RefRuby").ToString(), ds.Tables(0).Rows(r).Item("ReqQty").ToString(), ds.Tables(0).Rows(r).Item("Check Components").ToString()}
+                Dim row As String() = New String() {ds.Tables(0).Rows(r).Item("Order").ToString(), ds.Tables(0).Rows(r).Item("RefRuby").ToString(), ds.Tables(0).Rows(r).Item("Qty").ToString(), ds.Tables(0).Rows(r).Item("Check Components").ToString()}
                 DataGridView9.Rows.Add(row)
-                If ds.Tables(0).Rows(r).Item("Check Components").ToString() = 1 Then
+                If Convert.ToInt32(ds.Tables(0).Rows(r).Item("Check Components").ToString()) Mod 2 = 0 Then
                     DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.SkyBlue
+                ElseIf Convert.ToInt32(ds.Tables(0).Rows(r).Item("Check Components").ToString()) Mod 2 = 1 Then
+                    DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.Blue
                 Else
                     DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.White
+                End If
+            Next
+        End If
+    End Sub
+
+    '------------------- Refresh DGV Ruby V2 -------------------------------------------------
+    Private Sub Refresh_DGV_Ruby2()
+        DataGridView10.Rows.Clear()
+        Dim sql As String = "select [Order],[RefRuby],[Component],[Qty],[Check Components] from ComponentsRuby where [Order]='" & Me.PPRubyEntry.Text & "' and Workstation='" & Me.workstationRuby.Text & "' and Component is not null"
+        Dim ds As New DataSet
+        adapter = New SqlDataAdapter(sql, Main.koneksi)
+        adapter.Fill(ds)
+        If ds.Tables(0).Rows.Count > 0 Then
+            DataGridView10.ColumnCount = 5
+            DataGridView10.Columns(0).Name = "Order"
+            DataGridView10.Columns(1).Name = "Com Ref"
+            DataGridView10.Columns(2).Name = "Component"
+            DataGridView10.Columns(3).Name = "Qty"
+            DataGridView10.Columns(4).Name = "Check Scan"
+            For r = 0 To ds.Tables(0).Rows.Count - 1
+                Dim row As String() = New String() {ds.Tables(0).Rows(r).Item("Order").ToString(), ds.Tables(0).Rows(r).Item("RefRuby").ToString(), ds.Tables(0).Rows(r).Item("Component").ToString(), ds.Tables(0).Rows(r).Item("Qty").ToString(), ds.Tables(0).Rows(r).Item("Check Components").ToString()}
+                DataGridView10.Rows.Add(row)
+                If ds.Tables(0).Rows(r).Item("Check Components").ToString() = 1 Then
+                    DataGridView10.Rows(r).Cells(3).Style.BackColor = Color.SkyBlue
+                Else
+                    DataGridView10.Rows(r).Cells(3).Style.BackColor = Color.White
                 End If
             Next
         End If
@@ -10805,25 +10936,52 @@ set @abc = (SELECT TOP (1) [Date]
             Dim DataRef As String = arrDataRef(1)
             Dim DataSn As String = arrDataSn(1)
 
-            Dim sqlCekRuby As String = "select * from ComponentsRuby where [order]=" & PPRubyEntry.Text & "and [RefRuby]='" & DataRef & "' and workstation='" & workstationRuby.Text & "'"
+            Dim sqlCekRuby As String = "select * from ComponentsRuby where [order]=" & PPRubyEntry.Text & "and [RefRuby]='" & DataRef & "' and workstation='" & workstationRuby.Text & "' and Component is null"
             Dim dsCekRuby As New DataSet
             adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
             adapter.Fill(dsCekRuby)
             If (dsCekRuby.Tables(0).Rows.Count > 0) Then
                 DCRuby.Text = DataSn.Substring(2)
-                If (dsCekRuby.Tables(0).Rows(0).Item("ReqQty") = dsCekRuby.Tables(0).Rows(0).Item("Check Components")) Then
+                If (dsCekRuby.Tables(0).Rows(0).Item("Qty") = dsCekRuby.Tables(0).Rows(0).Item("Check Components")) Then
                     MsgBox("All Product have been scanned")
                 Else
-                    Dim queryUpdate = "UPDATE [ComponentsRuby] SET [Check Components] = " & Convert.ToInt32(dsCekRuby.Tables(0).Rows(0).Item("Check Components")) + 1 & " where 
-                    [Order]='" & Me.PPRubyEntry.Text & "' 
+                    Dim queryUpdate = "UPDATE [ComponentsRuby] SET [Check Components] = " & Convert.ToInt32(dsCekRuby.Tables(0).Rows(0).Item("Check Components")) + 1 & " 
+                    where [Order]='" & Me.PPRubyEntry.Text & "' 
                     and Workstation='" & Me.workstationRuby.Text & "' 
-                    and RefRuby='" & DataRef & "'"
+                    and RefRuby='" & DataRef & "' 
+                    and Component is null"
                     adapter = New SqlDataAdapter(queryUpdate, Main.koneksi)
                     If adapter.SelectCommand.ExecuteNonQuery().ToString() = 1 Then
                         Refresh_DGV_Ruby()
+                        Dim sqlCekMaterialRuby As String = "select * from ComponentsRuby where [order]=" & PPRubyEntry.Text & "and [RefRuby]='" & ComRefRuby.Text & "' and workstation='" & workstationRuby.Text & "' and Component is not null"
+                        Dim dsCekMaterialRuby As New DataSet
+                        adapter2 = New SqlDataAdapter(sqlCekMaterialRuby, Main.koneksi)
+                        adapter2.Fill(dsCekMaterialRuby)
+                        If (dsCekMaterialRuby.Tables(0).Rows.Count > 0) Then
+                            Refresh_DGV_Ruby2()
+                        Else
+                            Dim queryInsert = "INSERT INTO [ComponentsRuby] ([Order],[RefRuby],[Component],[Qty]) 
+                            Select [PPList].[Order],[MasterMaterialRuby].[ParentRef],[MasterMaterialRuby].[Component],[MasterMaterialRuby].[Qty] 
+                            FROM [MasterMaterialRuby] 
+                            INNER JOIN [PPList] 
+                            ON [MasterMaterialRuby].[ParentRef]=[PPList].[Material] 
+                            WHERE [PPList].[Order] = '" & Me.PPRubyEntry.Text & "'"
+                            Dim adapterInsert = New SqlDataAdapter(queryInsert, Main.koneksi)
+                            If adapterInsert.SelectCommand.ExecuteNonQuery() > 0 Then
+                                Dim queryUpdate2 = "UPDATE [ComponentsRuby] SET [workstation] = '" & Me.workstationRuby.Text & "' 
+                                where [Order]='" & Me.PPRubyEntry.Text & "'"
+                                adapter3 = New SqlDataAdapter(queryUpdate2, Main.koneksi)
+                                If adapter3.SelectCommand.ExecuteNonQuery().ToString() > 0 Then
+                                    Refresh_DGV_Ruby2()
+                                End If
+                            End If
+                        End If
                     End If
                 End If
                 ScanRuby.Text = ""
+                ScanLabelRuby.Text = ""
+                ScanLabelRuby.Enabled = True
+                ScanRuby.Enabled = False
             End If
         End If
     End Sub
