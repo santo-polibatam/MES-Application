@@ -559,6 +559,26 @@ Partial Class Main
         Me.technicianNameFuji = New System.Windows.Forms.ComboBox()
         Me.Tab_Ruby = New System.Windows.Forms.TabPage()
         Me.GroupBox34 = New System.Windows.Forms.GroupBox()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.ProductImageRuby = New System.Windows.Forms.TextBox()
+        Me.CIPRuby = New System.Windows.Forms.TextBox()
+        Me.LogisticRefRuby = New System.Windows.Forms.TextBox()
+        Me.AddressChRuby = New System.Windows.Forms.TextBox()
+        Me.NameChRuby = New System.Windows.Forms.TextBox()
+        Me.ZipCodeRuby = New System.Windows.Forms.TextBox()
+        Me.SiteAddressRuby = New System.Windows.Forms.TextBox()
+        Me.MadeInCountryRuby = New System.Windows.Forms.TextBox()
+        Me.QTYSingleBoxRuby = New System.Windows.Forms.TextBox()
+        Me.EAN13Ruby = New System.Windows.Forms.TextBox()
+        Me.RangeNameRuby = New System.Windows.Forms.TextBox()
+        Me.LangKz = New System.Windows.Forms.TextBox()
+        Me.LangRu = New System.Windows.Forms.TextBox()
+        Me.LangEn = New System.Windows.Forms.TextBox()
+        Me.LangEs = New System.Windows.Forms.TextBox()
+        Me.LangFr = New System.Windows.Forms.TextBox()
+        Me.LangCn = New System.Windows.Forms.TextBox()
         Me.GroupBox33 = New System.Windows.Forms.GroupBox()
         Me.CartonBoxRuby = New System.Windows.Forms.TextBox()
         Me.SERefRuby = New System.Windows.Forms.TextBox()
@@ -739,26 +759,7 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
-        Me.LangCn = New System.Windows.Forms.TextBox()
-        Me.LangFr = New System.Windows.Forms.TextBox()
-        Me.LangEs = New System.Windows.Forms.TextBox()
-        Me.LangEn = New System.Windows.Forms.TextBox()
-        Me.LangRu = New System.Windows.Forms.TextBox()
-        Me.LangKz = New System.Windows.Forms.TextBox()
-        Me.RangeNameRuby = New System.Windows.Forms.TextBox()
-        Me.EAN13Ruby = New System.Windows.Forms.TextBox()
-        Me.QTYSingleBoxRuby = New System.Windows.Forms.TextBox()
-        Me.MadeInCountryRuby = New System.Windows.Forms.TextBox()
-        Me.SiteAddressRuby = New System.Windows.Forms.TextBox()
-        Me.ZipCodeRuby = New System.Windows.Forms.TextBox()
-        Me.NameChRuby = New System.Windows.Forms.TextBox()
-        Me.AddressChRuby = New System.Windows.Forms.TextBox()
-        Me.LogisticRefRuby = New System.Windows.Forms.TextBox()
-        Me.CIPRuby = New System.Windows.Forms.TextBox()
-        Me.ProductImageRuby = New System.Windows.Forms.TextBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -6714,6 +6715,166 @@ Partial Class Main
         Me.GroupBox34.TabStop = False
         Me.GroupBox34.Text = "Single Box Label"
         '
+        'TextBox23
+        '
+        Me.TextBox23.Location = New System.Drawing.Point(560, 89)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.ReadOnly = True
+        Me.TextBox23.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox23.TabIndex = 19
+        '
+        'TextBox22
+        '
+        Me.TextBox22.Location = New System.Drawing.Point(560, 190)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.ReadOnly = True
+        Me.TextBox22.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox22.TabIndex = 18
+        '
+        'TextBox21
+        '
+        Me.TextBox21.Location = New System.Drawing.Point(560, 142)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.ReadOnly = True
+        Me.TextBox21.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox21.TabIndex = 17
+        '
+        'ProductImageRuby
+        '
+        Me.ProductImageRuby.Location = New System.Drawing.Point(560, 35)
+        Me.ProductImageRuby.Name = "ProductImageRuby"
+        Me.ProductImageRuby.ReadOnly = True
+        Me.ProductImageRuby.Size = New System.Drawing.Size(100, 26)
+        Me.ProductImageRuby.TabIndex = 16
+        '
+        'CIPRuby
+        '
+        Me.CIPRuby.Location = New System.Drawing.Point(424, 190)
+        Me.CIPRuby.Name = "CIPRuby"
+        Me.CIPRuby.ReadOnly = True
+        Me.CIPRuby.Size = New System.Drawing.Size(100, 26)
+        Me.CIPRuby.TabIndex = 15
+        '
+        'LogisticRefRuby
+        '
+        Me.LogisticRefRuby.Location = New System.Drawing.Point(424, 142)
+        Me.LogisticRefRuby.Name = "LogisticRefRuby"
+        Me.LogisticRefRuby.ReadOnly = True
+        Me.LogisticRefRuby.Size = New System.Drawing.Size(100, 26)
+        Me.LogisticRefRuby.TabIndex = 14
+        '
+        'AddressChRuby
+        '
+        Me.AddressChRuby.Location = New System.Drawing.Point(424, 89)
+        Me.AddressChRuby.Name = "AddressChRuby"
+        Me.AddressChRuby.ReadOnly = True
+        Me.AddressChRuby.Size = New System.Drawing.Size(100, 26)
+        Me.AddressChRuby.TabIndex = 13
+        '
+        'NameChRuby
+        '
+        Me.NameChRuby.Location = New System.Drawing.Point(424, 35)
+        Me.NameChRuby.Name = "NameChRuby"
+        Me.NameChRuby.ReadOnly = True
+        Me.NameChRuby.Size = New System.Drawing.Size(100, 26)
+        Me.NameChRuby.TabIndex = 12
+        '
+        'ZipCodeRuby
+        '
+        Me.ZipCodeRuby.Location = New System.Drawing.Point(286, 190)
+        Me.ZipCodeRuby.Name = "ZipCodeRuby"
+        Me.ZipCodeRuby.ReadOnly = True
+        Me.ZipCodeRuby.Size = New System.Drawing.Size(100, 26)
+        Me.ZipCodeRuby.TabIndex = 11
+        '
+        'SiteAddressRuby
+        '
+        Me.SiteAddressRuby.Location = New System.Drawing.Point(286, 142)
+        Me.SiteAddressRuby.Name = "SiteAddressRuby"
+        Me.SiteAddressRuby.ReadOnly = True
+        Me.SiteAddressRuby.Size = New System.Drawing.Size(100, 26)
+        Me.SiteAddressRuby.TabIndex = 10
+        '
+        'MadeInCountryRuby
+        '
+        Me.MadeInCountryRuby.Location = New System.Drawing.Point(286, 89)
+        Me.MadeInCountryRuby.Name = "MadeInCountryRuby"
+        Me.MadeInCountryRuby.ReadOnly = True
+        Me.MadeInCountryRuby.Size = New System.Drawing.Size(100, 26)
+        Me.MadeInCountryRuby.TabIndex = 9
+        '
+        'QTYSingleBoxRuby
+        '
+        Me.QTYSingleBoxRuby.Location = New System.Drawing.Point(286, 35)
+        Me.QTYSingleBoxRuby.Name = "QTYSingleBoxRuby"
+        Me.QTYSingleBoxRuby.ReadOnly = True
+        Me.QTYSingleBoxRuby.Size = New System.Drawing.Size(100, 26)
+        Me.QTYSingleBoxRuby.TabIndex = 8
+        '
+        'EAN13Ruby
+        '
+        Me.EAN13Ruby.Location = New System.Drawing.Point(148, 190)
+        Me.EAN13Ruby.Name = "EAN13Ruby"
+        Me.EAN13Ruby.ReadOnly = True
+        Me.EAN13Ruby.Size = New System.Drawing.Size(100, 26)
+        Me.EAN13Ruby.TabIndex = 7
+        '
+        'RangeNameRuby
+        '
+        Me.RangeNameRuby.Location = New System.Drawing.Point(148, 142)
+        Me.RangeNameRuby.Name = "RangeNameRuby"
+        Me.RangeNameRuby.ReadOnly = True
+        Me.RangeNameRuby.Size = New System.Drawing.Size(100, 26)
+        Me.RangeNameRuby.TabIndex = 6
+        '
+        'LangKz
+        '
+        Me.LangKz.Location = New System.Drawing.Point(148, 89)
+        Me.LangKz.Name = "LangKz"
+        Me.LangKz.ReadOnly = True
+        Me.LangKz.Size = New System.Drawing.Size(100, 26)
+        Me.LangKz.TabIndex = 5
+        '
+        'LangRu
+        '
+        Me.LangRu.Location = New System.Drawing.Point(148, 35)
+        Me.LangRu.Name = "LangRu"
+        Me.LangRu.ReadOnly = True
+        Me.LangRu.Size = New System.Drawing.Size(100, 26)
+        Me.LangRu.TabIndex = 4
+        '
+        'LangEn
+        '
+        Me.LangEn.Location = New System.Drawing.Point(12, 35)
+        Me.LangEn.Name = "LangEn"
+        Me.LangEn.ReadOnly = True
+        Me.LangEn.Size = New System.Drawing.Size(100, 26)
+        Me.LangEn.TabIndex = 3
+        '
+        'LangEs
+        '
+        Me.LangEs.Location = New System.Drawing.Point(12, 190)
+        Me.LangEs.Name = "LangEs"
+        Me.LangEs.ReadOnly = True
+        Me.LangEs.Size = New System.Drawing.Size(100, 26)
+        Me.LangEs.TabIndex = 2
+        '
+        'LangFr
+        '
+        Me.LangFr.Location = New System.Drawing.Point(12, 142)
+        Me.LangFr.Name = "LangFr"
+        Me.LangFr.ReadOnly = True
+        Me.LangFr.Size = New System.Drawing.Size(100, 26)
+        Me.LangFr.TabIndex = 1
+        '
+        'LangCn
+        '
+        Me.LangCn.Location = New System.Drawing.Point(12, 89)
+        Me.LangCn.Name = "LangCn"
+        Me.LangCn.ReadOnly = True
+        Me.LangCn.Size = New System.Drawing.Size(100, 26)
+        Me.LangCn.TabIndex = 0
+        '
         'GroupBox33
         '
         Me.GroupBox33.Controls.Add(Me.CartonBoxRuby)
@@ -6937,6 +7098,7 @@ Partial Class Main
         'GroupBox29
         '
         Me.GroupBox29.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox29.Controls.Add(Me.TextBox4)
         Me.GroupBox29.Controls.Add(Me.Label196)
         Me.GroupBox29.Controls.Add(Me.ScanLabelRuby)
         Me.GroupBox29.Controls.Add(Me.ScanRuby)
@@ -8540,165 +8702,14 @@ Partial Class Main
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
         '
-        'LangCn
+        'TextBox4
         '
-        Me.LangCn.Location = New System.Drawing.Point(12, 89)
-        Me.LangCn.Name = "LangCn"
-        Me.LangCn.ReadOnly = True
-        Me.LangCn.Size = New System.Drawing.Size(100, 26)
-        Me.LangCn.TabIndex = 0
-        '
-        'LangFr
-        '
-        Me.LangFr.Location = New System.Drawing.Point(12, 142)
-        Me.LangFr.Name = "LangFr"
-        Me.LangFr.ReadOnly = True
-        Me.LangFr.Size = New System.Drawing.Size(100, 26)
-        Me.LangFr.TabIndex = 1
-        '
-        'LangEs
-        '
-        Me.LangEs.Location = New System.Drawing.Point(12, 190)
-        Me.LangEs.Name = "LangEs"
-        Me.LangEs.ReadOnly = True
-        Me.LangEs.Size = New System.Drawing.Size(100, 26)
-        Me.LangEs.TabIndex = 2
-        '
-        'LangEn
-        '
-        Me.LangEn.Location = New System.Drawing.Point(12, 35)
-        Me.LangEn.Name = "LangEn"
-        Me.LangEn.ReadOnly = True
-        Me.LangEn.Size = New System.Drawing.Size(100, 26)
-        Me.LangEn.TabIndex = 3
-        '
-        'LangRu
-        '
-        Me.LangRu.Location = New System.Drawing.Point(148, 35)
-        Me.LangRu.Name = "LangRu"
-        Me.LangRu.ReadOnly = True
-        Me.LangRu.Size = New System.Drawing.Size(100, 26)
-        Me.LangRu.TabIndex = 4
-        '
-        'LangKz
-        '
-        Me.LangKz.Location = New System.Drawing.Point(148, 89)
-        Me.LangKz.Name = "LangKz"
-        Me.LangKz.ReadOnly = True
-        Me.LangKz.Size = New System.Drawing.Size(100, 26)
-        Me.LangKz.TabIndex = 5
-        '
-        'RangeNameRuby
-        '
-        Me.RangeNameRuby.Location = New System.Drawing.Point(148, 142)
-        Me.RangeNameRuby.Name = "RangeNameRuby"
-        Me.RangeNameRuby.ReadOnly = True
-        Me.RangeNameRuby.Size = New System.Drawing.Size(100, 26)
-        Me.RangeNameRuby.TabIndex = 6
-        '
-        'EAN13Ruby
-        '
-        Me.EAN13Ruby.Location = New System.Drawing.Point(148, 190)
-        Me.EAN13Ruby.Name = "EAN13Ruby"
-        Me.EAN13Ruby.ReadOnly = True
-        Me.EAN13Ruby.Size = New System.Drawing.Size(100, 26)
-        Me.EAN13Ruby.TabIndex = 7
-        '
-        'QTYSingleBoxRuby
-        '
-        Me.QTYSingleBoxRuby.Location = New System.Drawing.Point(286, 35)
-        Me.QTYSingleBoxRuby.Name = "QTYSingleBoxRuby"
-        Me.QTYSingleBoxRuby.ReadOnly = True
-        Me.QTYSingleBoxRuby.Size = New System.Drawing.Size(100, 26)
-        Me.QTYSingleBoxRuby.TabIndex = 8
-        '
-        'MadeInCountryRuby
-        '
-        Me.MadeInCountryRuby.Location = New System.Drawing.Point(286, 89)
-        Me.MadeInCountryRuby.Name = "MadeInCountryRuby"
-        Me.MadeInCountryRuby.ReadOnly = True
-        Me.MadeInCountryRuby.Size = New System.Drawing.Size(100, 26)
-        Me.MadeInCountryRuby.TabIndex = 9
-        '
-        'SiteAddressRuby
-        '
-        Me.SiteAddressRuby.Location = New System.Drawing.Point(286, 142)
-        Me.SiteAddressRuby.Name = "SiteAddressRuby"
-        Me.SiteAddressRuby.ReadOnly = True
-        Me.SiteAddressRuby.Size = New System.Drawing.Size(100, 26)
-        Me.SiteAddressRuby.TabIndex = 10
-        '
-        'ZipCodeRuby
-        '
-        Me.ZipCodeRuby.Location = New System.Drawing.Point(286, 190)
-        Me.ZipCodeRuby.Name = "ZipCodeRuby"
-        Me.ZipCodeRuby.ReadOnly = True
-        Me.ZipCodeRuby.Size = New System.Drawing.Size(100, 26)
-        Me.ZipCodeRuby.TabIndex = 11
-        '
-        'NameChRuby
-        '
-        Me.NameChRuby.Location = New System.Drawing.Point(424, 35)
-        Me.NameChRuby.Name = "NameChRuby"
-        Me.NameChRuby.ReadOnly = True
-        Me.NameChRuby.Size = New System.Drawing.Size(100, 26)
-        Me.NameChRuby.TabIndex = 12
-        '
-        'AddressChRuby
-        '
-        Me.AddressChRuby.Location = New System.Drawing.Point(424, 89)
-        Me.AddressChRuby.Name = "AddressChRuby"
-        Me.AddressChRuby.ReadOnly = True
-        Me.AddressChRuby.Size = New System.Drawing.Size(100, 26)
-        Me.AddressChRuby.TabIndex = 13
-        '
-        'LogisticRefRuby
-        '
-        Me.LogisticRefRuby.Location = New System.Drawing.Point(424, 142)
-        Me.LogisticRefRuby.Name = "LogisticRefRuby"
-        Me.LogisticRefRuby.ReadOnly = True
-        Me.LogisticRefRuby.Size = New System.Drawing.Size(100, 26)
-        Me.LogisticRefRuby.TabIndex = 14
-        '
-        'CIPRuby
-        '
-        Me.CIPRuby.Location = New System.Drawing.Point(424, 190)
-        Me.CIPRuby.Name = "CIPRuby"
-        Me.CIPRuby.ReadOnly = True
-        Me.CIPRuby.Size = New System.Drawing.Size(100, 26)
-        Me.CIPRuby.TabIndex = 15
-        '
-        'ProductImageRuby
-        '
-        Me.ProductImageRuby.Location = New System.Drawing.Point(560, 35)
-        Me.ProductImageRuby.Name = "ProductImageRuby"
-        Me.ProductImageRuby.ReadOnly = True
-        Me.ProductImageRuby.Size = New System.Drawing.Size(100, 26)
-        Me.ProductImageRuby.TabIndex = 16
-        '
-        'TextBox21
-        '
-        Me.TextBox21.Location = New System.Drawing.Point(560, 142)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.ReadOnly = True
-        Me.TextBox21.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox21.TabIndex = 17
-        '
-        'TextBox22
-        '
-        Me.TextBox22.Location = New System.Drawing.Point(560, 190)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.ReadOnly = True
-        Me.TextBox22.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox22.TabIndex = 18
-        '
-        'TextBox23
-        '
-        Me.TextBox23.Location = New System.Drawing.Point(560, 89)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.ReadOnly = True
-        Me.TextBox23.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox23.TabIndex = 19
+        Me.TextBox4.Location = New System.Drawing.Point(168, 16)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(28, 26)
+        Me.TextBox4.TabIndex = 53
+        Me.TextBox4.Visible = False
         '
         'Main
         '
@@ -9545,4 +9556,5 @@ Partial Class Main
     Friend WithEvents LangEs As TextBox
     Friend WithEvents LangFr As TextBox
     Friend WithEvents LangCn As TextBox
+    Friend WithEvents TextBox4 As TextBox
 End Class
