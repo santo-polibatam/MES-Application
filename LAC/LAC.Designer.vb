@@ -558,6 +558,20 @@ Partial Class Main
         Me.Label180 = New System.Windows.Forms.Label()
         Me.technicianNameFuji = New System.Windows.Forms.ComboBox()
         Me.Tab_Ruby = New System.Windows.Forms.TabPage()
+        Me.GroupBox38 = New System.Windows.Forms.GroupBox()
+        Me.cbxOutsideRuby = New System.Windows.Forms.ComboBox()
+        Me.PreviewOutsideRuby = New System.Windows.Forms.Button()
+        Me.PrintOutsideRuby = New System.Windows.Forms.Button()
+        Me.GroupBox36 = New System.Windows.Forms.GroupBox()
+        Me.CheckBoxNR = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxNL = New System.Windows.Forms.CheckBox()
+        Me.cbxPerfomaceRuby = New System.Windows.Forms.ComboBox()
+        Me.PreviewPerformanceRuby = New System.Windows.Forms.Button()
+        Me.PrintPerformanceRuby = New System.Windows.Forms.Button()
+        Me.GroupBox37 = New System.Windows.Forms.GroupBox()
+        Me.cbxPackagingRuby = New System.Windows.Forms.ComboBox()
+        Me.PreviewPackagingRuby = New System.Windows.Forms.Button()
+        Me.PrintPackagingRuby = New System.Windows.Forms.Button()
         Me.GroupBox34 = New System.Windows.Forms.GroupBox()
         Me.TextBox23 = New System.Windows.Forms.TextBox()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
@@ -580,6 +594,7 @@ Partial Class Main
         Me.LangFr = New System.Windows.Forms.TextBox()
         Me.LangCn = New System.Windows.Forms.TextBox()
         Me.GroupBox33 = New System.Windows.Forms.GroupBox()
+        Me.ProductTypeRuby = New System.Windows.Forms.TextBox()
         Me.CartonBoxRuby = New System.Windows.Forms.TextBox()
         Me.SERefRuby = New System.Windows.Forms.TextBox()
         Me.QtySERefRuby = New System.Windows.Forms.TextBox()
@@ -604,11 +619,13 @@ Partial Class Main
         Me.GroupBox30 = New System.Windows.Forms.GroupBox()
         Me.DataGridView9 = New System.Windows.Forms.DataGridView()
         Me.GroupBox29 = New System.Windows.Forms.GroupBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label196 = New System.Windows.Forms.Label()
         Me.ScanLabelRuby = New System.Windows.Forms.TextBox()
         Me.ScanRuby = New System.Windows.Forms.TextBox()
         Me.Label197 = New System.Windows.Forms.Label()
         Me.GroupBox28 = New System.Windows.Forms.GroupBox()
+        Me.QRCodeRuby = New System.Windows.Forms.TextBox()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.dateCodeRuby = New System.Windows.Forms.TextBox()
         Me.technicianShortNameRuby = New System.Windows.Forms.TextBox()
@@ -621,10 +638,11 @@ Partial Class Main
         Me.Label195 = New System.Windows.Forms.Label()
         Me.technicianNameRuby = New System.Windows.Forms.ComboBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
+        Me.GroupBox35 = New System.Windows.Forms.GroupBox()
         Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
         Me.masterruby = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.btn_Export_Labelling_fuji = New System.Windows.Forms.Button()
         Me.btn_export_BOM_Fuji = New System.Windows.Forms.Button()
@@ -759,7 +777,6 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -795,6 +812,9 @@ Partial Class Main
         Me.GroupBox16.SuspendLayout
         Me.GroupBox14.SuspendLayout
         Me.Tab_Ruby.SuspendLayout
+        Me.GroupBox38.SuspendLayout
+        Me.GroupBox36.SuspendLayout
+        Me.GroupBox37.SuspendLayout
         Me.GroupBox34.SuspendLayout
         Me.GroupBox33.SuspendLayout
         Me.GroupBox32.SuspendLayout
@@ -805,6 +825,7 @@ Partial Class Main
         Me.GroupBox29.SuspendLayout
         Me.GroupBox28.SuspendLayout
         Me.TabPage4.SuspendLayout
+        Me.GroupBox35.SuspendLayout
         Me.GroupBox15.SuspendLayout
         Me.GroupBox11.SuspendLayout
         Me.GroupBox10.SuspendLayout
@@ -6499,7 +6520,7 @@ Partial Class Main
         Me.GroupBox16.Controls.Add(Me.cbx_Rotary)
         Me.GroupBox16.Controls.Add(Me.btn_rotary_handle_preview)
         Me.GroupBox16.Controls.Add(Me.btn_rotary_print)
-        Me.GroupBox16.Location = New System.Drawing.Point(6, 305)
+        Me.GroupBox16.Location = New System.Drawing.Point(21, 305)
         Me.GroupBox16.Name = "GroupBox16"
         Me.GroupBox16.Size = New System.Drawing.Size(252, 105)
         Me.GroupBox16.TabIndex = 45
@@ -6672,6 +6693,9 @@ Partial Class Main
         '
         'Tab_Ruby
         '
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox38)
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox36)
+        Me.Tab_Ruby.Controls.Add(Me.GroupBox37)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox34)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox33)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox32)
@@ -6685,6 +6709,145 @@ Partial Class Main
         Me.Tab_Ruby.TabIndex = 8
         Me.Tab_Ruby.Text = "Ruby"
         Me.Tab_Ruby.UseVisualStyleBackColor = True
+        '
+        'GroupBox38
+        '
+        Me.GroupBox38.Controls.Add(Me.cbxOutsideRuby)
+        Me.GroupBox38.Controls.Add(Me.PreviewOutsideRuby)
+        Me.GroupBox38.Controls.Add(Me.PrintOutsideRuby)
+        Me.GroupBox38.Location = New System.Drawing.Point(591, 530)
+        Me.GroupBox38.Name = "GroupBox38"
+        Me.GroupBox38.Size = New System.Drawing.Size(236, 105)
+        Me.GroupBox38.TabIndex = 74
+        Me.GroupBox38.TabStop = False
+        Me.GroupBox38.Text = "Outside Label"
+        '
+        'cbxOutsideRuby
+        '
+        Me.cbxOutsideRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxOutsideRuby.FormattingEnabled = True
+        Me.cbxOutsideRuby.Location = New System.Drawing.Point(10, 78)
+        Me.cbxOutsideRuby.Name = "cbxOutsideRuby"
+        Me.cbxOutsideRuby.Size = New System.Drawing.Size(205, 21)
+        Me.cbxOutsideRuby.TabIndex = 48
+        '
+        'PreviewOutsideRuby
+        '
+        Me.PreviewOutsideRuby.Location = New System.Drawing.Point(133, 25)
+        Me.PreviewOutsideRuby.Name = "PreviewOutsideRuby"
+        Me.PreviewOutsideRuby.Size = New System.Drawing.Size(82, 47)
+        Me.PreviewOutsideRuby.TabIndex = 47
+        Me.PreviewOutsideRuby.Text = "Preview"
+        Me.PreviewOutsideRuby.UseVisualStyleBackColor = True
+        '
+        'PrintOutsideRuby
+        '
+        Me.PrintOutsideRuby.Location = New System.Drawing.Point(10, 25)
+        Me.PrintOutsideRuby.Name = "PrintOutsideRuby"
+        Me.PrintOutsideRuby.Size = New System.Drawing.Size(75, 47)
+        Me.PrintOutsideRuby.TabIndex = 46
+        Me.PrintOutsideRuby.Text = "Print"
+        Me.PrintOutsideRuby.UseVisualStyleBackColor = True
+        '
+        'GroupBox36
+        '
+        Me.GroupBox36.Controls.Add(Me.CheckBoxNR)
+        Me.GroupBox36.Controls.Add(Me.CheckBoxNL)
+        Me.GroupBox36.Controls.Add(Me.cbxPerfomaceRuby)
+        Me.GroupBox36.Controls.Add(Me.PreviewPerformanceRuby)
+        Me.GroupBox36.Controls.Add(Me.PrintPerformanceRuby)
+        Me.GroupBox36.Location = New System.Drawing.Point(6, 530)
+        Me.GroupBox36.Name = "GroupBox36"
+        Me.GroupBox36.Size = New System.Drawing.Size(236, 105)
+        Me.GroupBox36.TabIndex = 72
+        Me.GroupBox36.TabStop = False
+        Me.GroupBox36.Text = "Performace Label"
+        '
+        'CheckBoxNR
+        '
+        Me.CheckBoxNR.AutoSize = True
+        Me.CheckBoxNR.Location = New System.Drawing.Point(91, 48)
+        Me.CheckBoxNR.Name = "CheckBoxNR"
+        Me.CheckBoxNR.Size = New System.Drawing.Size(40, 24)
+        Me.CheckBoxNR.TabIndex = 50
+        Me.CheckBoxNR.Text = "R"
+        Me.CheckBoxNR.UseVisualStyleBackColor = True
+        '
+        'CheckBoxNL
+        '
+        Me.CheckBoxNL.AutoSize = True
+        Me.CheckBoxNL.Location = New System.Drawing.Point(91, 25)
+        Me.CheckBoxNL.Name = "CheckBoxNL"
+        Me.CheckBoxNL.Size = New System.Drawing.Size(37, 24)
+        Me.CheckBoxNL.TabIndex = 49
+        Me.CheckBoxNL.Text = "L"
+        Me.CheckBoxNL.UseVisualStyleBackColor = True
+        '
+        'cbxPerfomaceRuby
+        '
+        Me.cbxPerfomaceRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxPerfomaceRuby.FormattingEnabled = True
+        Me.cbxPerfomaceRuby.Location = New System.Drawing.Point(10, 78)
+        Me.cbxPerfomaceRuby.Name = "cbxPerfomaceRuby"
+        Me.cbxPerfomaceRuby.Size = New System.Drawing.Size(205, 21)
+        Me.cbxPerfomaceRuby.TabIndex = 48
+        '
+        'PreviewPerformanceRuby
+        '
+        Me.PreviewPerformanceRuby.Location = New System.Drawing.Point(133, 25)
+        Me.PreviewPerformanceRuby.Name = "PreviewPerformanceRuby"
+        Me.PreviewPerformanceRuby.Size = New System.Drawing.Size(82, 47)
+        Me.PreviewPerformanceRuby.TabIndex = 47
+        Me.PreviewPerformanceRuby.Text = "Preview"
+        Me.PreviewPerformanceRuby.UseVisualStyleBackColor = True
+        '
+        'PrintPerformanceRuby
+        '
+        Me.PrintPerformanceRuby.Location = New System.Drawing.Point(10, 25)
+        Me.PrintPerformanceRuby.Name = "PrintPerformanceRuby"
+        Me.PrintPerformanceRuby.Size = New System.Drawing.Size(75, 47)
+        Me.PrintPerformanceRuby.TabIndex = 46
+        Me.PrintPerformanceRuby.Text = "Print"
+        Me.PrintPerformanceRuby.UseVisualStyleBackColor = True
+        '
+        'GroupBox37
+        '
+        Me.GroupBox37.Controls.Add(Me.cbxPackagingRuby)
+        Me.GroupBox37.Controls.Add(Me.PreviewPackagingRuby)
+        Me.GroupBox37.Controls.Add(Me.PrintPackagingRuby)
+        Me.GroupBox37.Location = New System.Drawing.Point(297, 530)
+        Me.GroupBox37.Name = "GroupBox37"
+        Me.GroupBox37.Size = New System.Drawing.Size(236, 105)
+        Me.GroupBox37.TabIndex = 73
+        Me.GroupBox37.TabStop = False
+        Me.GroupBox37.Text = "Packaging Label"
+        '
+        'cbxPackagingRuby
+        '
+        Me.cbxPackagingRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxPackagingRuby.FormattingEnabled = True
+        Me.cbxPackagingRuby.Location = New System.Drawing.Point(6, 78)
+        Me.cbxPackagingRuby.Name = "cbxPackagingRuby"
+        Me.cbxPackagingRuby.Size = New System.Drawing.Size(205, 21)
+        Me.cbxPackagingRuby.TabIndex = 48
+        '
+        'PreviewPackagingRuby
+        '
+        Me.PreviewPackagingRuby.Location = New System.Drawing.Point(133, 25)
+        Me.PreviewPackagingRuby.Name = "PreviewPackagingRuby"
+        Me.PreviewPackagingRuby.Size = New System.Drawing.Size(82, 47)
+        Me.PreviewPackagingRuby.TabIndex = 47
+        Me.PreviewPackagingRuby.Text = "Preview"
+        Me.PreviewPackagingRuby.UseVisualStyleBackColor = True
+        '
+        'PrintPackagingRuby
+        '
+        Me.PrintPackagingRuby.Location = New System.Drawing.Point(10, 25)
+        Me.PrintPackagingRuby.Name = "PrintPackagingRuby"
+        Me.PrintPackagingRuby.Size = New System.Drawing.Size(75, 47)
+        Me.PrintPackagingRuby.TabIndex = 46
+        Me.PrintPackagingRuby.Text = "Print"
+        Me.PrintPackagingRuby.UseVisualStyleBackColor = True
         '
         'GroupBox34
         '
@@ -6708,175 +6871,196 @@ Partial Class Main
         Me.GroupBox34.Controls.Add(Me.LangEs)
         Me.GroupBox34.Controls.Add(Me.LangFr)
         Me.GroupBox34.Controls.Add(Me.LangCn)
-        Me.GroupBox34.Location = New System.Drawing.Point(6, 735)
+        Me.GroupBox34.Location = New System.Drawing.Point(6, 745)
         Me.GroupBox34.Name = "GroupBox34"
-        Me.GroupBox34.Size = New System.Drawing.Size(821, 242)
+        Me.GroupBox34.Size = New System.Drawing.Size(821, 132)
         Me.GroupBox34.TabIndex = 71
         Me.GroupBox34.TabStop = False
         Me.GroupBox34.Text = "Single Box Label"
         '
         'TextBox23
         '
-        Me.TextBox23.Location = New System.Drawing.Point(560, 89)
+        Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox23.Location = New System.Drawing.Point(433, 47)
         Me.TextBox23.Name = "TextBox23"
         Me.TextBox23.ReadOnly = True
-        Me.TextBox23.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox23.Size = New System.Drawing.Size(100, 22)
         Me.TextBox23.TabIndex = 19
         '
         'TextBox22
         '
-        Me.TextBox22.Location = New System.Drawing.Point(560, 190)
+        Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox22.Location = New System.Drawing.Point(433, 91)
         Me.TextBox22.Name = "TextBox22"
         Me.TextBox22.ReadOnly = True
-        Me.TextBox22.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox22.Size = New System.Drawing.Size(100, 22)
         Me.TextBox22.TabIndex = 18
         '
         'TextBox21
         '
-        Me.TextBox21.Location = New System.Drawing.Point(560, 142)
+        Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox21.Location = New System.Drawing.Point(433, 69)
         Me.TextBox21.Name = "TextBox21"
         Me.TextBox21.ReadOnly = True
-        Me.TextBox21.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox21.Size = New System.Drawing.Size(100, 22)
         Me.TextBox21.TabIndex = 17
         '
         'ProductImageRuby
         '
-        Me.ProductImageRuby.Location = New System.Drawing.Point(560, 35)
+        Me.ProductImageRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductImageRuby.Location = New System.Drawing.Point(433, 25)
         Me.ProductImageRuby.Name = "ProductImageRuby"
         Me.ProductImageRuby.ReadOnly = True
-        Me.ProductImageRuby.Size = New System.Drawing.Size(100, 26)
+        Me.ProductImageRuby.Size = New System.Drawing.Size(100, 22)
         Me.ProductImageRuby.TabIndex = 16
         '
         'CIPRuby
         '
-        Me.CIPRuby.Location = New System.Drawing.Point(424, 190)
+        Me.CIPRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CIPRuby.Location = New System.Drawing.Point(327, 91)
         Me.CIPRuby.Name = "CIPRuby"
         Me.CIPRuby.ReadOnly = True
-        Me.CIPRuby.Size = New System.Drawing.Size(100, 26)
+        Me.CIPRuby.Size = New System.Drawing.Size(100, 22)
         Me.CIPRuby.TabIndex = 15
         '
         'LogisticRefRuby
         '
-        Me.LogisticRefRuby.Location = New System.Drawing.Point(424, 142)
+        Me.LogisticRefRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogisticRefRuby.Location = New System.Drawing.Point(327, 69)
         Me.LogisticRefRuby.Name = "LogisticRefRuby"
         Me.LogisticRefRuby.ReadOnly = True
-        Me.LogisticRefRuby.Size = New System.Drawing.Size(100, 26)
+        Me.LogisticRefRuby.Size = New System.Drawing.Size(100, 22)
         Me.LogisticRefRuby.TabIndex = 14
         '
         'AddressChRuby
         '
-        Me.AddressChRuby.Location = New System.Drawing.Point(424, 89)
+        Me.AddressChRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddressChRuby.Location = New System.Drawing.Point(327, 47)
         Me.AddressChRuby.Name = "AddressChRuby"
         Me.AddressChRuby.ReadOnly = True
-        Me.AddressChRuby.Size = New System.Drawing.Size(100, 26)
+        Me.AddressChRuby.Size = New System.Drawing.Size(100, 22)
         Me.AddressChRuby.TabIndex = 13
         '
         'NameChRuby
         '
-        Me.NameChRuby.Location = New System.Drawing.Point(424, 35)
+        Me.NameChRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameChRuby.Location = New System.Drawing.Point(327, 25)
         Me.NameChRuby.Name = "NameChRuby"
         Me.NameChRuby.ReadOnly = True
-        Me.NameChRuby.Size = New System.Drawing.Size(100, 26)
+        Me.NameChRuby.Size = New System.Drawing.Size(100, 22)
         Me.NameChRuby.TabIndex = 12
         '
         'ZipCodeRuby
         '
-        Me.ZipCodeRuby.Location = New System.Drawing.Point(286, 190)
+        Me.ZipCodeRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ZipCodeRuby.Location = New System.Drawing.Point(221, 91)
         Me.ZipCodeRuby.Name = "ZipCodeRuby"
         Me.ZipCodeRuby.ReadOnly = True
-        Me.ZipCodeRuby.Size = New System.Drawing.Size(100, 26)
+        Me.ZipCodeRuby.Size = New System.Drawing.Size(100, 22)
         Me.ZipCodeRuby.TabIndex = 11
         '
         'SiteAddressRuby
         '
-        Me.SiteAddressRuby.Location = New System.Drawing.Point(286, 142)
+        Me.SiteAddressRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SiteAddressRuby.Location = New System.Drawing.Point(221, 69)
         Me.SiteAddressRuby.Name = "SiteAddressRuby"
         Me.SiteAddressRuby.ReadOnly = True
-        Me.SiteAddressRuby.Size = New System.Drawing.Size(100, 26)
+        Me.SiteAddressRuby.Size = New System.Drawing.Size(100, 22)
         Me.SiteAddressRuby.TabIndex = 10
         '
         'MadeInCountryRuby
         '
-        Me.MadeInCountryRuby.Location = New System.Drawing.Point(286, 89)
+        Me.MadeInCountryRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MadeInCountryRuby.Location = New System.Drawing.Point(221, 47)
         Me.MadeInCountryRuby.Name = "MadeInCountryRuby"
         Me.MadeInCountryRuby.ReadOnly = True
-        Me.MadeInCountryRuby.Size = New System.Drawing.Size(100, 26)
+        Me.MadeInCountryRuby.Size = New System.Drawing.Size(100, 22)
         Me.MadeInCountryRuby.TabIndex = 9
         '
         'QTYSingleBoxRuby
         '
-        Me.QTYSingleBoxRuby.Location = New System.Drawing.Point(286, 35)
+        Me.QTYSingleBoxRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QTYSingleBoxRuby.Location = New System.Drawing.Point(221, 25)
         Me.QTYSingleBoxRuby.Name = "QTYSingleBoxRuby"
         Me.QTYSingleBoxRuby.ReadOnly = True
-        Me.QTYSingleBoxRuby.Size = New System.Drawing.Size(100, 26)
+        Me.QTYSingleBoxRuby.Size = New System.Drawing.Size(100, 22)
         Me.QTYSingleBoxRuby.TabIndex = 8
         '
         'EAN13Ruby
         '
-        Me.EAN13Ruby.Location = New System.Drawing.Point(148, 190)
+        Me.EAN13Ruby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EAN13Ruby.Location = New System.Drawing.Point(115, 91)
         Me.EAN13Ruby.Name = "EAN13Ruby"
         Me.EAN13Ruby.ReadOnly = True
-        Me.EAN13Ruby.Size = New System.Drawing.Size(100, 26)
+        Me.EAN13Ruby.Size = New System.Drawing.Size(100, 22)
         Me.EAN13Ruby.TabIndex = 7
         '
         'RangeNameRuby
         '
-        Me.RangeNameRuby.Location = New System.Drawing.Point(148, 142)
+        Me.RangeNameRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RangeNameRuby.Location = New System.Drawing.Point(115, 69)
         Me.RangeNameRuby.Name = "RangeNameRuby"
         Me.RangeNameRuby.ReadOnly = True
-        Me.RangeNameRuby.Size = New System.Drawing.Size(100, 26)
+        Me.RangeNameRuby.Size = New System.Drawing.Size(100, 22)
         Me.RangeNameRuby.TabIndex = 6
         '
         'LangKz
         '
-        Me.LangKz.Location = New System.Drawing.Point(148, 89)
+        Me.LangKz.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangKz.Location = New System.Drawing.Point(115, 47)
         Me.LangKz.Name = "LangKz"
         Me.LangKz.ReadOnly = True
-        Me.LangKz.Size = New System.Drawing.Size(100, 26)
+        Me.LangKz.Size = New System.Drawing.Size(100, 22)
         Me.LangKz.TabIndex = 5
         '
         'LangRu
         '
-        Me.LangRu.Location = New System.Drawing.Point(148, 35)
+        Me.LangRu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangRu.Location = New System.Drawing.Point(115, 25)
         Me.LangRu.Name = "LangRu"
         Me.LangRu.ReadOnly = True
-        Me.LangRu.Size = New System.Drawing.Size(100, 26)
+        Me.LangRu.Size = New System.Drawing.Size(100, 22)
         Me.LangRu.TabIndex = 4
         '
         'LangEn
         '
-        Me.LangEn.Location = New System.Drawing.Point(12, 35)
+        Me.LangEn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangEn.Location = New System.Drawing.Point(12, 25)
         Me.LangEn.Name = "LangEn"
         Me.LangEn.ReadOnly = True
-        Me.LangEn.Size = New System.Drawing.Size(100, 26)
+        Me.LangEn.Size = New System.Drawing.Size(100, 22)
         Me.LangEn.TabIndex = 3
         '
         'LangEs
         '
-        Me.LangEs.Location = New System.Drawing.Point(12, 190)
+        Me.LangEs.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangEs.Location = New System.Drawing.Point(12, 91)
         Me.LangEs.Name = "LangEs"
         Me.LangEs.ReadOnly = True
-        Me.LangEs.Size = New System.Drawing.Size(100, 26)
+        Me.LangEs.Size = New System.Drawing.Size(100, 22)
         Me.LangEs.TabIndex = 2
         '
         'LangFr
         '
-        Me.LangFr.Location = New System.Drawing.Point(12, 142)
+        Me.LangFr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangFr.Location = New System.Drawing.Point(12, 69)
         Me.LangFr.Name = "LangFr"
         Me.LangFr.ReadOnly = True
-        Me.LangFr.Size = New System.Drawing.Size(100, 26)
+        Me.LangFr.Size = New System.Drawing.Size(100, 22)
         Me.LangFr.TabIndex = 1
         '
         'LangCn
         '
-        Me.LangCn.Location = New System.Drawing.Point(12, 89)
+        Me.LangCn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangCn.Location = New System.Drawing.Point(12, 47)
         Me.LangCn.Name = "LangCn"
         Me.LangCn.ReadOnly = True
-        Me.LangCn.Size = New System.Drawing.Size(100, 26)
+        Me.LangCn.Size = New System.Drawing.Size(100, 22)
         Me.LangCn.TabIndex = 0
         '
         'GroupBox33
         '
+        Me.GroupBox33.Controls.Add(Me.ProductTypeRuby)
         Me.GroupBox33.Controls.Add(Me.CartonBoxRuby)
         Me.GroupBox33.Controls.Add(Me.SERefRuby)
         Me.GroupBox33.Controls.Add(Me.QtySERefRuby)
@@ -6889,107 +7073,128 @@ Partial Class Main
         Me.GroupBox33.Controls.Add(Me.ScrewAcc)
         Me.GroupBox33.Controls.Add(Me.QtyScrewAcc)
         Me.GroupBox33.Controls.Add(Me.QtyEXT24)
-        Me.GroupBox33.Location = New System.Drawing.Point(349, 543)
+        Me.GroupBox33.Location = New System.Drawing.Point(297, 641)
         Me.GroupBox33.Name = "GroupBox33"
-        Me.GroupBox33.Size = New System.Drawing.Size(478, 186)
+        Me.GroupBox33.Size = New System.Drawing.Size(530, 98)
         Me.GroupBox33.TabIndex = 70
         Me.GroupBox33.TabStop = False
         Me.GroupBox33.Text = "Master Ruby"
         '
+        'ProductTypeRuby
+        '
+        Me.ProductTypeRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductTypeRuby.Location = New System.Drawing.Point(431, 25)
+        Me.ProductTypeRuby.Name = "ProductTypeRuby"
+        Me.ProductTypeRuby.ReadOnly = True
+        Me.ProductTypeRuby.Size = New System.Drawing.Size(93, 22)
+        Me.ProductTypeRuby.TabIndex = 74
+        '
         'CartonBoxRuby
         '
-        Me.CartonBoxRuby.Location = New System.Drawing.Point(246, 135)
+        Me.CartonBoxRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CartonBoxRuby.Location = New System.Drawing.Point(219, 69)
         Me.CartonBoxRuby.Name = "CartonBoxRuby"
         Me.CartonBoxRuby.ReadOnly = True
-        Me.CartonBoxRuby.Size = New System.Drawing.Size(100, 26)
+        Me.CartonBoxRuby.Size = New System.Drawing.Size(100, 22)
         Me.CartonBoxRuby.TabIndex = 73
         '
         'SERefRuby
         '
-        Me.SERefRuby.Location = New System.Drawing.Point(246, 86)
+        Me.SERefRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SERefRuby.Location = New System.Drawing.Point(219, 47)
         Me.SERefRuby.Name = "SERefRuby"
         Me.SERefRuby.ReadOnly = True
-        Me.SERefRuby.Size = New System.Drawing.Size(100, 26)
+        Me.SERefRuby.Size = New System.Drawing.Size(100, 22)
         Me.SERefRuby.TabIndex = 71
         '
         'QtySERefRuby
         '
-        Me.QtySERefRuby.Location = New System.Drawing.Point(363, 86)
+        Me.QtySERefRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QtySERefRuby.Location = New System.Drawing.Point(325, 47)
         Me.QtySERefRuby.Name = "QtySERefRuby"
         Me.QtySERefRuby.ReadOnly = True
-        Me.QtySERefRuby.Size = New System.Drawing.Size(100, 26)
+        Me.QtySERefRuby.Size = New System.Drawing.Size(100, 22)
         Me.QtySERefRuby.TabIndex = 70
         '
         'QtyCartonBox
         '
-        Me.QtyCartonBox.Location = New System.Drawing.Point(363, 135)
+        Me.QtyCartonBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QtyCartonBox.Location = New System.Drawing.Point(325, 69)
         Me.QtyCartonBox.Name = "QtyCartonBox"
         Me.QtyCartonBox.ReadOnly = True
-        Me.QtyCartonBox.Size = New System.Drawing.Size(100, 26)
+        Me.QtyCartonBox.Size = New System.Drawing.Size(100, 22)
         Me.QtyCartonBox.TabIndex = 72
         '
         'EXT24
         '
-        Me.EXT24.Location = New System.Drawing.Point(12, 135)
+        Me.EXT24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EXT24.Location = New System.Drawing.Point(8, 69)
         Me.EXT24.Name = "EXT24"
         Me.EXT24.ReadOnly = True
-        Me.EXT24.Size = New System.Drawing.Size(100, 26)
+        Me.EXT24.Size = New System.Drawing.Size(100, 22)
         Me.EXT24.TabIndex = 67
         '
         'QtyRS485
         '
-        Me.QtyRS485.Location = New System.Drawing.Point(363, 35)
+        Me.QtyRS485.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QtyRS485.Location = New System.Drawing.Point(325, 25)
         Me.QtyRS485.Name = "QtyRS485"
         Me.QtyRS485.ReadOnly = True
-        Me.QtyRS485.Size = New System.Drawing.Size(100, 26)
+        Me.QtyRS485.Size = New System.Drawing.Size(100, 22)
         Me.QtyRS485.TabIndex = 68
         '
         'PerfLabel
         '
-        Me.PerfLabel.Location = New System.Drawing.Point(12, 35)
+        Me.PerfLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PerfLabel.Location = New System.Drawing.Point(8, 25)
         Me.PerfLabel.Name = "PerfLabel"
         Me.PerfLabel.ReadOnly = True
-        Me.PerfLabel.Size = New System.Drawing.Size(100, 26)
+        Me.PerfLabel.Size = New System.Drawing.Size(100, 22)
         Me.PerfLabel.TabIndex = 62
         '
         'QtyPerfLabel
         '
-        Me.QtyPerfLabel.Location = New System.Drawing.Point(129, 35)
+        Me.QtyPerfLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QtyPerfLabel.Location = New System.Drawing.Point(114, 25)
         Me.QtyPerfLabel.Name = "QtyPerfLabel"
         Me.QtyPerfLabel.ReadOnly = True
-        Me.QtyPerfLabel.Size = New System.Drawing.Size(100, 26)
+        Me.QtyPerfLabel.Size = New System.Drawing.Size(100, 22)
         Me.QtyPerfLabel.TabIndex = 64
         '
         'RS485
         '
-        Me.RS485.Location = New System.Drawing.Point(246, 35)
+        Me.RS485.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RS485.Location = New System.Drawing.Point(219, 25)
         Me.RS485.Name = "RS485"
         Me.RS485.ReadOnly = True
-        Me.RS485.Size = New System.Drawing.Size(100, 26)
+        Me.RS485.Size = New System.Drawing.Size(100, 22)
         Me.RS485.TabIndex = 69
         '
         'ScrewAcc
         '
-        Me.ScrewAcc.Location = New System.Drawing.Point(12, 86)
+        Me.ScrewAcc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ScrewAcc.Location = New System.Drawing.Point(8, 47)
         Me.ScrewAcc.Name = "ScrewAcc"
         Me.ScrewAcc.ReadOnly = True
-        Me.ScrewAcc.Size = New System.Drawing.Size(100, 26)
+        Me.ScrewAcc.Size = New System.Drawing.Size(100, 22)
         Me.ScrewAcc.TabIndex = 65
         '
         'QtyScrewAcc
         '
-        Me.QtyScrewAcc.Location = New System.Drawing.Point(129, 86)
+        Me.QtyScrewAcc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QtyScrewAcc.Location = New System.Drawing.Point(114, 47)
         Me.QtyScrewAcc.Name = "QtyScrewAcc"
         Me.QtyScrewAcc.ReadOnly = True
-        Me.QtyScrewAcc.Size = New System.Drawing.Size(100, 26)
+        Me.QtyScrewAcc.Size = New System.Drawing.Size(100, 22)
         Me.QtyScrewAcc.TabIndex = 63
         '
         'QtyEXT24
         '
-        Me.QtyEXT24.Location = New System.Drawing.Point(129, 135)
+        Me.QtyEXT24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QtyEXT24.Location = New System.Drawing.Point(114, 69)
         Me.QtyEXT24.Name = "QtyEXT24"
         Me.QtyEXT24.ReadOnly = True
-        Me.QtyEXT24.Size = New System.Drawing.Size(100, 26)
+        Me.QtyEXT24.Size = New System.Drawing.Size(100, 22)
         Me.QtyEXT24.TabIndex = 66
         '
         'GroupBox32
@@ -7000,59 +7205,65 @@ Partial Class Main
         Me.GroupBox32.Controls.Add(Me.RatedVoltRuby)
         Me.GroupBox32.Controls.Add(Me.RatedFreq)
         Me.GroupBox32.Controls.Add(Me.UtilizationRuby)
-        Me.GroupBox32.Location = New System.Drawing.Point(6, 543)
+        Me.GroupBox32.Location = New System.Drawing.Point(6, 642)
         Me.GroupBox32.Name = "GroupBox32"
-        Me.GroupBox32.Size = New System.Drawing.Size(337, 186)
+        Me.GroupBox32.Size = New System.Drawing.Size(285, 97)
         Me.GroupBox32.TabIndex = 62
         Me.GroupBox32.TabStop = False
         Me.GroupBox32.Text = "Performance Label"
         '
         'RatedCurrRuby
         '
-        Me.RatedCurrRuby.Location = New System.Drawing.Point(12, 38)
+        Me.RatedCurrRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RatedCurrRuby.Location = New System.Drawing.Point(9, 26)
         Me.RatedCurrRuby.Name = "RatedCurrRuby"
         Me.RatedCurrRuby.ReadOnly = True
-        Me.RatedCurrRuby.Size = New System.Drawing.Size(100, 26)
+        Me.RatedCurrRuby.Size = New System.Drawing.Size(100, 22)
         Me.RatedCurrRuby.TabIndex = 56
         '
         'DCRuby
         '
-        Me.DCRuby.Location = New System.Drawing.Point(129, 125)
+        Me.DCRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DCRuby.Location = New System.Drawing.Point(115, 70)
         Me.DCRuby.Name = "DCRuby"
         Me.DCRuby.ReadOnly = True
-        Me.DCRuby.Size = New System.Drawing.Size(100, 26)
+        Me.DCRuby.Size = New System.Drawing.Size(100, 22)
         Me.DCRuby.TabIndex = 58
         '
         'ShortCircuitRuby
         '
-        Me.ShortCircuitRuby.Location = New System.Drawing.Point(128, 82)
+        Me.ShortCircuitRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShortCircuitRuby.Location = New System.Drawing.Point(115, 48)
         Me.ShortCircuitRuby.Name = "ShortCircuitRuby"
         Me.ShortCircuitRuby.ReadOnly = True
-        Me.ShortCircuitRuby.Size = New System.Drawing.Size(100, 26)
+        Me.ShortCircuitRuby.Size = New System.Drawing.Size(100, 22)
         Me.ShortCircuitRuby.TabIndex = 61
         '
         'RatedVoltRuby
         '
-        Me.RatedVoltRuby.Location = New System.Drawing.Point(129, 38)
+        Me.RatedVoltRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RatedVoltRuby.Location = New System.Drawing.Point(115, 26)
         Me.RatedVoltRuby.Name = "RatedVoltRuby"
         Me.RatedVoltRuby.ReadOnly = True
-        Me.RatedVoltRuby.Size = New System.Drawing.Size(100, 26)
+        Me.RatedVoltRuby.Size = New System.Drawing.Size(100, 22)
         Me.RatedVoltRuby.TabIndex = 59
         '
         'RatedFreq
         '
-        Me.RatedFreq.Location = New System.Drawing.Point(12, 82)
+        Me.RatedFreq.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RatedFreq.Location = New System.Drawing.Point(9, 48)
         Me.RatedFreq.Name = "RatedFreq"
         Me.RatedFreq.ReadOnly = True
-        Me.RatedFreq.Size = New System.Drawing.Size(100, 26)
+        Me.RatedFreq.Size = New System.Drawing.Size(100, 22)
         Me.RatedFreq.TabIndex = 60
         '
         'UtilizationRuby
         '
-        Me.UtilizationRuby.Location = New System.Drawing.Point(12, 125)
+        Me.UtilizationRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UtilizationRuby.Location = New System.Drawing.Point(9, 70)
         Me.UtilizationRuby.Name = "UtilizationRuby"
         Me.UtilizationRuby.ReadOnly = True
-        Me.UtilizationRuby.Size = New System.Drawing.Size(100, 26)
+        Me.UtilizationRuby.Size = New System.Drawing.Size(100, 22)
         Me.UtilizationRuby.TabIndex = 57
         '
         'GroupBox31
@@ -7060,7 +7271,7 @@ Partial Class Main
         Me.GroupBox31.Controls.Add(Me.DataGridView10)
         Me.GroupBox31.Location = New System.Drawing.Point(6, 304)
         Me.GroupBox31.Name = "GroupBox31"
-        Me.GroupBox31.Size = New System.Drawing.Size(821, 233)
+        Me.GroupBox31.Size = New System.Drawing.Size(821, 220)
         Me.GroupBox31.TabIndex = 55
         Me.GroupBox31.TabStop = False
         Me.GroupBox31.Text = "Fix BOM"
@@ -7070,9 +7281,9 @@ Partial Class Main
         Me.DataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView10.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView10.Location = New System.Drawing.Point(6, 20)
+        Me.DataGridView10.Location = New System.Drawing.Point(6, 25)
         Me.DataGridView10.Name = "DataGridView10"
-        Me.DataGridView10.Size = New System.Drawing.Size(809, 207)
+        Me.DataGridView10.Size = New System.Drawing.Size(809, 188)
         Me.DataGridView10.TabIndex = 0
         '
         'GroupBox30
@@ -7111,6 +7322,15 @@ Partial Class Main
         Me.GroupBox29.TabIndex = 44
         Me.GroupBox29.TabStop = False
         Me.GroupBox29.Text = "Scanning"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(168, 16)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(28, 26)
+        Me.TextBox4.TabIndex = 53
+        Me.TextBox4.Visible = False
         '
         'Label196
         '
@@ -7152,6 +7372,7 @@ Partial Class Main
         '
         'GroupBox28
         '
+        Me.GroupBox28.Controls.Add(Me.QRCodeRuby)
         Me.GroupBox28.Controls.Add(Me.Button13)
         Me.GroupBox28.Controls.Add(Me.dateCodeRuby)
         Me.GroupBox28.Controls.Add(Me.technicianShortNameRuby)
@@ -7168,6 +7389,15 @@ Partial Class Main
         Me.GroupBox28.Size = New System.Drawing.Size(1063, 145)
         Me.GroupBox28.TabIndex = 43
         Me.GroupBox28.TabStop = False
+        '
+        'QRCodeRuby
+        '
+        Me.QRCodeRuby.Enabled = False
+        Me.QRCodeRuby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QRCodeRuby.Location = New System.Drawing.Point(683, 98)
+        Me.QRCodeRuby.Name = "QRCodeRuby"
+        Me.QRCodeRuby.Size = New System.Drawing.Size(374, 22)
+        Me.QRCodeRuby.TabIndex = 53
         '
         'Button13
         '
@@ -7278,16 +7508,13 @@ Partial Class Main
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.Button16)
-        Me.TabPage4.Controls.Add(Me.Button15)
-        Me.TabPage4.Controls.Add(Me.Button14)
-        Me.TabPage4.Controls.Add(Me.masterruby)
+        Me.TabPage4.Controls.Add(Me.GroupBox35)
         Me.TabPage4.Controls.Add(Me.GroupBox15)
-        Me.TabPage4.Controls.Add(Me.GroupBox11)
         Me.TabPage4.Controls.Add(Me.GroupBox10)
         Me.TabPage4.Controls.Add(Me.GroupBox9)
         Me.TabPage4.Controls.Add(Me.GroupBox8)
         Me.TabPage4.Controls.Add(Me.GroupBox7)
+        Me.TabPage4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage4.Location = New System.Drawing.Point(4, 29)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -7296,41 +7523,64 @@ Partial Class Main
         Me.TabPage4.Text = "Master Data"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Button16
+        'GroupBox35
         '
-        Me.Button16.Location = New System.Drawing.Point(1079, 859)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(116, 76)
-        Me.Button16.TabIndex = 16
-        Me.Button16.Text = "Upload Ruby Packaging Label"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
-        'Button15
-        '
-        Me.Button15.Location = New System.Drawing.Point(1079, 759)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(116, 66)
-        Me.Button15.TabIndex = 15
-        Me.Button15.Text = "Upload Ruby Range Label"
-        Me.Button15.UseVisualStyleBackColor = True
+        Me.GroupBox35.Controls.Add(Me.Button14)
+        Me.GroupBox35.Controls.Add(Me.Button16)
+        Me.GroupBox35.Controls.Add(Me.masterruby)
+        Me.GroupBox35.Controls.Add(Me.Button15)
+        Me.GroupBox35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox35.ForeColor = System.Drawing.Color.Green
+        Me.GroupBox35.Location = New System.Drawing.Point(16, 681)
+        Me.GroupBox35.Name = "GroupBox35"
+        Me.GroupBox35.Size = New System.Drawing.Size(513, 129)
+        Me.GroupBox35.TabIndex = 17
+        Me.GroupBox35.TabStop = False
+        Me.GroupBox35.Text = "Ruby"
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(1079, 652)
+        Me.Button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button14.ForeColor = System.Drawing.Color.Black
+        Me.Button14.Location = New System.Drawing.Point(7, 73)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(116, 71)
+        Me.Button14.Size = New System.Drawing.Size(155, 42)
         Me.Button14.TabIndex = 14
         Me.Button14.Text = "Upload Ruby Material Master"
         Me.Button14.UseVisualStyleBackColor = True
         '
+        'Button16
+        '
+        Me.Button16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.ForeColor = System.Drawing.Color.Black
+        Me.Button16.Location = New System.Drawing.Point(177, 72)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(156, 42)
+        Me.Button16.TabIndex = 16
+        Me.Button16.Text = "Upload Ruby Packaging Label"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
         'masterruby
         '
-        Me.masterruby.Location = New System.Drawing.Point(1079, 549)
+        Me.masterruby.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.masterruby.ForeColor = System.Drawing.Color.Black
+        Me.masterruby.Location = New System.Drawing.Point(7, 25)
         Me.masterruby.Name = "masterruby"
-        Me.masterruby.Size = New System.Drawing.Size(116, 78)
+        Me.masterruby.Size = New System.Drawing.Size(155, 42)
         Me.masterruby.TabIndex = 13
         Me.masterruby.Text = "Upload Ruby Master Data"
         Me.masterruby.UseVisualStyleBackColor = True
+        '
+        'Button15
+        '
+        Me.Button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button15.ForeColor = System.Drawing.Color.Black
+        Me.Button15.Location = New System.Drawing.Point(177, 25)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(156, 41)
+        Me.Button15.TabIndex = 15
+        Me.Button15.Text = "Upload Ruby Range Label"
+        Me.Button15.UseVisualStyleBackColor = True
         '
         'GroupBox15
         '
@@ -7339,6 +7589,7 @@ Partial Class Main
         Me.GroupBox15.Controls.Add(Me.Button11)
         Me.GroupBox15.Controls.Add(Me.Button10)
         Me.GroupBox15.Controls.Add(Me.masterfuji)
+        Me.GroupBox15.Controls.Add(Me.GroupBox11)
         Me.GroupBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox15.ForeColor = System.Drawing.Color.Green
         Me.GroupBox15.Location = New System.Drawing.Point(535, 525)
@@ -7411,9 +7662,9 @@ Partial Class Main
         Me.GroupBox11.Controls.Add(Me.select_folder)
         Me.GroupBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox11.ForeColor = System.Drawing.Color.Green
-        Me.GroupBox11.Location = New System.Drawing.Point(16, 681)
+        Me.GroupBox11.Location = New System.Drawing.Point(448, 156)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(1032, 131)
+        Me.GroupBox11.Size = New System.Drawing.Size(65, 62)
         Me.GroupBox11.TabIndex = 12
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "Folder Path ==> Copy Data to :"
@@ -8702,15 +8953,6 @@ Partial Class Main
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
         '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(168, 16)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(28, 26)
-        Me.TextBox4.TabIndex = 53
-        Me.TextBox4.Visible = False
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -8778,6 +9020,10 @@ Partial Class Main
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout
         Me.Tab_Ruby.ResumeLayout(False)
+        Me.GroupBox38.ResumeLayout(False)
+        Me.GroupBox36.ResumeLayout(False)
+        Me.GroupBox36.PerformLayout
+        Me.GroupBox37.ResumeLayout(False)
         Me.GroupBox34.ResumeLayout(False)
         Me.GroupBox34.PerformLayout
         Me.GroupBox33.ResumeLayout(False)
@@ -8793,6 +9039,7 @@ Partial Class Main
         Me.GroupBox28.ResumeLayout(False)
         Me.GroupBox28.PerformLayout
         Me.TabPage4.ResumeLayout(False)
+        Me.GroupBox35.ResumeLayout(False)
         Me.GroupBox15.ResumeLayout(False)
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout
@@ -9557,4 +9804,21 @@ Partial Class Main
     Friend WithEvents LangFr As TextBox
     Friend WithEvents LangCn As TextBox
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents GroupBox35 As GroupBox
+    Friend WithEvents GroupBox36 As GroupBox
+    Friend WithEvents CheckBoxNR As CheckBox
+    Friend WithEvents CheckBoxNL As CheckBox
+    Friend WithEvents cbxPerfomaceRuby As ComboBox
+    Friend WithEvents PreviewPerformanceRuby As Button
+    Friend WithEvents PrintPerformanceRuby As Button
+    Friend WithEvents GroupBox38 As GroupBox
+    Friend WithEvents cbxOutsideRuby As ComboBox
+    Friend WithEvents PreviewOutsideRuby As Button
+    Friend WithEvents PrintOutsideRuby As Button
+    Friend WithEvents GroupBox37 As GroupBox
+    Friend WithEvents cbxPackagingRuby As ComboBox
+    Friend WithEvents PreviewPackagingRuby As Button
+    Friend WithEvents PrintPackagingRuby As Button
+    Friend WithEvents QRCodeRuby As TextBox
+    Friend WithEvents ProductTypeRuby As TextBox
 End Class
