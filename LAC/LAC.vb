@@ -738,7 +738,7 @@ Err_btnExit2_Click:
         Form1.Show()
     End Sub
     Dim selectWorkstation As Integer
-    Private Sub workstation_event() '
+    Private Sub workstation_event()
 
         Dim sql As String
         Dim ds As New DataSet
@@ -749,8 +749,9 @@ Err_btnExit2_Click:
         Dim sql4 As String
         Dim ds4 As New DataSet
 
-        Dim sql_fuji(10) As String
+        Dim sql_fuji(10), sql_ruby(5) As String
         Dim ds1_fuji, ds2_fuji, ds3_fuji, ds4_fuji, ds5_fuji As New DataSet
+        Dim ds1_ruby, ds2_ruby, ds3_ruby As New DataSet
 
         Dim selectedPrinterPackaging As String = "Microsoft Print to PDF"
         Dim selectedPrinterProduct As String = "Microsoft Print to PDF"
@@ -764,7 +765,7 @@ Err_btnExit2_Click:
         Dim selectedPrinterFujiOutSIdeLabel As String = "Microsoft Print to PDF"
         Dim selectedPrinterFujifrontLabel As String = "Microsoft Print to PDF"
 
-        'Fuji
+        'Ruby
         Dim selectedPrinterRubyPerformance As String = "Microsoft Print to PDF"
         Dim selectedPrinterRubyPackaging As String = "Microsoft Print to PDF"
         Dim selectedPrinterRubyOutSide As String = "Microsoft Print to PDF"
@@ -905,6 +906,54 @@ Err_btnExit2_Click:
         Catch ex As Exception
         End Try
 
+
+        'Ruby
+        'performance
+        Try
+            sql_ruby(1) = "SELECT [printer]  FROM [dbo].[printerTable] where [workstation]= '" &
+            workstation.SelectedValue.ToString & "' AND [report type]= 'Ruby performance label'"
+            Dim adapter_ruby_performance = New SqlDataAdapter(sql_ruby(1), Main.koneksi)
+            adapter_ruby_performance.Fill(ds1_ruby)
+
+            If ds1_ruby.Tables(0).Rows.Count = 0 Then
+                'MsgBox("Ruby Performance Label Printer not set in Database !")
+            Else
+                selectedPrinterRubyPerformance = ds1_ruby.Tables(0).Rows(0).Item("printer").ToString
+            End If
+        Catch ex As Exception
+        End Try
+
+        'packaging
+        Try
+            sql_ruby(2) = "SELECT [printer]  FROM [dbo].[printerTable] where [workstation]= '" &
+            workstation.SelectedValue.ToString & "' AND [report type]= 'Ruby packaging label'"
+            Dim adapter_ruby_packaging = New SqlDataAdapter(sql_ruby(2), Main.koneksi)
+            adapter_ruby_packaging.Fill(ds2_ruby)
+
+            If ds2_ruby.Tables(0).Rows.Count = 0 Then
+                'MsgBox("Ruby Performance Label Printer not set in Database !")
+            Else
+                selectedPrinterRubyPackaging = ds2_ruby.Tables(0).Rows(0).Item("printer").ToString
+            End If
+        Catch ex As Exception
+        End Try
+
+        'Out Side
+        Try
+            sql_ruby(3) = "SELECT [printer]  FROM [dbo].[printerTable] where [workstation]= '" &
+            workstation.SelectedValue.ToString & "' AND [report type]= 'Ruby Outside label'"
+            Dim adapter_ruby_outside = New SqlDataAdapter(sql_ruby(3), Main.koneksi)
+            adapter_ruby_outside.Fill(ds3_ruby)
+
+            If ds3_ruby.Tables(0).Rows.Count = 0 Then
+                'MsgBox("Ruby Performance Label Printer not set in Database !")
+            Else
+                selectedPrinterRubyOutSide = ds3_ruby.Tables(0).Rows(0).Item("printer").ToString
+            End If
+        Catch ex As Exception
+        End Try
+
+
         listprinter.ResetText()
         listprinter1.ResetText()
         listprinter2.ResetText()
@@ -941,6 +990,45 @@ Err_btnExit2_Click:
         Dim index_fuji3 = Array.IndexOf(items, selectedPrinterFujifrontLabel)
         Dim index_fuji4 = Array.IndexOf(items, selectedPrinterFujiCartonLabel)
         Dim index_fuji5 = Array.IndexOf(items, selectedPrinterFujiOutSIdeLabel)
+        'ruby
+        Dim index_ruby1 = Array.IndexOf(items, selectedPrinterRubyPerformance)
+        Dim index_ruby2 = Array.IndexOf(items, selectedPrinterRubyPackaging)
+        Dim index_ruby3 = Array.IndexOf(items, selectedPrinterRubyOutSide)
+
+        'Ruby set
+        'performance label
+        If index_ruby1 >= 0 Then
+            cbxPerfomaceRuby.SelectedText = selectedPrinterRubyPerformance
+            label_performance_small_ruby.PrintSettings.PrinterName = selectedPrinterRubyPerformance
+            label_performance_big_ruby.PrintSettings.PrinterName = selectedPrinterRubyPerformance
+        Else
+            cbxPerfomaceRuby.SelectedText = "Microsoft Print to PDF"
+            label_performance_small_ruby.PrintSettings.PrinterName = "Microsoft Print to PDF"
+            label_performance_big_ruby.PrintSettings.PrinterName = "Microsoft Print to PDF"
+            'MsgBox("Fuji Side label Printer are choosen (" & selectedPrinterFujiSIdeLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
+        End If
+        'packaging label
+        If index_ruby2 >= 0 Then
+            cbxPackagingRuby.SelectedText = selectedPrinterRubyPackaging
+            label_packaging_ruby.PrintSettings.PrinterName = selectedPrinterRubyPackaging
+        Else
+            cbxPackagingRuby.SelectedText = "Microsoft Print to PDF"
+            label_packaging_ruby.PrintSettings.PrinterName = "Microsoft Print to PDF"
+            'MsgBox("Fuji Side label Printer are choosen (" & selectedPrinterFujiSIdeLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
+        End If
+        'packaging label
+        If index_ruby3 >= 0 Then
+            cbxOutsideRuby.SelectedText = selectedPrinterRubyOutSide
+            label_outside_ruby.PrintSettings.PrinterName = selectedPrinterRubyOutSide
+        Else
+            cbxOutsideRuby.SelectedText = "Microsoft Print to PDF"
+            label_outside_ruby.PrintSettings.PrinterName = "Microsoft Print to PDF"
+            'MsgBox("Fuji Side label Printer are choosen (" & selectedPrinterFujiSIdeLabel & ") Not installed in this PC!" & vbNewLine & "Printer will use: Microsoft Print to PDF")
+        End If
+
+
+
+
         'fuji set
         If index_fuji1 >= 0 Then
             cbx_fuji_side_label.SelectedText = selectedPrinterFujiSIdeLabel
@@ -11013,7 +11101,12 @@ set @abc = (SELECT TOP (1) [Date]
                         and Component is null"
                         adapter = New SqlDataAdapter(queryUpdate, Main.koneksi)
                         If adapter.SelectCommand.ExecuteNonQuery().ToString() = 1 Then
-                            MessageBox.Show("Print " & QtyPerfLabel.Text & " Perf Label")
+                            ' MessageBox.Show("Print " & QtyPerfLabel.Text & " Perf 1 Label")
+                            'print ruby performance
+                            CheckBoxNL.Checked = False
+                            CheckBoxNR.Checked = True
+                            PrintPerformanceRuby_Click(sender, e)
+
                             Refresh_DGV_Ruby()
                             ScanRuby.Text = ""
                             ScanRuby.Select()
@@ -11026,7 +11119,13 @@ set @abc = (SELECT TOP (1) [Date]
                         and Component is null"
                         adapter = New SqlDataAdapter(queryUpdate, Main.koneksi)
                         If adapter.SelectCommand.ExecuteNonQuery().ToString() = 1 Then
-                            MessageBox.Show("Print " & QtyPerfLabel.Text & " Perf Label")
+
+                            'MessageBox.Show("Print " & QtyPerfLabel.Text & " Perf 2 Label")
+                            'print ruby performance
+                            CheckBoxNL.Checked = True
+                            CheckBoxNR.Checked = False
+                            PrintPerformanceRuby_Click(sender, e)
+
                             Refresh_DGV_Ruby()
                             ScanRuby.Text = ""
                             ScanRuby.Select()
@@ -11064,7 +11163,9 @@ set @abc = (SELECT TOP (1) [Date]
                         Dim adapterInsert = New SqlDataAdapter(queryInsert, Main.koneksi)
                         If adapterInsert.SelectCommand.ExecuteNonQuery() > 0 Then
                             Refresh_DGV_Ruby2()
-                            MessageBox.Show("Print Single Box")
+                            'MessageBox.Show("Print Single Box")
+                            PrintPackagingRuby_Click(sender, e)
+
                             ScanLabelRuby.Text = ""
                             ScanLabelRuby.Select()
                         End If
@@ -11100,7 +11201,9 @@ set @abc = (SELECT TOP (1) [Date]
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
         If TextBox4.Text = 3 Then
-            MessageBox.Show("Print Group Box")
+            'MessageBox.Show("Print Group Box")
+            PrintOutsideRuby_Click(sender, e)
+
             clearAllRuby()
             'Dim queryInsert = "INSERT INTO [ComponentsRuby] 
             ' ([Order],[RefRuby],[Component],[Qty],[workstation]) 
@@ -11256,6 +11359,10 @@ set @abc = (SELECT TOP (1) [Date]
 
             label_outside_ruby.Variables("Product_Pic").SetValue(ProductImageRuby.Text)
 
+            'label_outside_ruby.Variables("Po").SetValue(ProductImageRuby.Text)
+            'label_outside_ruby.Variables("So_Line_Number").SetValue(ProductImageRuby.Text)
+            'label_outside_ruby.Variables("So").SetValue(ProductImageRuby.Text)
+
         Catch ex As Exception
             MsgBox("Ruby Outside Label  " & ex.Message)
         End Try
@@ -11265,8 +11372,10 @@ set @abc = (SELECT TOP (1) [Date]
         reload_printer()
         If CheckBoxNR.Checked Then
             Ruby_Performance_Small_setvalue("R")
+            Ruby_Performance_Big_setvalue("R")
         Else
             Ruby_Performance_Small_setvalue("L")
+            Ruby_Performance_Big_setvalue("L")
         End If
 
 
@@ -11278,8 +11387,14 @@ set @abc = (SELECT TOP (1) [Date]
         LabelPreviewSettings.Width = Form_preview.pictureBoxPreview.Width                   ' Width Of image To generate
         LabelPreviewSettings.Height = Form_preview.pictureBoxPreview.Height                 ' Height Of image To generate
 
+        Dim imageObj As Object
         ' Generate Preview File
-        Dim imageObj As Object = label_performance_small_ruby.GetLabelPreview(LabelPreviewSettings)
+        If ProductTypeRuby.Text = "Ruby 1" Then
+            imageObj = label_performance_small_ruby.GetLabelPreview(LabelPreviewSettings)
+        Else
+            imageObj = label_performance_big_ruby.GetLabelPreview(LabelPreviewSettings)
+        End If
+
 
         'Display image in UI
         If TypeOf imageObj Is Byte() Then
@@ -11342,27 +11457,72 @@ set @abc = (SELECT TOP (1) [Date]
     End Sub
 
     Private Sub PrintPerformanceRuby_Click(sender As Object, e As EventArgs) Handles PrintPerformanceRuby.Click
-        If CheckBoxNL.Checked Then
-            Try
 
-                Ruby_Performance_Small_setvalue("L")
-                'If qty = 0 Then qty = 1
-                label_performance_small_ruby.Print(1)
-            Catch ex As Exception
-                MsgBox("Print Failed" & ex.ToString)
-            End Try
+        If ProductTypeRuby.Text = "Ruby 1" Then
+            If CheckBoxNL.Checked Then
+                Try
+
+                    Ruby_Performance_Small_setvalue("L")
+                    label_performance_small_ruby.Print(1)
+                Catch ex As Exception
+                    MsgBox("Print Failed" & ex.ToString)
+                End Try
+            End If
+
+            If CheckBoxNR.Checked Then
+                Try
+
+                    Ruby_Performance_Small_setvalue("R")
+                    label_performance_small_ruby.Print(1)
+                Catch ex As Exception
+                    MsgBox("Print Failed" & ex.ToString)
+                End Try
+            End If
+        ElseIf ProductTypeRuby.Text = "Ruby 2" Then
+            If CheckBoxNL.Checked Then
+                Try
+
+                    Ruby_Performance_Big_setvalue("L")
+                    label_performance_big_ruby.Print(1)
+                Catch ex As Exception
+                    MsgBox("Print Failed" & ex.ToString)
+                End Try
+            End If
+
+            If CheckBoxNR.Checked Then
+                Try
+
+                    Ruby_Performance_Big_setvalue("R")
+                    label_performance_big_ruby.Print(1)
+                Catch ex As Exception
+                    MsgBox("Print Failed" & ex.ToString)
+                End Try
+            End If
+
+        Else
+            MsgBox("You Need to Scan PP Order First !")
         End If
+    End Sub
 
-        If CheckBoxNR.Checked Then
-            Try
+    Private Sub PrintPackagingRuby_Click(sender As Object, e As EventArgs) Handles PrintPackagingRuby.Click
+        Try
+            Ruby_Packaging_setvalue()
+            label_packaging_ruby.Print(1)
+        Catch ex As Exception
+            MsgBox("Print Failed" & ex.ToString)
+        End Try
+    End Sub
 
-                Ruby_Performance_Small_setvalue("R")
-                'If qty = 0 Then qty = 1
-                label_performance_small_ruby.Print(1)
-            Catch ex As Exception
-                MsgBox("Print Failed" & ex.ToString)
-            End Try
-        End If
+    Private Sub PrintOutsideRuby_Click(sender As Object, e As EventArgs) Handles PrintOutsideRuby.Click
+        Try
+            Ruby_Outside_setvalue()
+            label_outside_ruby.Print(1)
+        Catch ex As Exception
+            MsgBox("Print Failed" & ex.ToString)
+        End Try
+    End Sub
 
+    Private Sub workstationRuby_SelectedValueChanged(sender As Object, e As EventArgs) Handles workstationRuby.SelectedValueChanged
+        'workstation_event()
     End Sub
 End Class
