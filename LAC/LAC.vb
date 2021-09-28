@@ -4110,7 +4110,7 @@ loncat:
                 adapter.Fill(dsCountry)
                 Try
                     If dsCountry.Tables(0).Rows.Count = 1 Then
-                        Me.testCountry.Text = ds.Tables(0).Rows(0).Item("country")
+                        Me.testCountry.Text = dsCountry.Tables(0).Rows(0).Item("country")
                     End If
                 Catch ex As Exception
                     If CustomerCountryNotFound = 0 Then MsgBox("Customer Country Not Found ")
@@ -4365,7 +4365,9 @@ loncat:
             adap2.Fill(dsa)
 
             If dsa.Tables(0).Rows.Count = 1 Then
-                Me.country.SelectedValue = dsa.Tables(0).Rows(0).Item("country").ToString
+
+                'Me.country.SelectedValue = dsa.Tables(0).Rows(0).Item("country").ToString
+                Me.country.Text = dsa.Tables(0).Rows(0).Item("country").ToString
                 Me.countryShortName.Text = dsa.Tables(0).Rows(0).Item("country short name").ToString
                 Me.Customer_code.Text = dsa.Tables(0).Rows(0).Item("Customer code").ToString
             ElseIf dsa.Tables(0).Rows.Count > 1 Then
@@ -10769,7 +10771,14 @@ set @abc = (SELECT TOP (1) [Date]
                         AddressChRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("AddressCh").ToString
                         LogisticRefRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("LogisticRef").ToString
                         CIPRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("CIP").ToString
-                        ProductImageRuby.Text = dsCekRuby.Tables(0).Rows(0).Item("ProductPicture").ToString
+
+                        Dim pir As String = ""
+
+                        pir = dsCekRuby.Tables(0).Rows(0).Item("ProductPicture").ToString
+                        pir = pir.Replace("1P", "4P")
+                        pir = pir.Replace("2P", "4P")
+                        pir = pir.Replace("3P", "4P")
+                        ProductImageRuby.Text = pir
 
                         If (dsCekForInsert.Tables(0).Rows.Count > 0) Then
                             Refresh_DGV_Ruby()
@@ -11655,6 +11664,31 @@ set @abc = (SELECT TOP (1) [Date]
             Visible_N.Text = ""
         Else
             Visible_N.Text = "N"
+        End If
+    End Sub
+
+    Private Sub cbxPerfomaceRuby_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxPerfomaceRuby.SelectedIndexChanged
+        If printers.Count > 0 Then
+            selected_Printer = printers.Item(cbxPerfomaceRuby.SelectedIndex)
+            label_performance_small_ruby.PrintSettings.PrinterName = selected_Printer.Name
+            label_performance_big_ruby.PrintSettings.PrinterName = selected_Printer.Name
+            cbxPerfomaceRuby.SelectedItem = selected_Printer.Name
+        End If
+    End Sub
+
+    Private Sub cbxPackagingRuby_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxPackagingRuby.SelectedIndexChanged
+        If printers.Count > 0 Then
+            selected_Printer = printers.Item(cbxPackagingRuby.SelectedIndex)
+            label_packaging_ruby.PrintSettings.PrinterName = selected_Printer.Name
+            cbxPackagingRuby.SelectedItem = selected_Printer.Name
+        End If
+    End Sub
+
+    Private Sub cbxOutsideRuby_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxOutsideRuby.SelectedIndexChanged
+        If printers.Count > 0 Then
+            selected_Printer = printers.Item(cbxOutsideRuby.SelectedIndex)
+            label_outside_ruby.PrintSettings.PrinterName = selected_Printer.Name
+            cbxOutsideRuby.SelectedItem = selected_Printer.Name
         End If
     End Sub
 End Class
