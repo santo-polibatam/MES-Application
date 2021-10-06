@@ -5100,6 +5100,7 @@ loncat:
         Dim iii As String
         Dim Category As String
         Category = Me.header.Text
+
         Try
             If Me.countryShortName.Text.IndexOf("KR") <> -1 Then
                 'NEW FOR KR CERTIFICATION NUMBER Stephen
@@ -5689,6 +5690,9 @@ loncat:
     'santo
     'label 1 setvalue
     Private Sub label1_setValue()
+        Application.DoEvents()
+        Me.Refresh()
+
         label1_printer.Variables("Product ID").SetValue(Microsoft.VisualBasic.Left(Material.Text, 19))
         'label1_printer.Variables("custMaterial").SetValue(Microsoft.VisualBasic.Left(custMaterial.Text, 19))
         label1_printer.Variables("custMaterial").SetValue(custMaterial.Text)
