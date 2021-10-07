@@ -11076,24 +11076,29 @@ set @abc = (SELECT TOP (1) [Date]
                 adapterGetDataRef.Fill(dsGetDataRef)
 
                 Dim DataRef As String = dsGetDataRef.Tables(0).Rows(0).Item("peggedreqt")
+
                 Dim DataSn As String = ScanRuby.Text().Substring(0, 13)
 
+
                 Dim sqlCekRuby As String = "select * from ComponentsRuby where [order]=" & PPRubyEntry.Text & "and [RefRuby]='" & DataRef & "' and workstation='" & workstationRuby.Text & "' and Component is null"
-                Dim dsCekRuby As New DataSet
-                adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
-                adapter.Fill(dsCekRuby)
-                If (dsCekRuby.Tables(0).Rows.Count > 0) Then
+                    Dim dsCekRuby As New DataSet
+                    adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
+                    adapter.Fill(dsCekRuby)
+                    If (dsCekRuby.Tables(0).Rows.Count > 0) Then
 
                     'ambil QRCODE
                     If ScanRuby.Text.Length = 34 Then
                         QRCodeRuby.Text = "http://go2se.com/ref=" + ComRefRuby.Text + "/sn=" + ScanRuby.Text
                     End If
 
-                    DCRuby.Text = DataSn.Substring(2)
-                    YearDCRuby.Text = DataSn.Substring(2, 2)
-                    WeekDCRuby.Text = DataSn.Substring(4, 2)
-                    DayDCRuby.Text = DataSn.Substring(6, 1)
-                    IDNumberRuby.Text = DataSn.Substring(9, 4)
+                    If Not ScanRuby.Text.Contains("http://go2se.com/ref=") Then
+                        DCRuby.Text = DataSn.Substring(2)
+                        YearDCRuby.Text = DataSn.Substring(2, 2)
+                        WeekDCRuby.Text = DataSn.Substring(4, 2)
+                        DayDCRuby.Text = DataSn.Substring(6, 1)
+                        IDNumberRuby.Text = DataSn.Substring(9, 4)
+                    End If
+
                     If (dsCekRuby.Tables(0).Rows(0).Item("Check Components") = 1 And dsCekRuby.Tables(0).Rows(0).Item("ScanAgain") = dsCekRuby.Tables(0).Rows(0).Item("Qty")) Then
                         MsgBox("All Product have been scanned")
                         ScanRuby.Text = ""
@@ -11197,7 +11202,7 @@ set @abc = (SELECT TOP (1) [Date]
                     End If
                 End If
             Else
-                MessageBox.Show("Wrong QR Code")
+                    MessageBox.Show("Wrong QR Code")
             End If
         End If
     End Sub
@@ -11460,6 +11465,9 @@ set @abc = (SELECT TOP (1) [Date]
             label_outside_ruby.Variables("So_Line_Number").SetValue(SoLineRuby.Text)
             label_outside_ruby.Variables("SO").SetValue(SORuby.Text)
 
+            label_outside_ruby.Variables("SO_Barcode").SetValue("0" & SORuby.Text & Convert.ToDecimal(SoLineRuby.Text).ToString("000000"))
+            'label_out_side_printer.Variables("QR_SO").SetValue("0" & FujiSO.Text & Convert.ToDecimal(FujiLineNo.Text).ToString("000000"))
+
         Catch ex As Exception
             MsgBox("Ruby Outside Label  " & ex.Message)
         End Try
@@ -11554,69 +11562,81 @@ set @abc = (SELECT TOP (1) [Date]
     End Sub
 
     Private Sub PrintPerformanceRuby_Click(sender As Object, e As EventArgs) Handles PrintPerformanceRuby.Click
+        If DCRuby.Text.Length > 5 Then
 
-        If ProductTypeRuby.Text = "Ruby 1" Then
-            If CheckBoxNR.Checked Then
-                Try
+            If ProductTypeRuby.Text = "Ruby 1" Then
+                If CheckBoxNR.Checked Then
+                    Try
 
-                    Ruby_Performance_Small_setvalue("R")
-                    label_performance_small_ruby.Print(1)
-                Catch ex As Exception
-                    MsgBox("Print Failed" & ex.ToString)
-                End Try
+                        Ruby_Performance_Small_setvalue("R")
+                        label_performance_small_ruby.Print(1)
+                    Catch ex As Exception
+                        MsgBox("Print Failed" & ex.ToString)
+                    End Try
+                End If
+
+                If CheckBoxNL.Checked Then
+                    Try
+
+                        Ruby_Performance_Small_setvalue("L")
+                        label_performance_small_ruby.Print(1)
+                    Catch ex As Exception
+                        MsgBox("Print Failed" & ex.ToString)
+                    End Try
+                End If
+            ElseIf ProductTypeRuby.Text = "Ruby 2" Then
+                If CheckBoxNR.Checked Then
+                    Try
+
+                        Ruby_Performance_Big_setvalue("R")
+                        label_performance_big_ruby.Print(1)
+                    Catch ex As Exception
+                        MsgBox("Print Failed" & ex.ToString)
+                    End Try
+                End If
+
+                If CheckBoxNL.Checked Then
+                    Try
+
+                        Ruby_Performance_Big_setvalue("L")
+                        label_performance_big_ruby.Print(1)
+                    Catch ex As Exception
+                        MsgBox("Print Failed" & ex.ToString)
+                    End Try
+                End If
+
+            Else
+                MsgBox("You Need to Scan PP Order First !")
             End If
-
-            If CheckBoxNL.Checked Then
-                Try
-
-                    Ruby_Performance_Small_setvalue("L")
-                    label_performance_small_ruby.Print(1)
-                Catch ex As Exception
-                    MsgBox("Print Failed" & ex.ToString)
-                End Try
-            End If
-        ElseIf ProductTypeRuby.Text = "Ruby 2" Then
-            If CheckBoxNR.Checked Then
-                Try
-
-                    Ruby_Performance_Big_setvalue("R")
-                    label_performance_big_ruby.Print(1)
-                Catch ex As Exception
-                    MsgBox("Print Failed" & ex.ToString)
-                End Try
-            End If
-
-            If CheckBoxNL.Checked Then
-                Try
-
-                    Ruby_Performance_Big_setvalue("L")
-                    label_performance_big_ruby.Print(1)
-                Catch ex As Exception
-                    MsgBox("Print Failed" & ex.ToString)
-                End Try
-            End If
-
         Else
-            MsgBox("You Need to Scan PP Order First !")
+            MsgBox("You Need to Scan The Breaker QR-Code First !")
         End If
     End Sub
 
     Private Sub PrintPackagingRuby_Click(sender As Object, e As EventArgs) Handles PrintPackagingRuby.Click
-        Try
-            Ruby_Packaging_setvalue()
-            label_packaging_ruby.Print(1)
-        Catch ex As Exception
-            MsgBox("Print Failed" & ex.ToString)
-        End Try
+        If DCRuby.Text.Length > 5 Then
+            Try
+                Ruby_Packaging_setvalue()
+                label_packaging_ruby.Print(1)
+            Catch ex As Exception
+                MsgBox("Print Failed" & ex.ToString)
+            End Try
+        Else
+            MsgBox("You Need to Scan The Breaker QR-Code First !")
+        End If
     End Sub
 
     Private Sub PrintOutsideRuby_Click(sender As Object, e As EventArgs) Handles PrintOutsideRuby.Click
-        Try
-            Ruby_Outside_setvalue()
-            label_outside_ruby.Print(1)
-        Catch ex As Exception
-            MsgBox("Print Failed" & ex.ToString)
-        End Try
+        If DCRuby.Text.Length > 5 Then
+            Try
+                Ruby_Outside_setvalue()
+                label_outside_ruby.Print(1)
+            Catch ex As Exception
+                MsgBox("Print Failed" & ex.ToString)
+            End Try
+        Else
+            MsgBox("You Need to Scan The Breaker QR-Code First !")
+        End If
     End Sub
 
     Private Sub workstationRuby_SelectedValueChanged(sender As Object, e As EventArgs) Handles workstationRuby.SelectedValueChanged
