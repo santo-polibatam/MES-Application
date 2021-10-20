@@ -9174,11 +9174,49 @@ set @abc = (SELECT TOP (1) [Date]
             End Try
         End If
     End Sub
+    Function After_str(value As String, a As String) As String
+        ' Get index of argument and return substring after its position.
+        Dim posA As Integer = value.LastIndexOf(a)
+        If posA = -1 Then
+            Return ""
+        End If
+        Dim adjustedPosA As Integer = posA + a.Length
+        If adjustedPosA >= value.Length Then
+            Return ""
+        End If
+        Return value.Substring(adjustedPosA)
+    End Function
 
     Private Sub TextBox2_TextChanged(sender As Object, e As PreviewKeyDownEventArgs) Handles CompToQuality.PreviewKeyDown
 
         Dim tampungSplit As String = ""
         If e.KeyData = Keys.Enter Or e.KeyData = 9 Then
+
+
+
+            'jinlong request
+            If Me.CompToQuality.Text.Contains("!") Then
+                Dim str As String = ""
+                str = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
+                Dim new_str As String = str.Replace("!", "")
+
+                Dim result As String = After_str(new_str, "241")
+                result = "241" & result
+
+                Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [QR code] ='" & result & "'"
+                Dim dsfuji2 As New DataSet
+                Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
+                adapt2.Fill(dsfuji2)
+
+                If dsfuji2.Tables(0).Rows.Count > 0 Then
+                    Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
+                    Me.CompToQuality.Text = material
+                Else
+                    MsgBox("QR Code Not Found and pls Scan the Barcode !")
+                    Me.CompToQuality.Text = ""
+                End If
+
+            End If
 
             'Cek Fuji breaker
             If header.Text.Contains("BW") Then
@@ -9195,100 +9233,120 @@ set @abc = (SELECT TOP (1) [Date]
                 End If
             End If
 
+            Dim componentScanned As String = Me.CompToQuality.Text
+
             'santo tambah
             'If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Then cek_fuji_barcode()
             If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Or Me.CompToQuality.Text.Length = 48 Then cek_fuji_barcode()
-                'abcde
-                If Active_Quality_issue.Checked = True Then
 
-                    'mungkin salah
-                    'If Len(Me.CompToQuality.Text) = 22 Then
-                    '    SaveData.Text = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
-                    '    tampungSplit = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
-                    '    ComponentNo.Text = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
-                    'End If
+            'Fuji handle repeat breaker
+            If header.Text.Contains("BW") Then
+                Dim datcode_bearker As String = After_str(componentScanned, " ")
+                'Dim q = "select * from printingRecord where [PP]='" & Me.PPnumberEntry.Text & "' AND [qrcodefuji] like '%" & datcode_bearker & "'"
+                Dim q = "select * from printingRecord where [qrcodefuji] like '%" & datcode_bearker & "'"
+                Dim dsfuji As New DataSet
+                Dim adapt = New SqlDataAdapter(q, Main.koneksi)
 
-                    'arif
-                    If Len(Me.CompToQuality.Text) = 24 Then tampungSplit = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 11), 10)
-                    If Len(Me.CompToQuality.Text) = 10 Then
-                        tampungSplit = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 5)
-                    ElseIf Len(Me.CompToQuality.Text) >= 11 Then
-                        tampungSplit = Microsoft.VisualBasic.Left(Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 6), 5)
-                    Else
-                        tampungSplit = CompToQuality.Text
-                    End If
+                adapt.Fill(dsfuji)
+                If dsfuji.Tables(0).Rows.Count > 0 Then
+                    Dim a As String = "Breaker Already Scanned!" + Chr(13) + "Please Scan Another Breaker"
+                    MessageBox.Show(a, "Important", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Me.CompToQuality.Text = ""
+                    Exit Sub
+                End If
+            End If
 
-                    Dim sql As String = "select * from [Componentslist] where [code]='" & tampungSplit & "' or [material]='" & tampungSplit & "'"
-                    Dim dsSql As New DataSet
-                    Dim sqlAdap = New SqlDataAdapter(sql, Main.koneksi)
-                    sqlAdap.Fill(dsSql)
-                    If dsSql.Tables(0).Rows.Count > 0 Then
-                        tampungSplit = dsSql.Tables(0).Rows(0).Item("Material").ToString
-                    Else
-                        MsgBox("Wrong Components", vbExclamation, "The component is not part of the product")
-                    End If
+            'abcde
+            If Active_Quality_issue.Checked = True Then
 
-                    'santo
-                    If Convert.ToDecimal(CounterItems.Text) = Convert.ToDecimal(LabelQuantityitem.Text) Then
-                        MsgBox("All Breakers have been adapted !")
-                        CompToQuality.Text = ""
-                        Exit Sub
-                    End If
+                'mungkin salah
+                'If Len(Me.CompToQuality.Text) = 22 Then
+                '    SaveData.Text = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
+                '    tampungSplit = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
+                '    ComponentNo.Text = Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 8)
+                'End If
 
-                    Try
-                        'Dim queryCheck = "select * from QualityIssue where [references]='" & CompToQuality.Text & "'"
-                        Dim queryCheck = "select * from QualityIssue where [references]='" & tampungSplit & "'"
-                        Dim ds As New DataSet
-                        Dim CheckAdap = New SqlDataAdapter(queryCheck, Main.koneksi)
+                'arif
+                If Len(Me.CompToQuality.Text) = 24 Then tampungSplit = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.CompToQuality.Text, 11), 10)
+                If Len(Me.CompToQuality.Text) = 10 Then
+                    tampungSplit = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 5)
+                ElseIf Len(Me.CompToQuality.Text) >= 11 Then
+                    tampungSplit = Microsoft.VisualBasic.Left(Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 6), 5)
+                Else
+                    tampungSplit = CompToQuality.Text
+                End If
 
-                        CheckAdap.Fill(ds)
+                Dim sql As String = "select * from [Componentslist] where [code]='" & tampungSplit & "' or [material]='" & tampungSplit & "'"
+                Dim dsSql As New DataSet
+                Dim sqlAdap = New SqlDataAdapter(sql, Main.koneksi)
+                sqlAdap.Fill(dsSql)
+                If dsSql.Tables(0).Rows.Count > 0 Then
+                    tampungSplit = dsSql.Tables(0).Rows(0).Item("Material").ToString
+                Else
+                    MsgBox("Wrong Components", vbExclamation, "The component is not part of the product")
+                End If
 
-                        If ds.Tables(0).Rows.Count >= 1 Then
-                            'Dim PlantCode = InputBox("Please enter the Plant Code + Date Code :" & vbLf & vbLf & "Example: AF19514", "Enter Plant Code & Date Code")
-                            Dim PlantCode
-                            'santo
+                'santo
+                If Convert.ToDecimal(CounterItems.Text) = Convert.ToDecimal(LabelQuantityitem.Text) Then
+                    MsgBox("All Breakers have been adapted !")
+                    CompToQuality.Text = ""
+                    Exit Sub
+                End If
 
-                            Input_BoX.ShowDialog()
-                            PlantCode = Input_BoX.txt_PlanCode_DateCode.Text
+                Try
+                    'Dim queryCheck = "select * from QualityIssue where [references]='" & CompToQuality.Text & "'"
+                    Dim queryCheck = "select * from QualityIssue where [references]='" & tampungSplit & "'"
+                    Dim ds As New DataSet
+                    Dim CheckAdap = New SqlDataAdapter(queryCheck, Main.koneksi)
 
-                            'Dim Query = "INSERT INTO [dbo].[QualityIssueRecord] ([PP],[References],[PlantCodeDateCode],[Remark]) VALUES ('" & PPnumberEntry.Text & "','" & tampungSplit.ToUpper & "','" & PlantCode.ToString.ToUpper & "','" & checkQualityIssue(tampungSplit, PlantCode) & "')"
-                            'Dim InsertBro = New SqlDataAdapter(Query, Main.koneksi)
-                            'InsertBro.SelectCommand.ExecuteNonQuery()
+                    CheckAdap.Fill(ds)
 
-                            If checkQualityIssue(tampungSplit, PlantCode) <> "OK" Then
+                    If ds.Tables(0).Rows.Count >= 1 Then
+                        'Dim PlantCode = InputBox("Please enter the Plant Code + Date Code :" & vbLf & vbLf & "Example: AF19514", "Enter Plant Code & Date Code")
+                        Dim PlantCode
+                        'santo
 
-                                MessageBox.Show("Product Impected based on LA Info!" & vbCrLf & "Please Liaise with CS & Q", "Attention !",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Stop)
+                        Input_BoX.ShowDialog()
+                        PlantCode = Input_BoX.txt_PlanCode_DateCode.Text
 
-                                CompToQuality.Text = ""
-                                'CompToQuality.Select()
-                                CompToQuality.Enabled = False
-                                PPnumberEntry.Select()
-                                PPnumberEntry.SelectAll()
-                                Exit Sub
+                        'Dim Query = "INSERT INTO [dbo].[QualityIssueRecord] ([PP],[References],[PlantCodeDateCode],[Remark]) VALUES ('" & PPnumberEntry.Text & "','" & tampungSplit.ToUpper & "','" & PlantCode.ToString.ToUpper & "','" & checkQualityIssue(tampungSplit, PlantCode) & "')"
+                        'Dim InsertBro = New SqlDataAdapter(Query, Main.koneksi)
+                        'InsertBro.SelectCommand.ExecuteNonQuery()
 
-                            Else
-                                ComponentNo.Text = CompToQuality.Text
-                                CompToQuality.Text = ""
-                                CompToQuality.Select()
-                                'Lbl_Result.Text = "Result"
-                                'lbl_PlantCode.Text = "Plant :"
-                            End If
+                        If checkQualityIssue(tampungSplit, PlantCode) <> "OK" Then
+
+                            MessageBox.Show("Product Impected based on LA Info!" & vbCrLf & "Please Liaise with CS & Q", "Attention !",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop)
+
+                            CompToQuality.Text = ""
+                            'CompToQuality.Select()
+                            CompToQuality.Enabled = False
+                            PPnumberEntry.Select()
+                            PPnumberEntry.SelectAll()
+                            Exit Sub
+
                         Else
                             ComponentNo.Text = CompToQuality.Text
                             CompToQuality.Text = ""
                             CompToQuality.Select()
+                            'Lbl_Result.Text = "Result"
+                            'lbl_PlantCode.Text = "Plant :"
                         End If
-                    Catch ex As Exception
+                    Else
+                        ComponentNo.Text = CompToQuality.Text
+                        CompToQuality.Text = ""
+                        CompToQuality.Select()
+                    End If
+                Catch ex As Exception
 
-                    End Try
-                Else
-                    ComponentNo.Text = CompToQuality.Text
-                    CompToQuality.Text = ""
-                    CompToQuality.Select()
-                End If
+                End Try
+            Else
+                ComponentNo.Text = CompToQuality.Text
+                CompToQuality.Text = ""
+                CompToQuality.Select()
             End If
+        End If
     End Sub
 
     Private Sub Simpan_QualityIssueRecord()
