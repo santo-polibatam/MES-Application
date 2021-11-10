@@ -6950,6 +6950,7 @@ loncat:
 
         If CInt(CounterCpts.Text) < 0 Then CounterCpts.Text = 0
         If CounterCpts.Text = LabelQuantitycpt.Text And autoPrint.Checked = True Then
+            'If CounterCpts.Text = LabelQuantitycpt.Text Then
             'Dim sql As String = "select DISTINCT PeggedReqt from openOrders, MasterFuji where openOrders.[order]='" & Me.PPnumberEntry.Text & "' and MasterFuji.Ref=openOrders.PeggedReqt"
             'Dim ds As New DataSet
             'adapter = New SqlDataAdapter(sql, Main.koneksi)
@@ -7044,56 +7045,56 @@ loncat:
             'End If
 
             'Save to DB every printing
-            Try
-                Dim cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[QRCodeFuji],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@QRCodeFuji,@data,@Seq)", Main.koneksi)
-                cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
-                cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
-                cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
-                cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
-                cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
-                cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
-                cmd.Parameters.AddWithValue("@QRCodeFuji", Me.Fuji_QR_Product_Label.Text)
-                cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+            'Try
+            '    Dim cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[QRCodeFuji],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@QRCodeFuji,@data,@Seq)", Main.koneksi)
+            '    cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
+            '    cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
+            '    cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
+            '    cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
+            '    cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
+            '    cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
+            '    cmd.Parameters.AddWithValue("@QRCodeFuji", Me.Fuji_QR_Product_Label.Text)
+            '    cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
 
-                Dim date_2 As String
+            '    Dim date_2 As String
 
-                Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
+            '    Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
 
-                If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
+            '    If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
 
-                date_2 = Date.Now.ToString("yy") & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
+            '    date_2 = Date.Now.ToString("yy") & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
 
-                Dim _ID As String = Convert.ToDecimal(seq_SerialNumber.ToString).ToString("0000")
-                Dim _seq As String = "SG" & date_2 & _ID
+            '    Dim _ID As String = Convert.ToDecimal(seq_SerialNumber.ToString).ToString("0000")
+            '    Dim _seq As String = "SG" & date_2 & _ID
 
-                cmd.Parameters.AddWithValue("@Seq", _seq)
+            '    cmd.Parameters.AddWithValue("@Seq", _seq)
 
-                'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
-                cmd.ExecuteNonQuery()
-
-
-                'cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@data,@Seq)", Main.koneksi)
-                'cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
-                'cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
-                'cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
-                'cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
-
-                'If var_PrintLabel_klik = True Then
-                '    cmd.Parameters.AddWithValue("@from", CInt(Me.StartLabel.Text))
-                '    var_PrintLabel_klik = False
-                'Else
-                '    cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
-                'End If
+            '    'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
+            '    cmd.ExecuteNonQuery()
 
 
-                'cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
-                'cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
-                'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
-                'cmd.ExecuteNonQuery()
+            '    'cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@data,@Seq)", Main.koneksi)
+            '    'cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
+            '    'cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
+            '    'cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
+            '    'cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
 
-            Catch ex As Exception
+            '    'If var_PrintLabel_klik = True Then
+            '    '    cmd.Parameters.AddWithValue("@from", CInt(Me.StartLabel.Text))
+            '    '    var_PrintLabel_klik = False
+            '    'Else
+            '    '    cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
+            '    'End If
 
-            End Try
+
+            '    'cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
+            '    'cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+            '    'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
+            '    'cmd.ExecuteNonQuery()
+
+            'Catch ex As Exception
+
+            'End Try
             'If CounterItems.Text > 0 Then
 
 
@@ -7122,6 +7123,56 @@ loncat:
             '    DataGridView1.Rows(i).Cells(4).Style.BackColor = Color.White
             'Next
         End If
+        Try
+            Dim cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[QRCodeFuji],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@QRCodeFuji,@data,@Seq)", Main.koneksi)
+            cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
+            cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
+            cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
+            cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
+            cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
+            cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
+            cmd.Parameters.AddWithValue("@QRCodeFuji", Me.Fuji_QR_Product_Label.Text)
+            cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+
+            Dim date_2 As String
+
+            Dim VBAWeekNum As Integer = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFourDays)
+
+            If Len(VBAWeekNum) = 1 Then VBAWeekNum = "0" & VBAWeekNum
+
+            date_2 = Date.Now.ToString("yy") & VBAWeekNum & DateAndTime.Weekday(DateTime.Now, vbMonday)
+
+            Dim _ID As String = Convert.ToDecimal(seq_SerialNumber.ToString).ToString("0000")
+            Dim _seq As String = "SG" & date_2 & _ID
+
+            cmd.Parameters.AddWithValue("@Seq", _seq)
+
+            'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
+            cmd.ExecuteNonQuery()
+
+
+            'cmd = New SqlCommand("insert into printingRecord([pp],[date],[time],[user],[from],[to],[Data],[Seq]) values(@pp,@date,@time,@user,@from,@to,@data,@Seq)", Main.koneksi)
+            'cmd.Parameters.AddWithValue("@pp", Me.PPnumberEntry.Text)
+            'cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"))
+            'cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"))
+            'cmd.Parameters.AddWithValue("@user", Me.technicianShortName.Text)
+
+            'If var_PrintLabel_klik = True Then
+            '    cmd.Parameters.AddWithValue("@from", CInt(Me.StartLabel.Text))
+            '    var_PrintLabel_klik = False
+            'Else
+            '    cmd.Parameters.AddWithValue("@from", CInt(Me.CounterItems.Text) + 1)
+            'End If
+
+
+            'cmd.Parameters.AddWithValue("@to", Me.LabelQuantityitem.Text)
+            'cmd.Parameters.AddWithValue("@data", LoginForm.strHostName & " - " & Application.ProductVersion)
+            'cmd.Parameters.AddWithValue("@Seq", seq_SerialNumber.ToString)
+            'cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Command111_Click(sender As Object, e As EventArgs) Handles Command111.Click
@@ -9195,28 +9246,44 @@ set @abc = (SELECT TOP (1) [Date]
 
 
             'jinlong request
-            If Me.CompToQuality.Text.Contains("!") Then
-                Dim str As String = ""
-                str = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
-                Dim new_str As String = str.Replace("!", "")
+            'If Me.CompToQuality.Text.Contains("!") Then
+            '    Dim str As String = ""
+            '    str = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
+            '    Dim new_str As String = str.Replace("!", "")
 
-                Dim result As String = After_str(new_str, "241")
-                result = "241" & result
+            '    Dim result As String = After_str(new_str, "241")
+            '    result = "241" & result
 
-                Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [QR code] ='" & result & "'"
-                Dim dsfuji2 As New DataSet
-                Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
-                adapt2.Fill(dsfuji2)
+            '    Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [QR code] ='" & result & "'"
+            '    Dim dsfuji2 As New DataSet
+            '    Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
+            '    adapt2.Fill(dsfuji2)
 
-                If dsfuji2.Tables(0).Rows.Count > 0 Then
-                    Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
-                    Me.CompToQuality.Text = material
-                Else
-                    MsgBox("QR Code Not Found and pls Scan the Barcode !")
-                    Me.CompToQuality.Text = ""
-                End If
+            '    If dsfuji2.Tables(0).Rows.Count > 0 Then
+            '        Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
+            '        Me.CompToQuality.Text = material
+            '    Else
+            '        MsgBox("QR Code Not Found and pls Scan the Barcode !")
+            '        Me.CompToQuality.Text = ""
+            '    End If
+            'ElseIf Me.CompToQuality.Text.Length = 13 Then
+            '    Dim str As String = ""
+            '    str = Me.CompToQuality.Text
 
-            End If
+            '    Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [Reference] ='" & str & "'"
+            '    Dim dsfuji2 As New DataSet
+            '    Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
+            '    adapt2.Fill(dsfuji2)
+
+            '    If dsfuji2.Tables(0).Rows.Count > 0 Then
+            '        Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
+            '        Me.CompToQuality.Text = material
+            '    Else
+            '        MsgBox("New scan EAN13 Not Found and pls Contact Leader!")
+            '        Me.CompToQuality.Text = ""
+            '    End If
+
+            'End If
 
             'Cek Fuji breaker
             If header.Text.Contains("BW") Then
@@ -9240,7 +9307,7 @@ set @abc = (SELECT TOP (1) [Date]
             If Me.CompToQuality.Text.Length = 22 Or Me.CompToQuality.Text.Length = 19 Or Me.CompToQuality.Text.Length = 48 Then cek_fuji_barcode()
 
             'Fuji handle repeat breaker
-            If header.Text.Contains("BW") Then
+            If header.Text.Contains("BW") And componentScanned.Length > 20 Then
                 Dim datcode_bearker As String = After_str(componentScanned, " ")
                 'Dim q = "select * from printingRecord where [PP]='" & Me.PPnumberEntry.Text & "' AND [qrcodefuji] like '%" & datcode_bearker & "'"
                 Dim q = "select * from printingRecord where [qrcodefuji] like '%" & datcode_bearker & "'"
@@ -11267,6 +11334,20 @@ set @abc = (SELECT TOP (1) [Date]
 
     Private Sub ScanLabelRuby_TextChanged(sender As Object, e As PreviewKeyDownEventArgs) Handles ScanLabelRuby.PreviewKeyDown
         If (e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) Then
+            'add scan QR Code for acessories
+            Dim accesories_QR As String
+            If ScanLabelRuby.Text.Length >= 33 Then
+                accesories_QR = Microsoft.VisualBasic.Left(ScanLabelRuby.Text, 5)
+                If accesories_QR = "G4332" Then
+                    ScanLabelRuby.Text = "TPCDIO15"
+                End If
+
+                If accesories_QR = "G4333" Then
+                    ScanLabelRuby.Text = "TPCCOM16"
+                End If
+            End If
+
+
             Dim sqlCekRuby As String = "select * from MasterRuby where [CRRef]='" & ComRefRuby.Text & "'"
             Dim dsCekRuby As New DataSet
             adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
@@ -11771,6 +11852,110 @@ set @abc = (SELECT TOP (1) [Date]
             selected_Printer = printers.Item(cbxOutsideRuby.SelectedIndex)
             label_outside_ruby.PrintSettings.PrinterName = selected_Printer.Name
             cbxOutsideRuby.SelectedItem = selected_Printer.Name
+        End If
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        ExportToExcel("SELECT * FROM Componentslist")
+    End Sub
+
+    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        OpenFileDialog1.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+        If OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            Dim xlApp As New Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(OpenFileDialog1.FileName)
+            Dim SheetName As String = xlWorkBook.Worksheets(1).Name.ToString
+            Dim excelpath As String = OpenFileDialog1.FileName
+            Dim koneksiExcel As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & excelpath & ";Extended Properties='Excel 8.0;HDR=No;IMEX=1;'"
+            oleCon = New OleDbConnection(koneksiExcel)
+            oleCon.Open()
+
+            Dim queryExcel As String = "select * from [" & SheetName & "$]"
+            Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
+            Dim rd As OleDbDataReader
+
+            Call koneksi_db()
+
+            Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
+                bulkCopy.DestinationTableName = "dbo.Componentslist"
+                bulkCopy.BulkCopyTimeout = 120
+                Try
+                    rd = cmd.ExecuteReader
+                    bulkCopy.ColumnMappings.Add(0, 1)
+                    bulkCopy.ColumnMappings.Add(1, 2)
+                    'bulkCopy.ColumnMappings.Add(2, 3)
+                    'bulkCopy.ColumnMappings.Add(3, 4)
+                    ' bulkCopy.ColumnMappings.Add(4, 5)
+                    'bulkCopy.ColumnMappings.Add(5, 6)
+                    'bulkCopy.ColumnMappings.Add(6, 7)
+
+                    bulkCopy.WriteToServer(rd)
+
+                    ' Dim Sql = "INSERT INTO [Upload_History] (upload) Values ('COOIS');"
+                    ' Dim insert = New SqlCommand(Sql, Main.koneksi)
+                    'insert.ExecuteNonQuery()
+
+                    rd.Close()
+                    MsgBox("Upload New Component List Successed !")
+                Catch ex As Exception
+                    MsgBox("Upload Component List Failed " & ex.Message)
+                End Try
+            End Using
+        End If
+    End Sub
+
+    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+        OpenFileDialog1.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+        If OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            Dim xlApp As New Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(OpenFileDialog1.FileName)
+            Dim SheetName As String = xlWorkBook.Worksheets(1).Name.ToString
+            Dim excelpath As String = OpenFileDialog1.FileName
+            Dim koneksiExcel As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & excelpath & ";Extended Properties='Excel 8.0;HDR=No;IMEX=1;'"
+            oleCon = New OleDbConnection(koneksiExcel)
+            oleCon.Open()
+
+            Dim queryExcel As String = "select * from [" & SheetName & "$]"
+            Dim cmd As OleDbCommand = New OleDbCommand(queryExcel, oleCon)
+            Dim rd As OleDbDataReader
+
+            Call koneksi_db()
+
+            Using bulkCopy As SqlBulkCopy = New SqlBulkCopy(Main.koneksi)
+                bulkCopy.DestinationTableName = "dbo.NSXMasterdata"
+                bulkCopy.BulkCopyTimeout = 120
+                Try
+                    rd = cmd.ExecuteReader
+                    bulkCopy.ColumnMappings.Add(0, 1)
+                    bulkCopy.ColumnMappings.Add(1, 2)
+                    bulkCopy.ColumnMappings.Add(2, 3)
+                    bulkCopy.ColumnMappings.Add(3, 4)
+                    bulkCopy.ColumnMappings.Add(4, 5)
+                    bulkCopy.ColumnMappings.Add(5, 6)
+                    bulkCopy.ColumnMappings.Add(6, 7)
+                    bulkCopy.ColumnMappings.Add(7, 8)
+                    bulkCopy.ColumnMappings.Add(8, 9)
+                    bulkCopy.ColumnMappings.Add(9, 10)
+                    bulkCopy.ColumnMappings.Add(10, 11)
+                    bulkCopy.ColumnMappings.Add(11, 12)
+                    bulkCopy.ColumnMappings.Add(12, 13)
+                    bulkCopy.ColumnMappings.Add(13, 14)
+                    bulkCopy.ColumnMappings.Add(14, 15)
+                    bulkCopy.ColumnMappings.Add(15, 16)
+                    'bulkCopy.ColumnMappings.Add(16, 17)
+
+                    bulkCopy.WriteToServer(rd)
+
+                    ' Dim Sql = "INSERT INTO [Upload_History] (upload) Values ('COOIS');"
+                    ' Dim insert = New SqlCommand(Sql, Main.koneksi)
+                    'insert.ExecuteNonQuery()
+
+                    rd.Close()
+                    MsgBox("Upload New NSX Master Data Successed !")
+                Catch ex As Exception
+                    MsgBox("Upload NSX Master Data Failed " & ex.Message)
+                End Try
+            End Using
         End If
     End Sub
 End Class

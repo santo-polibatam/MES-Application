@@ -118,9 +118,9 @@ Partial Class Input_BoX
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(586, 20)
+        Me.Label1.Size = New System.Drawing.Size(487, 20)
         Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Please  Scan QRcode or Barcode or Type in Plan Code + Date Code"
+        Me.Label1.Text = "Please  Scan QRcode or Type in Plan Code + Date Code"
         '
         'Label2
         '

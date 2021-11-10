@@ -18,6 +18,11 @@ Public Class Input_BoX
                 Exit Sub
             End If
 
+            If txt_QRCode.Text.Length = 13 Then
+                MsgBox("Pls QRCode instead of EAN13 Barcode!")
+                Exit Sub
+            End If
+
             Combo_PlanCode.Text = ""
             Txt_Barcode.Text = ""
             'txt_Ref.Text = txt_QRCode.Text.Substring(23, 8)

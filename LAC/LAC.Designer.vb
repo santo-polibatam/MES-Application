@@ -794,6 +794,9 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -8001,6 +8004,8 @@ Partial Class Main
         '
         'GroupBox9
         '
+        Me.GroupBox9.Controls.Add(Me.Button19)
+        Me.GroupBox9.Controls.Add(Me.Button18)
         Me.GroupBox9.Controls.Add(Me.Button4)
         Me.GroupBox9.Controls.Add(Me.Label153)
         Me.GroupBox9.Controls.Add(Me.listAvalablePrinter)
@@ -8029,7 +8034,7 @@ Partial Class Main
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button4.Location = New System.Drawing.Point(351, 141)
+        Me.Button4.Location = New System.Drawing.Point(351, 127)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(156, 32)
         Me.Button4.TabIndex = 84
@@ -8080,7 +8085,7 @@ Partial Class Main
         '
         Me.Command575.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Command575.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Command575.Location = New System.Drawing.Point(177, 223)
+        Me.Command575.Location = New System.Drawing.Point(177, 236)
         Me.Command575.Name = "Command575"
         Me.Command575.Size = New System.Drawing.Size(156, 32)
         Me.Command575.TabIndex = 10
@@ -8091,7 +8096,7 @@ Partial Class Main
         '
         Me.Command576.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Command576.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Command576.Location = New System.Drawing.Point(6, 223)
+        Me.Command576.Location = New System.Drawing.Point(6, 237)
         Me.Command576.Name = "Command576"
         Me.Command576.Size = New System.Drawing.Size(156, 32)
         Me.Command576.TabIndex = 9
@@ -8122,11 +8127,11 @@ Partial Class Main
         '
         'OpenComponentslist
         '
-        Me.OpenComponentslist.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OpenComponentslist.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OpenComponentslist.ForeColor = System.Drawing.SystemColors.ControlText
         Me.OpenComponentslist.Location = New System.Drawing.Point(6, 166)
         Me.OpenComponentslist.Name = "OpenComponentslist"
-        Me.OpenComponentslist.Size = New System.Drawing.Size(156, 52)
+        Me.OpenComponentslist.Size = New System.Drawing.Size(156, 31)
         Me.OpenComponentslist.TabIndex = 5
         Me.OpenComponentslist.Text = "Open List of Component"
         Me.OpenComponentslist.UseVisualStyleBackColor = True
@@ -8354,6 +8359,7 @@ Partial Class Main
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.Button20)
         Me.GroupBox7.Controls.Add(Me.Button12)
         Me.GroupBox7.Controls.Add(Me.latestUpdate)
         Me.GroupBox7.Controls.Add(Me.Label54)
@@ -8411,7 +8417,7 @@ Partial Class Main
         '
         Me.Command109.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Command109.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Command109.Location = New System.Drawing.Point(177, 128)
+        Me.Command109.Location = New System.Drawing.Point(177, 126)
         Me.Command109.Name = "Command109"
         Me.Command109.Size = New System.Drawing.Size(156, 47)
         Me.Command109.TabIndex = 8
@@ -8431,9 +8437,9 @@ Partial Class Main
         '
         'Command110
         '
-        Me.Command110.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Command110.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Command110.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Command110.Location = New System.Drawing.Point(177, 78)
+        Me.Command110.Location = New System.Drawing.Point(177, 62)
         Me.Command110.Name = "Command110"
         Me.Command110.Size = New System.Drawing.Size(156, 32)
         Me.Command110.TabIndex = 6
@@ -9143,6 +9149,39 @@ Partial Class Main
         Me.Progress_print_all.Name = "Progress_print_all"
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
+        '
+        'Button18
+        '
+        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button18.Location = New System.Drawing.Point(7, 201)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(156, 32)
+        Me.Button18.TabIndex = 85
+        Me.Button18.Text = "Export Component List"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button19.Location = New System.Drawing.Point(177, 192)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(156, 41)
+        Me.Button19.TabIndex = 86
+        Me.Button19.Text = "Add Component List by Excel"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'Button20
+        '
+        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button20.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button20.Location = New System.Drawing.Point(177, 94)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(156, 32)
+        Me.Button20.TabIndex = 18
+        Me.Button20.Text = "Add NSX Master Data"
+        Me.Button20.UseVisualStyleBackColor = True
         '
         'Main
         '
@@ -10033,4 +10072,7 @@ Partial Class Main
     Friend WithEvents Visible_N As TextBox
     Friend WithEvents Visible As TextBox
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button18 As Button
+    Friend WithEvents Button19 As Button
+    Friend WithEvents Button20 As Button
 End Class
