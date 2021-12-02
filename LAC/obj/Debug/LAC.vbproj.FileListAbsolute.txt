@@ -943,3 +943,4 @@ C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\M
 C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.xml
 C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\MES APP.pdb
 C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.OKNext.resources
+C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Debug\LAC.DataGridUpdateDb.resources

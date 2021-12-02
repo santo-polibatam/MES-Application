@@ -97,3 +97,4 @@ C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release
 C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.exe
 C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.xml
 C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\MES APP.pdb
+C:\Users\sesa434387\Box\SANTO\VB Program\Program\MES-Application\LAC\obj\Release\LAC.DataGridUpdateDb.resources

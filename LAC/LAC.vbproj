@@ -117,6 +117,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGridUpdateDb.Designer.vb">
+      <DependentUpon>DataGridUpdateDb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridUpdateDb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Export_to_Excel.Designer.vb">
       <DependentUpon>Export_to_Excel.vb</DependentUpon>
     </Compile>
@@ -222,6 +228,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DataGridUpdateDb.resx">
+      <DependentUpon>DataGridUpdateDb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Export_to_Excel.resx">
       <DependentUpon>Export_to_Excel.vb</DependentUpon>
     </EmbeddedResource>

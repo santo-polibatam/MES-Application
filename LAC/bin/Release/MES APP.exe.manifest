@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MES APP.exe" size="1671168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MES APP.exe" size="1683968">
       <assemblyIdentity name="MES APP" version="1.0.2.54" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>r0ArGcxOlOB0W7hGtAVCAh4tflcbVc1raXvnty9zuV0=</dsig:DigestValue>
+        <dsig:DigestValue>0Q/KOo3OhLgdzyqt+47g0P61p43wkRgKvDT1D/qPc0U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

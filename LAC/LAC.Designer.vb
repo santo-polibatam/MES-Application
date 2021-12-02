@@ -680,6 +680,9 @@ Partial Class Main
         Me.Command206 = New System.Windows.Forms.Button()
         Me.Command204 = New System.Windows.Forms.Button()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.btn_NewComponents = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Button18 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label153 = New System.Windows.Forms.Label()
         Me.listAvalablePrinter = New System.Windows.Forms.ComboBox()
@@ -710,6 +713,7 @@ Partial Class Main
         Me.Command146 = New System.Windows.Forms.Button()
         Me.Command3 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.Button20 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.latestUpdate = New System.Windows.Forms.TextBox()
         Me.Label54 = New System.Windows.Forms.Label()
@@ -794,9 +798,11 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.Button20 = New System.Windows.Forms.Button()
+        Me.txtCXMatrix = New System.Windows.Forms.TextBox()
+        Me.QTY_Ruby = New System.Windows.Forms.TextBox()
+        Me.QTY_Process = New System.Windows.Forms.TextBox()
+        Me.txtMatrix2 = New System.Windows.Forms.TextBox()
+        Me.Label198 = New System.Windows.Forms.Label()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -6715,6 +6721,7 @@ Partial Class Main
         '
         'Tab_Ruby
         '
+        Me.Tab_Ruby.Controls.Add(Me.Label198)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox40)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox39)
         Me.Tab_Ruby.Controls.Add(Me.GroupBox38)
@@ -7554,6 +7561,10 @@ Partial Class Main
         '
         'GroupBox28
         '
+        Me.GroupBox28.Controls.Add(Me.txtMatrix2)
+        Me.GroupBox28.Controls.Add(Me.QTY_Process)
+        Me.GroupBox28.Controls.Add(Me.QTY_Ruby)
+        Me.GroupBox28.Controls.Add(Me.txtCXMatrix)
         Me.GroupBox28.Controls.Add(Me.QRCodeRuby)
         Me.GroupBox28.Controls.Add(Me.Button13)
         Me.GroupBox28.Controls.Add(Me.dateCodeRuby)
@@ -8004,6 +8015,7 @@ Partial Class Main
         '
         'GroupBox9
         '
+        Me.GroupBox9.Controls.Add(Me.btn_NewComponents)
         Me.GroupBox9.Controls.Add(Me.Button19)
         Me.GroupBox9.Controls.Add(Me.Button18)
         Me.GroupBox9.Controls.Add(Me.Button4)
@@ -8029,6 +8041,39 @@ Partial Class Main
         Me.GroupBox9.TabIndex = 10
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "General Setting"
+        '
+        'btn_NewComponents
+        '
+        Me.btn_NewComponents.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_NewComponents.ForeColor = System.Drawing.Color.Black
+        Me.btn_NewComponents.Location = New System.Drawing.Point(177, 275)
+        Me.btn_NewComponents.Name = "btn_NewComponents"
+        Me.btn_NewComponents.Size = New System.Drawing.Size(156, 48)
+        Me.btn_NewComponents.TabIndex = 87
+        Me.btn_NewComponents.Text = "Update New Components"
+        Me.btn_NewComponents.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button19.Location = New System.Drawing.Point(177, 192)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(156, 41)
+        Me.Button19.TabIndex = 86
+        Me.Button19.Text = "Add Component List by Excel"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'Button18
+        '
+        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button18.Location = New System.Drawing.Point(7, 201)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(156, 32)
+        Me.Button18.TabIndex = 85
+        Me.Button18.Text = "Export Component List"
+        Me.Button18.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -8064,7 +8109,7 @@ Partial Class Main
         'TextBox95
         '
         Me.TextBox95.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox95.Location = New System.Drawing.Point(177, 284)
+        Me.TextBox95.Location = New System.Drawing.Point(348, 212)
         Me.TextBox95.Name = "TextBox95"
         Me.TextBox95.Size = New System.Drawing.Size(156, 21)
         Me.TextBox95.TabIndex = 81
@@ -8076,7 +8121,7 @@ Partial Class Main
         Me.Command577.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Command577.Location = New System.Drawing.Point(6, 273)
         Me.Command577.Name = "Command577"
-        Me.Command577.Size = New System.Drawing.Size(156, 32)
+        Me.Command577.Size = New System.Drawing.Size(156, 50)
         Me.Command577.TabIndex = 11
         Me.Command577.Text = "Update Barcode"
         Me.Command577.UseVisualStyleBackColor = True
@@ -8380,6 +8425,17 @@ Partial Class Main
         Me.GroupBox7.TabIndex = 0
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Product Label"
+        '
+        'Button20
+        '
+        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button20.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button20.Location = New System.Drawing.Point(177, 94)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(156, 32)
+        Me.Button20.TabIndex = 18
+        Me.Button20.Text = "Add NSX Master Data"
+        Me.Button20.UseVisualStyleBackColor = True
         '
         'Button12
         '
@@ -9150,38 +9206,46 @@ Partial Class Main
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
         '
-        'Button18
+        'txtCXMatrix
         '
-        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button18.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button18.Location = New System.Drawing.Point(7, 201)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(156, 32)
-        Me.Button18.TabIndex = 85
-        Me.Button18.Text = "Export Component List"
-        Me.Button18.UseVisualStyleBackColor = True
+        Me.txtCXMatrix.Enabled = False
+        Me.txtCXMatrix.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCXMatrix.Location = New System.Drawing.Point(882, 118)
+        Me.txtCXMatrix.Name = "txtCXMatrix"
+        Me.txtCXMatrix.Size = New System.Drawing.Size(175, 21)
+        Me.txtCXMatrix.TabIndex = 54
         '
-        'Button19
+        'QTY_Ruby
         '
-        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button19.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button19.Location = New System.Drawing.Point(177, 192)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(156, 41)
-        Me.Button19.TabIndex = 86
-        Me.Button19.Text = "Add Component List by Excel"
-        Me.Button19.UseVisualStyleBackColor = True
+        Me.QTY_Ruby.Location = New System.Drawing.Point(995, 66)
+        Me.QTY_Ruby.Name = "QTY_Ruby"
+        Me.QTY_Ruby.Size = New System.Drawing.Size(62, 26)
+        Me.QTY_Ruby.TabIndex = 55
         '
-        'Button20
+        'QTY_Process
         '
-        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button20.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button20.Location = New System.Drawing.Point(177, 94)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(156, 32)
-        Me.Button20.TabIndex = 18
-        Me.Button20.Text = "Add NSX Master Data"
-        Me.Button20.UseVisualStyleBackColor = True
+        Me.QTY_Process.Location = New System.Drawing.Point(927, 67)
+        Me.QTY_Process.Name = "QTY_Process"
+        Me.QTY_Process.Size = New System.Drawing.Size(62, 26)
+        Me.QTY_Process.TabIndex = 56
+        '
+        'txtMatrix2
+        '
+        Me.txtMatrix2.Enabled = False
+        Me.txtMatrix2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMatrix2.Location = New System.Drawing.Point(683, 118)
+        Me.txtMatrix2.Name = "txtMatrix2"
+        Me.txtMatrix2.Size = New System.Drawing.Size(175, 21)
+        Me.txtMatrix2.TabIndex = 57
+        '
+        'Label198
+        '
+        Me.Label198.AutoSize = True
+        Me.Label198.Location = New System.Drawing.Point(1131, 3)
+        Me.Label198.Name = "Label198"
+        Me.Label198.Size = New System.Drawing.Size(81, 20)
+        Me.Label198.TabIndex = 58
+        Me.Label198.Text = "Ruby Test"
         '
         'Main
         '
@@ -9250,6 +9314,7 @@ Partial Class Main
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout
         Me.Tab_Ruby.ResumeLayout(False)
+        Me.Tab_Ruby.PerformLayout
         Me.GroupBox40.ResumeLayout(False)
         Me.GroupBox40.PerformLayout
         Me.GroupBox39.ResumeLayout(False)
@@ -10075,4 +10140,10 @@ Partial Class Main
     Friend WithEvents Button18 As Button
     Friend WithEvents Button19 As Button
     Friend WithEvents Button20 As Button
+    Friend WithEvents btn_NewComponents As Button
+    Friend WithEvents txtCXMatrix As TextBox
+    Friend WithEvents QTY_Process As TextBox
+    Friend WithEvents QTY_Ruby As TextBox
+    Friend WithEvents txtMatrix2 As TextBox
+    Friend WithEvents Label198 As Label
 End Class
