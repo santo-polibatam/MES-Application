@@ -9221,6 +9221,7 @@ Partial Class Main
         Me.QTY_Ruby.Name = "QTY_Ruby"
         Me.QTY_Ruby.Size = New System.Drawing.Size(62, 26)
         Me.QTY_Ruby.TabIndex = 55
+        Me.QTY_Ruby.Visible = False
         '
         'QTY_Process
         '
@@ -9228,6 +9229,7 @@ Partial Class Main
         Me.QTY_Process.Name = "QTY_Process"
         Me.QTY_Process.Size = New System.Drawing.Size(62, 26)
         Me.QTY_Process.TabIndex = 56
+        Me.QTY_Process.Visible = False
         '
         'txtMatrix2
         '
@@ -9241,11 +9243,12 @@ Partial Class Main
         'Label198
         '
         Me.Label198.AutoSize = True
-        Me.Label198.Location = New System.Drawing.Point(1131, 3)
+        Me.Label198.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label198.Location = New System.Drawing.Point(1125, 3)
         Me.Label198.Name = "Label198"
-        Me.Label198.Size = New System.Drawing.Size(81, 20)
+        Me.Label198.Size = New System.Drawing.Size(81, 15)
         Me.Label198.TabIndex = 58
-        Me.Label198.Text = "Ruby Test"
+        Me.Label198.Text = "Ruby Test V.1"
         '
         'Main
         '

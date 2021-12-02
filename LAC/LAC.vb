@@ -10958,13 +10958,13 @@ set @abc = (SELECT TOP (1) [Date]
 
     Private Sub Refresh_DGV_Ruby()
         DataGridView9.Rows.Clear()
-        'Dim sql As String = "select CR.[Order],CR.[RefRuby],CR.[Check Components],CR.[ScanAgain], p.[Item quantity], CR.[process] 
-        'from ComponentsRuby CR, PPList p 
-        'where CR.[Order]='" & Me.PPRubyEntry.Text & "' and CR.Workstation='" & Me.workstationRuby.Text & "' and CR.Component is null and p.[Order]='" & Me.PPRubyEntry.Text & "'
-        'and [process] = 0"
-        'Dim ds As New DataSet
-        'adapter = New SqlDataAdapter(sql, Main.koneksi)
-        'adapter.Fill(ds)
+        Dim sql As String = "select CR.[Order],CR.[RefRuby],CR.[Check Components],CR.[ScanAgain], p.[Item quantity], CR.[process] 
+        from ComponentsRuby CR, PPList p 
+        where CR.[Order]='" & Me.PPRubyEntry.Text & "' and CR.Workstation='" & Me.workstationRuby.Text & "' and CR.Component is null and p.[Order]='" & Me.PPRubyEntry.Text & "'
+        and [process] = 0"
+        Dim ds As New DataSet
+        adapter = New SqlDataAdapter(sql, Main.koneksi)
+        adapter.Fill(ds)
 
         Dim maxRuby As String = "select Max([process]) as process 
         from ComponentsRuby where [Order]='" & Me.PPRubyEntry.Text & "' and Workstation='" & Me.workstationRuby.Text & "'"
@@ -10972,49 +10972,103 @@ set @abc = (SELECT TOP (1) [Date]
         adapterMax = New SqlDataAdapter(maxRuby, Main.koneksi)
         adapterMax.Fill(dsMax)
 
-        Dim sql2 As String = "select CR.[Order],CR.[RefRuby],CR.[Check Components],CR.[ScanAgain], p.[Item quantity], CR.[process] 
-        from ComponentsRuby CR, PPList p 
-        where CR.[Order]='" & Me.PPRubyEntry.Text & "' and CR.Workstation='" & Me.workstationRuby.Text & "' and CR.Component is null and p.[Order]='" & Me.PPRubyEntry.Text & "'
-        and [process] = '" & dsMax.Tables(0).Rows(0).Item("Process").ToString() & "'"
-        Dim ds2 As New DataSet
-        adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
-        adapter2.Fill(ds2)
-
-        QTY_Ruby.Text = ds2.Tables(0).Rows(0).Item("Item quantity").ToString()
         QTY_Process.Text = dsMax.Tables(0).Rows(0).Item("Process").ToString()
-        If ds2.Tables(0).Rows.Count > 0 Then
-            DataGridView9.ColumnCount = 6
-            DataGridView9.Columns(0).Name = "Order"
-            DataGridView9.Columns(1).Name = "Com Ref"
-            DataGridView9.Columns(2).Name = "QTY"
-            DataGridView9.Columns(3).Name = "Process QTY"
-            DataGridView9.Columns(4).Name = "Scan Product"
-            DataGridView9.Columns(5).Name = "Scan Again"
-            For r = 0 To ds2.Tables(0).Rows.Count - 1
-                Dim row As String() = New String() {
-                    ds2.Tables(0).Rows(r).Item("Order").ToString(),
-                    ds2.Tables(0).Rows(r).Item("RefRuby").ToString(),
-                    ds2.Tables(0).Rows(r).Item("Item quantity").ToString(),
-                    dsMax.Tables(0).Rows(0).Item("Process").ToString(),
-                    ds2.Tables(0).Rows(r).Item("Check Components").ToString(),
-                    ds2.Tables(0).Rows(r).Item("ScanAgain").ToString()
-                }
-                DataGridView9.Rows.Add(row)
 
-                If Convert.ToInt32(ds2.Tables(0).Rows(r).Item("Check Components").ToString()) = 1 Then
-                    DataGridView9.Rows(r).Cells(2).Style.BackColor = Color.SkyBlue
-                Else
-                    DataGridView9.Rows(r).Cells(2).Style.BackColor = Color.White
-                End If
+        If ds.Tables(0).Rows.Count = 0 Then
+            Dim sqlIQ As String = "select [Item quantity] from PPList where [Order]='" & Me.PPRubyEntry.Text & "'"
+            Dim dsIQ As New DataSet
+            adapterIQ = New SqlDataAdapter(sqlIQ, Main.koneksi)
+            adapterIQ.Fill(dsIQ)
+            If dsMax.Tables(0).Rows(0).Item("Process") < dsIQ.Tables(0).Rows(0).Item("Item quantity") Then
+                Dim queryInsert = "insert into [ComponentsRuby]([order],[RefRuby],[WorkStation], 
+                [Qty]) values ('" & Me.PPRubyEntry.Text & "',(select Top 1 material from PPList 
+                where [order]='" & Me.PPRubyEntry.Text & "'),'" & Me.workstationRuby.Text & "','" & QtyPerfLabel.Text & "')"
+                Dim adapterInsert = New SqlDataAdapter(queryInsert, Main.koneksi)
+                adapterInsert.SelectCommand.ExecuteNonQuery()
+                Refresh_DGV_Ruby()
+                Exit Sub
+            End If
 
-                If Convert.ToInt32(ds2.Tables(0).Rows(r).Item("ScanAgain").ToString()) Mod 2 = 0 Then
-                    DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.SkyBlue
-                Else
-                    DataGridView9.Rows(r).Cells(3).Style.BackColor = Color.White
-                End If
+            Dim sql2 As String = "select CR.[Order],CR.[RefRuby],CR.[Check Components],CR.[ScanAgain], p.[Item quantity], CR.[process] 
+            from ComponentsRuby CR, PPList p 
+            where CR.[Order]='" & Me.PPRubyEntry.Text & "' and CR.Workstation='" & Me.workstationRuby.Text & "' and CR.Component is null and p.[Order]='" & Me.PPRubyEntry.Text & "'
+            and [process] = " & dsMax.Tables(0).Rows(0).Item("Process").ToString()
+            Dim ds2 As New DataSet
+            adapter2 = New SqlDataAdapter(sql2, Main.koneksi)
+            adapter2.Fill(ds2)
+            QTY_Ruby.Text = ds2.Tables(0).Rows(0).Item("Item quantity").ToString()
 
-            Next
+            If ds2.Tables(0).Rows.Count > 0 Then
+                DataGridView9.ColumnCount = 6
+                DataGridView9.Columns(0).Name = "Order"
+                DataGridView9.Columns(1).Name = "Com Ref"
+                DataGridView9.Columns(2).Name = "QTY"
+                DataGridView9.Columns(3).Name = "Process QTY"
+                DataGridView9.Columns(4).Name = "Scan Product"
+                DataGridView9.Columns(5).Name = "Scan Again"
+                For r = 0 To ds2.Tables(0).Rows.Count - 1
+                    Dim row As String() = New String() {
+                        ds2.Tables(0).Rows(r).Item("Order").ToString(),
+                        ds2.Tables(0).Rows(r).Item("RefRuby").ToString(),
+                        ds2.Tables(0).Rows(r).Item("Item quantity").ToString(),
+                        dsMax.Tables(0).Rows(0).Item("Process").ToString(),
+                        ds2.Tables(0).Rows(r).Item("Check Components").ToString(),
+                        ds2.Tables(0).Rows(r).Item("ScanAgain").ToString()
+                    }
+                    DataGridView9.Rows.Add(row)
+
+                    If Convert.ToInt32(ds2.Tables(0).Rows(r).Item("Check Components").ToString()) = 1 Then
+                        DataGridView9.Rows(r).Cells(4).Style.BackColor = Color.SkyBlue
+                    Else
+                        DataGridView9.Rows(r).Cells(4).Style.BackColor = Color.White
+                    End If
+
+                    If Convert.ToInt32(ds2.Tables(0).Rows(r).Item("ScanAgain").ToString()) Mod 2 = 0 Then
+                        DataGridView9.Rows(r).Cells(5).Style.BackColor = Color.SkyBlue
+                    Else
+                        DataGridView9.Rows(r).Cells(5).Style.BackColor = Color.White
+                    End If
+
+                Next
+            End If
+        Else
+            QTY_Ruby.Text = ds.Tables(0).Rows(0).Item("Item quantity").ToString()
+
+            If ds.Tables(0).Rows.Count > 0 Then
+                DataGridView9.ColumnCount = 6
+                DataGridView9.Columns(0).Name = "Order"
+                DataGridView9.Columns(1).Name = "Com Ref"
+                DataGridView9.Columns(2).Name = "QTY"
+                DataGridView9.Columns(3).Name = "Process QTY"
+                DataGridView9.Columns(4).Name = "Scan Product"
+                DataGridView9.Columns(5).Name = "Scan Again"
+                For r = 0 To ds.Tables(0).Rows.Count - 1
+                    Dim row As String() = New String() {
+                        ds.Tables(0).Rows(r).Item("Order").ToString(),
+                        ds.Tables(0).Rows(r).Item("RefRuby").ToString(),
+                        ds.Tables(0).Rows(r).Item("Item quantity").ToString(),
+                        dsMax.Tables(0).Rows(0).Item("Process").ToString(),
+                        ds.Tables(0).Rows(r).Item("Check Components").ToString(),
+                        ds.Tables(0).Rows(r).Item("ScanAgain").ToString()
+                    }
+                    DataGridView9.Rows.Add(row)
+
+                    If Convert.ToInt32(ds.Tables(0).Rows(r).Item("Check Components").ToString()) = 1 Then
+                        DataGridView9.Rows(r).Cells(4).Style.BackColor = Color.SkyBlue
+                    Else
+                        DataGridView9.Rows(r).Cells(4).Style.BackColor = Color.White
+                    End If
+
+                    If Convert.ToInt32(ds.Tables(0).Rows(r).Item("ScanAgain").ToString()) Mod 2 = 0 Then
+                        DataGridView9.Rows(r).Cells(5).Style.BackColor = Color.SkyBlue
+                    Else
+                        DataGridView9.Rows(r).Cells(5).Style.BackColor = Color.White
+                    End If
+
+                Next
+            End If
         End If
+
         If Convert.ToInt32(QTY_Process.Text) >= Convert.ToInt32(QTY_Ruby.Text) Then
             ScanRuby.Enabled = False
             ScanLabelRuby.Enabled = False
@@ -11508,7 +11562,7 @@ set @abc = (SELECT TOP (1) [Date]
                 adapter = New SqlDataAdapter(sqlCekComponentsRubyUpdate, Main.koneksi)
                 adapter.Fill(dsCekComponentsRubyUpdate)
                 If (dsCekComponentsRubyUpdate.Tables(0).Rows.Count = 0) Then
-                    Dim queryUpdateScrew = "UPDATE [ComponentsRuby] SET [process] = '" & Convert.ToInt32(QTY_Process.Text) + 1 & "' 
+                    Dim queryUpdateScrew = "UPDATE [ComponentsRuby] SET [process] = " & Convert.ToInt32(QTY_Process.Text) + 1 & " 
                     where [Order]='" & Me.PPRubyEntry.Text & "' and refruby='" & ComRefRuby.Text & "' 
                     and workstation='" & workstationRuby.Text & "' and [process]=0"
                     Dim adapterUpdateScrew = New SqlDataAdapter(queryUpdateScrew, Main.koneksi)
