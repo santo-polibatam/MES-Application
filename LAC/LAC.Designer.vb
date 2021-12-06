@@ -7461,6 +7461,7 @@ Partial Class Main
         Me.DataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView10.Location = New System.Drawing.Point(6, 25)
         Me.DataGridView10.Name = "DataGridView10"
+        Me.DataGridView10.ReadOnly = True
         Me.DataGridView10.Size = New System.Drawing.Size(809, 188)
         Me.DataGridView10.TabIndex = 0
         '
@@ -7481,6 +7482,7 @@ Partial Class Main
         Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView9.Location = New System.Drawing.Point(6, 20)
         Me.DataGridView9.Name = "DataGridView9"
+        Me.DataGridView9.ReadOnly = True
         Me.DataGridView9.Size = New System.Drawing.Size(809, 110)
         Me.DataGridView9.TabIndex = 0
         '
@@ -8055,6 +8057,7 @@ Partial Class Main
         '
         'Button19
         '
+        Me.Button19.Enabled = False
         Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button19.Location = New System.Drawing.Point(177, 192)
@@ -8117,6 +8120,7 @@ Partial Class Main
         '
         'Command577
         '
+        Me.Command577.Enabled = False
         Me.Command577.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Command577.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Command577.Location = New System.Drawing.Point(6, 273)
@@ -8128,6 +8132,7 @@ Partial Class Main
         '
         'Command575
         '
+        Me.Command575.Enabled = False
         Me.Command575.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Command575.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Command575.Location = New System.Drawing.Point(177, 236)
@@ -8139,6 +8144,7 @@ Partial Class Main
         '
         'Command576
         '
+        Me.Command576.Enabled = False
         Me.Command576.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Command576.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Command576.Location = New System.Drawing.Point(6, 237)

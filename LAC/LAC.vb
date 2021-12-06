@@ -9263,44 +9263,44 @@ set @abc = (SELECT TOP (1) [Date]
 
 
             'jinlong request
-            'If Me.CompToQuality.Text.Contains("!") Then
-            '    Dim str As String = ""
-            '    str = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
-            '    Dim new_str As String = str.Replace("!", "")
+            If Me.CompToQuality.Text.Contains("!") Then
+                Dim str As String = ""
+                str = Microsoft.VisualBasic.Right(Me.CompToQuality.Text, 14)
+                Dim new_str As String = str.Replace("!", "")
 
-            '    Dim result As String = After_str(new_str, "241")
-            '    result = "241" & result
+                Dim result As String = After_str(new_str, "241")
+                result = "241" & result
 
-            '    Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [QR code] ='" & result & "'"
-            '    Dim dsfuji2 As New DataSet
-            '    Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
-            '    adapt2.Fill(dsfuji2)
+                Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [QR code] ='" & result & "'"
+                Dim dsfuji2 As New DataSet
+                Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
+                adapt2.Fill(dsfuji2)
 
-            '    If dsfuji2.Tables(0).Rows.Count > 0 Then
-            '        Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
-            '        Me.CompToQuality.Text = material
-            '    Else
-            '        MsgBox("QR Code Not Found and pls Scan the Barcode !")
-            '        Me.CompToQuality.Text = ""
-            '    End If
-            'ElseIf Me.CompToQuality.Text.Length = 13 Then
-            '    Dim str As String = ""
-            '    str = Me.CompToQuality.Text
+                If dsfuji2.Tables(0).Rows.Count > 0 Then
+                    Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
+                    Me.CompToQuality.Text = material
+                Else
+                    MsgBox("QR Code Not Found and pls Scan the Barcode !")
+                    Me.CompToQuality.Text = ""
+                End If
+            ElseIf Me.CompToQuality.Text.Length = 13 Then
+                Dim str As String = ""
+                str = Me.CompToQuality.Text
 
-            '    Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [Reference] ='" & str & "'"
-            '    Dim dsfuji2 As New DataSet
-            '    Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
-            '    adapt2.Fill(dsfuji2)
+                Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [Reference] ='" & str & "'"
+                Dim dsfuji2 As New DataSet
+                Dim adapt2 = New SqlDataAdapter(q2, Main.koneksi)
+                adapt2.Fill(dsfuji2)
 
-            '    If dsfuji2.Tables(0).Rows.Count > 0 Then
-            '        Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
-            '        Me.CompToQuality.Text = material
-            '    Else
-            '        MsgBox("New scan EAN13 Not Found and pls Contact Leader!")
-            '        Me.CompToQuality.Text = ""
-            '    End If
+                If dsfuji2.Tables(0).Rows.Count > 0 Then
+                    Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
+                    Me.CompToQuality.Text = material
+                Else
+                    MsgBox("New scan EAN13 Not Found and pls Contact Leader!")
+                    Me.CompToQuality.Text = ""
+                End If
 
-            'End If
+            End If
 
             'Cek Fuji breaker
             If header.Text.Contains("BW") Then
@@ -12212,5 +12212,13 @@ set @abc = (SELECT TOP (1) [Date]
             Exit Sub
         End If
         role = ""
+    End Sub
+
+    Private Sub CheckBoxNL_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxNL.CheckedChanged
+        CheckBoxNR.Checked = False
+    End Sub
+
+    Private Sub CheckBoxNR_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxNR.CheckedChanged
+        CheckBoxNL.Checked = False
     End Sub
 End Class

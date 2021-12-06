@@ -69,7 +69,8 @@ Public Class DataGridUpdateDb
 
             For i As Integer = 0 To DataGridView1.Rows.Count - 1
 
-                query = "update SGRAC_MES.dbo.NewScanningComponent set Material='" & DataGridView1.Rows(i).Cells(0).Value & "',Description='" & DataGridView1.Rows(i).Cells(1).Value & "',Category='" & DataGridView1.Rows(i).Cells(2).Value & "',[Future Order]='" & DataGridView1.Rows(i).Cells(3).Value & "',[QR code]='" & DataGridView1.Rows(i).Cells(4).Value & "',Reference='" & DataGridView1.Rows(i).Cells(5).Value & "' where Material='" & DataGridView1.Rows(i).Cells(0).Value & "'"
+                'query = "update SGRAC_MES.dbo.NewScanningComponent set Material='" & DataGridView1.Rows(i).Cells(0).Value & "',Description='" & DataGridView1.Rows(i).Cells(1).Value & "',Category='" & DataGridView1.Rows(i).Cells(2).Value & "',[Future Order]='" & DataGridView1.Rows(i).Cells(3).Value & "',[QR code]='" & DataGridView1.Rows(i).Cells(4).Value & "',Reference='" & DataGridView1.Rows(i).Cells(5).Value & "' where Material='" & DataGridView1.Rows(i).Cells(0).Value & "'"
+                query = "update SGRAC_MES.dbo.NewScanningComponent set Material='" & DataGridView1.Rows(i).Cells(0).Value & "',Description='" & DataGridView1.Rows(i).Cells(1).Value & "',Category='" & DataGridView1.Rows(i).Cells(2).Value & "',[QR code]='" & DataGridView1.Rows(i).Cells(3).Value & "',Reference='" & DataGridView1.Rows(i).Cells(4).Value & "' where Material='" & DataGridView1.Rows(i).Cells(0).Value & "'"
 
                 adapter = New SqlDataAdapter(query, Main.koneksi)
                 adapter.SelectCommand.ExecuteNonQuery()
@@ -90,7 +91,7 @@ Public Class DataGridUpdateDb
     Private Sub btn_Add_Click(sender As Object, e As EventArgs) Handles btn_Add.Click
         Dim lastRows As Integer = DataGridView1.Rows.Count - 2
         Dim data(5) As String
-        For i As Integer = 0 To 5
+        For i As Integer = 0 To 4
             data(i) = ""
             If Not IsDBNull(DataGridView1.Rows(lastRows).Cells(i).Value) Then
                 data(i) = DataGridView1.Rows(lastRows).Cells(i).Value
@@ -99,7 +100,8 @@ Public Class DataGridUpdateDb
         Next
 
         'Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values(' ',' ',' ',' ',' ',' ')"
-        Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values('" & data(0) & "','" & data(1) & "','" & data(2) & "','" & data(3) & "','" & data(4) & "','" & data(5) & "')"
+        'Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values('" & data(0) & "','" & data(1) & "','" & data(2) & "','" & data(3) & "','" & data(4) & "','" & data(5) & "')"
+        Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values('" & data(0) & "','" & data(1) & "','" & data(2) & "','" & data(3) & "','" & data(4) & "')"
         Dim adapter As New SqlDataAdapter
         Call Main.koneksi_db()
         adapter = New SqlDataAdapter(query, Main.koneksi)
