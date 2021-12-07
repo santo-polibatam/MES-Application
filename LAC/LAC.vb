@@ -2121,7 +2121,7 @@ Err_btnExit2_Click:
 
             If Len(Me.ComponentNo.Text) = 24 Then Me.ComponentNo.Text = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 11), 10)
 
-            If Len(Me.ComponentNo.Text) = 10 Then
+            If Len(Me.ComponentNo.Text) = 10 And Not Me.ComponentNo.Text.Contains("SP") And Not Me.ComponentNo.Text.Contains("LV") Then
                 dateCode = Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 5)
                 Me.ComponentNo.Text = Microsoft.VisualBasic.Right(Me.ComponentNo.Text, 5)
             ElseIf Len(Me.ComponentNo.Text) >= 11 Then
@@ -2143,7 +2143,10 @@ Err_btnExit2_Click:
                 If (ds.Tables(0).Rows.Count > 0) Then
                     If Me.CounterCpts.Text < CInt(Me.LabelQuantitycpt.Text) Then
                         For i = 0 To ds.Tables(0).Rows.Count - 1
-                            If Me.ComponentNo.Text = ds.Tables(0).Rows(i).Item("Material").ToString Or Me.ComponentNo.Text = ds.Tables(0).Rows(i).Item("code").ToString Then
+                            Dim var_material As String = ds.Tables(0).Rows(i).Item("Material").ToString
+                            Dim var_code As String = ds.Tables(0).Rows(i).Item("code").ToString
+                            If Me.ComponentNo.Text = var_material Or Me.ComponentNo.Text = var_code Then
+                                'If Me.ComponentNo.Text = ds.Tables(0).Rows(i).Item("Material").ToString Or Me.ComponentNo.Text = ds.Tables(0).Rows(i).Item("code").ToString Then
                                 member = 1
                                 If ds.Tables(0).Rows(i).Item("Check Components") < ds.Tables(0).Rows(i).Item("Limit") Then
                                     If Not IsDBNull(ds.Tables(0).Rows(i).Item("barcode")) Then startStrBC = InStr(ds.Tables(0).Rows(i).Item("barcode"), barcode)
