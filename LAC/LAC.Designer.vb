@@ -558,6 +558,7 @@ Partial Class Main
         Me.Label180 = New System.Windows.Forms.Label()
         Me.technicianNameFuji = New System.Windows.Forms.ComboBox()
         Me.Tab_Ruby = New System.Windows.Forms.TabPage()
+        Me.Label198 = New System.Windows.Forms.Label()
         Me.GroupBox40 = New System.Windows.Forms.GroupBox()
         Me.IDNumberRuby = New System.Windows.Forms.TextBox()
         Me.DayDCRuby = New System.Windows.Forms.TextBox()
@@ -641,6 +642,10 @@ Partial Class Main
         Me.ScanRuby = New System.Windows.Forms.TextBox()
         Me.Label197 = New System.Windows.Forms.Label()
         Me.GroupBox28 = New System.Windows.Forms.GroupBox()
+        Me.txtMatrix2 = New System.Windows.Forms.TextBox()
+        Me.QTY_Process = New System.Windows.Forms.TextBox()
+        Me.QTY_Ruby = New System.Windows.Forms.TextBox()
+        Me.txtCXMatrix = New System.Windows.Forms.TextBox()
         Me.QRCodeRuby = New System.Windows.Forms.TextBox()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.dateCodeRuby = New System.Windows.Forms.TextBox()
@@ -798,11 +803,6 @@ Partial Class Main
         Me.SgraC_MESDataSet1 = New LAC.SGRAC_MESDataSet()
         Me.MadeINtextTableAdapter1 = New LAC.SGRAC_MESDataSetTableAdapters.madeINtextTableAdapter()
         Me.Progress_print_all = New System.Windows.Forms.ProgressBar()
-        Me.txtCXMatrix = New System.Windows.Forms.TextBox()
-        Me.QTY_Ruby = New System.Windows.Forms.TextBox()
-        Me.QTY_Process = New System.Windows.Forms.TextBox()
-        Me.txtMatrix2 = New System.Windows.Forms.TextBox()
-        Me.Label198 = New System.Windows.Forms.Label()
         Me.Report_Tab.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -6741,6 +6741,16 @@ Partial Class Main
         Me.Tab_Ruby.Text = "Ruby"
         Me.Tab_Ruby.UseVisualStyleBackColor = True
         '
+        'Label198
+        '
+        Me.Label198.AutoSize = True
+        Me.Label198.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label198.Location = New System.Drawing.Point(1125, 3)
+        Me.Label198.Name = "Label198"
+        Me.Label198.Size = New System.Drawing.Size(81, 15)
+        Me.Label198.TabIndex = 58
+        Me.Label198.Text = "Ruby Test V.1"
+        '
         'GroupBox40
         '
         Me.GroupBox40.Controls.Add(Me.IDNumberRuby)
@@ -7584,6 +7594,40 @@ Partial Class Main
         Me.GroupBox28.Size = New System.Drawing.Size(1063, 145)
         Me.GroupBox28.TabIndex = 43
         Me.GroupBox28.TabStop = False
+        '
+        'txtMatrix2
+        '
+        Me.txtMatrix2.Enabled = False
+        Me.txtMatrix2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMatrix2.Location = New System.Drawing.Point(683, 118)
+        Me.txtMatrix2.Name = "txtMatrix2"
+        Me.txtMatrix2.Size = New System.Drawing.Size(175, 21)
+        Me.txtMatrix2.TabIndex = 57
+        '
+        'QTY_Process
+        '
+        Me.QTY_Process.Location = New System.Drawing.Point(927, 67)
+        Me.QTY_Process.Name = "QTY_Process"
+        Me.QTY_Process.ReadOnly = True
+        Me.QTY_Process.Size = New System.Drawing.Size(62, 26)
+        Me.QTY_Process.TabIndex = 56
+        '
+        'QTY_Ruby
+        '
+        Me.QTY_Ruby.Location = New System.Drawing.Point(995, 66)
+        Me.QTY_Ruby.Name = "QTY_Ruby"
+        Me.QTY_Ruby.ReadOnly = True
+        Me.QTY_Ruby.Size = New System.Drawing.Size(62, 26)
+        Me.QTY_Ruby.TabIndex = 55
+        '
+        'txtCXMatrix
+        '
+        Me.txtCXMatrix.Enabled = False
+        Me.txtCXMatrix.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCXMatrix.Location = New System.Drawing.Point(882, 118)
+        Me.txtCXMatrix.Name = "txtCXMatrix"
+        Me.txtCXMatrix.Size = New System.Drawing.Size(175, 21)
+        Me.txtCXMatrix.TabIndex = 54
         '
         'QRCodeRuby
         '
@@ -9211,50 +9255,6 @@ Partial Class Main
         Me.Progress_print_all.Name = "Progress_print_all"
         Me.Progress_print_all.Size = New System.Drawing.Size(100, 13)
         Me.Progress_print_all.TabIndex = 100
-        '
-        'txtCXMatrix
-        '
-        Me.txtCXMatrix.Enabled = False
-        Me.txtCXMatrix.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCXMatrix.Location = New System.Drawing.Point(882, 118)
-        Me.txtCXMatrix.Name = "txtCXMatrix"
-        Me.txtCXMatrix.Size = New System.Drawing.Size(175, 21)
-        Me.txtCXMatrix.TabIndex = 54
-        '
-        'QTY_Ruby
-        '
-        Me.QTY_Ruby.Location = New System.Drawing.Point(995, 66)
-        Me.QTY_Ruby.Name = "QTY_Ruby"
-        Me.QTY_Ruby.Size = New System.Drawing.Size(62, 26)
-        Me.QTY_Ruby.TabIndex = 55
-        Me.QTY_Ruby.Visible = False
-        '
-        'QTY_Process
-        '
-        Me.QTY_Process.Location = New System.Drawing.Point(927, 67)
-        Me.QTY_Process.Name = "QTY_Process"
-        Me.QTY_Process.Size = New System.Drawing.Size(62, 26)
-        Me.QTY_Process.TabIndex = 56
-        Me.QTY_Process.Visible = False
-        '
-        'txtMatrix2
-        '
-        Me.txtMatrix2.Enabled = False
-        Me.txtMatrix2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMatrix2.Location = New System.Drawing.Point(683, 118)
-        Me.txtMatrix2.Name = "txtMatrix2"
-        Me.txtMatrix2.Size = New System.Drawing.Size(175, 21)
-        Me.txtMatrix2.TabIndex = 57
-        '
-        'Label198
-        '
-        Me.Label198.AutoSize = True
-        Me.Label198.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label198.Location = New System.Drawing.Point(1125, 3)
-        Me.Label198.Name = "Label198"
-        Me.Label198.Size = New System.Drawing.Size(81, 15)
-        Me.Label198.TabIndex = 58
-        Me.Label198.Text = "Ruby Test V.1"
         '
         'Main
         '

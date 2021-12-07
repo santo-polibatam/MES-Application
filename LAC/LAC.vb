@@ -9260,8 +9260,6 @@ set @abc = (SELECT TOP (1) [Date]
         Dim tampungSplit As String = ""
         If e.KeyData = Keys.Enter Or e.KeyData = 9 Then
 
-
-
             'jinlong request
             If Me.CompToQuality.Text.Contains("!") Then
                 Dim str As String = ""
@@ -9269,6 +9267,10 @@ set @abc = (SELECT TOP (1) [Date]
                 Dim new_str As String = str.Replace("!", "")
 
                 Dim result As String = After_str(new_str, "241")
+                If result.Length > 8 Then
+                    result = result.Substring(0, 8)
+                End If
+
                 result = "241" & result
 
                 Dim q2 = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent nsc WHERE [QR code] ='" & result & "'"
@@ -9283,7 +9285,8 @@ set @abc = (SELECT TOP (1) [Date]
                     MsgBox("QR Code Not Found and pls Scan the Barcode !")
                     Me.CompToQuality.Text = ""
                 End If
-            ElseIf Me.CompToQuality.Text.Length = 13 Then
+                'ElseIf Me.CompToQuality.Text.Length = 13 Then
+            ElseIf Me.CompToQuality.Text.Length >= 5 Then
                 Dim str As String = ""
                 str = Me.CompToQuality.Text
 
@@ -12214,11 +12217,4 @@ set @abc = (SELECT TOP (1) [Date]
         role = ""
     End Sub
 
-    Private Sub CheckBoxNL_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxNL.CheckedChanged
-        CheckBoxNR.Checked = False
-    End Sub
-
-    Private Sub CheckBoxNR_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxNR.CheckedChanged
-        CheckBoxNL.Checked = False
-    End Sub
 End Class
