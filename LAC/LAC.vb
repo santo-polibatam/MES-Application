@@ -2121,7 +2121,7 @@ Err_btnExit2_Click:
 
             If Len(Me.ComponentNo.Text) = 24 Then Me.ComponentNo.Text = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 11), 10)
 
-            If Len(Me.ComponentNo.Text) = 10 And Not Me.ComponentNo.Text.Contains("SP") And Not Me.ComponentNo.Text.Contains("LV") Then
+            If Len(Me.ComponentNo.Text) = 10 And Not Me.ComponentNo.Text.Contains("SP") And Not Me.ComponentNo.Text.Contains("LV") And Not Me.ComponentNo.Text.Contains("ZB") Then
                 dateCode = Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 5)
                 Me.ComponentNo.Text = Microsoft.VisualBasic.Right(Me.ComponentNo.Text, 5)
             ElseIf Len(Me.ComponentNo.Text) >= 11 Then
@@ -3808,6 +3808,115 @@ Err_btnExit2_Click:
 
             Dim querygilate = "update ProductionOrders set [Late]= 'Late' where convert(datetime, [GI Date], 103) <= convert(datetime, [FinishDate], 103) and [Late] is null and [FinishDate] is not null and [pp] = '" & Me.PPnumberEntry.Text & "'"
             Dim queryschlate = "update ProductionOrders set [LateM]= 'Late' where convert(datetime, [SchedFinishDate], 103) <= convert(datetime, [FinishDate], 103) and [LateM] is null and [FinishDate] is not null and [pp] = '" & Me.PPnumberEntry.Text & "'"
+
+            adapters2 = New SqlDataAdapter(queryGiOn, Main.koneksi)
+            adapters2.SelectCommand.ExecuteNonQuery()
+
+            adapters2 = New SqlDataAdapter(queryschon, Main.koneksi)
+            adapters2.SelectCommand.ExecuteNonQuery()
+
+            adapters2 = New SqlDataAdapter(querygilate, Main.koneksi)
+            adapters2.SelectCommand.ExecuteNonQuery()
+
+            adapters2 = New SqlDataAdapter(queryschlate, Main.koneksi)
+            adapters2.SelectCommand.ExecuteNonQuery()
+        Catch ex As Exception
+            'MessageBox.Show(ex.ToString)
+            'Log_data("Update Trecebility:" & ex.ToString)
+        End Try
+    End Sub
+
+    Sub InsertTraceabilityRuby()
+        Try
+            Dim ds2 As New DataSet
+            Dim dss3 As New DataSet
+            Dim sql2a = "SELECT * FROM [PPList] WHERE [Order] = '" & Me.PPRubyEntry.Text & "'"
+            Dim adapter2 = New SqlDataAdapter(sql2a, Main.koneksi)
+            adapter2.Fill(ds2)
+
+            Dim sql = "INSERT INTO [dbo].[ProductionOrders](
+            [GI Date]
+            ,[PP]
+            ,[Quantityadapted]
+            ,[Quantity]
+            ,[workstation]
+            ,[range]
+            ,[Customer]
+            ,[City]
+            ,[SchedFinishDate]
+            ,[Material]
+            ,[Description]
+            ,[Name1]
+            ,[SO no]
+            ,[Item]
+            ,[Entity]) 
+            values(
+            '" & ds2.Tables(0).Rows(0).Item("GI date").ToString() & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("order") & "'
+            ,'" & Convert.ToInt32(QTY_Process.Text) + 1 & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Item quantity") & "'
+            ,'" & workstationRuby.SelectedValue & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("range") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Customer") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("City") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Scheduled finish").ToString() & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Material") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Description") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Name 1") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("SO no") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Item") & "'
+            ,'" & ds2.Tables(0).Rows(0).Item("Entity") & "')"
+
+            Dim ter = New SqlDataAdapter(sql, Main.koneksi)
+            ter.SelectCommand.ExecuteNonQuery()
+
+            'cast('" & Convert.ToDateTime(CombineGiDate).ToString("MM/dd/yyyy") & "' as datetime)
+            ',cast('" & Convert.ToDateTime(CombineSchFini).ToString("MM/dd/yyyy") & "' as datetime)
+
+            'If ter.SelectCommand.ExecuteNonQuery() Then
+            '    MessageBox.Show("Berhasil")
+            'Else
+            '    MessageBox.Show("Gagal")
+            'End If
+
+            Dim sql2 = "INSERT INTO [dbo].[DailyProduction]([Employee],[WorkingSection]) values(@emp,@ws)"
+            Dim ter2 = New SqlDataAdapter(sql2, Main.koneksi)
+            ter2.SelectCommand.Parameters.AddWithValue("@emp", technicianNameRuby.SelectedValue)
+            ter2.SelectCommand.Parameters.AddWithValue("@ws", workstationRuby.SelectedValue)
+            ter2.SelectCommand.ExecuteNonQuery()
+
+            Dim adapters3 = New SqlDataAdapter("SELECT * FROM [ComponentsRuby] WHERE [Order] = '" & Me.PPRubyEntry.Text & "'", Main.koneksi)
+            adapters3.Fill(dss3)
+            If dss3.Tables(0).Rows.Count > 0 Then
+                For i3 = 0 To dss3.Tables(0).Rows.Count - 1
+                    Dim sql3 = "INSERT INTO [dbo].[ComponentOrders]
+                    ([Order]
+                    ,[Barcode]
+                    ,[Datecode]
+                    ,[Material]
+                    ,[Workstation]
+                    ,[Descr]
+                    ,[Reqmts qty]
+                    ,[Check Components])
+                    values(@order,@barcode,@datecode,@mat,@ws,@ds,@req,@check)"
+                    Dim ter3 = New SqlDataAdapter(sql3, Main.koneksi)
+                    ter3.SelectCommand.Parameters.AddWithValue("@order", dss3.Tables(0).Rows(i3).Item("order"))
+                    ter3.SelectCommand.Parameters.AddWithValue("@barcode", dss3.Tables(0).Rows(i3).Item("barcode"))
+                    ter3.SelectCommand.Parameters.AddWithValue("@datecode", dss3.Tables(0).Rows(i3).Item("datecode"))
+                    ter3.SelectCommand.Parameters.AddWithValue("@mat", dss3.Tables(0).Rows(i3).Item("component"))
+                    ter3.SelectCommand.Parameters.AddWithValue("@ws", dss3.Tables(0).Rows(i3).Item("workstation"))
+                    ter3.SelectCommand.Parameters.AddWithValue("@ds", dss3.Tables(0).Rows(i3).Item("desc"))
+                    ter3.SelectCommand.Parameters.AddWithValue("@req", QTY_Ruby.Text)
+                    ter3.SelectCommand.Parameters.AddWithValue("@check", dss3.Tables(0).Rows(i3).Item("process"))
+                    ter3.SelectCommand.ExecuteNonQuery()
+                Next
+            End If
+
+            Dim queryGiOn = "Update ProductionOrders SET [On Time]= 'On Time' where convert(datetime, [GI Date], 103) > convert(datetime, [FinishDate], 103) and [On Time] is null and [FinishDate] is not null and [pp] = '" & Me.PPRubyEntry.Text & "'"
+            Dim queryschon = "update ProductionOrders set [On TimeM]= 'On Time' where convert(datetime, [SchedFinishDate], 103) > convert(datetime, [FinishDate], 103) and [On TimeM] is null and [FinishDate] is not null and [pp] = '" & Me.PPRubyEntry.Text & "'"
+
+            Dim querygilate = "update ProductionOrders set [Late]= 'Late' where convert(datetime, [GI Date], 103) <= convert(datetime, [FinishDate], 103) and [Late] is null and [FinishDate] is not null and [pp] = '" & Me.PPRubyEntry.Text & "'"
+            Dim queryschlate = "update ProductionOrders set [LateM]= 'Late' where convert(datetime, [SchedFinishDate], 103) <= convert(datetime, [FinishDate], 103) and [LateM] is null and [FinishDate] is not null and [pp] = '" & Me.PPRubyEntry.Text & "'"
 
             adapters2 = New SqlDataAdapter(queryGiOn, Main.koneksi)
             adapters2.SelectCommand.ExecuteNonQuery()
@@ -8807,18 +8916,48 @@ set @abc = (SELECT TOP (1) [Date]
         Call Main.koneksi_db()
         'e.KeyData = Keys.Tab Or e.KeyData = Keys.Enter) And
         If Len(TextBox1.Text) >= 33 Then
-            DataGridView2.Rows.Clear()
-            DataGridView3.Rows.Clear()
-            DataGridView4.Rows.Clear()
-            Dim dsTrace As New DataSet
-            Dim sql = "select DISTINCT ProductionOrders.PP from ProductionOrders, printingRecord where ProductionOrders.PP=printingRecord.PP and printingRecord.QRCodeFuji='" & TextBox2.Text & "'"
-            Dim adapter = New SqlDataAdapter(sql, Main.koneksi)
-            adapter.Fill(dsTrace)
-            If dsTrace.Tables(0).Rows.Count > 0 Then
-                TextBox1.Text = dsTrace.Tables(0).Rows(0).Item("PP")
-                'Trace.PerformClick()
+            If TextBox1.Text.Contains("go2se.com") Then
+                DataGridView2.Rows.Clear()
+                DataGridView3.Rows.Clear()
+                DataGridView4.Rows.Clear()
+                Dim dsTrace As New DataSet
+                Dim sql = "select DISTINCT ProductionOrders.PP from ProductionOrders, printingRecord where ProductionOrders.PP=printingRecord.PP and printingRecord.QRCodeRuby='" & TextBox1.Text & "'"
+                Dim adapter = New SqlDataAdapter(sql, Main.koneksi)
+                adapter.Fill(dsTrace)
+                If dsTrace.Tables(0).Rows.Count > 0 Then
+                    TextBox1.Text = dsTrace.Tables(0).Rows(0).Item("PP")
+                    Trace.PerformClick()
+                Else
+                    MessageBox.Show("Sorry Data Not Found")
+                End If
+            ElseIf TextBox1.Text.Contains("WG") Then
+                DataGridView2.Rows.Clear()
+                DataGridView3.Rows.Clear()
+                DataGridView4.Rows.Clear()
+                Dim dsTrace As New DataSet
+                Dim sql = "select DISTINCT ProductionOrders.PP from ProductionOrders, componentsRuby where ProductionOrders.PP=componentsRuby.[order] and componentsRuby.barcode='" & TextBox1.Text & "'"
+                Dim adapter = New SqlDataAdapter(sql, Main.koneksi)
+                adapter.Fill(dsTrace)
+                If dsTrace.Tables(0).Rows.Count > 0 Then
+                    TextBox1.Text = dsTrace.Tables(0).Rows(0).Item("PP")
+                    Trace.PerformClick()
+                Else
+                    MessageBox.Show("Sorry Data Not Found")
+                End If
             Else
-                MessageBox.Show("Sorry Data Not Found")
+                DataGridView2.Rows.Clear()
+                DataGridView3.Rows.Clear()
+                DataGridView4.Rows.Clear()
+                Dim dsTrace As New DataSet
+                Dim sql = "select DISTINCT ProductionOrders.PP from ProductionOrders, printingRecord where ProductionOrders.PP=printingRecord.PP and printingRecord.QRCodeFuji='" & TextBox1.Text & "'"
+                Dim adapter = New SqlDataAdapter(sql, Main.koneksi)
+                adapter.Fill(dsTrace)
+                If dsTrace.Tables(0).Rows.Count > 0 Then
+                    TextBox1.Text = dsTrace.Tables(0).Rows(0).Item("PP")
+                    'Trace.PerformClick()
+                Else
+                    MessageBox.Show("Sorry Data Not Found")
+                End If
             End If
 
         ElseIf TextBox1.Text.Contains("SG") Then
@@ -11464,7 +11603,7 @@ set @abc = (SELECT TOP (1) [Date]
                                 '        ScanRuby.Select()
                                 '    End If
                             Else
-                                Dim queryUpdate = "UPDATE [ComponentsRuby] SET [Check Components] = 1
+                                Dim queryUpdate = "UPDATE [ComponentsRuby] SET [Check Components] = 1, [barcode] = '" & ScanRuby.Text & "', [datecode] = '" & DataSn.Substring(6, 1) + DataSn.Substring(4, 2) + DataSn.Substring(2, 2) & "'
                                 where [Order]='" & Me.PPRubyEntry.Text & "' 
                                 and Workstation='" & Me.workstationRuby.Text & "' 
                                 and RefRuby='" & DataRef & "' 
@@ -11606,6 +11745,7 @@ set @abc = (SELECT TOP (1) [Date]
             'End If
         ElseIf TextBox4.Text = 5 Then
             PrintOutsideRuby_Click(sender, e)
+            InsertTraceabilityRuby()
             clearAllRuby()
         End If
     End Sub

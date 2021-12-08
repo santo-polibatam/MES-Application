@@ -732,19 +732,20 @@ Partial Class Main
         Me.Command108 = New System.Windows.Forms.Button()
         Me.open_orders_table = New System.Windows.Forms.Button()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.GroupBox42 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label157 = New System.Windows.Forms.Label()
+        Me.Trace = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TraceFujiProduct = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.btn_export_Tracecibility = New System.Windows.Forms.Button()
         Me.Label160 = New System.Windows.Forms.Label()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
-        Me.Trace = New System.Windows.Forms.Button()
         Me.Label159 = New System.Windows.Forms.Label()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.Label158 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Label157 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.btn_QI_Search = New System.Windows.Forms.Button()
         Me.TXT_Ref_Search_QI = New System.Windows.Forms.TextBox()
@@ -861,6 +862,7 @@ Partial Class Main
         Me.GroupBox8.SuspendLayout
         Me.GroupBox7.SuspendLayout
         Me.TabPage5.SuspendLayout
+        Me.GroupBox42.SuspendLayout
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit
@@ -8620,19 +8622,17 @@ Partial Class Main
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.GroupBox42)
         Me.TabPage5.Controls.Add(Me.TextBox3)
         Me.TabPage5.Controls.Add(Me.TraceFujiProduct)
         Me.TabPage5.Controls.Add(Me.TextBox2)
         Me.TabPage5.Controls.Add(Me.btn_export_Tracecibility)
         Me.TabPage5.Controls.Add(Me.Label160)
         Me.TabPage5.Controls.Add(Me.DataGridView4)
-        Me.TabPage5.Controls.Add(Me.Trace)
         Me.TabPage5.Controls.Add(Me.Label159)
         Me.TabPage5.Controls.Add(Me.DataGridView3)
         Me.TabPage5.Controls.Add(Me.Label158)
         Me.TabPage5.Controls.Add(Me.DataGridView2)
-        Me.TabPage5.Controls.Add(Me.Label157)
-        Me.TabPage5.Controls.Add(Me.TextBox1)
         Me.TabPage5.Location = New System.Drawing.Point(4, 29)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
@@ -8641,10 +8641,50 @@ Partial Class Main
         Me.TabPage5.Text = "Tracecibility"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'GroupBox42
+        '
+        Me.GroupBox42.Controls.Add(Me.TextBox1)
+        Me.GroupBox42.Controls.Add(Me.Label157)
+        Me.GroupBox42.Controls.Add(Me.Trace)
+        Me.GroupBox42.Location = New System.Drawing.Point(43, 3)
+        Me.GroupBox42.Name = "GroupBox42"
+        Me.GroupBox42.Size = New System.Drawing.Size(416, 103)
+        Me.GroupBox42.TabIndex = 19
+        Me.GroupBox42.TabStop = False
+        Me.GroupBox42.Text = "Trace"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(11, 49)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(295, 26)
+        Me.TextBox1.TabIndex = 0
+        '
+        'Label157
+        '
+        Me.Label157.AutoSize = True
+        Me.Label157.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label157.Location = New System.Drawing.Point(6, 21)
+        Me.Label157.Name = "Label157"
+        Me.Label157.Size = New System.Drawing.Size(300, 25)
+        Me.Label157.TabIndex = 1
+        Me.Label157.Text = "PP / QR Code / Data Matrix"
+        '
+        'Trace
+        '
+        Me.Trace.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Trace.Location = New System.Drawing.Point(312, 21)
+        Me.Trace.Name = "Trace"
+        Me.Trace.Size = New System.Drawing.Size(98, 54)
+        Me.Trace.TabIndex = 6
+        Me.Trace.Text = "Trace"
+        Me.Trace.UseVisualStyleBackColor = True
+        '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(613, 48)
+        Me.TextBox3.Location = New System.Drawing.Point(479, 53)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(211, 26)
         Me.TextBox3.TabIndex = 14
@@ -8653,9 +8693,9 @@ Partial Class Main
         'TraceFujiProduct
         '
         Me.TraceFujiProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TraceFujiProduct.Location = New System.Drawing.Point(854, 13)
+        Me.TraceFujiProduct.Location = New System.Drawing.Point(696, 25)
         Me.TraceFujiProduct.Name = "TraceFujiProduct"
-        Me.TraceFujiProduct.Size = New System.Drawing.Size(127, 62)
+        Me.TraceFujiProduct.Size = New System.Drawing.Size(104, 55)
         Me.TraceFujiProduct.TabIndex = 13
         Me.TraceFujiProduct.Text = "Trace"
         Me.TraceFujiProduct.UseVisualStyleBackColor = True
@@ -8664,7 +8704,7 @@ Partial Class Main
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(613, 16)
+        Me.TextBox2.Location = New System.Drawing.Point(479, 25)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(211, 26)
         Me.TextBox2.TabIndex = 10
@@ -8672,9 +8712,9 @@ Partial Class Main
         '
         'btn_export_Tracecibility
         '
-        Me.btn_export_Tracecibility.Location = New System.Drawing.Point(1034, 80)
+        Me.btn_export_Tracecibility.Location = New System.Drawing.Point(1091, 80)
         Me.btn_export_Tracecibility.Name = "btn_export_Tracecibility"
-        Me.btn_export_Tracecibility.Size = New System.Drawing.Size(154, 37)
+        Me.btn_export_Tracecibility.Size = New System.Drawing.Size(97, 37)
         Me.btn_export_Tracecibility.TabIndex = 9
         Me.btn_export_Tracecibility.Text = "Export"
         Me.btn_export_Tracecibility.UseVisualStyleBackColor = True
@@ -8698,16 +8738,6 @@ Partial Class Main
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.Size = New System.Drawing.Size(1145, 246)
         Me.DataGridView4.TabIndex = 7
-        '
-        'Trace
-        '
-        Me.Trace.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Trace.Location = New System.Drawing.Point(464, 23)
-        Me.Trace.Name = "Trace"
-        Me.Trace.Size = New System.Drawing.Size(117, 81)
-        Me.Trace.TabIndex = 6
-        Me.Trace.Text = "Trace"
-        Me.Trace.UseVisualStyleBackColor = True
         '
         'Label159
         '
@@ -8733,7 +8763,7 @@ Partial Class Main
         '
         Me.Label158.AutoSize = True
         Me.Label158.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label158.Location = New System.Drawing.Point(38, 95)
+        Me.Label158.Location = New System.Drawing.Point(38, 109)
         Me.Label158.Name = "Label158"
         Me.Label158.Size = New System.Drawing.Size(88, 25)
         Me.Label158.TabIndex = 3
@@ -8744,28 +8774,10 @@ Partial Class Main
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(43, 123)
+        Me.DataGridView2.Location = New System.Drawing.Point(43, 137)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1145, 246)
+        Me.DataGridView2.Size = New System.Drawing.Size(1145, 232)
         Me.DataGridView2.TabIndex = 2
-        '
-        'Label157
-        '
-        Me.Label157.AutoSize = True
-        Me.Label157.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label157.Location = New System.Drawing.Point(38, 13)
-        Me.Label157.Name = "Label157"
-        Me.Label157.Size = New System.Drawing.Size(300, 25)
-        Me.Label157.TabIndex = 1
-        Me.Label157.Text = "PP / QR Code / Data Matrix"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(43, 53)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(376, 26)
-        Me.TextBox1.TabIndex = 0
         '
         'TabPage6
         '
@@ -9261,7 +9273,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1344, 881)
+        Me.ClientSize = New System.Drawing.Size(1378, 881)
         Me.Controls.Add(Me.Progress_print_all)
         Me.Controls.Add(Me.Report_Tab)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -9360,6 +9372,8 @@ Partial Class Main
         Me.GroupBox7.PerformLayout
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout
+        Me.GroupBox42.ResumeLayout(False)
+        Me.GroupBox42.PerformLayout
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit
@@ -10155,4 +10169,5 @@ Partial Class Main
     Friend WithEvents QTY_Ruby As TextBox
     Friend WithEvents txtMatrix2 As TextBox
     Friend WithEvents Label198 As Label
+    Friend WithEvents GroupBox42 As GroupBox
 End Class
