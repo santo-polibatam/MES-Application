@@ -43,6 +43,7 @@ Partial Class DataGridUpdateDb
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -69,15 +70,15 @@ Partial Class DataGridUpdateDb
         'txt_Search_db
         '
         Me.txt_Search_db.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Search_db.Location = New System.Drawing.Point(520, 485)
+        Me.txt_Search_db.Location = New System.Drawing.Point(589, 485)
         Me.txt_Search_db.Name = "txt_Search_db"
-        Me.txt_Search_db.Size = New System.Drawing.Size(178, 22)
+        Me.txt_Search_db.Size = New System.Drawing.Size(109, 22)
         Me.txt_Search_db.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(461, 490)
+        Me.Label1.Location = New System.Drawing.Point(536, 490)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(47, 13)
         Me.Label1.TabIndex = 3
@@ -108,7 +109,7 @@ Partial Class DataGridUpdateDb
         '
         'btn_refresh
         '
-        Me.btn_refresh.Location = New System.Drawing.Point(231, 485)
+        Me.btn_refresh.Location = New System.Drawing.Point(215, 485)
         Me.btn_refresh.Name = "btn_refresh"
         Me.btn_refresh.Size = New System.Drawing.Size(113, 23)
         Me.btn_refresh.TabIndex = 6
@@ -117,7 +118,7 @@ Partial Class DataGridUpdateDb
         '
         'btn_Delete
         '
-        Me.btn_Delete.Location = New System.Drawing.Point(99, 485)
+        Me.btn_Delete.Location = New System.Drawing.Point(91, 485)
         Me.btn_Delete.Name = "btn_Delete"
         Me.btn_Delete.Size = New System.Drawing.Size(120, 23)
         Me.btn_Delete.TabIndex = 7
@@ -206,7 +207,7 @@ Partial Class DataGridUpdateDb
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(356, 485)
+        Me.Button1.Location = New System.Drawing.Point(435, 485)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(99, 23)
         Me.Button1.TabIndex = 19
@@ -226,18 +227,28 @@ Partial Class DataGridUpdateDb
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 548)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 526)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(686, 67)
         Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Adding New Data"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(332, 485)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(99, 23)
+        Me.Button2.TabIndex = 21
+        Me.Button2.Text = "Check Duplicate"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'DataGridUpdateDb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(720, 648)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_Delete)
@@ -280,4 +291,5 @@ Partial Class DataGridUpdateDb
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button2 As Button
 End Class

@@ -81,6 +81,7 @@ Public Class DataGridUpdateDb
                 Application.DoEvents()
             Next
             MessageBox.Show("New Database updated successfully")
+
         End If
 
     End Sub
@@ -123,7 +124,7 @@ Public Class DataGridUpdateDb
                     txtCategory.Text = ""
                     txtQRCode.Text = ""
                     txtReferences.Text = ""
-
+                    see_duplicate()
                     Exit Sub
 
                 End If
@@ -172,7 +173,31 @@ Public Class DataGridUpdateDb
         reload()
     End Sub
 
+    Private Sub see_duplicate()
+        Dim query As String = "SELECT SGRAC_MES.dbo.NewScanningComponent.Material , COUNT(*)
+                             FROM SGRAC_MES.dbo.NewScanningComponent
+                            GROUP BY SGRAC_MES.dbo.NewScanningComponent.Material
+                            HAVING COUNT(*) > 1"
+
+        Call Main.koneksi_db()
+
+        Dim sc As New SqlCommand(query, Main.koneksi)
+            Dim adapter As New SqlDataAdapter(sc)
+            Dim ds As New DataSet
+
+        adapter.Fill(ds)
+        If ds.Tables(0).Rows.Count > 0 Then
+            MessageBox.Show(
+            "There are Duplicate data" & Chr(13) & "please Check duplicate and Delete Duplicate!", "Duplicate Data!",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Warning,
+            MessageBoxDefaultButton.Button1,
+            MessageBoxOptions.RightAlign,
+            True)
+        End If
+    End Sub
     Private Sub Cek_Duplicate()
+
         Dim query As String = "SELECT SGRAC_MES.dbo.NewScanningComponent.Material , COUNT(*)
                              FROM SGRAC_MES.dbo.NewScanningComponent
                             GROUP BY SGRAC_MES.dbo.NewScanningComponent.Material
@@ -194,6 +219,11 @@ Public Class DataGridUpdateDb
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Cek_Duplicate()
+
+    End Sub
 End Class
