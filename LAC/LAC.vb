@@ -2121,7 +2121,20 @@ Err_btnExit2_Click:
 
             If Len(Me.ComponentNo.Text) = 24 Then Me.ComponentNo.Text = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 11), 10)
 
-            If Len(Me.ComponentNo.Text) = 10 And Not Me.ComponentNo.Text.Contains("SP") And Not Me.ComponentNo.Text.Contains("LV") And Not Me.ComponentNo.Text.Contains("ZB") Then
+            'santo parsing char
+            Dim deteksi As String = ""
+            Dim sValue As String = Me.ComponentNo.Text
+            Dim sValueAsArray = sValue.ToCharArray()
+            If IsNumeric(sValueAsArray(0)) Then
+                deteksi = "numeric"
+            Else
+                deteksi = "non numeric"
+            End If
+
+
+
+            'If Len(Me.ComponentNo.Text) = 10 And Not Me.ComponentNo.Text.Contains("SP") And Not Me.ComponentNo.Text.Contains("LV") And Not Me.ComponentNo.Text.Contains("ZB") And Not Me.ComponentNo.Text.Contains("MV") Then
+            If deteksi = "numeric" And Len(Me.ComponentNo.Text) = 10 Then
                 dateCode = Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 5)
                 Me.ComponentNo.Text = Microsoft.VisualBasic.Right(Me.ComponentNo.Text, 5)
             ElseIf Len(Me.ComponentNo.Text) >= 11 Then
@@ -11603,7 +11616,7 @@ set @abc = (SELECT TOP (1) [Date]
                                 '        ScanRuby.Select()
                                 '    End If
                             Else
-                                Dim queryUpdate = "UPDATE [ComponentsRuby] SET [Check Components] = 1, [barcode] = '" & ScanRuby.Text & "', [datecode] = '" & DataSn.Substring(6, 1) + DataSn.Substring(4, 2) + DataSn.Substring(2, 2) & "'
+                                Dim queryUpdate = "UPDATE [ComponentsRuby] SET [Check Components] = 1, [barcode] = '" & QRCodeRuby.Text & "', [datecode] = '" & DataSn.Substring(2, 2) + DataSn.Substring(4, 2) + DataSn.Substring(6, 1) & "'
                                 where [Order]='" & Me.PPRubyEntry.Text & "' 
                                 and Workstation='" & Me.workstationRuby.Text & "' 
                                 and RefRuby='" & DataRef & "' 

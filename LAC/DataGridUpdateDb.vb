@@ -7,6 +7,7 @@ Public Class DataGridUpdateDb
     Public publicQuery As String
     Private Sub txt_Search_db_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txt_Search_db.KeyPress
         If e.KeyChar = Chr(13) Then
+            reload()
             Dim str As String = txt_Search_db.Text
             Try
                 If Me.txt_Search_db.Text.Trim(" ") = " " Then
@@ -89,27 +90,54 @@ Public Class DataGridUpdateDb
     End Sub
 
     Private Sub btn_Add_Click(sender As Object, e As EventArgs) Handles btn_Add.Click
-        Dim lastRows As Integer = DataGridView1.Rows.Count - 2
-        Dim data(5) As String
-        For i As Integer = 0 To 4
-            data(i) = ""
-            If Not IsDBNull(DataGridView1.Rows(lastRows).Cells(i).Value) Then
-                data(i) = DataGridView1.Rows(lastRows).Cells(i).Value
-            End If
+        'Dim lastRows As Integer = DataGridView1.Rows.Count - 2
+        'Dim data(5) As String
+        'For i As Integer = 0 To 4
+        '    data(i) = ""
+        '    If Not IsDBNull(DataGridView1.Rows(lastRows).Cells(i).Value) Then
+        '        data(i) = DataGridView1.Rows(lastRows).Cells(i).Value
+        '    End If
 
-        Next
+        'Next
 
         'Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values(' ',' ',' ',' ',' ',' ')"
         'Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values('" & data(0) & "','" & data(1) & "','" & data(2) & "','" & data(3) & "','" & data(4) & "','" & data(5) & "')"
-        Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values('" & data(0) & "','" & data(1) & "','" & data(2) & "','" & data(3) & "','" & data(4) & "')"
+        Dim query As String = "insert into SGRAC_MES.dbo.NewScanningComponent values('" & txtMaterial.Text & "','" & txtxDescription.Text & "','" & txtCategory.Text & "','" & txtQRCode.Text & "','" & txtReferences.Text & "')"
         Dim adapter As New SqlDataAdapter
         Call Main.koneksi_db()
         adapter = New SqlDataAdapter(query, Main.koneksi)
         adapter.SelectCommand.ExecuteNonQuery()
         reload()
 
-        DataGridView1.Rows(DataGridView1.Rows.Count - 2).Selected = True
-        DataGridView1.FirstDisplayedScrollingRowIndex = DataGridView1.Rows.Count - 1
+        Dim str As String = txtMaterial.Text
+
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            For j As Integer = 0 To Me.DataGridView1.Rows(i).Cells.Count - 1
+                If DataGridView1.Item(j, i).Value.ToString().ToLower.StartsWith(Str.ToLower) Or InStr(DataGridView1.Item(j, i).Value.ToString().ToLower, Str.ToLower) Then
+                    DataGridView1.Rows(i).Selected = True
+                    DataGridView1.CurrentCell = DataGridView1.Rows(i).Cells(j)
+
+
+                    txtMaterial.Text = ""
+                    txtxDescription.Text = ""
+                    txtCategory.Text = ""
+                    txtQRCode.Text = ""
+                    txtReferences.Text = ""
+
+                    Exit Sub
+
+                End If
+            Next
+        Next i
+
+        txtMaterial.Text = ""
+        txtxDescription.Text = ""
+        txtCategory.Text = ""
+        txtQRCode.Text = ""
+        txtReferences.Text = ""
+
+        'DataGridView1.Rows(DataGridView1.Rows.Count - 2).Selected = True
+        'DataGridView1.FirstDisplayedScrollingRowIndex = DataGridView1.Rows.Count - 1
     End Sub
 
     Private Sub btn_Save_Click(sender As Object, e As EventArgs) Handles btn_Delete.Click
@@ -129,8 +157,43 @@ Public Class DataGridUpdateDb
 
     End Sub
 
-    Private Sub btn_LastRow_Click(sender As Object, e As EventArgs) Handles btn_LastRow.Click
-        DataGridView1.Rows(DataGridView1.Rows.Count - 2).Selected = True
-        DataGridView1.FirstDisplayedScrollingRowIndex = DataGridView1.Rows.Count - 1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Dim sql As String = "with deleteDup as(select *, ROW_NUMBER() over (partition by [order] order by id) as RowNumber from [SGRAC_MES].[dbo].[PPList]) delete from deleteDup where RowNumber > 1"
+        Dim sql As String = "SELECT * FROM SGRAC_MES.dbo.NewScanningComponent
+        ;WITH CTE AS(
+            SELECT [Material],
+            RN = ROW_NUMBER()OVER(PARTITION BY  [Material] ORDER BY [Material])
+            FROM SGRAC_MES.dbo.NewScanningComponent
+            )
+        DELETE FROM CTE WHERE RN <> 1"
+        Dim cmd As New SqlCommand(Sql, Main.koneksi)
+        Dim count As Integer = cmd.ExecuteNonQuery()
+        MsgBox("The Number Of Duplicate data has been executed : " & count & " Records")
+        reload()
     End Sub
+
+    Private Sub Cek_Duplicate()
+        Dim query As String = "SELECT SGRAC_MES.dbo.NewScanningComponent.Material , COUNT(*)
+                             FROM SGRAC_MES.dbo.NewScanningComponent
+                            GROUP BY SGRAC_MES.dbo.NewScanningComponent.Material
+                            HAVING COUNT(*) > 1"
+
+        Call Main.koneksi_db()
+        Try
+            Dim sc As New SqlCommand(query, Main.koneksi)
+            Dim adapter As New SqlDataAdapter(sc)
+            Dim ds As New DataSet
+
+            adapter.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+            DataGridView1.Rows(0).Selected = True
+
+            'adapter.UpdateCommand = New SqlCommandBuilder(adapter).GetUpdateCommand
+            'adapter.Update(ds)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
 End Class
