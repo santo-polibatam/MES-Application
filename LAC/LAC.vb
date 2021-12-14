@@ -9452,7 +9452,9 @@ set @abc = (SELECT TOP (1) [Date]
 
                 If dsfuji2.Tables(0).Rows.Count > 0 Then
                     Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
-                    Me.CompToQuality.Text = material
+                    If Not header.Text.Contains("BW") Then Me.CompToQuality.Text = material
+                    'Cek Fuji breaker
+
                 Else
                     MsgBox("New scan EAN13 Not Found and pls Contact Leader!")
                     Me.CompToQuality.Text = ""
@@ -9461,7 +9463,7 @@ set @abc = (SELECT TOP (1) [Date]
             End If
 
             'Cek Fuji breaker
-            If header.Text.Contains("BW") Then
+            If header.Text.Contains("BW") And Me.CompToQuality.Text.Length = 13 Then
                 Dim q = "select * from FujiBreakerCheck where [EAN13]='" & Me.CompToQuality.Text & "'"
                 Dim dsfuji As New DataSet
                 Dim adapt = New SqlDataAdapter(q, Main.koneksi)
