@@ -9441,7 +9441,7 @@ set @abc = (SELECT TOP (1) [Date]
                     Me.CompToQuality.Text = ""
                 End If
                 'ElseIf Me.CompToQuality.Text.Length = 13 Then
-            ElseIf Me.CompToQuality.Text.Length >= 5 Then
+            ElseIf Me.CompToQuality.Text.Length >= 5 And Not header.Text.Contains("BW") Then
                 Dim str As String = ""
                 str = Me.CompToQuality.Text
 
@@ -9452,7 +9452,7 @@ set @abc = (SELECT TOP (1) [Date]
 
                 If dsfuji2.Tables(0).Rows.Count > 0 Then
                     Dim material As String = dsfuji2.Tables(0).Rows(0).Item("Material").ToString()
-                    If Not header.Text.Contains("BW") Then Me.CompToQuality.Text = material
+                    Me.CompToQuality.Text = material
                     'Cek Fuji breaker
 
                 Else
