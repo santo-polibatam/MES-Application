@@ -2137,7 +2137,7 @@ Err_btnExit2_Click:
             If deteksi = "numeric" And Len(Me.ComponentNo.Text) = 10 Then
                 dateCode = Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 5)
                 Me.ComponentNo.Text = Microsoft.VisualBasic.Right(Me.ComponentNo.Text, 5)
-            ElseIf Len(Me.ComponentNo.Text) >= 11 Then
+            ElseIf Len(Me.ComponentNo.Text) >= 11 And deteksi = "numeric" Then
                 dateCode = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(Me.ComponentNo.Text, 6), 5)
                 Me.ComponentNo.Text = Microsoft.VisualBasic.Left(Microsoft.VisualBasic.Right(Me.ComponentNo.Text, 6), 5)
             Else
