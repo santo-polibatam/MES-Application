@@ -11015,7 +11015,8 @@ set @abc = (SELECT TOP (1) [Date]
                     adapter = New SqlDataAdapter(sqlCekRuby, Main.koneksi)
                     adapter.Fill(dsCekRuby)
                     If (dsCekRuby.Tables(0).Rows.Count > 0) Then
-                        Dim sqlCekForInsert As String = "select * from PPList, ComponentsRuby where PPlist.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsRuby.RefRuby=PPList.Material and ComponentsRuby.Workstation='" & Me.workstationRuby.Text & "'"
+                        Dim sqlCekForInsert As String = "select * from PPList, ComponentsRuby where PPlist.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsRuby.[Order]=PPlist.[Order] and ComponentsRuby.Workstation='" & Me.workstationRuby.Text & "'"
+                        'Dim sqlCekForInsert As String = "select * from PPList, ComponentsRuby where PPlist.[Order]='" & Me.PPRubyEntry.Text & "' and ComponentsRuby.RefRuby=PPList.Material and ComponentsRuby.[order]='" & Me.PPRubyEntry.Text & "' and ComponentsRuby.Workstation='" & Me.workstationRuby.Text & "'"
                         Dim dsCekForInsert As New DataSet
                         adapter = New SqlDataAdapter(sqlCekForInsert, Main.koneksi)
                         adapter.Fill(dsCekForInsert)
